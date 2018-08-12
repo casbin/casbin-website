@@ -11,11 +11,33 @@
 /* List of projects/orgs using your project for the users page */
 const users = [
   {
-    caption: 'User1',
-    // You will need to prepend the image path with your baseUrl
-    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: '/img/docusaurus.svg',
-    infoLink: 'https://www.facebook.com',
+    caption: 'Intel RMD',
+    image: 'img/users/intel.png',
+    infoLink: 'https://github.com/intel/rmd',
+    pinned: true,
+  },
+  {
+    caption: 'VMware Dispatch',
+    image: 'img/users/vmware.png',
+    infoLink: 'https://github.com/vmware/dispatch',
+    pinned: true,
+  },
+  {
+    caption: 'Casbin Authorization Plugin',
+    image: 'img/users/docker.png',
+    infoLink: 'https://docs.docker.com/engine/extend/legacy_plugins/#authorization-plugins',
+    pinned: true,
+  },
+  {
+    caption: 'Banzai Pipeline',
+    image: 'img/users/banzai.png',
+    infoLink: 'https://github.com/banzaicloud/pipeline',
+    pinned: true,
+  },
+  {
+    caption: 'Orange Gobis',
+    image: 'img/users/orange.png',
+    infoLink: 'https://github.com/orange-cloudfoundry/gobis',
     pinned: true,
   },
 ];
