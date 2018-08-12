@@ -22,8 +22,8 @@ const users = [
 
 const siteConfig = {
   title: 'Casbin' /* title for your website */,
-  tagline: 'An authorization library that supports access control models like ACL, RBAC, ABAC',
-  url: 'http://casbin.org' /* your website url */,
+  tagline: 'An authorization library that supports access control models like ACL, RBAC, ABAC for Golang, Java, PHP and Node.js',
+  url: 'https://casbin.org' /* your website url */,
   baseUrl: '/' /* base url for your project */,
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
@@ -76,7 +76,7 @@ const siteConfig = {
   copyright:
     'Copyright © ' +
     new Date().getFullYear() +
-    ' Casbin Inc.',
+    ' Casbin contributors.',
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
@@ -92,6 +92,8 @@ const siteConfig = {
   /* Open Graph and Twitter card images */
   ogImage: 'img/docusaurus.png',
   twitterImage: 'img/docusaurus.png',
+
+  cname: 'casbin.org'
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
