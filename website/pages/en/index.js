@@ -76,13 +76,11 @@ class HomeSplash extends React.Component {
     let language = this.props.language || '';
     return (
       <SplashContainer>
-        <Logo img_src={imgUrl('docusaurus.svg')} />
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
-            <Button href="#try">Try It Out</Button>
-            <Button href={docUrl('doc1.html', language)}>Example Link</Button>
-            <Button href={docUrl('doc2.html', language)}>Example Link 2</Button>
+            <Button href={docUrl('doc1.html', language)}>Get Started</Button>
+            <Button href="/editor">Try Casbin Online Editor</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -184,8 +182,8 @@ const Showcase = props => {
 
   return (
     <div className="productShowcaseSection paddingBottom">
-      <h2>{"Who's Using This?"}</h2>
-      <p>This project is used by all these people</p>
+      <h2>{"Who's using Casbin?"}</h2>
+      <p>Hundreds of projects are using Casbin, from established Fortune 500 companies to hot new startups. If you&#x27;re curious to see what can be accomplished Casbin, <a href="/users.html">check out these apps</a>!</p>
       <div className="logos">{showcase}</div>
       <div className="more-users">
         <a className="button" href={pageUrl('users.html', props.language)}>

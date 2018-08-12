@@ -40,8 +40,10 @@ const siteConfig = {
   headerLinks: [
     {doc: 'doc1', label: 'Docs'},
     {doc: 'doc4', label: 'API'},
-    {page: 'help', label: 'Help'},
+    {page: 'help', label: 'Community'},
     {blog: true, label: 'Blog'},
+    {search: true},
+    {href: 'https://github.com/casbin', label: "GitHub"}
   ],
 
   // If you have users set above, you add it here:
@@ -74,7 +76,7 @@ const siteConfig = {
   copyright:
     'Copyright © ' +
     new Date().getFullYear() +
-    ' Your Name or Your Company Name',
+    ' Casbin Inc.',
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
