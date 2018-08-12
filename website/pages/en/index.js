@@ -101,16 +101,22 @@ const Features = props => (
   <Block layout="fourColumn">
     {[
       {
-        content: 'This is the content of my feature',
+        content: 'In Casbin, an access control model is abstracted into a CONF file based on the PERM metamodel (Policy, Effect, Request, Matchers). So switching or upgrading the authorization mechanism for a project is just as simple as modifying a configuration.',
         image: imgUrl('docusaurus.svg'),
         imageAlign: 'top',
-        title: 'Feature One',
+        title: 'Multiple Access Control Models',
       },
       {
-        content: 'The content of my second feature',
+        content: 'Policy storage is implemented as an adapter. To keep light-weight, we don\'t put adapter code in the main library (except the default file adapter).',
         image: imgUrl('docusaurus.svg'),
         imageAlign: 'top',
-        title: 'Feature Two',
+        title: 'Flexible Policy Storage',
+      },
+      {
+        content: 'Casbin is implemented in Golang, Java, PHP and Node.js. All implementations share the same API and behaviors. You can learn Casbin once and use it everywhere.',
+        image: imgUrl('docusaurus.svg'),
+        imageAlign: 'top',
+        title: 'Cross-languages & Cross-platforms',
       },
     ]}
   </Block>
