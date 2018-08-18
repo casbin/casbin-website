@@ -1,10 +1,26 @@
 {
   "docs": {
-    "Docusaurus": ["doc1"],
-    "First Category": ["doc2"],
-    "Second Category": ["doc3"]
-  },
-  "docs-other": {
-    "First Category": ["doc4", "doc5"]
+    "Introduction": [
+      "overview",
+      "supported-models",
+      "how-it-works",
+      "features",
+      "online-editor"
+    ],
+    "Quick Start":[
+      "go-quick-start",
+      "java-quick-start",
+      "node-quick-start"
+    ],
+    "Tutorials":[
+      "go-tutorial",
+      "java-tutorial",
+      "node-tutorial"
+    ],
+    "Our adopters":[
+      "go-adopter",
+      "java-adopter",
+      "node-adopter"
+    ]
   }
 }
