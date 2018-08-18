@@ -29,6 +29,10 @@ This repo contains the website configuration and documentation powering the
 1.  `yarn start` to start the development server (powered by Docusaurus) (or `npm start`, if not using Yarn)
 1.  `open http://localhost:3000/` to open the site in your favorite browser
 
+### How to publish
+
+1. `yarn run publish-gh-pages` to publish the site to GitHub pages: https://github.com/casbin/casbin.github.io (aka https://casbin.org)
+
 # Overview
 
 If you're here because you would like to contribute an edit or addition to the
