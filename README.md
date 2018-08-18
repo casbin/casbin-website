@@ -1,4 +1,4 @@
-# [casbin.org](https://casbin.org/) &middot;  [![Circle CI Status](https://circleci.com/gh/casbin/casbin-website.svg?style=shield)](https://circleci.com/gh/casbin/casbin-website) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+# [casbin.org](https://casbin.org/) [![Build Status](https://travis-ci.org/casbin/casbin-website.svg?branch=master)](https://travis-ci.org/casbin/casbin-website)
 
 This repo contains the website configuration and documentation powering the
 [Casbin website](https://casbin.org/).
