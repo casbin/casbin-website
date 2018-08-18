@@ -1,7 +1,6 @@
 # [casbin.org](https://casbin.org/) [![Build Status](https://travis-ci.org/casbin/casbin-website.svg?branch=master)](https://travis-ci.org/casbin/casbin-website)
 
-This repo contains the website configuration and documentation powering the
-[Casbin website](https://casbin.org/).
+This repo contains the site configuration and documentation powering Casbin's website: https://casbin.org
 
 ## Getting started
 
@@ -9,7 +8,7 @@ This repo contains the website configuration and documentation powering the
 
 1.  Git
 1.  Node: install version 6.2.2 or greater. Node v8 would be ideal.
-1.  Yarn: See [Yarn website for installation instructions](https://yarnpkg.com/lang/en/docs/install/)
+1.  Yarn: See [Yarn Installation](https://yarnpkg.com/lang/en/docs/install/)
 1.  Docusaurus: Run `yarn global add docusaurus-init` or `npm install --global docusaurus-init`
 
 ### Installation
@@ -24,7 +23,12 @@ This repo contains the website configuration and documentation powering the
 1.  `yarn start` to start the development server (powered by Docusaurus) (or `npm start`, if not using Yarn).
 1.  open `http://localhost:3000/` to open the site in your favorite browser.
 
-### How to publish
+### Publish manually (optional)
+
+Whenever a new commit lands in `master`, the change will be automatically
+published to: https://casbin.org. However, if you want to deploy the site manually,
+make sure you have `write` access to: https://github.com/casbin/casbin.github.io,
+and use the following instruction:
 
 1. `yarn run publish-gh-pages` to publish the site to GitHub pages: https://github.com/casbin/casbin.github.io (aka https://casbin.org).
 
