@@ -2,8 +2,9 @@
   "docs": {
     "Introduction": [
       "overview",
-      "supported-models",
       "how-it-works",
+      "supported-models",
+      "syntax-for-models",
       "features",
       "online-editor"
     ],
