@@ -48,10 +48,10 @@ Each line in a policy is called a policy rule. Each policy rule starts with a ``
 
 **Note 2**: The elements in a policy rule are always regarded as``string``. If you have any question about this, please see the discussion at: https://github.com/casbin/casbin/issues/113
 
-## Request definition
+## Policy effect
 
 ``[policy_effect]`` is the definition for the policy effect. It defines whether the access request should be approved if multiple policy rules match the request. For example, one rule permits and the other denies.
-
+    
 ```ini
 [policy_effect]
 e = some(where (p.eft == allow))
