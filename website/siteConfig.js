@@ -40,6 +40,12 @@ const users = [
     infoLink: 'https://github.com/orange-cloudfoundry/gobis',
     pinned: true,
   },
+  {
+    caption: 'Tencent Cloud',
+    image: 'img/users/tencent.png',
+    infoLink: 'https://cloud.tencent.com',
+    pinned: true,
+  },
 ];
 
 const siteConfig = {
