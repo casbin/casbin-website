@@ -46,6 +46,12 @@ const users = [
     infoLink: 'https://cloud.tencent.com',
     pinned: true,
   },
+  {
+    caption: 'Cisco Cloud',
+    image: 'img/users/cisco.png',
+    infoLink: 'https://www.cisco.com/c/en/us/solutions/cloud/overview.html',
+    pinned: true,
+  },
 ];
 
 const siteConfig = {
