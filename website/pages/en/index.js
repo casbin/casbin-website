@@ -102,19 +102,19 @@ const Features = props => (
     {[
       {
         content: 'In Casbin, an access control model is abstracted into a CONF file based on the PERM metamodel (Policy, Effect, Request, Matchers). So switching or upgrading the authorization mechanism for a project is just as simple as modifying a configuration.',
-        image: imgUrl('docusaurus.svg'),
+        image: imgUrl('casbin.svg'),
         imageAlign: 'top',
         title: 'Multiple Access Control Models',
       },
       {
         content: 'Policy storage is implemented as an adapter. To keep light-weight, we don\'t put adapter code in the main library (except the default file adapter).',
-        image: imgUrl('docusaurus.svg'),
+        image: imgUrl('casbin.svg'),
         imageAlign: 'top',
         title: 'Flexible Policy Storage',
       },
       {
         content: 'Casbin is implemented in Golang, Java, PHP and Node.js. All implementations share the same API and behaviors. You can learn Casbin once and use it everywhere.',
-        image: imgUrl('docusaurus.svg'),
+        image: imgUrl('casbin.svg'),
         imageAlign: 'top',
         title: 'Cross-languages & Cross-platforms',
       },
@@ -136,7 +136,7 @@ const LearnHow = props => (
     {[
       {
         content: 'Talk about learning how to use this',
-        image: imgUrl('docusaurus.svg'),
+        image: imgUrl('casbin.svg'),
         imageAlign: 'right',
         title: 'Learn How',
       },
@@ -149,7 +149,7 @@ const TryOut = props => (
     {[
       {
         content: 'Talk about trying this out',
-        image: imgUrl('docusaurus.svg'),
+        image: imgUrl('casbin.svg'),
         imageAlign: 'left',
         title: 'Try it Out',
       },
@@ -162,7 +162,7 @@ const Description = props => (
     {[
       {
         content: 'This is another description of how this project is useful',
-        image: imgUrl('docusaurus.svg'),
+        image: imgUrl('casbin.svg'),
         imageAlign: 'right',
         title: 'Description',
       },
