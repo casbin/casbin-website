@@ -6,7 +6,8 @@
       "supported-models",
       "syntax-for-models",
       "features",
-      "online-editor"
+      "online-editor",
+      "api"
     ],
     "Quick Start":[
       "go-quick-start",

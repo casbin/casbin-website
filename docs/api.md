@@ -1,4 +1,7 @@
-## Policy management
+---
+id: api
+title: API Reference
+---
 
 Casbin provides two sets of APIs to manage permissions:
 
