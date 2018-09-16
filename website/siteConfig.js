@@ -52,6 +52,11 @@ const users = [
     infoLink: 'https://www.cisco.com/c/en/us/solutions/cloud/overview.html',
     pinned: true,
   },
+  {
+    caption: 'Microsoft (internal use)',
+    image: 'img/users/microsoft.png',
+    pinned: true,
+  },
 ];
 
 const siteConfig = {
