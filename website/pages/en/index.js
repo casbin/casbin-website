@@ -80,6 +80,10 @@ class HomeSplash extends React.Component {
           <ProjectTitle />
           <PromoSection>
             <Button href={docUrl('overview.html', language)}>Get Started</Button>
+            <Button href="https://github.com/casbin/casbin">Golang</Button>
+            <Button href="https://github.com/casbin/jcasbin">Java</Button>
+            <Button href="https://github.com/sstutz/php-casbin">PHP</Button>
+            <Button href="https://github.com/casbin/node-casbin">Node.js</Button>
             <Button href="/editor">Try Casbin Online Editor</Button>
           </PromoSection>
         </div>
