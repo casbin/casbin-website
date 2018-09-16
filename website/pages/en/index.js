@@ -108,19 +108,19 @@ const Features = props => (
         content: 'In Casbin, an access control model is abstracted into a CONF file based on the PERM metamodel (Policy, Effect, Request, Matchers). So switching or upgrading the authorization mechanism for a project is just as simple as modifying a configuration.',
         image: imgUrl('model.png'),
         imageAlign: 'top',
-        title: 'Multiple Access Control Models',
+        title: 'Hybrid access control models',
       },
       {
-        content: 'Policy storage is implemented as an adapter. To keep light-weight, we don\'t put adapter code in the main library (except the default file adapter).',
+        content: 'Besides memory and file, Casbin policy can be stored into lots of places. Currently, dozens of databases are supported, from MySQL, Postgres, Oracle to MongoDB, Redis, Cassandra, AWS S3. Check the full supported list at: https://github.com/casbin/casbin#policy-persistence',
         image: imgUrl('storage.png'),
         imageAlign: 'top',
-        title: 'Flexible Policy Storage',
+        title: 'Flexible policy storage',
       },
       {
         content: 'Casbin is implemented in Golang, Java, PHP and Node.js. All implementations share the same API and behaviors. You can learn Casbin once and use it everywhere.',
         image: imgUrl('language.png'),
         imageAlign: 'top',
-        title: 'Cross-languages & Cross-platforms',
+        title: 'Cross-languages & cross-platforms',
       },
     ]}
   </Block>
