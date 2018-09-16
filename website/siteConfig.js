@@ -74,7 +74,6 @@ const siteConfig = {
   headerLinks: [
     {doc: 'overview', label: 'Docs'},
     {doc: 'api', label: 'API'},
-    {page: 'help', label: 'Community'},
     {blog: true, label: 'Blog'},
     {search: true},
     {href: 'https://github.com/casbin', label: "GitHub"}
