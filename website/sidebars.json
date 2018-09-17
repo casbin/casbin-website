@@ -19,6 +19,11 @@
       "java-tutorial",
       "node-tutorial"
     ],
+    "Policy Persistence":[
+      "go-policy-persistence",
+      "java-policy-persistence",
+      "node-policy-persistence"
+    ],
     "Our adopters":[
       "go-adopter",
       "java-adopter",

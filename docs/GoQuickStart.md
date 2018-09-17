@@ -3,34 +3,34 @@ id: go-quick-start
 title: Go
 ---
 
-1. New a Casbin enforcer with a model file and a policy file:
+New a Casbin enforcer with a model file and a policy file:
 
-    ```go
-    e := casbin.NewEnforcer("path/to/model.conf", "path/to/policy.csv")
-    ```
+```go
+e := casbin.NewEnforcer("path/to/model.conf", "path/to/policy.csv")
+```
 
-Note: you can also initialize an enforcer with policy in DB instead of file, see [Persistence](#persistence) section for details.
+**Note:** you can also initialize an enforcer with policy in DB instead of file, see [Persistence](#persistence) section for details.
 
-2. Add an enforcement hook into your code right before the access happens:
+Add an enforcement hook into your code right before the access happens:
 
-    ```go
-    sub := "alice" // the user that wants to access a resource.
-    obj := "data1" // the resource that is going to be accessed.
-    act := "read" // the operation that the user performs on the resource.
+```go
+sub := "alice" // the user that wants to access a resource.
+obj := "data1" // the resource that is going to be accessed.
+act := "read" // the operation that the user performs on the resource.
 
-    if e.Enforce(sub, obj, act) == true {
-        // permit alice to read data1
-    } else {
-        // deny the request, show an error
-    }
-    ```
+if e.Enforce(sub, obj, act) == true {
+    // permit alice to read data1
+} else {
+    // deny the request, show an error
+}
+```
 
-3. Besides the static policy file, Casbin also provides API for permission management at run-time. For example, You can get all the roles assigned to a user as below:
+Besides the static policy file, Casbin also provides API for permission management at run-time. For example, You can get all the roles assigned to a user as below:
 
-    ```go
-    roles := e.GetRoles("alice")
-    ```
+```go
+roles := e.GetRoles("alice")
+```
 
 See [Policy management APIs](#policy-management) for more usage.
 
-4. Please refer to the ``_test.go`` files for more usage.
+Please refer to the ``_test.go`` files for more usage.
