@@ -53,8 +53,15 @@ const users = [
     pinned: true,
   },
   {
-    caption: 'Microsoft (internal use)',
+    caption: 'Microsoft',
     image: 'img/users/microsoft.png',
+    infoLink: 'https://www.microsoft.com',
+    pinned: true,
+  },
+  {
+    caption: 'Verizon',
+    image: 'img/users/verizon.png',
+    infoLink: 'https://www.verizon.com',
     pinned: true,
   },
 ];
