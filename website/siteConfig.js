@@ -143,6 +143,10 @@ const siteConfig = {
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
   repoUrl: 'https://github.com/casbin/casbin',
+  goRepoUrl: 'https://github.com/casbin/casbin',
+  javaRepoUrl: 'https://github.com/casbin/jcasbin',
+  phpRepoUrl: 'https://github.com/sstutz/php-casbin',
+  nodeRepoUrl: 'https://github.com/casbin/node-casbin',
 
   // Tracking ID of Google Analytics
   gaTrackingId: 'UA-119750650-1',

@@ -65,18 +65,49 @@ class Footer extends React.Component {
             </a>
           </div>
           <div>
-            <h5>More</h5>
-            <a href="https://github.com/casbin/casbin/wiki">Full Documentation</a>
-            <a href={this.props.config.repoUrl}>GitHub</a>
+            <h5>GitHub</h5>
             <a
               className="github-button"
-              href={this.props.config.repoUrl}
+              href={this.props.config.goRepoUrl}
               data-icon="octicon-star"
               data-count-href='/stargazers'
               data-show-count={true}
               data-count-aria-label="# stargazers on GitHub"
               aria-label="Star this project on GitHub">
-              Star
+              Casbin
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a
+              className="github-button"
+              href={this.props.config.javaRepoUrl}
+              data-icon="octicon-star"
+              data-count-href='/stargazers'
+              data-show-count={true}
+              data-count-aria-label="# stargazers on GitHub"
+              aria-label="Star this project on GitHub">
+              jCasbin
+            </a>
+            <br/>
+            <a
+              className="github-button"
+              href={this.props.config.phpRepoUrl}
+              data-icon="octicon-star"
+              data-count-href='/stargazers'
+              data-show-count={true}
+              data-count-aria-label="# stargazers on GitHub"
+              aria-label="Star this project on GitHub">
+              php-Casbin
+            </a>
+            &nbsp;&nbsp;&thinsp;&thinsp;
+            <a
+              className="github-button"
+              href={this.props.config.nodeRepoUrl}
+              data-icon="octicon-star"
+              data-count-href='/stargazers'
+              data-show-count={true}
+              data-count-aria-label="# stargazers on GitHub"
+              aria-label="Star this project on GitHub">
+              node-Casbin
             </a>
           </div>
         </section>
