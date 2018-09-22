@@ -150,6 +150,9 @@ const siteConfig = {
 
   // Tracking ID of Google Analytics
   gaTrackingId: 'UA-119750650-1',
+
+  // URL for editing docs, usage example: editUrl + 'en/doc1.md'.
+  editUrl: 'https://github.com/casbin/casbin-website/edit/master/docs/',
 };
 
 module.exports = siteConfig;
