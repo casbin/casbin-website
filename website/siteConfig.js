@@ -125,7 +125,11 @@ const siteConfig = {
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
-    theme: 'default',
+    // theme: 'default',
+    // theme: 'railscasts',
+    theme: 'monokai-sublime',
+    // theme: 'androidstudio',
+    // theme: 'atom-one-dark',
   },
 
   // Add custom scripts here that would be placed in <script> tags
