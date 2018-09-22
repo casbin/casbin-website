@@ -156,6 +156,9 @@ const siteConfig = {
 
   // Allow URLs with no .html extension
   cleanUrl: true,
+
+  // Enable the docs showing last update time
+  enableUpdateTime: true,
 };
 
 module.exports = siteConfig;
