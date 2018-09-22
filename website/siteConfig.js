@@ -153,6 +153,9 @@ const siteConfig = {
 
   // URL for editing docs, usage example: editUrl + 'en/doc1.md'.
   editUrl: 'https://github.com/casbin/casbin-website/edit/master/docs/',
+
+  // Allow URLs with no .html extension
+  cleanUrl: true,
 };
 
 module.exports = siteConfig;
