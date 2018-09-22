@@ -159,6 +159,9 @@ const siteConfig = {
 
   // Enable the docs showing last update time
   enableUpdateTime: true,
+
+  // Enable the scroll to top button at the bottom of your site
+  scrollToTop: true,
 };
 
 module.exports = siteConfig;
