@@ -1,6 +1,6 @@
 ---
-id: go-quick-start
-title: Go
+id: get-started
+title: Get Started
 ---
 
 New a Casbin enforcer with a model file and a policy file:

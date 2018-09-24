@@ -1,23 +1,21 @@
 {
   "docs": {
-    "Get Started": [
+    "The Basics": [
       "overview",
+      "get-started",
       "how-it-works",
-      "supported-models",
-      "syntax-for-models",
       "policy-management",
       "maintain",
       "online-editor",
       "api"
     ],
+    "Model":[
+      "supported-models",
+      "syntax-for-models"
+    ],
     "Storage":[
       "model-storage",
       "policy-storage"
-    ],
-    "Quick Start":[
-      "go-quick-start",
-      "java-quick-start",
-      "node-quick-start"
     ],
     "Tutorials":[
       "go-tutorial",
