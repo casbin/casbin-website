@@ -3,7 +3,7 @@ id: overview
 title: Overview
 ---
 
-Casbin is a powerful and efficient open-source access control library for Golang projects. It provides support for enforcing authorization based on various access control models.
+Casbin is a powerful and efficient open-source access control library. It provides support for enforcing authorization based on various access control models.
 
 ## All the languages supported by Casbin:
 

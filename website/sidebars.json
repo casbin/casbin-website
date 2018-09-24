@@ -1,6 +1,6 @@
 {
   "docs": {
-    "Introduction": [
+    "Get Started": [
       "overview",
       "how-it-works",
       "supported-models",
@@ -21,11 +21,6 @@
       "go-tutorial",
       "java-tutorial",
       "node-tutorial"
-    ],
-    "Policy Persistence":[
-      "go-policy-persistence",
-      "java-policy-persistence",
-      "node-policy-persistence"
     ],
     "Our adopters":[
       "go-adopter",
