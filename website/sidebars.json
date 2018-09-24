@@ -6,11 +6,14 @@
       "supported-models",
       "syntax-for-models",
       "policy-management",
-      "persistence",
       "maintain",
       "features",
       "online-editor",
       "api"
+    ],
+    "Storage":[
+      "model-storage",
+      "policy-storage"
     ],
     "Quick Start":[
       "go-quick-start",
