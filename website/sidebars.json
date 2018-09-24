@@ -4,10 +4,7 @@
       "overview",
       "get-started",
       "how-it-works",
-      "policy-management",
-      "maintain",
-      "online-editor",
-      "api"
+      "tutorials"
     ],
     "Model":[
       "supported-models",
@@ -17,10 +14,11 @@
       "model-storage",
       "policy-storage"
     ],
-    "Tutorials":[
-      "go-tutorial",
-      "java-tutorial",
-      "node-tutorial"
+    "Management":[
+      "policy-management",
+      "maintain",
+      "online-editor",
+      "api"
     ],
     "Our adopters":[
       "go-adopter",

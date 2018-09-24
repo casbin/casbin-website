@@ -1,6 +1,6 @@
 ---
-id: go-tutorial
-title: Go
+id: tutorials
+title: Tutorials
 ---
 
 - [Basic Role-Based HTTP Authorization in Go with Casbin](https://zupzup.org/casbin-http-role-auth) (or [Chinese translation](https://studygolang.com/articles/12323))
