@@ -1,6 +1,6 @@
 ---
-id: maintain
-title: Maintain
+id: log-error
+title: Log & Error Handling
 ---
 
 ## Logging

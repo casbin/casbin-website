@@ -16,7 +16,7 @@
     ],
     "Management":[
       "policy-management",
-      "maintain",
+      "log-error",
       "online-editor",
       "api"
     ],
