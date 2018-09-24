@@ -20,10 +20,8 @@
       "online-editor",
       "api"
     ],
-    "Our adopters":[
-      "go-adopter",
-      "java-adopter",
-      "node-adopter"
+    "More Resources":[
+      "adopters"
     ]
   }
 }
