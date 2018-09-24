@@ -87,8 +87,9 @@ const siteConfig = {
     {doc: 'overview', label: 'Docs'},
     {doc: 'api', label: 'API'},
     {blog: true, label: 'Blog'},
-    {search: true},
-    {href: 'https://github.com/casbin', label: "GitHub"}
+    {languages: true},
+    // {search: true},
+    {href: 'https://github.com/casbin', label: "GitHub"},
   ],
 
   // If you have users set above, you add it here:
@@ -171,6 +172,8 @@ const siteConfig = {
 
   // Enable the scroll to top button at the bottom of your site
   scrollToTop: true,
+
+  translationRecruitingLink: 'https://crowdin.com/project/casbin',
 };
 
 module.exports = siteConfig;

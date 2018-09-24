@@ -1,6 +1,6 @@
 # [casbin.org](https://casbin.org/) [![Build Status](https://travis-ci.org/casbin/casbin-website.svg?branch=master)](https://travis-ci.org/casbin/casbin-website)
 
-This repo contains the site configuration and documentation powering Casbin's website: https://casbin.org
+The site configuration and documentation powering Casbin's website: https://casbin.org
 
 ## Getting started
 
@@ -163,6 +163,34 @@ open `http://localhost:3000/casbin/versions.html` to see other versions.
 1.  If possible, include screenshots of visual changes.
 
 ---
+
+## Translation
+
+[Crowdin](https://crowdin.com/project/casbin) is used for Casbin website's translation.
+
+### Manually trigger Crowdin
+
+- Install Crowdin CLI:
+
+https://support.crowdin.com/cli-tool/
+
+- Setup environment variable:
+
+```
+CROWDIN_DOCUSAURUS_API_KEY = XXX
+```
+
+- Upload:
+
+```
+crowdin --config ../crowdin.yaml upload sources --auto-update -b master
+```
+
+- Download:
+
+```
+crowdin --config ../crowdin.yaml download -b master
+```
 
 ## License
 
