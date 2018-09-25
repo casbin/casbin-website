@@ -5,21 +5,19 @@ title: Model Storage
 
 Unlike the policy, the model can be loaded only, it cannot be saved. Because we think the model is not a dynamic component and should not be modified at run-time, so we don't implement an API to save the model into a storage.
 
-However, the good news is, we provide several ways to load a model statically or dynamically:
+However, the good news is, we provide several ways to load a model either statically or dynamically:
 
-1. Load from a model file (.CONF). This is the most common way to use Casbin:
+## Load model from .CONF file
+
+This is the most common way to use Casbin. It's easy to understand for beginners and convenient for sharing when you ask Casbin team for help.
 
     ```go
     e := casbin.NewEnforcer("examples/basic_model.conf", "examples/basic_policy.csv")
     ```
 
-2. Load from code. Please see: https://github.com/casbin/casbin/wiki/Load-model-from-string
+## Load model from code
 
-3. Load from string. Please see: https://github.com/casbin/casbin/wiki/Load-model-from-string
-
-## Load model from string
-
-The model can be initialized from code instead of using ``.CONF`` file. Here's an example for the RBAC model:
+The model can be initialized dynamically from code instead of using ``.CONF`` file. Here's an example for the RBAC model:
 
 ```go
 // Initialize the model from Go code.
@@ -38,7 +36,9 @@ a := persist.NewFileAdapter("examples/rbac_policy.csv")
 e := casbin.NewEnforcer(m, a)
 ```
 
-Or you can just get the model from one single string:
+## Load model from string
+
+Or you can just get the model from a single multi-line string:
 
 ```go
 // Initialize the model from a string.
@@ -69,7 +69,7 @@ a := persist.NewFileAdapter("examples/rbac_policy.csv")
 e := casbin.NewEnforcer(m, a)
 ```
 
-These two ways are equivalent with the common usage:
+The above two ways are equivalent with the following common use:
 
 [examples/rbac_model.conf](https://github.com/casbin/casbin/blob/master/examples/rbac_model.conf):
 
