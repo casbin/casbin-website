@@ -1,6 +1,7 @@
 ---
 title: node-Casbin: New Member of Casbin Family
 author: Zixuan Liu
+authorTitle: Casbin Maintainer
 authorURL: http://github.com/nodece
 authorImageURL: https://avatars.githubusercontent.com/nodece
 ---

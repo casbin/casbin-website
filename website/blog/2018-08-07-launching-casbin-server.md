@@ -1,6 +1,7 @@
 ---
 title: Casbin Server is Launched!
 author: Helong Zhang
+authorTitle: Casbin Maintainer
 authorURL: http://github.com/BetaCat0
 authorImageURL: https://avatars.githubusercontent.com/BetaCat0
 ---

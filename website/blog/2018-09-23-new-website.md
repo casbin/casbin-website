@@ -1,6 +1,7 @@
 ---
 title: Reworking our Documentation
 author: Yang Luo
+authorTitle: Creator of Casbin
 authorURL: http://github.com/hsluoyz
 authorImageURL: https://avatars.githubusercontent.com/hsluoyz
 ---
