@@ -57,15 +57,9 @@ class Footer extends React.Component {
                target="_blank">
               Project Chat
             </a>
-            <a
-              href="https://twitter.com/CasbinNews"
-              target="_blank"
-              rel="noreferrer noopener">
-              Twitter
-            </a>
           </div>
           <div>
-            <h5>GitHub</h5>
+            <h5>Social</h5>
             <a
               className="github-button"
               href={this.props.config.goRepoUrl}
@@ -109,6 +103,15 @@ class Footer extends React.Component {
               aria-label="Star this project on GitHub">
               node-Casbin
             </a>
+            {this.props.config.twitterUsername && (
+              <div className="social">
+                <a
+                  href={`https://twitter.com/${this.props.config.twitterUsername}`}
+                  className="twitter-follow-button">
+                  Follow @{this.props.config.twitterUsername}
+                </a>
+              </div>
+            )}
           </div>
         </section>
         <section className="copyright">{this.props.config.copyright}</section>

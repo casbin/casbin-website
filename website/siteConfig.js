@@ -144,10 +144,6 @@ const siteConfig = {
   /* On page navigation for the current documentation page */
   onPageNav: 'separate',
 
-  /* Open Graph and Twitter card images */
-  ogImage: 'img/docusaurus.png',
-  twitterImage: 'img/docusaurus.png',
-
   cname: 'casbin.org',
 
   // You may provide arbitrary config keys to be used as needed by your
@@ -174,6 +170,13 @@ const siteConfig = {
   scrollToTop: true,
 
   translationRecruitingLink: 'https://crowdin.com/project/casbin',
+
+  // Twitter
+  twitter: 'true',
+  twitterUsername: 'CasbinNews',
+  /* Open Graph and Twitter card images */
+  ogImage: 'img/casbin.svg',
+  twitterImage: 'img/casbin.svg',
 };
 
 module.exports = siteConfig;
