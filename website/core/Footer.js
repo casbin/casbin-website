@@ -112,6 +112,19 @@ class Footer extends React.Component {
                 </a>
               </div>
             )}
+            {this.props.config.facebookAppId && (
+              <div className="social">
+                <div
+                  className="fb-like"
+                  data-href={this.props.config.url}
+                  data-colorscheme="dark"
+                  data-layout="standard"
+                  data-share="true"
+                  data-width="225"
+                  data-show-faces="false"
+                />
+              </div>
+            )}
           </div>
         </section>
         <section className="copyright">{this.props.config.copyright}</section>

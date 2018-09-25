@@ -177,6 +177,10 @@ const siteConfig = {
   /* Open Graph and Twitter card images */
   ogImage: 'img/casbin.svg',
   twitterImage: 'img/casbin.svg',
+
+  // Facebook
+  facebookAppId: '1354585054683583',
+  facebookComments: true,
 };
 
 module.exports = siteConfig;
