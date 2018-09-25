@@ -35,16 +35,16 @@ class Footer extends React.Component {
           </a>
           <div>
             <h5>Docs</h5>
-            <a href={this.props.config.baseUrl + 'docs/go-quick-start.html'}>
+            <a href={this.props.config.baseUrl + 'docs/get-started'}>
               Getting Started
             </a>
-            <a href={this.props.config.baseUrl + 'docs/api.html'}>
+            <a href={this.props.config.baseUrl + 'docs/api'}>
               API Reference
             </a>
           </div>
           <div>
             <h5>Community</h5>
-            <a href={this.pageUrl('users.html', this.props.language)}>
+            <a href={this.pageUrl('users', this.props.language)}>
               Who's using Casbin?
             </a>
             <a
