@@ -41,6 +41,9 @@ class Footer extends React.Component {
             <a href={this.props.config.baseUrl + 'docs/api'}>
               API Reference
             </a>
+            <a href={this.props.config.baseUrl + 'docs/adopters'}>
+              Middlewares
+            </a>
           </div>
           <div>
             <h5>Community</h5>
