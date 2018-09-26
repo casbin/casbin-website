@@ -36,7 +36,7 @@ class Users extends React.Component {
             </div>
             <div className="logos">{showcase}</div>
             <p>Is your project also using Casbin?</p>
-            <a href="https://github.com/casbin/casbin-website/edit/master/website/siteConfig.js" className="button">
+            <a href="https://github.com/casbin/casbin-website/edit/master/website/data/users.js" className="button">
               Add your company here
             </a>
           </div>
