@@ -47,6 +47,10 @@ class Footer extends React.Component {
             <a href={this.pageUrl('users', this.props.language)}>
               Who's using Casbin?
             </a>
+            <a href="mailto:casbin@googlegroups.com"
+               target="_blank">
+              Mailing List
+            </a>
             <a
               href="https://stackoverflow.com/search?q=casbin"
               target="_blank"
