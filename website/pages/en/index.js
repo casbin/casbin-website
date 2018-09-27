@@ -13,6 +13,7 @@ const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
 
 const siteConfig = require(process.cwd() + '/siteConfig.js');
+const translate = require('../../server/translate.js').translate;
 
 function imgUrl(img) {
   return siteConfig.baseUrl + 'img/' + img;
@@ -59,7 +60,9 @@ const Logo = props => (
 const ProjectTitle = props => (
   <h2 className="projectTitle">
     {siteConfig.title}
-    <small>{siteConfig.tagline}</small>
+    <small>
+      {siteConfig.tagline}
+    </small>
   </h2>
 );
 
@@ -79,12 +82,12 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
-            <Button href={docUrl('overview.html', language)}>Get Started</Button>
+            <Button href={docUrl('overview.html', language)}><translate>Get Started</translate></Button>
             <Button href="https://github.com/casbin/casbin">Golang</Button>
             <Button href="https://github.com/casbin/jcasbin">Java</Button>
             <Button href="https://github.com/sstutz/php-casbin">PHP</Button>
             <Button href="https://github.com/casbin/node-casbin">Node.js</Button>
-            <Button href="/editor">Try Casbin Online Editor</Button>
+            <Button href="/editor"><translate>Try Casbin Online Editor</translate></Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -196,12 +199,16 @@ const Showcase = props => {
 
   return (
     <div className="productShowcaseSection paddingBottom">
-      <h2>{"Who's using Casbin?"}</h2>
-      <p>Hundreds of projects are using Casbin, from established Fortune 500 companies to hot new startups. If you&#x27;re curious to see what can be accomplished Casbin, <a href="/users.html">check out these apps</a>!</p>
+      <h2>
+        <translate>Who's using Casbin?</translate>
+      </h2>
+      <p>
+        <translate>Hundreds of projects are using Casbin, from established Fortune 500 companies to hot new startups. If you&#x27;re curious to see what can be accomplished with Casbin,</translate> <a href="/users.html"><translate>check out these apps!</translate></a>
+      </p>
       <div className="logos">{showcase}</div>
       <div className="more-users">
         <a className="button" href={pageUrl('users.html', props.language)}>
-          More {siteConfig.title} Users
+          <translate>More</translate> {siteConfig.title} <translate>Users</translate>
         </a>
       </div>
     </div>

@@ -11,6 +11,7 @@ const CompLibrary = require('../../core/CompLibrary.js');
 const Container = CompLibrary.Container;
 
 const siteConfig = require(process.cwd() + '/siteConfig.js');
+const translate = require('../../server/translate.js').translate;
 
 class Users extends React.Component {
   render() {
@@ -31,13 +32,19 @@ class Users extends React.Component {
         <Container padding={['bottom', 'top']}>
           <div className="showcaseSection">
             <div className="prose">
-              <h1>Who's using Casbin?</h1>
-              <p>Hundreds of projects are using Casbin, from established Fortune 500 companies to hot new startups. If you&#x27;re curious to see what can be accomplished Casbin, check out these apps!</p>
+              <h1>
+                <translate>Who's using Casbin?</translate>
+              </h1>
+              <p>
+                <translate>Hundreds of projects are using Casbin, from established Fortune 500 companies to hot new startups. If you&#x27;re curious to see what can be accomplished Casbin, check out these apps!</translate>
+              </p>
             </div>
             <div className="logos">{showcase}</div>
-            <p>Is your project also using Casbin?</p>
+            <p>
+              <translate>Is your project also using Casbin?</translate>
+            </p>
             <a href="https://github.com/casbin/casbin-website/edit/master/website/data/users.js" className="button">
-              Add your company here
+              <translate>Add your company here</translate>
             </a>
           </div>
         </Container>
