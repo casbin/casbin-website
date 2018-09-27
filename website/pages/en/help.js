@@ -12,6 +12,7 @@ const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
 
 const siteConfig = require(process.cwd() + '/siteConfig.js');
+const translate = require('../../server/translate.js').translate;
 
 function docUrl(doc, language) {
   return siteConfig.baseUrl + 'docs/' + (language ? language + '/' : '') + doc;
@@ -22,19 +23,26 @@ class Help extends React.Component {
     let language = this.props.language || '';
     const supportLinks = [
       {
-        content: `Learn more using the [documentation on this site.](${docUrl(
-          'doc1.html',
+        title: 'Browse the docs',
+        content: `Learn more about Casbin using the [official documentation](${docUrl(
+          'overview',
           language
-        )})`,
-        title: 'Browse Docs',
+        )}).`,
       },
       {
-        content: 'Ask questions about the documentation and project',
-        title: 'Join the community',
+        title: 'Gitter',
+        content:
+          'You can join the conversation on [Gitter](https://gitter.im/casbin/Lobby) for contributing help.',
       },
       {
-        content: "Find out what's new with this project",
-        title: 'Stay up to date',
+        title: 'Tencent QQ',
+        content:
+          'You can contact us by joining the QQ group: [546057381](https://shang.qq.com/wpa/qunwpa?idkey=8ac8b91fc97ace3d383d0035f7aa06f7d670fd8e8d4837347354a31c18fac885).',
+      },
+      {
+        title: 'GitHub',
+        content:
+          'At our [GitHub repo](https://github.com/casbin/casbin) Browse and submit [issues](https://github.com/casbin/casbin/issues) or [pull requests](https://github.com/casbin/casbin/pulls) for bugs you find or any new features you may want implemented.',
       },
     ];
 
@@ -43,15 +51,23 @@ class Help extends React.Component {
         <Container className="mainContainer documentContainer postContainer">
           <div className="post">
             <header className="postHeader">
-              <h1>Need help?</h1>
+              <h1>
+                <translate>Need help?</translate>
+              </h1>
             </header>
-            <p>This project is maintained by a dedicated group of people.</p>
-            <GridBlock contents={supportLinks} layout="threeColumn" />
+            <p>
+              <translate desc="statement made to reader">
+                If you need help with Casbin, you can try one of the mechanisms below.
+              </translate>
+            </p>
+            <GridBlock contents={supportLinks} layout="fourColumn" />
           </div>
         </Container>
       </div>
     );
   }
 }
+
+Help.title = 'Help';
 
 module.exports = Help;
