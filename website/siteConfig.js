@@ -33,7 +33,7 @@ const siteConfig = {
     {doc: 'api', label: 'API'},
     {blog: true, label: 'Blog'},
     {languages: true},
-    // {search: true},
+    {search: true},
     {href: 'https://github.com/casbin', label: "GitHub"},
   ],
 
@@ -44,6 +44,14 @@ const siteConfig = {
   headerIcon: 'img/casbin.svg',
   footerIcon: 'img/casbin.svg',
   favicon: 'img/favicon.png',
+
+  algolia: {
+    apiKey: '2b87bf88e794912bdbe1b08420681efa',
+    indexName: 'casbin',
+    algoliaOptions: {
+      facetFilters: ['language:LANGUAGE'],
+    },
+  },
 
   /* colors for website */
   colors: {
