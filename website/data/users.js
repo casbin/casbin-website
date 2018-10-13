@@ -53,4 +53,10 @@ module.exports = [
     infoLink: 'https://www.verizon.com',
     pinned: true,
   },
+  {
+    caption: 'Red Hat',
+    image: '/img/users/redhat.png',
+    infoLink: 'https://github.com/skydive-project/skydive',
+    pinned: true,
+  },
 ];
