@@ -11,7 +11,7 @@ Language | Project | Status
 ----|------|----
 Golang | [Casbin](https://github.com/casbin/casbin) | production-ready
 Java | [jCasbin](https://github.com/casbin/jcasbin) | production-ready
-PHP | [PHP-Casbin](https://github.com/sstutz/php-casbin) | experimental
+PHP | [PHP-Casbin](https://github.com/php-casbin/php-casbin) | experimental
 Node.js | [node-casbin](https://github.com/casbin/node-casbin) | production-ready
 C++ | xCasbin | WIP
 

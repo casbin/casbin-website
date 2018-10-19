@@ -105,7 +105,7 @@ const siteConfig = {
   repoUrl: 'https://github.com/casbin/casbin',
   goRepoUrl: 'https://github.com/casbin/casbin',
   javaRepoUrl: 'https://github.com/casbin/jcasbin',
-  phpRepoUrl: 'https://github.com/sstutz/php-casbin',
+  phpRepoUrl: 'https://github.com/php-casbin/php-casbin',
   nodeRepoUrl: 'https://github.com/casbin/node-casbin',
 
   // Tracking ID of Google Analytics
