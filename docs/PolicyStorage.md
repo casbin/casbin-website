@@ -5,7 +5,7 @@ title: Policy Storage
 
 In Casbin, the policy storage is implemented as an adapter (aka middleware for Casbin). A Casbin user can use an adapter to load policy rules from a storage (aka ``LoadPolicy()``), or save policy rules to it (aka ``SavePolicy()``). To keep light-weight, we don't put adapter code in the main library.
 
-All supported adapters can be found in: https://github.com/casbin/casbin/wiki/Supported-adapters
+All supported adapters can be found [here](https://github.com/casbin/casbin/blob/master/README.md#policy-persistence).
 
 Here are some things you need to know:
 
