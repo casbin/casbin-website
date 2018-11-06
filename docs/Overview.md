@@ -7,13 +7,10 @@ Casbin is a powerful and efficient open-source access control library. It provid
 
 ## All the languages supported by Casbin:
 
-Language | Project | Status
-----|------|----
-Golang | [Casbin](https://github.com/casbin/casbin) | production-ready
-Java | [jCasbin](https://github.com/casbin/jcasbin) | production-ready
-PHP | [PHP-Casbin](https://github.com/php-casbin/php-casbin) | experimental
-Node.js | [node-casbin](https://github.com/casbin/node-casbin) | production-ready
-C++ | xCasbin | WIP
+![golang](assets/langs/golang.png) | ![java](assets/langs/java.png) | ![nodejs](assets/langs/nodejs.png) | ![php](assets/langs/php.png)
+----|----|----|----
+[Casbin](https://github.com/casbin/casbin) | [jCasbin](https://github.com/casbin/jcasbin) | [node-casbin](https://github.com/casbin/node-casbin) | [PHP-Casbin](https://github.com/php-casbin/php-casbin)
+production-ready | production-ready | production-ready | experimental
 
 ## Features
 
