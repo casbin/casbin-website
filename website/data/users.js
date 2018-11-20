@@ -19,7 +19,7 @@ module.exports = [
   },
   {
     caption: 'Banzai Pipeline',
-    image: '/img/users/banzai.png',
+    image: '/img/users/banzai.jpg',
     infoLink: 'https://github.com/banzaicloud/pipeline',
     pinned: true,
   },
