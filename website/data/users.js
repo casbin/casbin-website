@@ -59,4 +59,10 @@ module.exports = [
     infoLink: 'https://github.com/skydive-project/skydive',
     pinned: true,
   },
+  {
+    caption: 'ETH Zürich',
+    image: '/img/users/eth.jpg',
+    infoLink: 'https://github.com/netsec-ethz/2SMS',
+    pinned: true,
+  },
 ];
