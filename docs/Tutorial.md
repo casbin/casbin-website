@@ -6,6 +6,7 @@ title: Tutorials
 ### PERM Meta-Model (Policy, Effect, Request, Matchers)
 
 - [Modeling Authorization with PERM in Casbin](https://vicarie.in/posts/generalized-authz.html)
+- [Permission management with Casbin (in Chinese)](http://www.cnblogs.com/wang_yb/archive/2018/11/20/9987397.html)
 
 ### HTTP & RESTful
 
@@ -27,6 +28,7 @@ title: Tutorials
 ### Iris
 
 - [Iris + Casbin: Practice for permission management (in Chinese)](https://zxc0328.github.io/2018/05/14/casbin-iris/)
+- [Role-based access control for HTTP based on Casbin (in Chinese)](https://studyiris.com/example/exper/casbin.html)
 
 ### Banzai Cloud
 
