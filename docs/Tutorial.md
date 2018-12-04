@@ -24,6 +24,7 @@ title: Tutorials
 
 - [Backend API with Go: 1. Authentication based on JWT (in Chinese)](https://studygolang.com/topics/6998)
 - [Backend API with Go: 2. Authorization based on Casbin (in Chinese)](https://studygolang.com/topics/6999)
+- [Using Go's authorization library Casbin with Gin and GORM (in Japanese)](https://www.zaneli.com/blog/20181203)
 
 ### Iris
 
