@@ -65,4 +65,10 @@ module.exports = [
     infoLink: 'https://github.com/netsec-ethz/2SMS',
     pinned: true,
   },
+  {
+    caption: 'T-Mobile',
+    image: '/img/users/t-mobile.png',
+    infoLink: 'https://github.com/tmobile/jazz-installer/pull/433',
+    pinned: true,
+  },
 ];
