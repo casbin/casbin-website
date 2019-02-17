@@ -25,3 +25,18 @@ script:
   - crowdin --config crowdin.yaml download -b master
   # build and publish website
   - cd website && yarn install && GIT_USER="${GH_NAME}" yarn run publish-gh-pages
+
+
+deploy:
+    provider: pages
+    repo: casbin/casbin-website
+    skip-cleanup: true
+    github-token: $GITHUB_PUBLISH_TOKEN
+    keep-history: true
+    local-dir: website
+    target-branch: gh-pages
+    name: casbin Bot
+    verbose: true
+    on:
+        repo: casbin/casbin-website
+        branch: master
