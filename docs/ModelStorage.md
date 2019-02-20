@@ -11,9 +11,9 @@ However, the good news is, we provide several ways to load a model either static
 
 This is the most common way to use Casbin. It's easy to understand for beginners and convenient for sharing when you ask Casbin team for help.
 
-    ```go
-    e := casbin.NewEnforcer("examples/basic_model.conf", "examples/basic_policy.csv")
-    ```
+```go
+e := casbin.NewEnforcer("examples/basic_model.conf", "examples/basic_policy.csv")
+```
 
 ## Load model from code
 
