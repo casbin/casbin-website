@@ -8,7 +8,8 @@
     ],
     "Model":[
       "supported-models",
-      "syntax-for-models"
+      "syntax-for-models",
+      "abac"
     ],
     "Storage":[
       "model-storage",
