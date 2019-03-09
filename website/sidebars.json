@@ -9,6 +9,7 @@
     "Model":[
       "supported-models",
       "syntax-for-models",
+      "rbac",
       "abac"
     ],
     "Storage":[
