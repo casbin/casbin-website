@@ -73,3 +73,22 @@ m = g(r.sub, p.sub, r.dom) && r.dom == p.dom && r.obj == p.obj && r.act == p.act
 ```
 
 Please see the [rbac_with_domains_model.conf](https://github.com/casbin/casbin/blob/master/examples/rbac_with_domains_model.conf) for examples.
+
+## Role hierarchy
+
+Casbin's RBAC supports RBAC1's role hierarchy feature, meaning if ``alice`` has ``role1``, ``role1`` has ``role2``, then ``alice`` will also have ``role2`` and inherit its permissions.
+
+Here is a concept called hierarchy level. So the hierarchy level for this example is 2. For the built-in role manager in Casbin, you can specify the max hierarchy level. The default value is 10. It means an end user like ``alice`` can only inherit 10 levels of roles.
+
+```go
+// NewRoleManager is the constructor for creating an instance of the
+// default RoleManager implementation.
+func NewRoleManager(maxHierarchyLevel int) rbac.RoleManager {
+	rm := RoleManager{}
+	rm.allRoles = &sync.Map{}
+	rm.maxHierarchyLevel = maxHierarchyLevel
+	rm.hasPattern = false
+
+	return &rm
+}
+```
