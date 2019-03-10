@@ -10,6 +10,7 @@
       "supported-models",
       "syntax-for-models",
       "rbac",
+      "rbac-with-domains",
       "abac"
     ],
     "Storage":[
