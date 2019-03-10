@@ -17,10 +17,10 @@
       "policy-storage"
     ],
     "Management":[
-      "policy-management",
+      "api",
+      "admin-portal",
       "log-error",
-      "online-editor",
-      "api"
+      "online-editor"
     ],
     "More Resources":[
       "adopters"
