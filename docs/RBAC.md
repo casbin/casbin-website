@@ -93,6 +93,38 @@ func NewRoleManager(maxHierarchyLevel int) rbac.RoleManager {
 }
 ```
 
+## Use pattern matching in RBAC
+
+Sometimes, you want some subjects (or objects) with the specific pattern to be automatically granted to a role. Pattern matching functions in RBAC can help you do that. A pattern matching function shares the same parameters and return value as the previous [matcher function](https://casbin.org/docs/en/syntax-for-models#functions-in-matchers).
+
+We know that normally RBAC is expressed as ``g(r.sub, p.sub)`` in matcher. Then we will use policy like:
+
+```
+p, alice, book_group, read
+g, /book/1, book_group
+g, /book/2, book_group
+```
+
+So ``alice`` can read all books including ``book 1`` and ``book 2``. But there can be thousands of books and it's very tedious to add each book to the book role (or group) with one ``g`` policy rule.
+
+But with pattern matching functions, you can write the policy with only one line:
+
+```
+g, /book/:id, book_group
+```
+
+Casbin will automatically match ``/book/1`` and ``/book/2`` into pattern ``/book/:id`` for you. You only need to register the function with the enforcer like:
+
+```go
+e.rm.(*defaultrolemanager.RoleManager).AddMatchingFunc("KeyMatch2", util.KeyMatch2)
+```
+
+You can see the full example [here](https://github.com/casbin/casbin/blob/dbdb6cbe2e7a80863e4951f9ff36da07fef01b75/model_test.go#L278-L307).
+
+it's notable that:
+
+1. Only the 1st arg (aka the user) in ``g`` supports pattern functions. You are using it in 3rd arg (domain), which is currently not supported.
+
 ## Role manager
 
 The role manager is used to manage the RBAC role hierarchy (user-role mapping) in Casbin. A role manager can retrieve the role data from Casbin policy rules or external sources such as LDAP, Okta, Auth0, Azure AD, etc. We support different implementations of a role manager. To keep light-weight, we don't put role manager code in the main library (except the default role manager). A complete list of Casbin role managers is provided as below. Any 3rd-party contribution on a new role manager is welcomed, please inform us and I will put it in this list:)
