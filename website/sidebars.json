@@ -19,6 +19,7 @@
     "Management":[
       "api",
       "admin-portal",
+      "service",
       "log-error",
       "online-editor"
     ],
