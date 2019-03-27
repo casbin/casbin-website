@@ -5,8 +5,6 @@ title: Adapters
 
 In Casbin, the policy storage is implemented as an adapter (aka middleware for Casbin). A Casbin user can use an adapter to load policy rules from a storage (aka ``LoadPolicy()``), or save policy rules to it (aka ``SavePolicy()``). To keep light-weight, we don't put adapter code in the main library.
 
-All supported adapters can be found [here](https://github.com/casbin/casbin/blob/master/README.md#policy-persistence).
-
 Here are some things you need to know:
 
 1. If ``casbin.NewEnforcer()`` is called with an explicit or implicit adapter, the policy will be loaded automatically.
@@ -84,9 +82,7 @@ e.SavePolicy()
 
 ## Supported adapters
 
-In Casbin, the policy storage is implemented as an adapter (aka middleware for Casbin). To keep light-weight, we don't put adapter code in the main library. A complete list of Casbin adapters is provided as below.
-
-**Note**: Any 3rd-party contribution on a new adapter is welcomed, please inform us and we will put it in this list:)
+A complete list of Casbin adapters is provided as below. Any 3rd-party contribution on a new adapter is welcomed, please inform us and we will put it in this list:)
 
 Adapter | Type | Author | Description
 ----|------|----|----
@@ -201,4 +197,4 @@ Casbin enforcer will ignore the ``not implemented`` error when calling these thr
 
 ### Who is responsible to create the DB?
 
-As a convention, the adapter should be able to automatically create a database named ``casbin``  if it doesn't exist and use it for policy storage. Please use the MySQL adapter as a reference implementation: https://github.com/casbin/mysql-adapter
+As a convention, the adapter should be able to automatically create a database named ``casbin``  if it doesn't exist and use it for policy storage. Please use the Xorm adapter as a reference implementation: https://github.com/casbin/xorm-adapter
