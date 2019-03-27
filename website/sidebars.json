@@ -19,6 +19,7 @@
     ],
     "Extensions":[
       "adapters",
+      "watchers",
       "role-managers"
     ],
     "Management":[
