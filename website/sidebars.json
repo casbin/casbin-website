@@ -18,7 +18,8 @@
       "policy-storage"
     ],
     "Extensions":[
-      "adapters"
+      "adapters",
+      "role-managers"
     ],
     "Management":[
       "api",
