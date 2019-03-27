@@ -17,6 +17,9 @@
       "model-storage",
       "policy-storage"
     ],
+    "Extensions":[
+      "adapters"
+    ],
     "Management":[
       "api",
       "admin-portal",
