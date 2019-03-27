@@ -18,12 +18,6 @@ module.exports = [
     pinned: true,
   },
   {
-    caption: 'Banzai Pipeline',
-    image: '/img/users/banzai.jpg',
-    infoLink: 'https://github.com/banzaicloud/pipeline',
-    pinned: true,
-  },
-  {
     caption: 'Orange Gobis',
     image: '/img/users/orange.png',
     infoLink: 'https://github.com/orange-cloudfoundry/gobis',
