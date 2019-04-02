@@ -22,8 +22,11 @@
       "watchers",
       "role-managers"
     ],
+    "API": [
+      "management-api",
+      "rbac-api"
+    ],
     "Management":[
-      "api",
       "admin-portal",
       "service",
       "log-error",
