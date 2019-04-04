@@ -2,6 +2,7 @@
   "docs": {
     "The Basics": [
       "overview",
+      "installation",
       "get-started",
       "how-it-works",
       "tutorials"
