@@ -3,10 +3,16 @@ id: tutorials
 title: Tutorials
 ---
 
+Some tutorials are for the Casbin's model and work for all Casbin implementations in different languages. Some other tutorials are language-specific.
+
 ### PERM Meta-Model (Policy, Effect, Request, Matchers)
 
 - [Modeling Authorization with PERM in Casbin](https://vicarie.in/posts/generalized-authz.html)
 - [Permission management with Casbin (in Chinese)](http://www.cnblogs.com/wang_yb/archive/2018/11/20/9987397.html)
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
 
 ### HTTP & RESTful
 
@@ -42,3 +48,20 @@ title: Tutorials
 ### GShark
 
 - [GShark: Scan for sensitive information in Github easily and effectively (in Chinese)](https://mp.weixin.qq.com/s?__biz=MzI3MjA3MTY3Mw==&mid=2247483770&idx=1&sn=9f02c2803e1c946e8c23b16ff3eba757&chksm=eb396fecdc4ee6fa2f378e846f354f45acf6e6f540cfd54190e9353df47c7707e3a2aadf714f&token=115330850&lang=zh_CN#rd)
+
+<!--Java-->
+
+### SprintBoot
+
+- [jCasbin: a more light-weight permission management solution (in Chinese)](https://blog.csdn.net/waynelee0809/article/details/85702551)
+- [Integrating jCasbin with JFinal (in Chinese)](http://www.jfinal.com/share/842)
+
+<!--Node.js-->
+
+<!--PHP-->
+
+<!--Python-->
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+
