@@ -5,6 +5,21 @@ title: Tutorials
 
 Some tutorials are for the Casbin's model and work for all Casbin implementations in different languages. Some other tutorials are language-specific.
 
+### Our Paper
+
+- [PML: An Interpreter-Based Access Control Policy Language for Web Services](https://arxiv.org/abs/1903.09756)
+
+This paper digs deeply into the design details about Casbin. Please cite the following BibTex if you use Casbin/PML as a reference in your paper:
+
+```bibtex
+@article{luo2019pml,
+  title={PML: An Interpreter-Based Access Control Policy Language for Web Services},
+  author={Luo, Yang and Shen, Qingni and Wu, Zhonghai},
+  journal={arXiv preprint arXiv:1903.09756},
+  year={2019}
+}
+```
+
 ### PERM Meta-Model (Policy, Effect, Request, Matchers)
 
 - [Modeling Authorization with PERM in Casbin](https://vicarie.in/posts/generalized-authz.html)
