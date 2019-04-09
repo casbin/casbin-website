@@ -52,5 +52,8 @@ Name | Description
 [ThinkPHP](http://www.thinkphp.cn/) | The ThinkPHP framework, via plugin: [think-casbin](https://github.com/php-casbin/think-casbin)
 
 <!--Python-->
+Name | Description
+----|----
+[Django](https://www.djangoproject.com/) | A high-level Python Web framework, via plugin: [django-casbin](https://github.com/pycasbin/django-casbin)
 
 <!--END_DOCUSAURUS_CODE_TABS-->
