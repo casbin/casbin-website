@@ -9,6 +9,8 @@ Some tutorials are for the Casbin's model and work for all Casbin implementation
 
 - [Modeling Authorization with PERM in Casbin](https://vicarie.in/posts/generalized-authz.html)
 - [Permission management with Casbin (in Chinese)](http://www.cnblogs.com/wang_yb/archive/2018/11/20/9987397.html)
+- [Design of System Permissions (in Chinese)](https://github.com/xizhibei/blog/issues/101)
+- [Casbin: A Permission Engine (in Chinese)](https://github.com/xizhibei/blog/issues/102)
 
 <!--DOCUSAURUS_CODE_TABS-->
 
