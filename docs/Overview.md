@@ -17,7 +17,24 @@ production-ready | production-ready | production-ready | production-ready
 [PyCasbin](https://github.com/casbin/pycasbin) | [Casbin4D](https://github.com/casbin4d/Casbin4D) | [Casbin-Net](https://github.com/Devolutions/casbin-net) | [Casbin-RS](https://github.com/Devolutions/casbin-rs)
 production-ready | experimental | WIP | WIP
 
-## Features
+## Feature Set for Different Languages
+
+Feature | Go | Java | Node.js | PHP | Python | Delphi
+----|----|----|----|----|----|----
+Enforcement | Y | Y | Y | Y | Y | Y
+RBAC | Y | Y | Y | Y | Y | Y
+ABAC | Y | Y | Y | Y | Y | Y
+Adapter | Y | Y | Y | Y | Y | Y
+Management API | Y | Y | Y | Y | | Y
+RBAC API | Y | Y | Y | Y | | Y
+Filtered Adapter | Y | | Y | Y | Y | |
+Watcher | Y | Y | Y | Y | | Y
+Role Manager | Y | Y | Y | Y | Y | |
+Multi-Threading | Y | | | | | |
+
+We are always working our best to make Casbin have the same set of features for all languages. But the reality is not that beautiful. The current progress is as the above table. "Y" means having the feature. "Y" for Watcher or Role Manager only means having the interface in the core library. Whether there is an available watcher or role manager implementation is another question.
+
+## What is Casbin?
 
 What Casbin does:
 
