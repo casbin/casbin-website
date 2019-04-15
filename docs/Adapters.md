@@ -124,6 +124,7 @@ Adapter | Type | Author | Description
 [Waterline Adapter](https://github.com/node-casbin/waterline-adapter) | ORM | Casbin | MySQL, MongoDB, neDB, Postgres are supported by [Waterline](https://github.com/balderdashy/waterline)
 [TypeORM Adapter](https://github.com/node-casbin/typeorm-adapter) | ORM | Casbin | MySQL, PostgreSQL, MariaDB, SQLite, MS SQL Server, Oracle, WebSQL, MongoDB are supported by [TypeORM](https://github.com/typeorm/typeorm)
 [Mongoose Adapter](https://github.com/elasticio/casbin-mongoose-adapter) | ORM | [elastic.io](https://github.com/elasticio) | MongoDB is supported by [Mongoose](https://mongoosejs.com/)
+[Knex Adapter](https://github.com/sarneeh/casbin-knex-adapter) | ORM | [@sarneeh](https://github.com/sarneeh) | MSSQL, MySQL, PostgreSQL, SQLite3, Oracle are supported by [Knex.js](https://knexjs.org/)
 
 <!--PHP-->
 Adapter | Type | Author | Description
