@@ -24,6 +24,7 @@ This paper digs deeply into the design details about Casbin. Please cite the fol
 
 - [Modeling Authorization with PERM in Casbin](https://vicarie.in/posts/generalized-authz.html)
 - [Permission management with Casbin (in Chinese)](http://www.cnblogs.com/wang_yb/archive/2018/11/20/9987397.html)
+- [Analysis of Casbin (in Chinese)](https://www.cnblogs.com/xiaohunshi/p/10372881.html)
 - [Design of System Permissions (in Chinese)](https://github.com/xizhibei/blog/issues/101)
 - [Casbin: A Permission Engine (in Chinese)](https://github.com/xizhibei/blog/issues/102)
 
