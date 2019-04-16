@@ -62,7 +62,7 @@ module.exports = [
   {
     caption: 'T-Mobile',
     image: '/img/users/t-mobile.png',
-    infoLink: 'https://github.com/tmobile/jazz-installer/pull/433',
+    infoLink: 'https://github.com/tmobile/jazz',
     pinned: true,
   },
 ];
