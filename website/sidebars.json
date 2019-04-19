@@ -16,7 +16,8 @@
     ],
     "Storage":[
       "model-storage",
-      "policy-storage"
+      "policy-storage",
+      "policy-subset-loading"
     ],
     "Extensions":[
       "adapters",
