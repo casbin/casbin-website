@@ -28,6 +28,9 @@
       "management-api",
       "rbac-api"
     ],
+    "Advanced Usage": [
+      "multi-threading"
+    ],
     "Management":[
       "admin-portal",
       "service",
