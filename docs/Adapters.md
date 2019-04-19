@@ -14,32 +14,32 @@ A complete list of Casbin adapters is provided as below. Any 3rd-party contribut
 <!--Go-->
 Adapter | Type | Author | AutoSave | Description
 ----|------|----|----|----
-[File Adapter (built-in)](https://casbin.org/docs/en/policy-storage#file-adapter-built-in) | File | Casbin | No | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files
-[Filtered File Adapter (built-in)](https://github.com/casbin/casbin#policy-enforcement-at-scale) | File | [@faceless-saint](https://github.com/faceless-saint) | No | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files with policy subset loading support
-[Xorm Adapter](https://github.com/casbin/xorm-adapter) | ORM | Casbin | Yes | MySQL, PostgreSQL, TiDB, SQLite, SQL Server, Oracle are supported by [Xorm](https://github.com/go-xorm/xorm/)
-[Gorm Adapter](https://github.com/casbin/gorm-adapter) | ORM | Casbin | Yes | MySQL, PostgreSQL, Sqlite3, SQL Server are supported by [Gorm](https://github.com/jinzhu/gorm/)
-[Beego ORM Adapter](https://github.com/casbin/beego-orm-adapter) | ORM | Casbin | Yes | MySQL, PostgreSQL, Sqlite3 are supported by [Beego ORM](https://beego.me/docs/mvc/model/overview.md)
-[MongoDB Adapter](https://github.com/casbin/mongodb-adapter) | NoSQL | Casbin | Yes | For [MongoDB](https://www.mongodb.com)
-[RQLite Adapter](https://github.com/edomosystems/rqlite-adapter) | SQL | [EDOMO Systems](https://github.com/edomosystems) | Yes | For [RQLite](https://github.com/rqlite/rqlite/)
-[RethinkDB Adapter](https://github.com/adityapandey9/rethinkdb-adapter) | NoSQL | [@adityapandey9](https://github.com/adityapandey9) | Yes | For [RethinkDB](https://rethinkdb.com/)
-[Cassandra Adapter](https://github.com/casbin/cassandra-adapter) | NoSQL | Casbin | No | For [Apache Cassandra DB](http://cassandra.apache.org)
-[GCP Datastore Adapter](https://github.com/livingpackets/datastore-adapter) | NoSQL | [LivingPackets](https://github.com/livingpackets) | No | For [Google Cloud Platform Datastore](https://cloud.google.com/datastore/)
-[Consul Adapter](https://github.com/ankitm123/consul-adapter) | KV store | [@ankitm123](https://github.com/ankitm123) | No | For [HashiCorp Consul](https://www.consul.io/)
-[Redis Adapter](https://github.com/casbin/redis-adapter) | KV store | Casbin | No | For [Redis](https://redis.io/)
-[Etcd Adapter](https://github.com/sebastianliu/etcd-adapter) | KV store | Casbin | No | For [etcd](https://github.com/coreos/etcd)
-[Protobuf Adapter](https://github.com/casbin/protobuf-adapter) | Stream | Casbin | No | For [Google Protocol Buffers](https://developers.google.com/protocol-buffers/)
-[JSON Adapter](https://github.com/casbin/json-adapter) | String | Casbin | No | For [JSON](https://www.json.org/)
-[String Adapter](https://github.com/qiangmzsx/string-adapter) | String | [@qiangmzsx](https://github.com/qiangmzsx) | No | For String
-[PostgreSQL Adapter](https://github.com/going/casbin-postgres-adapter) | SQL | [Going](https://github.com/going) | No | For [PostgreSQL](https://www.postgresql.org/)
-[DynamoDB Adapter](https://github.com/HOOQTV/dynacasbin) | NoSQL | [HOOQ](https://github.com/HOOQTV) | No | For [Amazon DynamoDB](https://aws.amazon.com/dynamodb/)
-[Minio/AWS S3 Adapter](https://github.com/Soluto/casbin-minio-adapter) | Object storage | [Soluto](https://github.com/Soluto) | No | For [Minio](https://github.com/minio/minio) and [Amazon S3](https://aws.amazon.com/s3/)
-[Bolt Adapter](https://github.com/wirepair/bolt-adapter) | KV store | [@wirepair](https://github.com/wirepair) | No | For [Bolt](https://github.com/boltdb/bolt)
+[File Adapter (built-in)](https://casbin.org/docs/en/policy-storage#file-adapter-built-in) | File | Casbin | ❌ | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files
+[Filtered File Adapter (built-in)](https://github.com/casbin/casbin#policy-enforcement-at-scale) | File | [@faceless-saint](https://github.com/faceless-saint) | ❌ | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files with policy subset loading support
+[Xorm Adapter](https://github.com/casbin/xorm-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, TiDB, SQLite, SQL Server, Oracle are supported by [Xorm](https://github.com/go-xorm/xorm/)
+[Gorm Adapter](https://github.com/casbin/gorm-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, Sqlite3, SQL Server are supported by [Gorm](https://github.com/jinzhu/gorm/)
+[Beego ORM Adapter](https://github.com/casbin/beego-orm-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, Sqlite3 are supported by [Beego ORM](https://beego.me/docs/mvc/model/overview.md)
+[MongoDB Adapter](https://github.com/casbin/mongodb-adapter) | NoSQL | Casbin | ✅ | For [MongoDB](https://www.mongodb.com)
+[RQLite Adapter](https://github.com/edomosystems/rqlite-adapter) | SQL | [EDOMO Systems](https://github.com/edomosystems) | ✅ | For [RQLite](https://github.com/rqlite/rqlite/)
+[RethinkDB Adapter](https://github.com/adityapandey9/rethinkdb-adapter) | NoSQL | [@adityapandey9](https://github.com/adityapandey9) | ✅ | For [RethinkDB](https://rethinkdb.com/)
+[Cassandra Adapter](https://github.com/casbin/cassandra-adapter) | NoSQL | Casbin | ❌ | For [Apache Cassandra DB](http://cassandra.apache.org)
+[GCP Datastore Adapter](https://github.com/livingpackets/datastore-adapter) | NoSQL | [LivingPackets](https://github.com/livingpackets) | ❌ | For [Google Cloud Platform Datastore](https://cloud.google.com/datastore/)
+[Consul Adapter](https://github.com/ankitm123/consul-adapter) | KV store | [@ankitm123](https://github.com/ankitm123) | ❌ | For [HashiCorp Consul](https://www.consul.io/)
+[Redis Adapter](https://github.com/casbin/redis-adapter) | KV store | Casbin | ❌ | For [Redis](https://redis.io/)
+[Etcd Adapter](https://github.com/sebastianliu/etcd-adapter) | KV store | Casbin | ❌ | For [etcd](https://github.com/coreos/etcd)
+[Protobuf Adapter](https://github.com/casbin/protobuf-adapter) | Stream | Casbin | ❌ | For [Google Protocol Buffers](https://developers.google.com/protocol-buffers/)
+[JSON Adapter](https://github.com/casbin/json-adapter) | String | Casbin | ❌ | For [JSON](https://www.json.org/)
+[String Adapter](https://github.com/qiangmzsx/string-adapter) | String | [@qiangmzsx](https://github.com/qiangmzsx) | ❌ | For String
+[PostgreSQL Adapter](https://github.com/going/casbin-postgres-adapter) | SQL | [Going](https://github.com/going) | ❌ | For [PostgreSQL](https://www.postgresql.org/)
+[DynamoDB Adapter](https://github.com/HOOQTV/dynacasbin) | NoSQL | [HOOQ](https://github.com/HOOQTV) | ❌ | For [Amazon DynamoDB](https://aws.amazon.com/dynamodb/)
+[Minio/AWS S3 Adapter](https://github.com/Soluto/casbin-minio-adapter) | Object storage | [Soluto](https://github.com/Soluto) | ❌ | For [Minio](https://github.com/minio/minio) and [Amazon S3](https://aws.amazon.com/s3/)
+[Bolt Adapter](https://github.com/wirepair/bolt-adapter) | KV store | [@wirepair](https://github.com/wirepair) | ❌ | For [Bolt](https://github.com/boltdb/bolt)
 
 <!--Java-->
 Adapter | Type | Author | AutoSave | Description
 ----|------|----|----|----
-[File Adapter (built-in)](https://github.com/casbin/casbin/wiki/Policy-persistence#file-adapter) | File | jCasbin | No | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files
-[JDBC Adapter](https://github.com/jcasbin/jdbc-adapter) | JDBC | jCasbin | Yes | MySQL, Oracle, PostgreSQL, DB2, Sybase, SQL Server are supported by [JDBC](https://docs.oracle.com/cd/E19226-01/820-7688/gawms/index.html)
+[File Adapter (built-in)](https://github.com/casbin/casbin/wiki/Policy-persistence#file-adapter) | File | jCasbin | ❌ | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files
+[JDBC Adapter](https://github.com/jcasbin/jdbc-adapter) | JDBC | jCasbin | ✅ | MySQL, Oracle, PostgreSQL, DB2, Sybase, SQL Server are supported by [JDBC](https://docs.oracle.com/cd/E19226-01/820-7688/gawms/index.html)
 
 <!--Node.js-->
 Adapter | Type | Author | Description
