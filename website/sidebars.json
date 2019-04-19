@@ -29,7 +29,8 @@
       "rbac-api"
     ],
     "Advanced Usage": [
-      "multi-threading"
+      "multi-threading",
+      "benchmark"
     ],
     "Management":[
       "admin-portal",
