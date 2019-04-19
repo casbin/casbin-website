@@ -14,7 +14,7 @@ A complete list of Casbin adapters is provided as below. Any 3rd-party contribut
 <!--Go-->
 Adapter | Type | Author | AutoSave | Description
 ----|------|----|----|----
-[File Adapter (built-in)](https://casbin.org/docs/en/policy-storage#file-adapter-built-in) | File | Casbin | ❌ | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files
+[File Adapter (built-in)](https://casbin.org/docs/en/adapters#file-adapter-built-in) | File | Casbin | ❌ | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files
 [Filtered File Adapter (built-in)](https://github.com/casbin/casbin#policy-enforcement-at-scale) | File | [@faceless-saint](https://github.com/faceless-saint) | ❌ | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files with policy subset loading support
 [Xorm Adapter](https://github.com/casbin/xorm-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, TiDB, SQLite, SQL Server, Oracle are supported by [Xorm](https://github.com/go-xorm/xorm/)
 [Gorm Adapter](https://github.com/casbin/gorm-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, Sqlite3, SQL Server are supported by [Gorm](https://github.com/jinzhu/gorm/)
@@ -38,31 +38,30 @@ Adapter | Type | Author | AutoSave | Description
 <!--Java-->
 Adapter | Type | Author | AutoSave | Description
 ----|------|----|----|----
-[File Adapter (built-in)](https://github.com/casbin/casbin/wiki/Policy-persistence#file-adapter) | File | jCasbin | ❌ | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files
-[JDBC Adapter](https://github.com/jcasbin/jdbc-adapter) | JDBC | jCasbin | ✅ | MySQL, Oracle, PostgreSQL, DB2, Sybase, SQL Server are supported by [JDBC](https://docs.oracle.com/cd/E19226-01/820-7688/gawms/index.html)
+[File Adapter (built-in)](https://casbin.org/docs/en/adapters#file-adapter-built-in) | File | Casbin | ❌ | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files
+[JDBC Adapter](https://github.com/jcasbin/jdbc-adapter) | JDBC | Casbin | ✅ | MySQL, Oracle, PostgreSQL, DB2, Sybase, SQL Server are supported by [JDBC](https://docs.oracle.com/cd/E19226-01/820-7688/gawms/index.html)
 
 <!--Node.js-->
-Adapter | Type | Author | Description
-----|------|----|----
-[File Adapter (built-in)](https://github.com/casbin/casbin/wiki/Policy-persistence#file-adapter) | File | Casbin | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files
-[Sequelize Adapter](https://github.com/node-casbin/sequelize-adapter) | ORM | Casbin | MySQL, PostgreSQL, SQLite, Microsoft SQL Server are supported by [Sequelize](https://github.com/sequelize/sequelize)
-[Waterline Adapter](https://github.com/node-casbin/waterline-adapter) | ORM | Casbin | MySQL, MongoDB, neDB, Postgres are supported by [Waterline](https://github.com/balderdashy/waterline)
-[TypeORM Adapter](https://github.com/node-casbin/typeorm-adapter) | ORM | Casbin | MySQL, PostgreSQL, MariaDB, SQLite, MS SQL Server, Oracle, WebSQL, MongoDB are supported by [TypeORM](https://github.com/typeorm/typeorm)
-[Mongoose Adapter](https://github.com/elasticio/casbin-mongoose-adapter) | ORM | [elastic.io](https://github.com/elasticio) | MongoDB is supported by [Mongoose](https://mongoosejs.com/)
-[Knex Adapter](https://github.com/sarneeh/casbin-knex-adapter) | ORM | [@sarneeh](https://github.com/sarneeh) | MSSQL, MySQL, PostgreSQL, SQLite3, Oracle are supported by [Knex.js](https://knexjs.org/)
+Adapter | Type | Author | AutoSave | Description
+----|------|----|----|----
+[File Adapter (built-in)](https://casbin.org/docs/en/adapters#file-adapter-built-in) | File | Casbin | ❌ | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files
+[Sequelize Adapter](https://github.com/node-casbin/sequelize-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, SQLite, Microsoft SQL Server are supported by [Sequelize](https://github.com/sequelize/sequelize)
+[TypeORM Adapter](https://github.com/node-casbin/typeorm-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, MariaDB, SQLite, MS SQL Server, Oracle, WebSQL, MongoDB are supported by [TypeORM](https://github.com/typeorm/typeorm)
+[Mongoose Adapter](https://github.com/elasticio/casbin-mongoose-adapter) | ORM | [elastic.io](https://github.com/elasticio) | ✅ | MongoDB is supported by [Mongoose](https://mongoosejs.com/)
+[Knex Adapter](https://github.com/sarneeh/casbin-knex-adapter) | ORM | [@sarneeh](https://github.com/sarneeh) | ✅ | MSSQL, MySQL, PostgreSQL, SQLite3, Oracle are supported by [Knex.js](https://knexjs.org/)
 
 <!--PHP-->
-Adapter | Type | Author | Description
-----|------|----|----
-[File Adapter (built-in)](https://casbin.org/docs/en/policy-storage#file-adapter-built-in) | File | php-casbin | Persistence for [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files
-[Database Adapter](https://github.com/php-casbin/database-adapter) | Database | php-casbin | MySQL, PostgreSQL, SQLite, Microsoft SQL Server are supported by Database Adapter
+Adapter | Type | Author | AutoSave | Description
+----|------|----|----|----
+[File Adapter (built-in)](https://casbin.org/docs/en/adapters#file-adapter-built-in) | File | Casbin | ❌ | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files
+[Database Adapter](https://github.com/php-casbin/database-adapter) | Database | Casbin | ✅ | MySQL, PostgreSQL, SQLite, Microsoft SQL Server are supported by Database Adapter
 
 <!--Python-->
-Adapter | Type | Author | Description
-----|------|----|----
-[File Adapter (built-in)](https://casbin.org/docs/en/policy-storage#file-adapter-built-in) | File | Casbin | Persistence for [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files
-[Filtered File Adapter (built-in)](https://github.com/casbin/casbin#policy-enforcement-at-scale) | File | [@faceless-saint](https://github.com/faceless-saint) | Persistence for [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files with policy subset loading support
-[SQLAlchemy Adapter](https://github.com/pycasbin/sqlalchemy-adapter) | database | Casbin | PostgreSQL,MySQL,SQLite,Oracle,Microsoft SQL Server,Firebird,Sybase are supported by [SQLAlchemy](https://docs.sqlalchemy.org/en/latest/dialects/index.html)
+Adapter | Type | Author | AutoSave | Description
+----|------|----|----|----
+[File Adapter (built-in)](https://casbin.org/docs/en/adapters#file-adapter-built-in) | File | Casbin | ❌ | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files
+[Filtered File Adapter (built-in)](https://github.com/casbin/casbin#policy-enforcement-at-scale) | File | [@faceless-saint](https://github.com/faceless-saint) | ❌ | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files with policy subset loading support
+[SQLAlchemy Adapter](https://github.com/pycasbin/sqlalchemy-adapter) | database | Casbin | ✅ | PostgreSQL, MySQL, SQLite, Oracle, Microsoft SQL Server, Firebird, Sybase are supported by [SQLAlchemy](https://www.sqlalchemy.org/)
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
