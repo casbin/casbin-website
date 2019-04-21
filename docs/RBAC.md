@@ -61,6 +61,12 @@ func NewRoleManager(maxHierarchyLevel int) rbac.RoleManager {
 }
 ```
 
+## How to distinguish role from user?
+
+Casbin doesn't distinguish role from user in its RBAC. They are all treated as strings. If you only use single-level RBAC (a role will never be a member of another role). You can use ``e.GetAllSubjects()`` to get all users and ``e.GetAllRoles()`` to get all roles. They just list all ``u`` and all ``r`` respectively in all ``g, u, r`` rules.
+
+But if you are using multi-level RBAC (with role hierarchy), and you application doesn't record whether a name (string) is a user or a role, or you have user and role with same name. You can add a prefix to role like ``role::admin`` before passing it to Casbin. So you will know if it's a role by checking this prefix.
+
 ## Use pattern matching in RBAC
 
 Sometimes, you want some subjects (or objects) with the specific pattern to be automatically granted to a role. Pattern matching functions in RBAC can help you do that. A pattern matching function shares the same parameters and return value as the previous [matcher function](https://casbin.org/docs/en/syntax-for-models#functions-in-matchers).
