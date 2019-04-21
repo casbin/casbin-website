@@ -67,6 +67,10 @@ Casbin doesn't distinguish role from user in its RBAC. They are all treated as s
 
 But if you are using multi-level RBAC (with role hierarchy), and you application doesn't record whether a name (string) is a user or a role, or you have user and role with same name. You can add a prefix to role like ``role::admin`` before passing it to Casbin. So you will know if it's a role by checking this prefix.
 
+## How to query implicit roles or permissions?
+
+When a user inherits a role or permission via RBAC hierarchy instead of directly assigning them in a policy rule, we call such type of assignment as ``implicit``. To query such implicit relations, you need to use these 2 APIs: ``GetImplicitRolesForUser()`` and ``GetImplicitPermissionsForUser`` instead of ``GetRolesForUser()`` and ``GetPermissionsForUser``. For more details, please see [this GitHub issue](https://github.com/casbin/casbin/issues/137).
+
 ## Use pattern matching in RBAC
 
 Sometimes, you want some subjects (or objects) with the specific pattern to be automatically granted to a role. Pattern matching functions in RBAC can help you do that. A pattern matching function shares the same parameters and return value as the previous [matcher function](https://casbin.org/docs/en/syntax-for-models#functions-in-matchers).
