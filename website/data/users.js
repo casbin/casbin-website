@@ -65,4 +65,10 @@ module.exports = [
     infoLink: 'https://github.com/tmobile/jazz',
     pinned: true,
   },
+  {
+    caption: 'FinTech Studios',
+    image: '/img/users/fintech-studios.png',
+    infoLink: 'https://fintechstudios.com',
+    pinned: true,
+  },
 ];
