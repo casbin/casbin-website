@@ -34,6 +34,7 @@ Adapter | Type | Author | AutoSave | Description
 [DynamoDB Adapter](https://github.com/HOOQTV/dynacasbin) | NoSQL | [HOOQ](https://github.com/HOOQTV) | ❌ | For [Amazon DynamoDB](https://aws.amazon.com/dynamodb/)
 [Minio/AWS S3 Adapter](https://github.com/Soluto/casbin-minio-adapter) | Object storage | [Soluto](https://github.com/Soluto) | ❌ | For [Minio](https://github.com/minio/minio) and [Amazon S3](https://aws.amazon.com/s3/)
 [Bolt Adapter](https://github.com/wirepair/bolt-adapter) | KV store | [@wirepair](https://github.com/wirepair) | ❌ | For [Bolt](https://github.com/boltdb/bolt)
+[SQLX Adapter](https://github.com/memwey/casbin-sqlx-adapter) | SQL | [@memwey](https://github.com/memwey) | ✅ | For [SQLX](https://github.com/jmoiron/sqlx)
 
 <!--Java-->
 Adapter | Type | Author | AutoSave | Description
