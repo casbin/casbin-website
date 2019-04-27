@@ -17,7 +17,7 @@ production-ready | production-ready | production-ready | production-ready
 [PyCasbin](https://github.com/casbin/pycasbin) | [Casbin4D](https://github.com/casbin4d/Casbin4D) | [Casbin-Net](https://github.com/Devolutions/casbin-net) | [Casbin-RS](https://github.com/Devolutions/casbin-rs)
 production-ready | experimental | WIP | WIP
 
-## Feature Set for Different Languages
+## Feature set for different languages
 
 Feature | Go | Java | Node.js | PHP | Python | Delphi
 ----|----|----|----|----|----|----
