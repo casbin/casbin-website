@@ -118,7 +118,7 @@ const Features = props => (
         title: 'Hybrid access control models',
       },
       {
-        content: 'Besides memory and file, Casbin policy can be stored into lots of places. Currently, dozens of databases are supported, from MySQL, Postgres, Oracle to MongoDB, Redis, Cassandra, AWS S3. Check the full supported list at: https://github.com/casbin/casbin#policy-persistence',
+        content: 'Besides memory and file, Casbin policy can be stored into lots of places. Currently, dozens of databases are supported, from MySQL, Postgres, Oracle to MongoDB, Redis, Cassandra, AWS S3. Check the full supported list at: https://casbin.org/docs/en/adapters',
         image: imgUrl('storage.png'),
         imageAlign: 'top',
         title: 'Flexible policy storage',
@@ -146,7 +146,7 @@ const LearnHow = props => (
   <Block background="light">
     {[
       {
-        content: 'In Casbin, the policy storage is implemented as an adapter(aka middleware for Casbin). To keep light-weight, we don\'t put adapter code in the main library (except the default file adapter). A complete list of Casbin adapters is provided as below. Any 3rd-party contribution on a new adapter is welcomed, please inform us and I will put it in this list:) For details of adapters, please refer to the documentation: https://github.com/casbin/casbin/wiki/Policy-persistence',
+        content: 'In Casbin, the policy storage is implemented as an adapter(aka middleware for Casbin). To keep light-weight, we don\'t put adapter code in the main library (except the default file adapter). A complete list of Casbin adapters is provided as below. Any 3rd-party contribution on a new adapter is welcomed, please inform us and I will put it in this list:) For details of adapters, please refer to the documentation: https://casbin.org/docs/en/adapters',
         image: imgUrl('store.png'),
         imageAlign: 'right',
         title: 'Policy persistence',
@@ -176,7 +176,7 @@ const Description = props => (
   <Block background="light">
     {[
       {
-        content: 'The role manager is used to manage the RBAC role hierarchy (user-role mapping) in Casbin. A role manager can retrieve the role data from Casbin policy rules or external sources such as LDAP, Okta, Auth0, Azure AD, etc. We support different implementations of a role manager. To keep light-weight, we don\'t put role manager code in the main library (except the default role manager). A complete list of Casbin role managers is provided as below. Any 3rd-party contribution on a new role manager is welcomed, please inform us and I will put it in this list:)\n',
+        content: 'The role manager is used to manage the RBAC role hierarchy (user-role mapping) in Casbin. A role manager can retrieve the role data from Casbin policy rules or external sources such as LDAP, Okta, Auth0, Azure AD, etc. We support different implementations of a role manager. To keep light-weight, we don\'t put role manager code in the main library (except the default role manager). A complete list of Casbin role managers is provided as: https://casbin.org/docs/en/role-managers\n',
         image: imgUrl('role.png'),
         imageAlign: 'right',
         title: 'Role manager',
