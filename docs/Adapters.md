@@ -19,6 +19,7 @@ Adapter | Type | Author | AutoSave | Description
 [Xorm Adapter](https://github.com/casbin/xorm-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, TiDB, SQLite, SQL Server, Oracle are supported by [Xorm](https://github.com/go-xorm/xorm/)
 [Gorm Adapter](https://github.com/casbin/gorm-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, Sqlite3, SQL Server are supported by [Gorm](https://github.com/jinzhu/gorm/)
 [Beego ORM Adapter](https://github.com/casbin/beego-orm-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, Sqlite3 are supported by [Beego ORM](https://beego.me/docs/mvc/model/overview.md)
+[SQLX Adapter](https://github.com/memwey/casbin-sqlx-adapter) | ORM | [@memwey](https://github.com/memwey) | ✅ | MySQL, PostgreSQL, SQLite, Oracle are supported by [SQLX](https://github.com/jmoiron/sqlx)
 [MongoDB Adapter](https://github.com/casbin/mongodb-adapter) | NoSQL | Casbin | ✅ | For [MongoDB](https://www.mongodb.com)
 [RQLite Adapter](https://github.com/edomosystems/rqlite-adapter) | SQL | [EDOMO Systems](https://github.com/edomosystems) | ✅ | For [RQLite](https://github.com/rqlite/rqlite/)
 [RethinkDB Adapter](https://github.com/adityapandey9/rethinkdb-adapter) | NoSQL | [@adityapandey9](https://github.com/adityapandey9) | ✅ | For [RethinkDB](https://rethinkdb.com/)
@@ -34,7 +35,6 @@ Adapter | Type | Author | AutoSave | Description
 [DynamoDB Adapter](https://github.com/HOOQTV/dynacasbin) | NoSQL | [HOOQ](https://github.com/HOOQTV) | ❌ | For [Amazon DynamoDB](https://aws.amazon.com/dynamodb/)
 [Minio/AWS S3 Adapter](https://github.com/Soluto/casbin-minio-adapter) | Object storage | [Soluto](https://github.com/Soluto) | ❌ | For [Minio](https://github.com/minio/minio) and [Amazon S3](https://aws.amazon.com/s3/)
 [Bolt Adapter](https://github.com/wirepair/bolt-adapter) | KV store | [@wirepair](https://github.com/wirepair) | ❌ | For [Bolt](https://github.com/boltdb/bolt)
-[SQLX Adapter](https://github.com/memwey/casbin-sqlx-adapter) | SQL | [@memwey](https://github.com/memwey) | ✅ | For [SQLX](https://github.com/jmoiron/sqlx)
 
 <!--Java-->
 Adapter | Type | Author | AutoSave | Description
