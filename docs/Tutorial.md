@@ -76,6 +76,8 @@ This paper digs deeply into the design details about Casbin. Please cite the fol
 
 <!--Node.js-->
 
+- [nest.js: Casbin RESTful RBAC authorization middleware (Video)](https://www.youtube.com/watch?v=mWlPNrCgVdE)
+
 <!--PHP-->
 
 <!--Python-->
