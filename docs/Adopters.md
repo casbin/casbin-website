@@ -18,6 +18,7 @@ Name | Description | Model | Policy
 [Cyber Auth API](https://github.com/CyberlifeCN/cyber-auth-api) | A Golang authentication API project. | [.conf](https://github.com/CyberlifeCN/cyber-auth-api/blob/master/conf/authz_model.conf) | [.csv](https://github.com/CyberlifeCN/cyber-auth-api/blob/master/conf/authz_policy.csv)
 [IRIS Community](https://github.com/irisnet/iris-community) | Website for IRIS Community Activities. | [.conf](https://github.com/irisnet/iris-community/blob/master/authz/authz_model.conf) | [.csv](https://github.com/irisnet/iris-community/blob/master/authz/authz_policy.csv)
 [Metadata DB](https://github.com/Bnei-Baruch/mdb) | BB archive metadata database. | [.conf](https://github.com/Bnei-Baruch/mdb/blob/master/data/permissions_model.conf) | [.csv](https://github.com/Bnei-Baruch/mdb/blob/master/data/permissions_policy.csv)
+[Qilin API](https://github.com/ProtocolONE/qilin.api) | ProtocolONE's licenses managemen tool for game content. | [Code](https://github.com/ProtocolONE/rbac/blob/master/model.go) | [.csv](https://github.com/ProtocolONE/rbac/tree/master/conf)
 
 ## Integration via plugin
 
