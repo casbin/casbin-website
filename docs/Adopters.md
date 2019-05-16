@@ -5,6 +5,9 @@ title: Our Adopters
 
 ## Direct integration
 
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
 Name | Description | Model | Policy
 ----|----|----|----
 [VMware Harbor](https://github.com/goharbor/harbor) | VMware's open source trusted cloud native registry project that stores, signs, and scans content. | [Code](https://github.com/goharbor/harbor/blob/master/src/common/ram/casbin.go#L30-L51) | [Code](https://github.com/goharbor/harbor/blob/master/src/common/ram/casbin.go#L53-L132)
@@ -19,6 +22,14 @@ Name | Description | Model | Policy
 [IRIS Community](https://github.com/irisnet/iris-community) | Website for IRIS Community Activities. | [.conf](https://github.com/irisnet/iris-community/blob/master/authz/authz_model.conf) | [.csv](https://github.com/irisnet/iris-community/blob/master/authz/authz_policy.csv)
 [Metadata DB](https://github.com/Bnei-Baruch/mdb) | BB archive metadata database. | [.conf](https://github.com/Bnei-Baruch/mdb/blob/master/data/permissions_model.conf) | [.csv](https://github.com/Bnei-Baruch/mdb/blob/master/data/permissions_policy.csv)
 [Qilin API](https://github.com/ProtocolONE/qilin.api) | ProtocolONE's licenses managemen tool for game content. | [Code](https://github.com/ProtocolONE/rbac/blob/master/model.go) | [.csv](https://github.com/ProtocolONE/rbac/tree/master/conf)
+
+<!--Java-->
+Name | Description | Model | Policy
+----|----|----|----
+[lighty.io](https://github.com/PantheonTechnologies/lighty-core) | OpenDaylight's solution for SDN controller. | [README](https://github.com/PantheonTechnologies/lighty-core/blob/6f2ceaae6a68e08c96d14d2fa8ee060ad9f61606/lighty-examples/lighty-controller-springboot-netconf/README.md#security) |
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
 
 ## Integration via plugin
 
