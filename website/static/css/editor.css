@@ -1,0 +1,25 @@
+.line-error {
+    background: #ff0000;
+}
+
+.editor-group {
+    display: flex;
+    flex-direction: row;
+}
+
+/*.editor-container {*/
+/*    flex-basis: 50%;*/
+/*    border-left: 1px solid #ddd;*/
+/*    border-bottom: 1px solid #ddd;*/
+/*    margin-left: -1px;*/
+/*}*/
+/*.editor-container .with-border {*/
+/*    border-left: 1px solid #ddd;*/
+/*    border-bottom: 1px solid #ddd;*/
+/*}*/
+
+.editor-container {
+    flex-basis: 50%;
+    /*    border-bottom: 1px solid #ddd;*/
+
+}
