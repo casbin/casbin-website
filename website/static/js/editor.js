@@ -174,6 +174,65 @@ var model_data = {
   /////////////////////////////////////////////////////////////////////////
 };
 
+var test_data = {
+  basic: {
+    params: 'alice, data1, read',
+    return: 'true',
+  },
+  basic_with_root: {
+    params: 'alice, data1, read',
+    return: 'true',
+  },
+  basic_without_resources: {
+    params: 'alice, read',
+    return: 'true',
+  },
+  basic_without_users: {
+    params: 'data1, read',
+    return: 'true',
+  },
+  rbac: {
+    params: 'alice, data2, read',
+    return: 'true',
+  },
+  rbac_with_resource_roles: {
+    params: 'alice, data1, read\n' +
+        'alice, data1, write\n' +
+        'alice, data2, read\n' +
+        'alice, data2, write ',
+    return: 'true\ntrue\nfalse\ntrue',
+  },
+  rbac_with_domains: {
+    params: 'alice, domain1, data1, read',
+    return: 'true',
+  },
+  rbac_with_deny: {
+    params: 'alice, data1, read\n' +
+        'alice, data2, write',
+    return: 'true\nfalse',
+  },
+  abac: {
+    params: 'Not support',
+    return: 'false',
+  },
+  keymatch: {
+    params: 'alice, /alice_data/hello, GET',
+    return: 'false',
+  },
+  keymatch2: {
+    params: 'alice, /alice_data/hello, GET\n' +
+        'alice, /alice_data/hello, POST',
+    return: 'true\nfalse',
+  },
+  ipmatch: {
+    params: 'Not support',
+    return: 'false',
+  },
+  priority: {
+    params: 'alice, data1, read',
+    return: 'true',
+  },
+};
 var policy_data = {
   /////////////////////////////////////////////////////////////////////////
   'basic': 'p, alice, data1, read\n' +
@@ -270,15 +329,6 @@ var editorPolicy = CodeMirror.fromTextArea(document.getElementById('policy'), {
   theme: 'monokai',
 });
 
-editorModel.setValue(model_data['basic']);
-editorPolicy.setValue(policy_data['basic']);
-
-document.getElementById('example-switch').
-    addEventListener('change', function() {
-      editorModel.setValue(model_data[this.value]);
-      editorPolicy.setValue(policy_data[this.value]);
-    });
-
 var editorTest = CodeMirror.fromTextArea(document.getElementById('test'), {
   lineNumbers: true,
   indentUnit: 4,
@@ -294,12 +344,27 @@ var editorTestResult = CodeMirror.fromTextArea(
       // lineNumbers: true,
       readOnly: true,
       indentUnit: 4,
-      styleActiveLine: true ,
+      styleActiveLine: true,
       matchBrackets: true,
       mode: 'javascript',
       lineWrapping: true,
       theme: 'monokai',
     });
+
+
+editorModel.setValue(model_data['basic']);
+editorPolicy.setValue(policy_data['basic']);
+editorTestResult.setValue(test_data['basic'].return);
+editorTest.setValue(test_data['basic'].params);
+
+document.getElementById('example-switch').
+    addEventListener('change', function() {
+      editorModel.setValue(model_data[this.value]);
+      editorPolicy.setValue(policy_data[this.value]);
+      editorTestResult.setValue(test_data[this.value].return);
+      editorTest.setValue(test_data[this.value].params);
+    });
+
 
 document.getElementById('run-test').addEventListener('click', function() {
   var policyString = editorPolicy.getValue();
@@ -313,9 +378,7 @@ document.getElementById('run-test').addEventListener('click', function() {
         editorTestResult.setValue(editorTestResult.getValue() + '\n');
         return;
       }
-      console.log(p);
       const ok = e.enforce(...p);
-      console.log(ok);
       editorTestResult.setValue(editorTestResult.getValue() + ok + '\n');
     });
   });

@@ -8,8 +8,6 @@ const Editor = () => (
             href="https://unpkg.com/codemirror@5.46.0/theme/monokai.css"/>
       <link rel="stylesheet"
             href="https://unpkg.com/normalize.css@8.0.1/normalize.css"/>
-      <link rel="stylesheet"
-            href="/css/editor.css"/>
       <div>
         <div className="editor-group">
           <div className={'editor-container'}>
@@ -61,14 +59,13 @@ const Editor = () => (
             <h4 style={{padding: 8}}>Request</h4>
 
             <div>
-              <textarea placeholder={'alice, resource, read'}
-                        id="test"/>
+              <textarea id="test"/>
             </div>
           </div>
           <div className={'editor-container'}>
             <h4 style={{padding: 8}}>Enforcement Result</h4>
             <div>
-              <textarea placeholder={'true'} id="test-result"/>
+              <textarea id="test-result"/>
             </div>
           </div>
         </div>
@@ -83,6 +80,8 @@ const Editor = () => (
           <div id="output"/>
         </div>
 
+
+        <div id={'disqus'}/>
         <script
             src="https://unpkg.com/codemirror@5.46.0/lib/codemirror.js"/>
         <script
