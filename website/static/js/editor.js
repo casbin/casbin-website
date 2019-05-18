@@ -351,7 +351,6 @@ var editorTestResult = CodeMirror.fromTextArea(
       theme: 'monokai',
     });
 
-
 editorModel.setValue(model_data['basic']);
 editorPolicy.setValue(policy_data['basic']);
 editorTestResult.setValue(test_data['basic'].return);
@@ -365,31 +364,42 @@ document.getElementById('example-switch').
       editorTest.setValue(test_data[this.value].params);
     });
 
+var output = document.getElementById('output');
 
 document.getElementById('run-test').addEventListener('click', function() {
+  var startTime = performance.now();
   var policyString = editorPolicy.getValue();
   var policy = policyString.split('\n');
   editorTestResult.setValue('');
-  casbin.newEnforcer(casbin.newModel(editorModel.getValue()),
-      new casbin.MemoryAdapter(policy)).then((e) => {
-    editorTest.getValue().split('\n').forEach(n => {
-      var p = n.split(',').map(n => n.trim()).filter(n => n);
-      if (!p || p.length === 0) {
-        editorTestResult.setValue(editorTestResult.getValue() + '\n');
-        return;
-      }
-      const ok = e.enforce(...p);
-      editorTestResult.setValue(editorTestResult.getValue() + ok + '\n');
+  try {
+    casbin.newEnforcer(casbin.newModel(editorModel.getValue()),
+        new casbin.MemoryAdapter(policy)).then((e) => {
+      editorTest.getValue().split('\n').forEach(n => {
+        var p = n.split(',').map(n => n.trim()).filter(n => n);
+        if (!p || p.length === 0) {
+          editorTestResult.setValue(editorTestResult.getValue() + '\n');
+          return;
+        }
+        const ok = e.enforce(...p);
+        editorTestResult.setValue(editorTestResult.getValue() + ok + '\n');
+      });
+      var stopTime = performance.now();
+      output.innerText = '✨ Done in ' +
+          ((stopTime - startTime) / 1000.00).toFixed(2) + 's.';
+      output.style = null;
     });
-  });
+  } catch (e) {
+    output.innerText = '❌ ' + e;
+    output.style.color = '#ff0000';
+  }
+
 });
 
 document.getElementById('validate').addEventListener('click', function() {
-  const output = document.getElementById('output');
   editorModel.removeLineClass(errorLine - 1, 'background');
   try {
     validateModel(editorModel.getValue());
-    output.innerText = '✅ No Error ';
+    output.innerText = '✅ No Error.';
     output.style = null;
   } catch (e) {
     output.innerText = '❌ ' + e;
@@ -456,6 +466,6 @@ function write(section, lineNum, line) {
   const equalIndex = line.indexOf('=');
   if (equalIndex === -1) {
     highlightErrorLine(editorModel, lineNum);
-    throw `parse the content error : line ${lineNum}`;
+    throw `parse the content error : line ${lineNum}.`;
   }
 }
