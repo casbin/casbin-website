@@ -467,5 +467,18 @@ function write(section, lineNum, line) {
   if (equalIndex === -1) {
     highlightErrorLine(editorModel, lineNum);
     throw `parse the content error : line ${lineNum}.`;
+  } else {
+    if (section === 'policy_effect') {
+      var effectors = [
+        'e = some(where (p.eft == allow))',
+        'e = !some(where (p.eft == deny))',
+        'e = some(where (p.eft == allow)) && !some(where (p.eft == deny))' +
+        'e = priority(p.eft) || deny'];
+      var effectorError = 'Casbin doesn\'t support this policy effect, see https://casbin.org/docs/en/syntax-for-models#policy-effect for more details.';
+      var has = effectors.some(n => n.trim() === line.trim());
+      if (!has) {
+        throw effectorError;
+      }
+    }
   }
 }
