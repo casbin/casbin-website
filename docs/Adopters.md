@@ -28,6 +28,11 @@ Name | Description | Model | Policy
 ----|----|----|----
 [lighty.io](https://github.com/PantheonTechnologies/lighty-core) | OpenDaylight's solution for SDN controller. | [README](https://github.com/PantheonTechnologies/lighty-core/blob/6f2ceaae6a68e08c96d14d2fa8ee060ad9f61606/lighty-examples/lighty-controller-springboot-netconf/README.md#security) |
 
+<!--Node.js-->
+Name | Description | Model | Policy
+----|----|----|----
+[Notadd](https://github.com/notadd/notadd) | A micro-service development architecture based on Nest.js. | [.conf](https://github.com/notadd/notadd/blob/e58d0a0cf5d691c3fe20170e94cdd8e2c627abd4/apps/nest-upms/src/casbin/rbac_model.conf) | [DB adapter](https://github.com/notadd/notadd/blob/e58d0a0cf5d691c3fe20170e94cdd8e2c627abd4/apps/nest-upms/src/casbin/adapter.ts)
+
 <!--Python-->
 Name | Description | Model | Policy
 ----|----|----|----
