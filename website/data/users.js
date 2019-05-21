@@ -66,6 +66,12 @@ module.exports = [
     pinned: true,
   },
   {
+    caption: 'Xiaomi',
+    image: '/img/users/xiaomi.png',
+    infoLink: 'https://www.mi.com/',
+    pinned: true,
+  },
+  {
     caption: 'FinTech Studios',
     image: '/img/users/fintech-studios.png',
     infoLink: 'https://fintechstudios.com',
