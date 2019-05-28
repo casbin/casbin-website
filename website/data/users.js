@@ -77,4 +77,10 @@ module.exports = [
     infoLink: 'https://fintechstudios.com',
     pinned: true,
   },
+  {
+    caption: 'Toolmaker',
+    image: '/img/users/toolmaker.png',
+    infoLink: 'https://toolmaker.io',
+    pinned: true,
+  },
 ];
