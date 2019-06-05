@@ -1,6 +1,7 @@
 var model_data = {
   /////////////////////////////////////////////////////////////////////////
-  'basic': '[request_definition]\n' +
+  basic:
+      '[request_definition]\n' +
       'r = sub, obj, act\n' +
       '\n' +
       '[policy_definition]\n' +
@@ -12,7 +13,8 @@ var model_data = {
       '[matchers]\n' +
       'm = r.sub == p.sub && r.obj == p.obj && r.act == p.act',
   /////////////////////////////////////////////////////////////////////////
-  'basic_with_root': '[request_definition]\n' +
+  basic_with_root:
+      '[request_definition]\n' +
       'r = sub, obj, act\n' +
       '\n' +
       '[policy_definition]\n' +
@@ -24,7 +26,8 @@ var model_data = {
       '[matchers]\n' +
       'm = r.sub == p.sub && r.obj == p.obj && r.act == p.act || r.sub == "root"',
   /////////////////////////////////////////////////////////////////////////
-  'basic_without_resources': '[request_definition]\n' +
+  basic_without_resources:
+      '[request_definition]\n' +
       'r = sub, act\n' +
       '\n' +
       '[policy_definition]\n' +
@@ -36,7 +39,8 @@ var model_data = {
       '[matchers]\n' +
       'm = r.sub == p.sub && r.act == p.act',
   /////////////////////////////////////////////////////////////////////////
-  'basic_without_users': '[request_definition]\n' +
+  basic_without_users:
+      '[request_definition]\n' +
       'r = obj, act\n' +
       '\n' +
       '[policy_definition]\n' +
@@ -48,7 +52,8 @@ var model_data = {
       '[matchers]\n' +
       'm = r.obj == p.obj && r.act == p.act',
   /////////////////////////////////////////////////////////////////////////
-  'rbac': '[request_definition]\n' +
+  rbac:
+      '[request_definition]\n' +
       'r = sub, obj, act\n' +
       '\n' +
       '[policy_definition]\n' +
@@ -63,7 +68,8 @@ var model_data = {
       '[matchers]\n' +
       'm = g(r.sub, p.sub) && r.obj == p.obj && r.act == p.act',
   /////////////////////////////////////////////////////////////////////////
-  'rbac_with_resource_roles': '[request_definition]\n' +
+  rbac_with_resource_roles:
+      '[request_definition]\n' +
       'r = sub, obj, act\n' +
       '\n' +
       '[policy_definition]\n' +
@@ -79,7 +85,8 @@ var model_data = {
       '[matchers]\n' +
       'm = g(r.sub, p.sub) && g2(r.obj, p.obj) && r.act == p.act',
   /////////////////////////////////////////////////////////////////////////
-  'rbac_with_domains': '[request_definition]\n' +
+  rbac_with_domains:
+      '[request_definition]\n' +
       'r = sub, dom, obj, act\n' +
       '\n' +
       '[policy_definition]\n' +
@@ -94,7 +101,8 @@ var model_data = {
       '[matchers]\n' +
       'm = g(r.sub, p.sub, r.dom) && r.dom == p.dom && r.obj == p.obj && r.act == p.act',
   /////////////////////////////////////////////////////////////////////////
-  'rbac_with_deny': '[request_definition]\n' +
+  rbac_with_deny:
+      '[request_definition]\n' +
       'r = sub, obj, act\n' +
       '\n' +
       '[policy_definition]\n' +
@@ -109,7 +117,8 @@ var model_data = {
       '[matchers]\n' +
       'm = g(r.sub, p.sub) && r.obj == p.obj && r.act == p.act',
   /////////////////////////////////////////////////////////////////////////
-  'abac': '[request_definition]\n' +
+  abac:
+      '[request_definition]\n' +
       'r = sub, obj, act\n' +
       '\n' +
       '[policy_definition]\n' +
@@ -121,7 +130,8 @@ var model_data = {
       '[matchers]\n' +
       'm = r.sub == r.obj.Owner',
   /////////////////////////////////////////////////////////////////////////
-  'keymatch': '[request_definition]\n' +
+  keymatch:
+      '[request_definition]\n' +
       'r = sub, obj, act\n' +
       '\n' +
       '[policy_definition]\n' +
@@ -133,7 +143,8 @@ var model_data = {
       '[matchers]\n' +
       'm = r.sub == p.sub && keyMatch(r.obj, p.obj) && regexMatch(r.act, p.act)',
   /////////////////////////////////////////////////////////////////////////
-  'keymatch2': '[request_definition]\n' +
+  keymatch2:
+      '[request_definition]\n' +
       'r = sub, obj, act\n' +
       '\n' +
       '[policy_definition]\n' +
@@ -145,7 +156,8 @@ var model_data = {
       '[matchers]\n' +
       'm = r.sub == p.sub && keyMatch2(r.obj, p.obj) && regexMatch(r.act, p.act)',
   /////////////////////////////////////////////////////////////////////////
-  'ipmatch': '[request_definition]\n' +
+  ipmatch:
+      '[request_definition]\n' +
       'r = sub, obj, act\n' +
       '\n' +
       '[policy_definition]\n' +
@@ -157,7 +169,8 @@ var model_data = {
       '[matchers]\n' +
       'm = ipMatch(r.sub, p.sub) && r.obj == p.obj && r.act == p.act',
   /////////////////////////////////////////////////////////////////////////
-  'priority': '[request_definition]\n' +
+  priority:
+      '[request_definition]\n' +
       'r = sub, obj, act\n' +
       '\n' +
       '[policy_definition]\n' +
@@ -173,7 +186,6 @@ var model_data = {
       'm = g(r.sub, p.sub) && r.obj == p.obj && r.act == p.act',
   /////////////////////////////////////////////////////////////////////////
 };
-
 var test_data = {
   basic: {
     params: 'alice, data1, read',
@@ -196,7 +208,8 @@ var test_data = {
     return: 'true',
   },
   rbac_with_resource_roles: {
-    params: 'alice, data1, read\n' +
+    params:
+        'alice, data1, read\n' +
         'alice, data1, write\n' +
         'alice, data2, read\n' +
         'alice, data2, write ',
@@ -207,8 +220,7 @@ var test_data = {
     return: 'true',
   },
   rbac_with_deny: {
-    params: 'alice, data1, read\n' +
-        'alice, data2, write',
+    params: 'alice, data1, read\n' + 'alice, data2, write',
     return: 'true\nfalse',
   },
   abac: {
@@ -220,8 +232,8 @@ var test_data = {
     return: 'false',
   },
   keymatch2: {
-    params: 'alice, /alice_data/hello, GET\n' +
-        'alice, /alice_data/hello, POST',
+    params:
+        'alice, /alice_data/hello, GET\n' + 'alice, /alice_data/hello, POST',
     return: 'true\nfalse',
   },
   ipmatch: {
@@ -235,26 +247,24 @@ var test_data = {
 };
 var policy_data = {
   /////////////////////////////////////////////////////////////////////////
-  'basic': 'p, alice, data1, read\n' +
-      'p, bob, data2, write',
+  basic: 'p, alice, data1, read\n' + 'p, bob, data2, write',
   /////////////////////////////////////////////////////////////////////////
-  'basic_with_root': 'p, alice, data1, read\n' +
-      'p, bob, data2, write',
+  basic_with_root: 'p, alice, data1, read\n' + 'p, bob, data2, write',
   /////////////////////////////////////////////////////////////////////////
-  'basic_without_resources': 'p, alice, read\n' +
-      'p, bob, write',
+  basic_without_resources: 'p, alice, read\n' + 'p, bob, write',
   /////////////////////////////////////////////////////////////////////////
-  'basic_without_users': 'p, data1, read\n' +
-      'p, data2, write',
+  basic_without_users: 'p, data1, read\n' + 'p, data2, write',
   /////////////////////////////////////////////////////////////////////////
-  'rbac': 'p, alice, data1, read\n' +
+  rbac:
+      'p, alice, data1, read\n' +
       'p, bob, data2, write\n' +
       'p, data2_admin, data2, read\n' +
       'p, data2_admin, data2, write\n' +
       '\n' +
       'g, alice, data2_admin',
   /////////////////////////////////////////////////////////////////////////
-  'rbac_with_resource_roles': 'p, alice, data1, read\n' +
+  rbac_with_resource_roles:
+      'p, alice, data1, read\n' +
       'p, bob, data2, write\n' +
       'p, data_group_admin, data_group, write\n' +
       '\n' +
@@ -262,7 +272,8 @@ var policy_data = {
       'g2, data1, data_group\n' +
       'g2, data2, data_group',
   /////////////////////////////////////////////////////////////////////////
-  'rbac_with_domains': 'p, admin, domain1, data1, read\n' +
+  rbac_with_domains:
+      'p, admin, domain1, data1, read\n' +
       'p, admin, domain1, data1, write\n' +
       'p, admin, domain2, data2, read\n' +
       'p, admin, domain2, data2, write\n' +
@@ -270,7 +281,8 @@ var policy_data = {
       'g, alice, admin, domain1\n' +
       'g, bob, admin, domain2',
   /////////////////////////////////////////////////////////////////////////
-  'rbac_with_deny': 'p, alice, data1, read, allow\n' +
+  rbac_with_deny:
+      'p, alice, data1, read, allow\n' +
       'p, bob, data2, write, allow\n' +
       'p, data2_admin, data2, read, allow\n' +
       'p, data2_admin, data2, write, allow\n' +
@@ -278,9 +290,10 @@ var policy_data = {
       '\n' +
       'g, alice, data2_admin',
   /////////////////////////////////////////////////////////////////////////
-  'abac': '',
+  abac: '',
   /////////////////////////////////////////////////////////////////////////
-  'keymatch': 'p, alice, /alice_data/*, GET\n' +
+  keymatch:
+      'p, alice, /alice_data/*, GET\n' +
       'p, alice, /alice_data/resource1, POST\n' +
       '\n' +
       'p, bob, /alice_data/resource2, GET\n' +
@@ -288,13 +301,14 @@ var policy_data = {
       '\n' +
       'p, cathy, /cathy_data, (GET)|(POST)',
   /////////////////////////////////////////////////////////////////////////
-  'keymatch2': 'p, alice, /alice_data/:resource, GET\n' +
+  keymatch2:
+      'p, alice, /alice_data/:resource, GET\n' +
       'p, alice, /alice_data2/:id/using/:resId, GET',
   /////////////////////////////////////////////////////////////////////////
-  'ipmatch': 'p, 192.168.2.0/24, data1, read\n' +
-      'p, 10.0.0.0/16, data2, write',
+  ipmatch: 'p, 192.168.2.0/24, data1, read\n' + 'p, 10.0.0.0/16, data2, write',
   /////////////////////////////////////////////////////////////////////////
-  'priority': 'p, alice, data1, read, allow\n' +
+  priority:
+      'p, alice, data1, read, allow\n' +
       'p, data1_deny_group, data1, read, deny\n' +
       'p, data1_deny_group, data1, write, deny\n' +
       'p, alice, data1, write, allow\n' +
@@ -309,6 +323,8 @@ var policy_data = {
   /////////////////////////////////////////////////////////////////////////
 };
 
+var exampleSwitch = document.getElementById('example-switch');
+
 var editorModel = CodeMirror.fromTextArea(document.getElementById('model'), {
   lineNumbers: true,
   indentUnit: 4,
@@ -317,6 +333,9 @@ var editorModel = CodeMirror.fromTextArea(document.getElementById('model'), {
   mode: 'casbin-conf',
   lineWrapping: true,
   theme: 'monokai',
+});
+editorModel.on('change', function(cm, change) {
+  setConfigToCache(exampleSwitch.value + '_model', cm.getValue());
 });
 
 var editorPolicy = CodeMirror.fromTextArea(document.getElementById('policy'), {
@@ -328,6 +347,9 @@ var editorPolicy = CodeMirror.fromTextArea(document.getElementById('policy'), {
   lineWrapping: true,
   theme: 'monokai',
 });
+editorPolicy.on('change', function(cm, change) {
+  setConfigToCache(exampleSwitch.value + '_policy', cm.getValue());
+});
 
 var editorTest = CodeMirror.fromTextArea(document.getElementById('test'), {
   lineNumbers: true,
@@ -338,9 +360,13 @@ var editorTest = CodeMirror.fromTextArea(document.getElementById('test'), {
   lineWrapping: true,
   theme: 'monokai',
 });
+editorTest.on('change', function(cm, change) {
+  setConfigToCache(exampleSwitch.value + '_request', cm.getValue());
+});
 
 var editorTestResult = CodeMirror.fromTextArea(
-    document.getElementById('test-result'), {
+    document.getElementById('test-result'),
+    {
       // lineNumbers: true,
       readOnly: true,
       indentUnit: 4,
@@ -349,20 +375,68 @@ var editorTestResult = CodeMirror.fromTextArea(
       mode: 'javascript',
       lineWrapping: true,
       theme: 'monokai',
-    });
+    },
+);
+editorTestResult.on('change', function(cm, change) {
+  setConfigToCache(exampleSwitch.value + '_result', cm.getValue());
+});
 
-editorModel.setValue(model_data['basic']);
-editorPolicy.setValue(policy_data['basic']);
-editorTestResult.setValue(test_data['basic'].return);
-editorTest.setValue(test_data['basic'].params);
+function getModel(key) {
+  return localStorage.getItem(key + '_model') || model_data[key];
+}
 
-document.getElementById('example-switch').
-    addEventListener('change', function() {
-      editorModel.setValue(model_data[this.value]);
-      editorPolicy.setValue(policy_data[this.value]);
-      editorTestResult.setValue(test_data[this.value].return);
-      editorTest.setValue(test_data[this.value].params);
-    });
+function getPolicy(key) {
+  return localStorage.getItem(key + '_policy') || policy_data[key];
+}
+
+function getRequest(key) {
+  return localStorage.getItem(key + '_request') || test_data[key].params;
+}
+
+function getTestResult(key) {
+  return localStorage.getItem(key + '_result') || test_data[key].return;
+}
+
+var switchKey = 'example-switch';
+
+var key = localStorage.getItem(switchKey) || 'basic';
+
+function setConfigToCache(key, value) {
+  console.log(key, value);
+  localStorage.setItem(key, value);
+}
+
+function updateEditorData(key) {
+  setConfigToCache(switchKey, key);
+  editorModel.setValue(getModel(key));
+  editorPolicy.setValue(getPolicy(key));
+  editorTestResult.setValue(getTestResult(key));
+  editorTest.setValue(getRequest(key));
+}
+
+function reset() {
+  var key = exampleSwitch.value;
+  localStorage.removeItem(key + '_model');
+  localStorage.removeItem(key + '_policy');
+  localStorage.removeItem(key + '_request');
+  localStorage.removeItem(key + '_result');
+  updateEditorData(key);
+  var resetResultNode = document.getElementById('reset-result');
+  resetResultNode.innerText = 'SUCCESS.';
+  setTimeout(() => {
+    resetResultNode.innerText = '';
+  }, 3000);
+}
+
+document.getElementById('reset').addEventListener('click', function() {
+  reset();
+});
+
+exampleSwitch.addEventListener('change', function() {
+  updateEditorData(this.value);
+});
+
+updateEditorData(key);
 
 var output = document.getElementById('output');
 
@@ -372,8 +446,10 @@ document.getElementById('run-test').addEventListener('click', function() {
   var policy = policyString.split('\n');
   editorTestResult.setValue('');
   try {
-    casbin.newEnforcer(casbin.newModel(editorModel.getValue()),
-        new casbin.MemoryAdapter(policy)).then((e) => {
+    casbin.newEnforcer(
+        casbin.newModel(editorModel.getValue()),
+        new casbin.MemoryAdapter(policy),
+    ).then(e => {
       editorTest.getValue().split('\n').forEach(n => {
         var p = n.split(',').map(n => n.trim()).filter(n => n);
         if (!p || p.length === 0) {
@@ -384,15 +460,14 @@ document.getElementById('run-test').addEventListener('click', function() {
         editorTestResult.setValue(editorTestResult.getValue() + ok + '\n');
       });
       var stopTime = performance.now();
-      output.innerText = '✨ Done in ' +
-          ((stopTime - startTime) / 1000.00).toFixed(2) + 's.';
+      output.innerText =
+          '✨ Done in ' + ((stopTime - startTime) / 1000.0).toFixed(2) + 's.';
       output.style = null;
     });
   } catch (e) {
     output.innerText = '❌ ' + e;
     output.style.color = '#ff0000';
   }
-
 });
 
 document.getElementById('validate').addEventListener('click', function() {
@@ -433,8 +508,10 @@ function validateModel(data) {
       return;
     }
 
-    if (line.startsWith(DEFAULT_COMMENT) ||
-        line.startsWith(DEFAULT_COMMENT_SEM)) {
+    if (
+        line.startsWith(DEFAULT_COMMENT) ||
+        line.startsWith(DEFAULT_COMMENT_SEM)
+    ) {
       return;
     } else if (line.startsWith('[') && line.endsWith(']')) {
       if (currentLine.length !== 0) {
@@ -473,8 +550,10 @@ function write(section, lineNum, line) {
         'e = some(where (p.eft == allow))',
         'e = !some(where (p.eft == deny))',
         'e = some(where (p.eft == allow)) && !some(where (p.eft == deny))' +
-        'e = priority(p.eft) || deny'];
-      var effectorError = 'Casbin doesn\'t support this policy effect, see https://casbin.org/docs/en/syntax-for-models#policy-effect for more details.';
+        'e = priority(p.eft) || deny',
+      ];
+      var effectorError =
+          'Casbin doesn\'t support this policy effect, see https://casbin.org/docs/en/syntax-for-models#policy-effect for more details.';
       var has = effectors.some(n => n.trim() === line.trim());
       if (!has) {
         throw effectorError;

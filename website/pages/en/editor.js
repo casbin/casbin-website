@@ -42,6 +42,10 @@ const Editor = () => (
                 </select>
 
               </div>
+              <button id="reset" style={{marginLeft: 8}} className={'button'}>Reset</button>
+              <div style={{padding: 8}}>
+                <div id="reset-result"/>
+              </div>
             </div>
 
 
