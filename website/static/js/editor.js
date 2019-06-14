@@ -325,7 +325,7 @@ var policy_data = {
 
 var exampleSwitch = document.getElementById('example-switch');
 
-var editorModel = CodeMirror.fromTextArea(document.getElementById('model'), {
+var modelEditor = CodeMirror.fromTextArea(document.getElementById('model'), {
   lineNumbers: true,
   indentUnit: 4,
   styleActiveLine: true,
@@ -334,11 +334,11 @@ var editorModel = CodeMirror.fromTextArea(document.getElementById('model'), {
   lineWrapping: true,
   theme: 'monokai',
 });
-editorModel.on('change', function(cm, change) {
+modelEditor.on('change', function(cm, change) {
   setConfigToCache(exampleSwitch.value + '_model', cm.getValue());
 });
 
-var editorPolicy = CodeMirror.fromTextArea(document.getElementById('policy'), {
+var policyEditor = CodeMirror.fromTextArea(document.getElementById('policy'), {
   lineNumbers: true,
   indentUnit: 4,
   styleActiveLine: true,
@@ -347,11 +347,11 @@ var editorPolicy = CodeMirror.fromTextArea(document.getElementById('policy'), {
   lineWrapping: true,
   theme: 'monokai',
 });
-editorPolicy.on('change', function(cm, change) {
+policyEditor.on('change', function(cm, change) {
   setConfigToCache(exampleSwitch.value + '_policy', cm.getValue());
 });
 
-var editorTest = CodeMirror.fromTextArea(document.getElementById('test'), {
+var testEditor = CodeMirror.fromTextArea(document.getElementById('test'), {
   lineNumbers: true,
   indentUnit: 4,
   styleActiveLine: true,
@@ -360,11 +360,25 @@ var editorTest = CodeMirror.fromTextArea(document.getElementById('test'), {
   lineWrapping: true,
   theme: 'monokai',
 });
-editorTest.on('change', function(cm, change) {
+testEditor.on('change', function(cm, change) {
   setConfigToCache(exampleSwitch.value + '_request', cm.getValue());
 });
 
-var editorTestResult = CodeMirror.fromTextArea(
+var functionEditor = CodeMirror.fromTextArea(
+    document.getElementById('custom-function'), {
+      lineNumbers: true,
+      indentUnit: 4,
+      styleActiveLine: true,
+      matchBrackets: true,
+      mode: 'javascript',
+      lineWrapping: true,
+      theme: 'monokai',
+    });
+functionEditor.on('change', function(cm, change) {
+  setConfigToCache(exampleSwitch.value + '_function', cm.getValue());
+});
+
+var testResultEditor = CodeMirror.fromTextArea(
     document.getElementById('test-result'),
     {
       // lineNumbers: true,
@@ -377,7 +391,7 @@ var editorTestResult = CodeMirror.fromTextArea(
       theme: 'monokai',
     },
 );
-editorTestResult.on('change', function(cm, change) {
+testResultEditor.on('change', function(cm, change) {
   setConfigToCache(exampleSwitch.value + '_result', cm.getValue());
 });
 
@@ -397,21 +411,26 @@ function getTestResult(key) {
   return localStorage.getItem(key + '_result') || test_data[key].return;
 }
 
+function getCustomFunction(key) {
+  var defaultFunction = `var fns = {}`;
+  return localStorage.getItem(key + '_function') || defaultFunction;
+}
+
 var switchKey = 'example-switch';
 
 var key = localStorage.getItem(switchKey) || 'basic';
 
 function setConfigToCache(key, value) {
-  console.log(key, value);
   localStorage.setItem(key, value);
 }
 
 function updateEditorData(key) {
   setConfigToCache(switchKey, key);
-  editorModel.setValue(getModel(key));
-  editorPolicy.setValue(getPolicy(key));
-  editorTestResult.setValue(getTestResult(key));
-  editorTest.setValue(getRequest(key));
+  modelEditor.setValue(getModel(key));
+  policyEditor.setValue(getPolicy(key));
+  testResultEditor.setValue(getTestResult(key));
+  testEditor.setValue(getRequest(key));
+  functionEditor.setValue(getCustomFunction(key));
 }
 
 function reset() {
@@ -420,6 +439,7 @@ function reset() {
   localStorage.removeItem(key + '_policy');
   localStorage.removeItem(key + '_request');
   localStorage.removeItem(key + '_result');
+  localStorage.removeItem(key + '_function');
   updateEditorData(key);
   var resetResultNode = document.getElementById('reset-result');
   resetResultNode.innerText = 'SUCCESS.';
@@ -440,45 +460,74 @@ updateEditorData(key);
 
 var output = document.getElementById('output');
 
+function writeToOutput(text, error) {
+  output.innerText = text;
+  if (error) {
+    output.style.color = '#ff0000';
+  } else {
+    output.style = null;
+  }
+}
+
 document.getElementById('run-test').addEventListener('click', function() {
   var startTime = performance.now();
-  var policyString = editorPolicy.getValue();
+  var policyString = policyEditor.getValue();
   var policy = policyString.split('\n');
-  editorTestResult.setValue('');
+  testResultEditor.setValue('');
   try {
+    var model = modelEditor.getValue();
     casbin.newEnforcer(
-        casbin.newModel(editorModel.getValue()),
+        casbin.newModel(model),
         new casbin.MemoryAdapter(policy),
     ).then(e => {
-      editorTest.getValue().split('\n').forEach(n => {
-        var p = n.split(',').map(n => n.trim()).filter(n => n);
-        if (!p || p.length === 0) {
-          editorTestResult.setValue(editorTestResult.getValue() + '\n');
+      if (functionEditor.getValue()) {
+        try {
+          eval(`${functionEditor.getValue()}`);
+
+          if (fns) {
+            Object.keys(fns).forEach(key => e.addFunction(key, fns[key]));
+          }
+        } catch (e) {
+          writeToOutput(
+              'Error: Please check syntax in Custom Function Editor.');
           return;
         }
-        const ok = e.enforce(...p);
-        editorTestResult.setValue(editorTestResult.getValue() + ok + '\n');
-      });
+      }
+
+      try {
+        for (var n of  testEditor.getValue().split('\n')) {
+          var p = n.split(',').map(n => n.trim()).filter(n => n);
+
+          if (!p || p.length === 0) {
+            testResultEditor.setValue(testResultEditor.getValue() + '\n');
+            return;
+          }
+
+          const ok = e.enforce(...p);
+          testResultEditor.setValue(testResultEditor.getValue() + ok + '\n');
+        }
+      } catch (e) {
+        writeToOutput(e, true);
+        return;
+      }
+
       var stopTime = performance.now();
       output.innerText =
           '✨ Done in ' + ((stopTime - startTime) / 1000.0).toFixed(2) + 's.';
       output.style = null;
     });
   } catch (e) {
-    output.innerText = '❌ ' + e;
-    output.style.color = '#ff0000';
+    writeToOutput(e, true);
   }
 });
 
 document.getElementById('validate').addEventListener('click', function() {
-  editorModel.removeLineClass(errorLine - 1, 'background');
+  modelEditor.removeLineClass(errorLine - 1, 'background');
   try {
-    validateModel(editorModel.getValue());
-    output.innerText = '✅ No Error.';
-    output.style = null;
+    validateModel(modelEditor.getValue());
+    writeToOutput('✅ No Error.');
   } catch (e) {
-    output.innerText = '❌ ' + e;
-    output.style.color = '#ff0000';
+    writeToOutput(e, true);
   }
 });
 
@@ -542,8 +591,8 @@ function validateModel(data) {
 function write(section, lineNum, line) {
   const equalIndex = line.indexOf('=');
   if (equalIndex === -1) {
-    highlightErrorLine(editorModel, lineNum);
-    throw `parse the content error : line ${lineNum}.`;
+    highlightErrorLine(modelEditor, lineNum);
+    throw `Error: parse the content error in line ${lineNum}.`;
   } else {
     if (section === 'policy_effect') {
       var effectors = [
@@ -553,7 +602,7 @@ function write(section, lineNum, line) {
         'e = priority(p.eft) || deny',
       ];
       var effectorError =
-          'Casbin doesn\'t support this policy effect, see https://casbin.org/docs/en/syntax-for-models#policy-effect for more details.';
+          'Error: Casbin doesn\'t support this policy effect, see https://casbin.org/docs/en/syntax-for-models#policy-effect for more details.';
       var has = effectors.some(n => n.trim() === line.trim());
       if (!has) {
         throw effectorError;

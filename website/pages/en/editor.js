@@ -42,7 +42,9 @@ const Editor = () => (
                 </select>
 
               </div>
-              <button id="reset" style={{marginLeft: 8}} className={'button'}>Reset</button>
+              <button id="reset" style={{marginLeft: 8}}
+                      className={'button'}>Reset
+              </button>
               <div style={{padding: 8}}>
                 <div id="reset-result"/>
               </div>
@@ -58,10 +60,13 @@ const Editor = () => (
                       className={'with-border'}/>
           </div>
         </div>
+        <div className={'editor-container'}>
+          <h4 style={{padding: 8}}>Custom Function</h4>
+          <textarea id="custom-function"/>
+        </div>
         <div className="editor-group">
           <div className={'editor-container'}>
             <h4 style={{padding: 8}}>Request</h4>
-
             <div>
               <textarea id="test"/>
             </div>
@@ -83,7 +88,6 @@ const Editor = () => (
         <div style={{padding: 8}}>
           <div id="output"/>
         </div>
-
 
         <div id={'disqus'}/>
         <script
