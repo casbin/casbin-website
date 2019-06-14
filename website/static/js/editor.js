@@ -458,6 +458,8 @@ exampleSwitch.addEventListener('change', function() {
 
 updateEditorData(key);
 
+
+
 var output = document.getElementById('output');
 
 function writeToOutput(text, error) {
@@ -468,6 +470,19 @@ function writeToOutput(text, error) {
     output.style = null;
   }
 }
+
+var customFunctionBody = document.getElementById('custom-function-body');
+
+customFunctionBody.style.display = 'none';
+
+document.getElementById('custom-function-btn').
+    addEventListener('click', function() {
+      if (customFunctionBody.style.display === 'none') {
+        customFunctionBody.style.display = '';
+      } else {
+        customFunctionBody.style.display = 'none';
+      }
+    });
 
 document.getElementById('run-test').addEventListener('click', function() {
   var startTime = performance.now();

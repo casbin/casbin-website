@@ -60,10 +60,7 @@ const Editor = () => (
                       className={'with-border'}/>
           </div>
         </div>
-        <div className={'editor-container'}>
-          <h4 style={{padding: 8}}>Custom Function</h4>
-          <textarea id="custom-function"/>
-        </div>
+
         <div className="editor-group">
           <div className={'editor-container'}>
             <h4 style={{padding: 8}}>Request</h4>
@@ -78,6 +75,23 @@ const Editor = () => (
             </div>
           </div>
         </div>
+
+        <div className={'editor-container'}>
+          <div style={{
+            flexDirection: 'row',
+            display: 'flex',
+            alignItems: 'center',
+          }}>
+            <h4 style={{padding: 8}}>Custom Function</h4>
+            <button id="custom-function-btn" style={{marginLeft: 8}}
+                    className={'button'}>Toggle
+            </button>
+          </div>
+          <div id={'custom-function-body'}>
+            <textarea id="custom-function"/>
+          </div>
+        </div>
+
         <div style={{padding: 8}}>
           <button id={'validate'} className={'button'}
                   style={{marginRight: 8}}>Syntax
