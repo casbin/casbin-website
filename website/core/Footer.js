@@ -69,7 +69,7 @@ class Footer extends React.Component {
             </a>
           </div>
           <div>
-            <h5>Social</h5>
+            {/*<h5>Social</h5>*/}
             <a
               className="github-button"
               href={this.props.config.goRepoUrl}
@@ -94,17 +94,6 @@ class Footer extends React.Component {
             <br/>
             <a
               className="github-button"
-              href={this.props.config.phpRepoUrl}
-              data-icon="octicon-star"
-              data-count-href='/stargazers'
-              data-show-count={true}
-              data-count-aria-label="# stargazers on GitHub"
-              aria-label="Star this project on GitHub">
-              php-Casbin
-            </a>
-            &nbsp;&nbsp;&thinsp;&thinsp;
-            <a
-              className="github-button"
               href={this.props.config.nodeRepoUrl}
               data-icon="octicon-star"
               data-count-href='/stargazers'
@@ -112,6 +101,38 @@ class Footer extends React.Component {
               data-count-aria-label="# stargazers on GitHub"
               aria-label="Star this project on GitHub">
               node-Casbin
+            </a>
+            &nbsp;&nbsp;&thinsp;&thinsp;
+            <a
+              className="github-button"
+              href={this.props.config.phpRepoUrl}
+              data-icon="octicon-star"
+              data-count-href='/stargazers'
+              data-show-count={true}
+              data-count-aria-label="# stargazers on GitHub"
+              aria-label="Star this project on GitHub">
+              PHP-Casbin
+            </a>
+            <a
+              className="github-button"
+              href={this.props.config.pythonRepoUrl}
+              data-icon="octicon-star"
+              data-count-href='/stargazers'
+              data-show-count={true}
+              data-count-aria-label="# stargazers on GitHub"
+              aria-label="Star this project on GitHub">
+              pyCasbin
+            </a>
+            &nbsp;&nbsp;&thinsp;&thinsp;
+            <a
+              className="github-button"
+              href={this.props.config.dotnetRepoUrl}
+              data-icon="octicon-star"
+              data-count-href='/stargazers'
+              data-show-count={true}
+              data-count-aria-label="# stargazers on GitHub"
+              aria-label="Star this project on GitHub">
+              Casbin.NET
             </a>
             {this.props.config.twitterUsername && (
               <div className="social">
