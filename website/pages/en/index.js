@@ -232,6 +232,7 @@ class Index extends React.Component {
           <TryOut />
           <Description />
           <Showcase language={language} />
+          <script src="https://opencollective.com/casbin/banner.js"></script>
         </div>
       </div>
     );
