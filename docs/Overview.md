@@ -25,10 +25,10 @@ Enforcement | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 RBAC | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 ABAC | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 Adapter | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
-Management API | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅
-RBAC API | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅
-Filtered Adapter | ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | ❌ |
-Watcher | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ✅
+Management API | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
+RBAC API | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
+Filtered Adapter | ✅ | ❌ | ✅ | ✅ | ❌ | ✅ | ❌ |
+Watcher | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅
 Role Manager | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 Multi-Threading | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
