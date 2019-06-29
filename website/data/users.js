@@ -24,15 +24,9 @@ module.exports = [
     pinned: true,
   },
   {
-    caption: 'Tencent Cloud',
-    image: '/img/users/tencent.png',
-    infoLink: 'https://cloud.tencent.com',
-    pinned: true,
-  },
-  {
     caption: 'Cisco Cloud',
     image: '/img/users/cisco.png',
-    infoLink: 'https://www.cisco.com/c/en/us/solutions/cloud/overview.html',
+    infoLink: 'https://www.linkedin.com/in/openmohan/',
     pinned: true,
   },
   {
@@ -44,7 +38,7 @@ module.exports = [
   {
     caption: 'Verizon',
     image: '/img/users/verizon.png',
-    infoLink: 'https://www.verizon.com',
+    infoLink: 'https://github.com/casbin/casbin/pull/56',
     pinned: true,
   },
   {
@@ -63,18 +57,6 @@ module.exports = [
     caption: 'T-Mobile',
     image: '/img/users/t-mobile.png',
     infoLink: 'https://github.com/tmobile/jazz',
-    pinned: true,
-  },
-  {
-    caption: 'Xiaomi',
-    image: '/img/users/xiaomi.png',
-    infoLink: 'https://www.mi.com/',
-    pinned: true,
-  },
-  {
-    caption: 'FinTech Studios',
-    image: '/img/users/fintech-studios.png',
-    infoLink: 'https://fintechstudios.com',
     pinned: true,
   },
 ];
