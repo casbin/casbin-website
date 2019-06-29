@@ -59,4 +59,10 @@ module.exports = [
     infoLink: 'https://github.com/tmobile/jazz',
     pinned: true,
   },
+  {
+    caption: 'IBM',
+    image: '/img/users/ibm.png',
+    infoLink: 'https://github.com/strongloop/loopback-next/pull/1205',
+    pinned: true,
+  },
 ];
