@@ -612,7 +612,7 @@ For example:
 
 <!--GO-->
 ```go
-removed := e.AddNamedGroupingPolicy("alice", "data2_admin")
+removed := e.RemoveGroupingPolicy("alice", "data2_admin")
 ```
 
 <!--Node.js-->
