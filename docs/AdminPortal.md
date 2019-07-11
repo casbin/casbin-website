@@ -20,6 +20,11 @@ Project | Author | Frontend | Backend | Description
 [gin-admin](https://github.com/LyricTian/gin-admin) | [@LyricTian](https://github.com/LyricTian) | Ant Design | Gin | RBAC scaffolding based on Gin + GORM + Casbin + Ant Design React
 [go-admin](https://github.com/hequan2017/go-admin) | [@hequan2017](https://github.com/hequan2017) | None | Gin | Go RESTful API gateway based on Gin + GORM + JWT + RBAC (Casbin)
 
+<!--Python-->
+Project | Author | Frontend | Backend | Description
+----|----|----|----|----
+[Web UI](https://github.com/casbin/web-ui) | Casbin | Bootstrap | Django | The Web UI for Casbin
+
 <!--PHP-->
 Project | Author | Frontend | Backend | Description
 ----|----|----|----|----
