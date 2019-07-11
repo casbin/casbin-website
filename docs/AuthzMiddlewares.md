@@ -49,7 +49,8 @@ Name | Description
 [Laravel](https://laravel.com/) | The PHP framework for web artisans, via plugin: [laravel-casbin](https://github.com/php-casbin/laravel-casbin)
 [Yii PHP Framework](https://www.yiiframework.com/) | A fast, secure, and efficient PHP framework, via plugin: [yii-casbin](https://github.com/php-casbin/yii-casbin)
 [CakePHP](https://cakephp.org/) | Build fast, grow solid PHP Framework, via plugin: [cake-casbin](https://github.com/php-casbin/cake-casbin)
-[ThinkPHP](http://www.thinkphp.cn/) | The ThinkPHP framework, via plugin: [think-casbin](https://github.com/php-casbin/think-casbin)
+[ThinkPHP 5.1](http://www.thinkphp.cn/) | The ThinkPHP 5.1 framework, via plugin: [think-casbin](https://github.com/php-casbin/think-casbin)
+[ThinkPHP 6.0](http://www.thinkphp.cn/) | The ThinkPHP 6.0 framework, via plugin: [think-authz](https://github.com/php-casbin/think-authz)
 [Symfony](https://symfony.com/) | The Symfony PHP framework, via plugin: [symfony-casbin](https://github.com/videni/symfony-casbin)
 
 <!--Python-->
