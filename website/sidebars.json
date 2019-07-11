@@ -22,7 +22,8 @@
     "Extensions":[
       "adapters",
       "watchers",
-      "role-managers"
+      "role-managers",
+      "middlewares"
     ],
     "API": [
       "management-api",
@@ -38,8 +39,7 @@
       "log-error",
       "online-editor"
     ],
-    "More Resources":[
-      "middlewares",
+    "More":[
       "adopters"
     ]
   }

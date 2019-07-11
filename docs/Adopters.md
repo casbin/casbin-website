@@ -26,7 +26,7 @@ Name | Description | Model | Policy
 <!--Java-->
 Name | Description | Model | Policy
 ----|----|----|----
-[lighty.io](https://github.com/PantheonTechnologies/lighty-core) | OpenDaylight's solution for SDN controller. | [README](https://github.com/PantheonTechnologies/lighty-core/blob/6f2ceaae6a68e08c96d14d2fa8ee060ad9f61606/lighty-examples/lighty-controller-springboot-netconf/README.md#security) |
+[lighty.io](https://github.com/PantheonTechnologies/lighty-core) | OpenDaylight's solution for SDN controller. | [README](https://github.com/PantheonTechnologies/lighty-core/blob/6f2ceaae6a68e08c96d14d2fa8ee060ad9f61606/lighty-examples/lighty-controller-springboot-netconf/README.md#security) | N/A
 
 <!--Node.js-->
 Name | Description | Model | Policy
@@ -36,7 +36,7 @@ Name | Description | Model | Policy
 <!--Python-->
 Name | Description | Model | Policy
 ----|----|----|----
-[dtrace](https://github.com/EduScaled/dtrace) | EduScaled's tracing system. | [Commit](https://github.com/EduScaled/dtrace/commit/6e8d6b52ec2fa120e8ad63f84a4aecc3eae14c02) |
+[dtrace](https://github.com/EduScaled/dtrace) | EduScaled's tracing system. | [Commit](https://github.com/EduScaled/dtrace/commit/6e8d6b52ec2fa120e8ad63f84a4aecc3eae14c02) | N/A
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 

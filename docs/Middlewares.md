@@ -1,6 +1,6 @@
 ---
 id: middlewares
-title: Authz Middlewares
+title: Middlewares
 ---
 
 ### Web frameworks
