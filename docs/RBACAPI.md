@@ -11,7 +11,7 @@ global variable `e` is Enforcer instance.
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 e := NewEnforcer("examples/rbac_model.conf", "examples/rbac_policy.csv")
 ```
@@ -31,7 +31,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 res := e.GetRolesForUser("alice")
 ```
@@ -51,7 +51,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 res := e.GetUsersForRole("data1_admin")
 ```
@@ -70,7 +70,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 res := e.HasRoleForUser("alice", "data1_admin")
 ```
@@ -91,7 +91,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 e.AddRoleForUser("alice", "data2_admin")
 ```
@@ -112,7 +112,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 e.DeleteRoleForUser("alice", "data1_admin")
 ```
@@ -133,7 +133,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 e.DeleteRolesForUser("alice")
 ```
@@ -154,7 +154,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```
 e.DeleteUser("alice")
 ```
@@ -174,7 +174,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 e.DeleteRole("data2_admin")
 ```
@@ -195,7 +195,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 e.DeletePermission("read")
 ```
@@ -217,7 +217,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 e.AddPermissionForUser("bob", "read")
 ```
@@ -238,7 +238,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 e.DeletePermissionForUser("bob", "read")
 ```
@@ -260,7 +260,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 e.DeletePermissionsForUser("bob")
 ```
@@ -280,7 +280,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 e.GetPermissionsForUser("bob")
 ```
@@ -300,7 +300,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 e.HasPermissionForUser("alice", []string{"read"})
 ```
@@ -329,7 +329,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 e.GetImplicitRolesForUser("alice")
 ```
@@ -358,7 +358,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 e.GetImplicitPermissionsForUser("alice")
 ```

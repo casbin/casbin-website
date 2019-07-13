@@ -11,7 +11,7 @@ global variable `e` is Enforcer instance.
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 e := NewEnforcer("examples/rbac_model.conf", "examples/rbac_policy.csv")
 ```
@@ -31,7 +31,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 allSubjects := e.GetAllSubjects()
 ```
@@ -51,7 +51,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 allNamedSubjects := e.GetAllNamedSubjects("p")
 ```
@@ -70,7 +70,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 allObjects := e.GetAllObjects()
 ```
@@ -90,7 +90,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 allNamedObjects := e.GetAllNamedObjects("p")
 ```
@@ -110,7 +110,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 allActions := e.GetAllActions()
 ```
@@ -130,7 +130,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 allNamedActions := e.GetAllNamedActions("p")
 ```
@@ -150,7 +150,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```
 allRoles = e.GetAllRoles()
 
@@ -171,7 +171,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 allNamedRoles := e.GetAllNamedRoles("g")
 
@@ -192,7 +192,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 policy = e.GetPolicy()
 ```
@@ -213,7 +213,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 filteredPolicy := e.GetFilteredPolicy(0, "alice")
 ```
@@ -233,7 +233,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 namedPolicy := e.GetNamedPolicy("p")
 ```
@@ -254,7 +254,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 filteredNamedPolicy = e.GetFilteredNamedPolicy("p", 0, "bob")
 ```
@@ -274,7 +274,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 groupingPolicy := e.GetGroupingPolicy()
 ```
@@ -294,7 +294,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 filteredGroupingPolicy := e.GetFilteredGroupingPolicy(0, "alice")
 
@@ -315,7 +315,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 namedGroupingPolicy := e.GetNamedGroupingPolicy("g")
 ```
@@ -335,7 +335,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 namedGroupingPolicy := e.GetFilteredNamedGroupingPolicy("g", 0, "alice")
 ```
@@ -355,7 +355,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 hasPolicy := e.HasPolicy("data2_admin", "data2", "read")
 ```
@@ -375,7 +375,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 hasNamedPolicy := e.HasNamedPolicy("p", "data2_admin", "data2", "read")
 ```
@@ -397,7 +397,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 added := e.AddPolicy("eve", "data3", "read")
 ```
@@ -420,7 +420,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 added := e.AddNamedPolicy("p", "eve", "data3", "read")
 ```
@@ -441,7 +441,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 removed := e.RemovePolicy("alice", "data1", "read")
 ```
@@ -463,7 +463,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 removed := e.RemoveFilteredPolicy(0, "alice", "data1", "read")
 ```
@@ -484,7 +484,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 removed := e.RemoveNamedPolicy("p", "alice", "data1", "read")
 ```
@@ -505,7 +505,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 removed := e.RemoveFilteredNamedPolicy("p", 0, "alice", "data1", "read")
 ```
@@ -526,7 +526,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 has := e.HasGroupingPolicy("alice", "data2_admin")
 ```
@@ -546,7 +546,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 has := e.HasNamedGroupingPolicy("g", "alice", "data2_admin")
 ```
@@ -568,7 +568,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 added := e.AddGroupingPolicy("group1", "data2_admin")
 ```
@@ -590,7 +590,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 added := e.AddNamedGroupingPolicy("g", "group1", "data2_admin")
 ```
@@ -610,7 +610,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 removed := e.RemoveGroupingPolicy("alice", "data2_admin")
 ```
@@ -630,7 +630,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 removed := e.RemoveFilteredGroupingPolicy(0, "alice")
 ```
@@ -650,7 +650,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 removed := e.RemoveNamedGroupingPolicy("g", "alice")
 ```
@@ -670,7 +670,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 removed := e.RemoveFilteredNamedGroupingPolicy("g", 0, "alice")
 ```
@@ -690,7 +690,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--GO-->
+<!--Go-->
 ```go
 func CustomFunction(key1 string, key2 string) bool {
 	if key1 == "/alice_data2/myid/using/res_id" && key2 == "/alice_data/:resource" {
