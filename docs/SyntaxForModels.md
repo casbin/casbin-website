@@ -7,7 +7,7 @@ title: Syntax for Models
 
 - If a model uses RBAC, it should also add the ``[role_definition]`` section.
 
-- A model CONF can contain comments. The comments start with ``#``, and ``#`` will comment the whole line.
+- A model CONF can contain comments. The comments start with ``#``, and ``#`` will comment the rest of the line.
 
 ## Request definition
 
