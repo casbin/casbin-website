@@ -613,7 +613,7 @@ function write(section, lineNum, line) {
       var effectors = [
         'e = some(where (p.eft == allow))',
         'e = !some(where (p.eft == deny))',
-        'e = some(where (p.eft == allow)) && !some(where (p.eft == deny))' +
+        'e = some(where (p.eft == allow)) && !some(where (p.eft == deny))',
         'e = priority(p.eft) || deny',
       ];
       var effectorError =
