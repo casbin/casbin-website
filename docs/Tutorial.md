@@ -61,7 +61,7 @@ This paper digs deeply into the design details about Casbin. Please cite the fol
 
 ### Argo CD
 
-- [Organizational RBAC in Argo CD with Casbin](https://argoproj.github.io/docs/argo-cd/docs/rbac.html)
+- [Organizational RBAC in Argo CD with Casbin](https://argoproj.github.io/argo-cd/operator-manual/rbac/)
 
 ### GShark
 
