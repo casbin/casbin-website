@@ -42,7 +42,7 @@ The model can be initialized dynamically from code instead of using ``.CONF`` fi
 
 ```go
 // Initialize the model from Go code.
-m := casbin.NewModel()
+m := model.NewModel()
 m.AddDef("r", "r", "sub, obj, act")
 m.AddDef("p", "p", "sub, obj, act")
 m.AddDef("g", "g", "_, _")
