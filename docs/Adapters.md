@@ -62,7 +62,8 @@ Adapter | Type | Author | AutoSave | Description
 Adapter | Type | Author | AutoSave | Description
 ----|------|----|----|----
 [File Adapter (built-in)](https://casbin.org/docs/en/adapters#file-adapter-built-in) | File | Casbin | ❌ | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files
-[Database Adapter](https://github.com/php-casbin/database-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, SQLite, Microsoft SQL Server are supported by Database Adapter
+[Database Adapter](https://github.com/php-casbin/database-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, SQLite, Microsoft SQL Server are supported by [techone/database](https://github.com/techoner/database)
+[Zend Db Adapter](https://github.com/php-casbin/zend-db-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, Oracle, IBM DB2, Microsoft SQL Server, PD are supported by [zend-db](https://docs.zendframework.com/zend-db/)
 
 <!--Python-->
 Adapter | Type | Author | AutoSave | Description
