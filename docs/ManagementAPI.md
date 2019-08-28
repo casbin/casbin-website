@@ -21,6 +21,11 @@ e := NewEnforcer("examples/rbac_model.conf", "examples/rbac_policy.csv")
 const e = await newEnforcer('examples/rbac_model.conf', 'examples/rbac_policy.csv')
 ```
 
+<!--PHP-->
+```php
+$e = new Enforcer('examples/rbac_model.conf', 'examples/rbac_policy.csv');
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetAllSubjects()`
@@ -39,6 +44,11 @@ allSubjects := e.GetAllSubjects()
 <!--Node.js-->
 ```typescript
 const allSubjects = e.getAllSubjects()
+```
+
+<!--PHP-->
+```php
+$allSubjects = $e->getAllSubjects();
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -60,6 +70,12 @@ allNamedSubjects := e.GetAllNamedSubjects("p")
 ```typescript
 const allNamedSubjects = e.getAllNamedSubjects('p')
 ```
+
+<!--PHP-->
+```php
+$allNamedSubjects = $e->getAllNamedSubjects("p");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetAllObjects()`
@@ -78,6 +94,11 @@ allObjects := e.GetAllObjects()
 <!--Node.js-->
 ```typescript
 const allObjects = e.getAllObjects()
+```
+
+<!--PHP-->
+```php
+$allObjects = $e->getAllObjects();
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -100,6 +121,11 @@ allNamedObjects := e.GetAllNamedObjects("p")
 const allNamedObjects = e.getAllNamedObjects('p')
 ```
 
+<!--PHP-->
+```php
+$allNamedObjects = $e->getAllNamedObjects("p");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetAllActions()`
@@ -120,6 +146,11 @@ allActions := e.GetAllActions()
 const allActions = e.getAllActions()
 ```
 
+<!--PHP-->
+```php
+$allActions = $e->getAllActions();
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetAllNamedActions()`
@@ -138,6 +169,11 @@ allNamedActions := e.GetAllNamedActions("p")
 <!--Node.js-->
 ```typescript
 const allNamedActions = e.getAllNamedActions('p')
+```
+
+<!--PHP-->
+```php
+$allNamedActions = $e->getAllNamedActions("p");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -161,6 +197,11 @@ allRoles = e.GetAllRoles()
 const allRoles = e.getAllRoles()
 ```
 
+<!--PHP-->
+```php
+$allRoles = $e->getAllRoles();
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetAllNamedRoles()`
@@ -182,6 +223,11 @@ allNamedRoles := e.GetAllNamedRoles("g")
 const allNamedRoles = e.getAllNamedRoles('g')
 ```
 
+<!--PHP->
+```php
+$allNamedRoles = $e->getAllNamedRoles('g');
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetPolicy()`
@@ -200,6 +246,11 @@ policy = e.GetPolicy()
 <!--Node.js-->
 ```typescript
 const policy = e.getPolicy()
+```
+
+<!--PHP-->
+```php
+$policy = $e->getPolicy();
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -223,6 +274,11 @@ filteredPolicy := e.GetFilteredPolicy(0, "alice")
 const filteredPolicy = e.getFilteredPolicy(0, 'alice')
 ```
 
+<!--PHP-->
+```php
+$filteredPolicy = $e->getFilteredPolicy(0, "alice");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetNamedPolicy()`
@@ -241,6 +297,11 @@ namedPolicy := e.GetNamedPolicy("p")
 <!--Node.js-->
 ```typescript
 const namedPolicy = e.getNamedPolicy('p')
+```
+
+<!--PHP-->
+```php
+$namedPolicy = $e->getNamedPolicy("p");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -264,6 +325,11 @@ filteredNamedPolicy = e.GetFilteredNamedPolicy("p", 0, "bob")
 const filteredNamedPolicy = e.getFilteredNamedPolicy('p', 0, 'bob')
 ```
 
+<!--PHP-->
+```php
+$filteredNamedPolicy = $e->getFilteredNamedPolicy("p", 0, "bob");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetGroupingPolicy()`
@@ -282,6 +348,11 @@ groupingPolicy := e.GetGroupingPolicy()
 <!--Node.js-->
 ```typescript
 const groupingPolicy = e.getGroupingPolicy()
+```
+
+<!--PHP-->
+```php
+$groupingPolicy = $e->getGroupingPolicy();
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -305,6 +376,11 @@ filteredGroupingPolicy := e.GetFilteredGroupingPolicy(0, "alice")
 const filteredGroupingPolicy = e.getFilteredGroupingPolicy(0, 'alice')
 ```
 
+<!--Go-->
+```go
+$filteredGroupingPolicy = $e->getFilteredGroupingPolicy(0, "alice");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetNamedGroupingPolicy()`
@@ -323,6 +399,11 @@ namedGroupingPolicy := e.GetNamedGroupingPolicy("g")
 <!--Node.js-->
 ```typescript
 const namedGroupingPolicy = e.getNamedGroupingPolicy('g')
+```
+
+<!--PHP-->
+```php
+$namedGroupingPolicy = $e->getNamedGroupingPolicy("g");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -345,6 +426,11 @@ namedGroupingPolicy := e.GetFilteredNamedGroupingPolicy("g", 0, "alice")
 const namedGroupingPolicy = e.getFilteredNamedGroupingPolicy('g', 0, 'alice')
 ```
 
+<!--PHP-->
+```php
+$namedGroupingPolicy = $e->getFilteredNamedGroupingPolicy("g", 0, "alice");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `HasPolicy()`
@@ -365,6 +451,11 @@ hasPolicy := e.HasPolicy("data2_admin", "data2", "read")
 const hasPolicy = e.hasPolicy('data2_admin', 'data2', 'read')
 ```
 
+<!--PHP-->
+```php
+$hasPolicy = $e->hasPolicy('data2_admin', 'data2', 'read');
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `HasNamedPolicy()`
@@ -383,6 +474,11 @@ hasNamedPolicy := e.HasNamedPolicy("p", "data2_admin", "data2", "read")
 <!--Node.js-->
 ```typescript
 const hasNamedPolicy = e.hasNamedPolicy('p', 'data2_admin', 'data2', 'read')
+```
+
+<!--PHP-->
+```php
+$hasNamedPolicy = $e->hasNamedPolicy("p", "data2_admin", "data2", "read");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -408,6 +504,11 @@ const p = ['eve', 'data3', 'read']
 const added = await e.addPolicy(...p)
 ```
 
+<!--PHP-->
+```php
+$added = $e->addPolicy('eve', 'data3', 'read');
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `AddNamedPolicy()`
@@ -431,6 +532,11 @@ const p = ['eve', 'data3', 'read']
 const added = await e.addNamedPolicy('p', ...p)
 ```
 
+<!--PHP-->
+```php
+$added = $e->addNamedPolicy("p", "eve", "data3", "read");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `RemovePolicy()`
@@ -450,6 +556,11 @@ removed := e.RemovePolicy("alice", "data1", "read")
 ```typescript
 const p = ['alice', 'data1', 'read']
 const removed = await e.removePolicy(...p)
+```
+
+<!--PHP-->
+```php
+$removed = $e->removePolicy("alice", "data1", "read");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -474,6 +585,11 @@ const p = ['alice', 'data1', 'read']
 const removed = await e.removeFilteredPolicy(0, ...p)
 ```
 
+<!--PHP-->
+```php
+$removed = $e->removeFilteredPolicy(0, "alice", "data1", "read");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `RemoveNamedPolicy()`
@@ -493,6 +609,11 @@ removed := e.RemoveNamedPolicy("p", "alice", "data1", "read")
 ```typescript
 const p = ['alice', 'data1', 'read']
 const removed = await e.removeNamedPolicy('p', ...p)
+```
+
+<!--PHP-->
+```php
+$removed = $e->removeNamedPolicy("p", "alice", "data1", "read");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -516,6 +637,11 @@ const p = ['alice', 'data1', 'read']
 const removed = await e.removeFilteredNamedPolicy('p', 0, ...p)
 ```
 
+<!--PHP-->
+```php
+$removed = $e->removeFilteredNamedPolicy("p", 0, "alice", "data1", "read");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `HasGroupingPolicy()`
@@ -536,6 +662,11 @@ has := e.HasGroupingPolicy("alice", "data2_admin")
 const has = e.hasGroupingPolicy('alice', 'data2_admin')
 ```
 
+<!--PHP-->
+```php
+$has = $e->hasGroupingPolicy("alice", "data2_admin");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `HasNamedGroupingPolicy()`
@@ -554,6 +685,11 @@ has := e.HasNamedGroupingPolicy("g", "alice", "data2_admin")
 <!--Node.js-->
 ```typescript
 const has = e.hasNamedGroupingPolicy('g', 'alice', 'data2_admin')
+```
+
+<!--PHP-->
+```php
+$has = $e->hasNamedGroupingPolicy("g", "alice", "data2_admin");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -578,6 +714,11 @@ added := e.AddGroupingPolicy("group1", "data2_admin")
 const added = await e.addGroupingPolicy('group1', 'data2_admin')
 ```
 
+<!--PHP-->
+```php
+$added = $e->addGroupingPolicy("group1", "data2_admin");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `AddNamedGroupingPolicy()`
@@ -600,6 +741,11 @@ added := e.AddNamedGroupingPolicy("g", "group1", "data2_admin")
 const added = await e.addNamedGroupingPolicy('g', 'group1', 'data2_admin')
 ```
 
+<!--PHP-->
+```php
+$added = $e->addNamedGroupingPolicy("g", "group1", "data2_admin");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `RemoveGroupingPolicy()`
@@ -618,6 +764,11 @@ removed := e.RemoveGroupingPolicy("alice", "data2_admin")
 <!--Node.js-->
 ```typescript
 const removed = await e.removeGroupingPolicy('alice', 'data2_admin')
+```
+
+<!--PHP-->
+```php
+$removed = $e->removeGroupingPolicy("alice", "data2_admin");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -640,6 +791,11 @@ removed := e.RemoveFilteredGroupingPolicy(0, "alice")
 const removed = await e.removeFilteredGroupingPolicy(0, 'alice')
 ```
 
+<!--PHP-->
+```php
+$removed = $e->removeFilteredGroupingPolicy(0, "alice");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `RemoveNamedGroupingPolicy()`
@@ -660,6 +816,11 @@ removed := e.RemoveNamedGroupingPolicy("g", "alice")
 const removed = await e.removeNamedGroupingPolicy('g', 'alice')
 ```
 
+<!--PHP-->
+```php
+$removed = $e->removeNamedGroupingPolicy("g", "alice");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `RemoveFilteredNamedGroupingPolicy()`
@@ -678,6 +839,11 @@ removed := e.RemoveFilteredNamedGroupingPolicy("g", 0, "alice")
 <!--Node.js-->
 ```typescript
 const removed = await e.removeFilteredNamedGroupingPolicy('g', 0, 'alice')
+```
+
+<!--PHP-->
+```php
+$removed = $e->removeFilteredNamedGroupingPolicy("g", 0, "alice");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -715,6 +881,28 @@ e.AddFunction("keyMatchCustom", CustomFunctionWrapper)
 <!--Node.js-->
 ```text
 Method is not implemented
+```
+
+<!--PHP-->
+```php
+func customFunction($key1, $key2) {
+	if ($key1 == "/alice_data2/myid/using/res_id" && $key2 == "/alice_data/:resource") {
+		return true;
+	} elseif ($key1 == "/alice_data2/myid/using/res_id" && $key2 == "/alice_data2/:id/using/:resId") {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+func customFunctionWrapper(...$args){
+	$key1 := $args[0];
+	$key2 := $args[1];
+
+	return customFunction($key1, $key2);
+}
+
+$e->addFunction("keyMatchCustom", customFunctionWrapper);
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
