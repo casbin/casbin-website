@@ -144,26 +144,27 @@ Besides the static policy file, Casbin also provides API for permission manageme
 
 <!--Go-->
 ```go
-roles := e.GetRoles("alice")
+roles := e.GetRolesForUser("alice")
 ```
 
 <!--Java-->
 ```java
-Roles roles = enforcer.getRoles("alice");
+Roles roles = enforcer.getRolesForUser("alice");
 ```
 
 <!--Node.js-->
 ```js
-const roles = enforcer.getRoles('alice');
+const roles = enforcer.getRolesForUser('alice');
 ```
 
 <!--PHP-->
 ```php
+$roles = $e->getRolesForUser("alice");
 ```
 
 <!--Python-->
 ```python
-roles = e.get_roles("alice")
+roles = e.get_roles_for_user("alice")
 ```
 
 <!--Delphi-->
