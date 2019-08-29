@@ -21,6 +21,11 @@ e := NewEnforcer("examples/rbac_model.conf", "examples/rbac_policy.csv")
 const e = await newEnforcer('examples/rbac_model.conf', 'examples/rbac_policy.csv')
 ```
 
+<!--PHP-->
+```php
+$e = new Enforcer('examples/rbac_model.conf', 'examples/rbac_policy.csv');
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetRolesForUser()`
@@ -39,6 +44,11 @@ res := e.GetRolesForUser("alice")
 <!--Node.js-->
 ```typescript
 const res = e.getRolesForUser('alice')
+```
+
+<!--PHP-->
+```php
+$res = $e->getRolesForUser("alice");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -60,6 +70,12 @@ res := e.GetUsersForRole("data1_admin")
 ```typescript
 const res = e.getUsersForRole('data1_admin')
 ```
+
+<!--PHP-->
+```php
+$res = $e->getUsersForRole("data1_admin");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `HasRoleForUser()`
@@ -78,6 +94,11 @@ res := e.HasRoleForUser("alice", "data1_admin")
 <!--Node.js-->
 ```typescript
 const res = e.hasRoleForUser('alice', 'data1_admin')
+```
+
+<!--PHP-->
+```php
+$res = $e->hasRoleForUser("alice", "data1_admin");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -101,6 +122,11 @@ e.AddRoleForUser("alice", "data2_admin")
 await e.addRoleForUser('alice', 'data2_admin')
 ```
 
+<!--PHP-->
+```PHP
+$e->addRoleForUser("alice", "data2_admin");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `DeleteRoleForUser()`
@@ -120,6 +146,11 @@ e.DeleteRoleForUser("alice", "data1_admin")
 <!--Node.js-->
 ```typescript
 await e.deleteRoleForUser('alice', 'data1_admin')
+```
+
+<!--PHP-->
+```php
+$e->deleteRoleForUser("alice", "data1_admin");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -143,6 +174,11 @@ e.DeleteRolesForUser("alice")
 await e.deleteRolesForUser('alice')
 ```
 
+<!--PHP-->
+```php
+$e->deleteRolesForUser("alice");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `DeleteUser()`
@@ -162,6 +198,11 @@ e.DeleteUser("alice")
 <!--Node.js-->
 ```typescript
 await e.deleteUser('alice')
+```
+
+<!--PHP-->
+```php
+$e->deleteUser("alice");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -184,6 +225,11 @@ e.DeleteRole("data2_admin")
 await e.deleteRole("data2_admin")
 ```
 
+<!--PHP-->
+```php
+$e->deleteRole("data2_admin");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `DeletePermission()`
@@ -203,6 +249,11 @@ e.DeletePermission("read")
 <!--Node.js-->
 ```typescript
 await e.deletePermission('read')
+```
+
+<!--PHP-->
+```php
+$e->deletePermission("read");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -227,6 +278,11 @@ e.AddPermissionForUser("bob", "read")
 await e.addPermissionForUser('bob', 'read')
 ```
 
+<!--PHP-->
+```php
+$e->addPermissionForUser("bob", "read");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `DeletePermissionForUser()`
@@ -246,6 +302,11 @@ e.DeletePermissionForUser("bob", "read")
 <!--Node.js-->
 ```typescript
 await e.deletePermissionForUser("bob", "read")
+```
+
+<!--PHP-->
+```php
+$e->deletePermissionForUser("bob", "read");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -270,6 +331,11 @@ e.DeletePermissionsForUser("bob")
 await e.deletePermissionsForUser('bob')
 ```
 
+<!--PHP-->
+```php
+$e->deletePermissionsForUser("bob");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetPermissionsForUser()`
@@ -290,6 +356,11 @@ e.GetPermissionsForUser("bob")
 e.getPermissionsForUser('bob')
 ```
 
+<!--PHP-->
+```php
+$e->getPermissionsForUser("bob");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `HasPermissionForUser()`
@@ -308,6 +379,11 @@ e.HasPermissionForUser("alice", []string{"read"})
 <!--Node.js-->
 ```typescript
 e.hasPermissionForUser('alice', 'read')
+```
+
+<!--PHP-->
+```php
+$e->hasPermissionForUser("alice", []string{"read"});
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -339,6 +415,11 @@ e.GetImplicitRolesForUser("alice")
 Method is not implemented
 ```
 
+<!--PHP-->
+```php
+$e->getImplicitRolesForUser("alice");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetImplicitPermissionsForUser()`
@@ -366,6 +447,11 @@ e.GetImplicitPermissionsForUser("alice")
 <!--Node.js-->
 ```text
 Method is not implemented
+```
+
+<!--PHP-->
+```php
+$e->getImplicitPermissionsForUser("alice");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
