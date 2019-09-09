@@ -64,6 +64,7 @@ Adapter | Type | Author | AutoSave | Description
 [File Adapter (built-in)](https://casbin.org/docs/en/adapters#file-adapter-built-in) | File | Casbin | ❌ | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files
 [Database Adapter](https://github.com/php-casbin/database-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, SQLite, Microsoft SQL Server are supported by [techone/database](https://github.com/techoner/database)
 [Zend Db Adapter](https://github.com/php-casbin/zend-db-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, SQLite, Oracle, IBM DB2, Microsoft SQL Server, Other PDO Driver are supported by [zend-db](https://docs.zendframework.com/zend-db/)
+[Doctrine DBAL Adapter(Recommend)](https://github.com/php-casbin/dbal-adapter) | ORM | Casbin | ✅ | Powerful PHP database abstraction layer ([DBAL](https://github.com/doctrine/dbal)) with many features for database schema introspection and management.
 
 <!--Python-->
 Adapter | Type | Author | AutoSave | Description
@@ -95,14 +96,29 @@ Here we provide several examples:
 
 Below shows how to initialize an enforcer from the built-in file adapter:
 
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
 ```go
 import "github.com/casbin/casbin"
 
 e := casbin.NewEnforcer("examples/basic_model.conf", "examples/basic_policy.csv")
 ```
 
+<!--PHP-->
+```php
+use Casbin\Enforcer;
+
+$e = new Enforcer('examples/basic_model.conf', 'examples/basic_policy.csv');
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
 This is the same with:
 
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
 ```go
 import (
     "github.com/casbin/casbin"
@@ -113,10 +129,25 @@ a := fileadapter.NewAdapter("examples/basic_policy.csv")
 e := casbin.NewEnforcer("examples/basic_model.conf", a)
 ```
 
+<!--PHP-->
+```php
+use Casbin\Enforcer;
+use Casbin\Persist\Adapters\FileAdapter;
+
+$a = new FileAdapter('examples/basic_policy.csv');
+$e = new Enforcer('examples/basic_model.conf', $a);
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
 ### [MySQL adapter](https://github.com/casbin/mysql-adapter)
 
 Below shows how to initialize an enforcer from MySQL database. it connects to a MySQL DB on 127.0.0.1:3306 with root and blank password.
 
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
 ```go
 import (
     "github.com/casbin/casbin"
@@ -126,6 +157,31 @@ import (
 a := mysqladapter.NewAdapter("mysql", "root:@tcp(127.0.0.1:3306)/")
 e := casbin.NewEnforcer("examples/basic_model.conf", a)
 ```
+
+<!--PHP-->
+```php
+// https://github.com/php-casbin/dbal-adapter
+
+use Casbin\Enforcer;
+use CasbinAdapter\DBAL\Adapter as DatabaseAdapter;
+
+$config = [
+    // Either 'driver' with one of the following values:
+    // pdo_mysql,pdo_sqlite,pdo_pgsql,pdo_oci (unstable),pdo_sqlsrv,pdo_sqlsrv,
+    // mysqli,sqlanywhere,sqlsrv,ibm_db2 (unstable),drizzle_pdo_mysql
+    'driver'     => 'pdo_mysql', 
+    'host' => '127.0.0.1',
+    'dbname' => 'test',
+    'user' => 'root',
+    'password' => '',
+    'port' => '3306',
+];
+
+$a = DatabaseAdapter::newAdapter($config);
+$e = new Enforcer('examples/basic_model.conf', $a);
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Use your own storage adapter
 
