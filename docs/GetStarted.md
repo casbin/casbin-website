@@ -23,7 +23,7 @@ Enforcer enforcer = new Enforcer("path/to/model.conf", "path/to/policy.csv");
 
 <!--Node.js-->
 ```js
-import casbin from 'casbin';
+import * as casbin from 'casbin';
 
 const enforcer = await casbin.newEnforcer('path/to/model.conf', 'path/to/policy.csv');
 ```
