@@ -56,7 +56,7 @@ end
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
-**Note:** you can also initialize an enforcer with policy in DB instead of file, see [Persistence](#persistence) section for details.
+**Note:** you can also initialize an enforcer with policy in DB instead of file, see [Adapters](/docs/en/adapters) section for details.
 
 Add an enforcement hook into your code right before the access happens:
 
@@ -138,7 +138,7 @@ else
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
-Besides the static policy file, Casbin also provides API for permission management at run-time. For example, You can get all the roles assigned to a user as below:
+Casbin also provides API for permission management at run-time. For example, You can get all the roles assigned to a user as below:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
@@ -173,6 +173,6 @@ roles = e.get_roles_for_user("alice")
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
-See [Policy management APIs](#policy-management) for more usage.
+See [Management API](/docs/en/management-api) and [RBAC API](/docs/en/rbac-api) for more usage.
 
-Please refer to the ``_test.go`` files for more usage.
+Please refer to the test cases for more usage.
