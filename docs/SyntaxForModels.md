@@ -108,3 +108,24 @@ You can use arithmetic like ``+, -, *, /`` and logical operators like ``&&, ||, 
 :::note
 Although it seems like there will be multiple matchers such as ``m1``, ``m2`` like other primitives, currently, we only support one matcher ``m``. You can always use the above logical operators to implement complicated logic judgment in one matcher. So we believe there is no need to support multiple matchers for now. Let me know if you have other opinions.
 :::
+
+### Expression evaluator
+
+The matcher evaluation in Casbin is implemented by expression evaluators in each language. Casbin integrates their powers to provide the unified PERM language. Besides all the model syntax provided here, those expression evaluators may provide extra functionality, which may be not supported by another language or implementation. Use it at your own risk.
+
+The expression evaluators used by each Casbin implementation are:
+
+Implementation | Language | Expression evaluator
+----|----|----
+Casbin | Golang | https://github.com/Knetic/govaluate
+jCasbin | Java | https://github.com/killme2008/aviator
+Node-Casbin | Node.js | https://github.com/donmccurdy/expression-eval
+PHP-Casbin | PHP | https://github.com/symfony/expression-language
+PyCasbin | Python | https://github.com/danthedeckie/simpleeval
+Casbin.NET | C# | https://github.com/davideicardi/DynamicExpresso
+Casbin4D | Delphi | https://github.com/casbin4d/Casbin4D/tree/master/SourceCode/Common/Third%20Party/TExpressionParser
+casbin-rs | Rust | https://github.com/jonathandturner/rhai
+
+:::note
+If you encounter performance issue about Casbin, it's probably caused by the low efficiency of the expression evaluator. You can both send issue to Casbin or the expression evaluator directly for advice to speed up. See [Benchmarks](/docs/en/benchmark) section for details.
+:::
