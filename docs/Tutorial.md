@@ -47,6 +47,8 @@ This paper digs deeply into the design details about Casbin. Please cite the fol
 
 ### Gin
 
+- [Tutorial: Integrate Gin with Cabsin](https://dev.to/maxwellhertz/tutorial-integrate-gin-with-cabsin-56m0)
+- [Policy enforcements on K8s with Pipeline](https://banzaicloud.com/blog/policy-enforcement-k8s/)
 - [Backend API with Go: 1. Authentication based on JWT (in Chinese)](https://studygolang.com/topics/6998)
 - [Backend API with Go: 2. Authorization based on Casbin (in Chinese)](https://studygolang.com/topics/6999)
 - [Using Go's authorization library Casbin with Gin and GORM (in Japanese)](https://www.zaneli.com/blog/20181203)
@@ -55,10 +57,6 @@ This paper digs deeply into the design details about Casbin. Please cite the fol
 
 - [Iris + Casbin: Practice for permission management (in Chinese)](https://zxc0328.github.io/2018/05/14/casbin-iris/)
 - [Role-based access control for HTTP based on Casbin (in Chinese)](https://studyiris.com/example/exper/casbin.html)
-
-### Banzai Cloud
-
-- [Policy enforcements on Kubernetes with Banzai Cloud's Pipeline and Casbin](https://banzaicloud.com/blog/policy-enforcement-k8s/)
 
 ### Argo CD
 
