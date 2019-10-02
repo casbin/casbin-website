@@ -75,6 +75,17 @@ e = some(where (p.eft == allow)) && !some(where (p.eft == deny))
 
 It means at least one matched policy rule of``allow``, and there is no matched policy rule of``deny``. So in this way, both the allow and deny authorizations are supported, and the deny overrides.
 
+Note: although we designed the syntax of policy effect as above, the current implementations only use hard-coded policy effect, as we found there's no much need for that sort of flexibility. So for now, you must use one of the built-in policy effects instead of customizing your own one.
+
+The supported built-in policy effects are:
+
+Policy effect | Meaning | Example
+----|------|----
+some(where (p.eft == allow)) | allow-override | [ACL, RBAC, etc.](/docs/en/supported-models#examples)
+!some(where (p.eft == deny)) | deny-override | [Deny-override](/docs/en/supported-models#examples)
+some(where (p.eft == allow)) && !some(where (p.eft == deny)) | allow-and-deny | [Allow-and-deny](/docs/en/supported-models#examples)
+priority(p.eft) &#124;&#124; deny | priority | [Priority](/docs/en/supported-models#examples)
+
 ## Matchers
 
 ``[matchers]`` is the definition for policy matchers. The matchers are expressions. It defines how the policy rules are evaluated against the request.
