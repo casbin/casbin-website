@@ -40,7 +40,9 @@ Function | Behavior on error | What if I want error instead of panic?
 [SavePolicy()](https://godoc.org/github.com/casbin/casbin#Enforcer.SavePolicy) | Return error | N/A
 [Enforce()](https://godoc.org/github.com/casbin/casbin#Enforcer.Enforce) | Cause panic | Please use [EnforceSafe()](https://godoc.org/github.com/casbin/casbin#Enforcer.EnforceSafe)
 
-Note: ``NewEnforcer()`` calls ``LoadModel()`` and ``LoadPolicy()`` inside. So you don't have to call the latter two calls when using ``NewEnforcer()``.
+:::note
+``NewEnforcer()`` calls ``LoadModel()`` and ``LoadPolicy()`` inside. So you don't have to call the latter two calls when using ``NewEnforcer()``.
+:::
 
 ### Why not just return error for all the functions?
 

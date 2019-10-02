@@ -41,8 +41,10 @@ Simply speaking, to use ABAC, you need to do two things:
 1. Specify the attributes in the model matcher.
 2. Pass in the struct or class instance for the element as the argument in Casbin's ``Enforce()`` function.
 
-Note:
+:::warning
+Currently, only request elements like ``r.sub``, ``r.obj``, ``r.act`` and so on support ABAC. You cannot use it on policy elements like ``p.sub``, because there is no way to define a struct or class in Casbin's policy.
+:::
 
-1. Currently, only request elements like ``r.sub``, ``r.obj``, ``r.act`` and so on support ABAC. You cannot use it on policy elements like ``p.sub``, because there is no way to define a struct or class in Casbin's policy.
-2. You can use multiple ABAC attributes in a matcher, for example: ``m = r.sub.Domain == r.obj.Domain``.
-
+:::tip
+You can use multiple ABAC attributes in a matcher, for example: ``m = r.sub.Domain == r.obj.Domain``.
+:::

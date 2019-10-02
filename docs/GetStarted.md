@@ -56,7 +56,9 @@ end
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
-**Note:** you can also initialize an enforcer with policy in DB instead of file, see [Adapters](/docs/en/adapters) section for details.
+:::tip
+You can also initialize an enforcer with policy in DB instead of file, see [Adapters](/docs/en/adapters) section for details.
+:::
 
 Add an enforcement hook into your code right before the access happens:
 

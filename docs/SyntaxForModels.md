@@ -44,9 +44,13 @@ Each line in a policy is called a policy rule. Each policy rule starts with a ``
 (bob, write-all-objects) -> (p2.sub, p2.act)
 ```
 
-**Note**: Currently only single policy definition ``p`` is supported. ``p2`` is yet not supported. Because for common cases, our user doesn't have the need to use multiple policy definitions. If your requirement has to use additional policy definitions, please send an issue about it.
+:::note
+Currently only single policy definition ``p`` is supported. ``p2`` is yet not supported. Because for common cases, our user doesn't have the need to use multiple policy definitions. If your requirement has to use additional policy definitions, please send an issue about it.
+:::
 
-**Note 2**: The elements in a policy rule are always regarded as``string``. If you have any question about this, please see the discussion at: https://github.com/casbin/casbin/issues/113
+:::tip
+The elements in a policy rule are always regarded as``string``. If you have any question about this, please see the discussion at: https://github.com/casbin/casbin/issues/113
+:::
 
 ## Policy effect
 
@@ -75,7 +79,9 @@ e = some(where (p.eft == allow)) && !some(where (p.eft == deny))
 
 It means at least one matched policy rule of``allow``, and there is no matched policy rule of``deny``. So in this way, both the allow and deny authorizations are supported, and the deny overrides.
 
-Note: although we designed the syntax of policy effect as above, the current implementations only use hard-coded policy effect, as we found there's no much need for that sort of flexibility. So for now, you must use one of the built-in policy effects instead of customizing your own one.
+:::note
+Although we designed the syntax of policy effect as above, the current implementations only use hard-coded policy effect, as we found there's no much need for that sort of flexibility. So for now, you must use one of the built-in policy effects instead of customizing your own one.
+:::
 
 The supported built-in policy effects are:
 
@@ -99,4 +105,6 @@ The above matcher is the simplest, it means that the subject, object and action 
 
 You can use arithmetic like ``+, -, *, /`` and logical operators like ``&&, ||, !`` in matchers.
 
-**Note**: Although it seems like there will be multiple matchers such as ``m1``, ``m2`` like other primitives, currently, we only support one matcher ``m``. You can always use the above logical operators to implement complicated logic judgment in one matcher. So we believe there is no need to support multiple matchers for now. Let me know if you have other opinions.
+:::note
+Although it seems like there will be multiple matchers such as ``m1``, ``m2`` like other primitives, currently, we only support one matcher ``m``. You can always use the above logical operators to implement complicated logic judgment in one matcher. So we believe there is no need to support multiple matchers for now. Let me know if you have other opinions.
+:::

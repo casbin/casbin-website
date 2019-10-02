@@ -139,6 +139,12 @@ const siteConfig = {
   // Facebook
   facebookAppId: '1354585054683583',
   facebookComments: true,
+
+  // Note banner
+  markdownPlugins: [
+    // Highlight admonitions.
+    require('remarkable-admonitions')({ icon: 'svg-inline' })
+  ]
 };
 
 module.exports = siteConfig;

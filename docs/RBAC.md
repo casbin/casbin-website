@@ -35,12 +35,12 @@ m = g(r.sub, p.sub) && r.obj == p.obj && r.act == p.act
 
 It means ``sub`` in the request should has the role ``sub`` in the policy.
 
-There are several things to note:
-
+:::note
 1. Casbin only stores the user-role mapping.
 2. Casbin doesn't verify whether a user is a valid user, or role is a valid role. That should be taken care of by authentication.
 3. Do not use the same name for a user and a role inside a RBAC system, because Casbin recognizes users and roles as strings, and there's no way for Casbin to know whether you are specifying user ``alice`` or role ``alice``. You can simply solve it by using ``role_alice``.
 4. If ``A`` has role ``B``, ``B`` has role ``C``, then ``A`` has role ``C``. This transitivity is infinite for now.
+:::
 
 ## Role hierarchy
 
@@ -99,9 +99,9 @@ e.rm.(*defaultrolemanager.RoleManager).AddMatchingFunc("KeyMatch2", util.KeyMatc
 
 You can see the full example [here](https://github.com/casbin/casbin/blob/dbdb6cbe2e7a80863e4951f9ff36da07fef01b75/model_test.go#L278-L307).
 
-it's notable that:
-
-1. Only the 1st arg (aka the user) in ``g`` supports pattern functions. You are using it in 3rd arg (domain), which is currently not supported.
+:::note
+Only the 1st arg (aka the user) in ``g`` supports pattern functions. You are using it in 3rd arg (domain), which is currently not supported.
+:::
 
 ## Role manager
 

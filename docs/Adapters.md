@@ -83,11 +83,11 @@ Adapter | Type | Author | AutoSave | Description
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
-Here are some things you need to know:
-
+:::note
 1. If ``casbin.NewEnforcer()`` is called with an explicit or implicit adapter, the policy will be loaded automatically.
 2. You can call ``e.LoadPolicy()`` to reload the policy rules from the storage.
 3. If the adapter does not support the ``Auto-Save`` feature, The policy rules cannot be automatically saved back to the storage when you add or remove policies. You can to call ``SavePolicy()`` manually to save all policy rules.
+:::
 
 ## Examples
 
@@ -219,11 +219,11 @@ There is a feature called ``Auto-Save`` for adapters. When an adapter supports `
 
 When the adapter supports ``Auto-Save``, you can switch this option via ``Enforcer.EnableAutoSave()`` function. The option is enabled by default (if the adapter supports it).
 
-**Note**:
-
+:::note
 1. The ``Auto-Save`` feature is optional. An adapter can choose to implement it or not.
 2. ``Auto-Save`` only works for a Casbin enforcer when the adapter the enforcer uses supports it.
 3. See the ``AutoSave`` column in the above adapter list to see if ``Auto-Save`` is supported by an adapter.
+:::
 
 Here's an example about how to use ``Auto-Save``:
 
@@ -271,7 +271,9 @@ AddPolicy() | optional | Add a policy rule to the storage
 RemovePolicy() | optional | Remove a policy rule from the storage
 RemoveFilteredPolicy() | optional | Remove policy rules that match the filter from the storage
 
-**Note**: if an adapter doesn't support the ``Auto-Save`` feature, it should provide an empty implementation for the three optional functions. If you don't provide it, Golang compiler will complain errors. Here's an example:
+:::note
+If an adapter doesn't support ``Auto-Save``, it should provide an empty implementation for the three optional functions. Here's an example for Golang:
+:::
 
 ```go
 // AddPolicy adds a policy rule to the storage.
