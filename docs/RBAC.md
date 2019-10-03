@@ -33,7 +33,7 @@ Then in a matcher, you should check the role as below:
 m = g(r.sub, p.sub) && r.obj == p.obj && r.act == p.act
 ```
 
-It means ``sub`` in the request should has the role ``sub`` in the policy.
+It means ``sub`` in the request should have the role ``sub`` in the policy.
 
 :::note
 1. Casbin only stores the user-role mapping.
