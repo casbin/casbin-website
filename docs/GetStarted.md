@@ -11,7 +11,7 @@ New a Casbin enforcer with a model file and a policy file:
 ```go
 import "github.com/casbin/casbin"
 
-e := casbin.NewEnforcer("path/to/model.conf", "path/to/policy.csv")
+e, err := casbin.NewEnforcer("path/to/model.conf", "path/to/policy.csv")
 ```
 
 <!--Java-->
