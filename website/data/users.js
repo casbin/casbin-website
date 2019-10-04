@@ -65,4 +65,10 @@ module.exports = [
     infoLink: 'https://github.com/strongloop/loopback-next/pull/1205',
     pinned: true,
   },
+  {
+    caption: 'F5',
+    image: '/img/users/f5.png',
+    infoLink: 'https://github.com/casbin/casbin/issues/299',
+    pinned: true,
+  },
 ];
