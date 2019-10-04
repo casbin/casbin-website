@@ -86,7 +86,7 @@ Adapter | Type | Author | AutoSave | Description
 :::note
 1. If ``casbin.NewEnforcer()`` is called with an explicit or implicit adapter, the policy will be loaded automatically.
 2. You can call ``e.LoadPolicy()`` to reload the policy rules from the storage.
-3. If the adapter does not support the ``Auto-Save`` feature, The policy rules cannot be automatically saved back to the storage when you add or remove policies. You can to call ``SavePolicy()`` manually to save all policy rules.
+3. If the adapter does not support the ``Auto-Save`` feature, The policy rules cannot be automatically saved back to the storage when you add or remove policies. You have to call ``SavePolicy()`` manually to save all policy rules.
 :::
 
 ## Examples
