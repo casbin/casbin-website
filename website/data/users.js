@@ -71,4 +71,10 @@ module.exports = [
     infoLink: 'https://github.com/casbin/casbin/issues/299',
     pinned: true,
   },
+  {
+    caption: 'Bose',
+    image: '/img/users/bose.png',
+    infoLink: 'https://github.com/casbin/casbin/issues/302',
+    pinned: true,
+  },
 ];
