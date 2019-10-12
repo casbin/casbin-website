@@ -23,6 +23,7 @@ This paper digs deeply into the design details about Casbin. Please cite the fol
 ### PERM Meta-Model (Policy, Effect, Request, Matchers)
 
 - [Modeling Authorization with PERM in Casbin](https://vicarie.in/posts/generalized-authz.html)
+- [Designing a Flexible Permissions System with Casbin](https://medium.com/silo-blog/designing-a-flexible-permissions-system-with-casbin-f5d97fef17b8)
 - [Permission management with Casbin (in Chinese)](http://www.cnblogs.com/wang_yb/archive/2018/11/20/9987397.html)
 - [Analysis of Casbin (in Chinese)](https://www.cnblogs.com/xiaohunshi/p/10372881.html)
 - [Design of System Permissions (in Chinese)](https://github.com/xizhibei/blog/issues/101)
