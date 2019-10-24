@@ -56,6 +56,7 @@ Adapter | Type | Author | AutoSave | Description
 [TypeORM Adapter](https://github.com/node-casbin/typeorm-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, MariaDB, SQLite, MS SQL Server, Oracle, WebSQL, MongoDB are supported by [TypeORM](https://github.com/typeorm/typeorm)
 [Mongoose Adapter](https://github.com/elasticio/casbin-mongoose-adapter) | ORM | [elastic.io](https://github.com/elasticio) | ✅ | MongoDB is supported by [Mongoose](https://mongoosejs.com/)
 [Knex Adapter](https://github.com/sarneeh/casbin-knex-adapter) | ORM | [@sarneeh](https://github.com/sarneeh) | ✅ | MSSQL, MySQL, PostgreSQL, SQLite3, Oracle are supported by [Knex.js](https://knexjs.org/)
+[Node MongoDB Native Adapter](https://github.com/juicycleff/casbin-mongodb-adapter) | NoSQL | [@juicycleff](https://github.com/juicycleff) | ✅ | For [Node MongoDB Native](https://mongodb.github.io/node-mongodb-native/)
 [Couchbase Adapter](https://github.com/sarneeh/casbin-knex-adapter) | NoSQL | [@MarkMYoung](https://github.com/MarkMYoung) | ✅ | For [Couchbase](https://www.couchbase.com/)
 [Redis Adapter](https://github.com/NandaKishorJeripothula/node-casbin-redis-adapter) | KV store | [@NandaKishorJeripothula](https://github.com/NandaKishorJeripothula) | ❌ | For [Redis](https://redis.io/)
 
