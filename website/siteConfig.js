@@ -110,7 +110,7 @@ const siteConfig = {
   nodeRepoUrl: 'https://github.com/casbin/node-casbin',
   phpRepoUrl: 'https://github.com/php-casbin/php-casbin',
   pythonRepoUrl: 'https://github.com/casbin/pycasbin',
-  dotnetRepoUrl: 'https://github.com/casbin-net/Casbin.NET',
+  dotnetRepoUrl: 'https://github.com/casbin/Casbin.NET',
 
   // Tracking ID of Google Analytics
   gaTrackingId: 'UA-119750650-1',

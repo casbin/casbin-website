@@ -89,7 +89,7 @@ class HomeSplash extends React.Component {
             <Button href="https://github.com/casbin/casbin.js">Front-end js</Button>
             <Button href="https://github.com/php-casbin/php-casbin">PHP</Button>
             <Button href="https://github.com/casbin/pycasbin">Python</Button>
-            <Button href="https://github.com/casbin-net/Casbin.NET">.NET (C#)</Button>
+            <Button href="https://github.com/casbin/Casbin.NET">.NET (C#)</Button>
             <Button href="https://github.com/casbin4d/Casbin4D">Delphi</Button>
             <Button href="https://github.com/casbin/casbin-rs">Rust</Button>
             <Button href="/en/editor"><translate>Try Casbin Online Editor</translate></Button>
