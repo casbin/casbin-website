@@ -77,4 +77,10 @@ module.exports = [
     infoLink: 'https://github.com/casbin/casbin/issues/302',
     pinned: true,
   },
+  {
+    caption: 'OVO',
+    image: '/img/users/ovo.png',
+    infoLink: 'https://ovo.id',
+    pinned: true,
+  },
 ];
