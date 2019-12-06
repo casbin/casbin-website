@@ -29,6 +29,7 @@ Adapter | Type | Author | AutoSave | Description
 [Cassandra Adapter](https://github.com/casbin/cassandra-adapter) | NoSQL | Casbin | ❌ | For [Apache Cassandra DB](http://cassandra.apache.org)
 [DynamoDB Adapter](https://github.com/HOOQTV/dynacasbin) | NoSQL | [HOOQ](https://github.com/HOOQTV) | ❌ | For [Amazon DynamoDB](https://aws.amazon.com/dynamodb/)
 [Dynacasbin](https://github.com/NewbMiao/dynacasbin) | NoSQL | [NewbMiao](https://github.com/NewbMiao) | ✅ | For [Amazon DynamoDB](https://aws.amazon.com/dynamodb/)
+[ArangoDB Adapter](https://github.com/adamwasila/arangodb-adapter) | NoSQL | [@adamwasila](https://github.com/adamwasila) | ✅ | For [ArangoDB](https://www.arangodb.com/)
 [Amazon S3 Adapter](https://github.com/Soluto/casbin-minio-adapter) | Cloud | [Soluto](https://github.com/Soluto) | ❌ | For [Minio](https://github.com/minio/minio) and [Amazon S3](https://aws.amazon.com/s3/)
 [Azure Cosmos DB Adapter](https://github.com/spacycoder/cosmos-casbin-adapter) | Cloud | [@spacycoder](https://github.com/spacycoder) | ✅ | For [Microsoft Azure Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/introduction)
 [GCP Datastore Adapter](https://github.com/livingpackets/datastore-adapter) | Cloud | [LivingPackets](https://github.com/livingpackets) | ❌ | For [Google Cloud Platform Datastore](https://cloud.google.com/datastore/)
