@@ -9,7 +9,7 @@ New a Casbin enforcer with a model file and a policy file:
 
 <!--Go-->
 ```go
-import "github.com/casbin/casbin"
+import "github.com/casbin/casbin/v2"
 
 e, err := casbin.NewEnforcer("path/to/model.conf", "path/to/policy.csv")
 ```
@@ -18,14 +18,14 @@ e, err := casbin.NewEnforcer("path/to/model.conf", "path/to/policy.csv")
 ```java
 import org.casbin.jcasbin.main.Enforcer;
 
-Enforcer enforcer = new Enforcer("path/to/model.conf", "path/to/policy.csv");
+Enforcer e = new Enforcer("path/to/model.conf", "path/to/policy.csv");
 ```
 
 <!--Node.js-->
 ```js
-import * as casbin from 'casbin';
+import { newEnforcer } from 'casbin';
 
-const enforcer = await casbin.newEnforcer('path/to/model.conf', 'path/to/policy.csv');
+const e = await newEnforcer('path/to/model.conf', 'path/to/policy.csv');
 ```
 
 <!--PHP-->
@@ -70,7 +70,13 @@ sub := "alice" // the user that wants to access a resource.
 obj := "data1" // the resource that is going to be accessed.
 act := "read" // the operation that the user performs on the resource.
 
-if e.Enforce(sub, obj, act) == true {
+ok, err := e.Enforce(sub, obj, act)
+
+if err != nil {
+    // handle err
+}
+
+if ok == true {
     // permit alice to read data1
 } else {
     // deny the request, show an error
@@ -83,7 +89,7 @@ String sub = "alice"; // the user that wants to access a resource.
 String obj = "data1"; // the resource that is going to be accessed.
 String act = "read"; // the operation that the user performs on the resource.
 
-if (enforcer.enforce(sub, obj, act) == true) {
+if (e.enforce(sub, obj, act) == true) {
     // permit alice to read data1
 } else {
     // deny the request, show an error
@@ -96,7 +102,7 @@ const sub = 'alice'; // the user that wants to access a resource.
 const obj = 'data1'; // the resource that is going to be accessed.
 const act = 'read'; // the operation that the user performs on the resource.
 
-if (enforcer.enforce(sub, obj, act) == true) {
+if ((await e.enforce(sub, obj, act)) === true) {
     // permit alice to read data1
 } else {
     // deny the request, show an error
@@ -151,12 +157,12 @@ roles := e.GetRolesForUser("alice")
 
 <!--Java-->
 ```java
-Roles roles = enforcer.getRolesForUser("alice");
+Roles roles = e.getRolesForUser("alice");
 ```
 
 <!--Node.js-->
 ```js
-const roles = enforcer.getRolesForUser('alice');
+const roles = e.getRolesForUser('alice');
 ```
 
 <!--PHP-->
