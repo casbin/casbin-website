@@ -62,7 +62,7 @@ module.exports = [
   {
     caption: 'IBM',
     image: '/img/users/ibm.png',
-    infoLink: 'https://github.com/strongloop/loopback-next/pull/1205',
+    infoLink: 'https://loopback.io/doc/en/lb4/Loopback-component-authorization.html#enforcer-libraries',
     pinned: true,
   },
   {
