@@ -48,6 +48,12 @@ module.exports = [
     pinned: true,
   },
   {
+    caption: 'Tencent',
+    image: '/img/users/tencent.png',
+    infoLink: 'https://github.com/tkestack/tke',
+    pinned: true,
+  },
+  {
     caption: 'ETH Zürich',
     image: '/img/users/eth.jpg',
     infoLink: 'https://github.com/netsec-ethz/2SMS',
