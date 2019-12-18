@@ -32,7 +32,7 @@ module.exports = [
   {
     caption: 'Microsoft',
     image: '/img/users/microsoft.png',
-    infoLink: 'https://www.microsoft.com',
+    infoLink: 'https://github.com/microsoft/mouselog',
     pinned: true,
   },
   {
