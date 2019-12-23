@@ -18,6 +18,11 @@ Watcher | Type | Author | Description
 [Redis Watcher](https://github.com/billcobbler/casbin-redis-watcher) | KV store | [@billcobbler](https://github.com/billcobbler) | Watcher for [Redis](http://redis.io/)
 [GCP Pub/Sub Watcher](https://github.com/livingpackets/cloudpubsub-watcher) | Messaging system | [LivingPackets](https://github.com/livingpackets) | Watcher for [Google Cloud Platform PUB/SUB](https://cloud.google.com/pubsub/)
 
+<!--Node.js-->
+Watcher | Type | Author | Description
+----|------|----|----
+[Redis Watcher](https://github.com/node-casbin/redis-watcher) | KV store | Casbin | Watcher for [Redis](http://redis.io/)
+
 <!--.NET-->
 Watcher | Type | Author | Description
 ----|------|----|----
