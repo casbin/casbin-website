@@ -54,6 +54,10 @@ This paper digs deeply into the design details about Casbin. Please cite the fol
 - [Backend API with Go: 2. Authorization based on Casbin (in Chinese)](https://studygolang.com/topics/6999)
 - [Using Go's authorization library Casbin with Gin and GORM (in Japanese)](https://www.zaneli.com/blog/20181203)
 
+### Echo
+
+- [Web authorization with Casbin](http://klotzandrew.com/blog/authorization-with-casbin)
+
 ### Iris
 
 - [Iris + Casbin: Practice for permission management (in Chinese)](https://zxc0328.github.io/2018/05/14/casbin-iris/)
@@ -78,6 +82,7 @@ This paper digs deeply into the design details about Casbin. Please cite the fol
 
 - [nest.js: Casbin RESTful RBAC authorization middleware (Video)](https://www.youtube.com/watch?v=mWlPNrCgVdE)
 - [A Demo App of Attribute-based Access Control in Node.js Based on Casbin](https://github.com/Jarvie8176/casbin-example)
+- [Multi tenant SaaS starter kit with cqrs graphql microservice architecture](https://github.com/juicycleff/ultimate-backend)
 
 <!--PHP-->
 
