@@ -21,6 +21,7 @@ Watcher | Type | Author | Description
 <!--Node.js-->
 Watcher | Type | Author | Description
 ----|------|----|----
+[Etcd Watcher](https://github.com/node-casbin/etcd-watcher) | KV store | Casbin | Watcher for [etcd](https://github.com/coreos/etcd)
 [Redis Watcher](https://github.com/node-casbin/redis-watcher) | KV store | Casbin | Watcher for [Redis](http://redis.io/)
 
 <!--.NET-->
