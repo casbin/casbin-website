@@ -21,7 +21,7 @@ Adapter | Type | Author | AutoSave | Description
 [Beego ORM Adapter](https://github.com/casbin/beego-orm-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, Sqlite3 are supported by [Beego ORM](https://beego.me/docs/mvc/model/overview.md)
 [SQLX Adapter](https://github.com/memwey/casbin-sqlx-adapter) | ORM | [@memwey](https://github.com/memwey) | ✅ | MySQL, PostgreSQL, SQLite, Oracle are supported by [SQLX](https://github.com/jmoiron/sqlx)
 [GF ORM Adapter](https://github.com/vance-liu/gdb-adapter) | ORM | [@vance-liu](https://github.com/vance-liu) | ✅ | MySQL, SQLite, PostgreSQL, Oracle, SQL Server are supported by [GF ORM](https://goframe.org/database/gdb/database)
-[Go-pg Adapter](https://github.com/TecnologiaDeBloques/casbin-pg-adapter) | SQL | [TecnologiaDeBloques](https://github.com/TecnologiaDeBloques) | ✅ | For [PostgreSQL](https://www.postgresql.org/)
+[Filtered PostgreSQL Adapter](https://github.com/casbin/casbin-pg-adapter) | SQL | Casbin | ✅ | For [PostgreSQL](https://www.postgresql.org/)
 [PostgreSQL Adapter](https://github.com/cychiuae/casbin-pg-adapter) | SQL | [@cychiuae](https://github.com/cychiuae) | ✅ | For [PostgreSQL](https://www.postgresql.org/)
 [PostgreSQL Adapter (Archived)](https://github.com/going/casbin-postgres-adapter) | SQL | [Going](https://github.com/going) | ❌ | For [PostgreSQL](https://www.postgresql.org/)
 [RQLite Adapter](https://github.com/edomosystems/rqlite-adapter) | SQL | [EDOMO Systems](https://github.com/edomosystems) | ✅ | For [RQLite](https://github.com/rqlite/rqlite/)
