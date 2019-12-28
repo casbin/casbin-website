@@ -84,6 +84,7 @@ Adapter | Type | Author | AutoSave | Description
 Adapter | Type | Author | AutoSave | Description
 ----|------|----|----|----
 [File Adapter (built-in)](https://casbin.org/docs/en/adapters#file-adapter-built-in) | File | Casbin | ❌ | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files
+[EF Adapter](https://github.com/casbin-net/EF-Adapter) | ORM | Casbin | ❌ | MySQL, PostgreSQL, SQLite, Microsoft SQL Server, Oracle, DB2, etc. are supported by [Entity Framework 6](https://docs.microsoft.com/en-us/ef/ef6/)
 [EFCore Adapter](https://github.com/casbin-net/EFCore-Adapter) | ORM | Casbin | ❌ | MySQL, PostgreSQL, SQLite, Microsoft SQL Server, Oracle, DB2, etc. are supported by [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/)
 
 <!--END_DOCUSAURUS_CODE_TABS-->
