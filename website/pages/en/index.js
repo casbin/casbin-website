@@ -93,6 +93,7 @@ class HomeSplash extends React.Component {
             <Button href="https://github.com/casbin4d/Casbin4D">Delphi</Button>
             <Button href="https://github.com/casbin/casbin-rs">Rust</Button>
             <Button href="/en/editor"><translate>Try Casbin Online Editor</translate></Button>
+            <Button href="https://github.com/casbin/casbin-dashboard"><translate>Try Casbin Dashboard</translate></Button>
           </PromoSection>
         </div>
       </SplashContainer>
