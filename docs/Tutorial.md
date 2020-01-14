@@ -29,6 +29,7 @@ This paper digs deeply into the design details about Casbin. Please cite the fol
 - [Design of System Permissions (in Chinese)](https://github.com/xizhibei/blog/issues/101)
 - [Casbin: A Permission Engine (in Chinese)](https://github.com/xizhibei/blog/issues/102)
 - [Implementing ABAC with Casbin (in Chinese)](https://www.cnblogs.com/studyzy/p/11380736.html)
+- [Source code analysis of Casbin (in Chinese)](https://github.com/jianfengye/doc_web/blob/master/golang/casbin.md)
 
 <!--DOCUSAURUS_CODE_TABS-->
 
@@ -62,6 +63,11 @@ This paper digs deeply into the design details about Casbin. Please cite the fol
 
 - [Iris + Casbin: Practice for permission management (in Chinese)](https://zxc0328.github.io/2018/05/14/casbin-iris/)
 - [Role-based access control for HTTP based on Casbin (in Chinese)](https://studyiris.com/example/exper/casbin.html)
+
+### VMware Harbor
+
+- [Casbin: Golang access control framework (in Chinese)](http://www.growingdev.com/articles/2020/01/12/1578838858526.html)
+- [Access control in Harbor (in Chinese)](http://www.growingdev.com/articles/2020/01/10/1578670203670.html)
 
 ### Argo CD
 
