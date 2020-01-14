@@ -6,9 +6,9 @@ module.exports = [
     pinned: true,
   },
   {
-    caption: 'VMware Dispatch',
+    caption: 'VMware Harbor',
     image: '/img/users/vmware.png',
-    infoLink: 'https://github.com/vmware/dispatch',
+    infoLink: 'https://github.com/goharbor/harbor',
     pinned: true,
   },
   {
