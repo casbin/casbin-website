@@ -29,7 +29,7 @@ This paper digs deeply into the design details about Casbin. Please cite the fol
 - [Design of System Permissions (in Chinese)](https://github.com/xizhibei/blog/issues/101)
 - [Casbin: A Permission Engine (in Chinese)](https://github.com/xizhibei/blog/issues/102)
 - [Implementing ABAC with Casbin (in Chinese)](https://www.cnblogs.com/studyzy/p/11380736.html)
-- [Source code analysis of Casbin (in Chinese)](https://github.com/jianfengye/doc_web/blob/master/golang/casbin.md)
+- [Source code analysis of Casbin (in Chinese)](https://www.cnblogs.com/yjf512/p/12200206.html)
 
 <!--DOCUSAURUS_CODE_TABS-->
 
