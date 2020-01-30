@@ -15,3 +15,4 @@ website/i18n/*
 *.iml
 
 package-lock.json
+yarn.lock
