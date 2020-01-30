@@ -32,6 +32,7 @@ const siteConfig = {
     {doc: 'overview', label: 'Docs'},
     {doc: 'management-api', label: 'API'},
     {page: 'editor', label: 'Editor'},
+    {href: 'https://dashboard.casbin.org', label: "Dashboard"},
     {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
     {languages: true},
