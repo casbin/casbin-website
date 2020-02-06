@@ -17,6 +17,11 @@ const languages = [
     tag: 'zh-CN',
   },
   {
+    enabled: true,
+    name: '한국어',
+    tag: 'ko',
+  },
+  {
     enabled: false,
     name: 'Русский',
     tag: 'ru',
@@ -25,11 +30,6 @@ const languages = [
     enabled: false,
     name: '日本語',
     tag: 'ja',
-  },
-  {
-    enabled: false,
-    name: '한국어',
-    tag: 'ko',
   },
 ];
 module.exports = languages;

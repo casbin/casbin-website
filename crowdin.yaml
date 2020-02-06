@@ -10,6 +10,7 @@ files:
     languages_mapping: &anchor
       locale:
         'zh-CN': 'zh-CN'
+        'ko': 'ko'
   -
     source: '/website/i18n/en.json'
     translation: '/website/i18n/%locale%.json'
