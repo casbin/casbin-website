@@ -1,7 +1,10 @@
-var _hmt = _hmt || [];
 (function() {
-  var hm = document.createElement("script");
-  hm.src = "https://mouselog.org/mouselog-casbin.js";
-  var s = document.getElementsByTagName("script")[0];
-  s.parentNode.insertBefore(hm, s);
+  var script = document.createElement("script");
+  script.src = "https://cdn.jsdelivr.net/npm/mouselog@0.0.5-beta2/mouselog.js";
+  script.onload = () => {
+    mouselog.run("https://mouselog.org", "casbin");
+  };
+  var t = document.getElementsByTagName("script");
+  var s = t.length > 0 ? t[0].parentNode : document.body;
+  s.appendChild(script, s);
 })();
