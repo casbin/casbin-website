@@ -43,7 +43,7 @@ allSubjects := e.GetAllSubjects()
 
 <!--Node.js-->
 ```typescript
-const allSubjects = e.getAllSubjects()
+const allSubjects = await e.getAllSubjects()
 ```
 
 <!--PHP-->
@@ -68,7 +68,7 @@ allNamedSubjects := e.GetAllNamedSubjects("p")
 
 <!--Node.js-->
 ```typescript
-const allNamedSubjects = e.getAllNamedSubjects('p')
+const allNamedSubjects = await e.getAllNamedSubjects('p')
 ```
 
 <!--PHP-->
@@ -93,7 +93,7 @@ allObjects := e.GetAllObjects()
 
 <!--Node.js-->
 ```typescript
-const allObjects = e.getAllObjects()
+const allObjects = await e.getAllObjects()
 ```
 
 <!--PHP-->
@@ -118,7 +118,7 @@ allNamedObjects := e.GetAllNamedObjects("p")
 
 <!--Node.js-->
 ```typescript
-const allNamedObjects = e.getAllNamedObjects('p')
+const allNamedObjects = await e.getAllNamedObjects('p')
 ```
 
 <!--PHP-->
@@ -143,7 +143,7 @@ allActions := e.GetAllActions()
 
 <!--Node.js-->
 ```typescript
-const allActions = e.getAllActions()
+const allActions = await e.getAllActions()
 ```
 
 <!--PHP-->
@@ -168,7 +168,7 @@ allNamedActions := e.GetAllNamedActions("p")
 
 <!--Node.js-->
 ```typescript
-const allNamedActions = e.getAllNamedActions('p')
+const allNamedActions = await e.getAllNamedActions('p')
 ```
 
 <!--PHP-->
@@ -194,7 +194,7 @@ allRoles = e.GetAllRoles()
 
 <!--Node.js-->
 ```typescript
-const allRoles = e.getAllRoles()
+const allRoles = await e.getAllRoles()
 ```
 
 <!--PHP-->
@@ -220,7 +220,7 @@ allNamedRoles := e.GetAllNamedRoles("g")
 
 <!--Node.js-->
 ```typescript
-const allNamedRoles = e.getAllNamedRoles('g')
+const allNamedRoles = await e.getAllNamedRoles('g')
 ```
 
 <!--PHP->
@@ -245,7 +245,7 @@ policy = e.GetPolicy()
 
 <!--Node.js-->
 ```typescript
-const policy = e.getPolicy()
+const policy = await e.getPolicy()
 ```
 
 <!--PHP-->
@@ -271,7 +271,7 @@ filteredPolicy := e.GetFilteredPolicy(0, "alice")
 
 <!--Node.js-->
 ```typescript
-const filteredPolicy = e.getFilteredPolicy(0, 'alice')
+const filteredPolicy = await e.getFilteredPolicy(0, 'alice')
 ```
 
 <!--PHP-->
@@ -296,7 +296,7 @@ namedPolicy := e.GetNamedPolicy("p")
 
 <!--Node.js-->
 ```typescript
-const namedPolicy = e.getNamedPolicy('p')
+const namedPolicy = await e.getNamedPolicy('p')
 ```
 
 <!--PHP-->
@@ -322,7 +322,7 @@ filteredNamedPolicy = e.GetFilteredNamedPolicy("p", 0, "bob")
 
 <!--Node.js-->
 ```typescript
-const filteredNamedPolicy = e.getFilteredNamedPolicy('p', 0, 'bob')
+const filteredNamedPolicy = await e.getFilteredNamedPolicy('p', 0, 'bob')
 ```
 
 <!--PHP-->
@@ -347,7 +347,7 @@ groupingPolicy := e.GetGroupingPolicy()
 
 <!--Node.js-->
 ```typescript
-const groupingPolicy = e.getGroupingPolicy()
+const groupingPolicy = await e.getGroupingPolicy()
 ```
 
 <!--PHP-->
@@ -373,7 +373,7 @@ filteredGroupingPolicy := e.GetFilteredGroupingPolicy(0, "alice")
 
 <!--Node.js-->
 ```typescript
-const filteredGroupingPolicy = e.getFilteredGroupingPolicy(0, 'alice')
+const filteredGroupingPolicy = await e.getFilteredGroupingPolicy(0, 'alice')
 ```
 
 <!--Go-->
@@ -398,7 +398,7 @@ namedGroupingPolicy := e.GetNamedGroupingPolicy("g")
 
 <!--Node.js-->
 ```typescript
-const namedGroupingPolicy = e.getNamedGroupingPolicy('g')
+const namedGroupingPolicy = await e.getNamedGroupingPolicy('g')
 ```
 
 <!--PHP-->
@@ -423,7 +423,7 @@ namedGroupingPolicy := e.GetFilteredNamedGroupingPolicy("g", 0, "alice")
 
 <!--Node.js-->
 ```typescript
-const namedGroupingPolicy = e.getFilteredNamedGroupingPolicy('g', 0, 'alice')
+const namedGroupingPolicy = await e.getFilteredNamedGroupingPolicy('g', 0, 'alice')
 ```
 
 <!--PHP-->
@@ -448,7 +448,7 @@ hasPolicy := e.HasPolicy("data2_admin", "data2", "read")
 
 <!--Node.js-->
 ```typescript
-const hasPolicy = e.hasPolicy('data2_admin', 'data2', 'read')
+const hasPolicy = await e.hasPolicy('data2_admin', 'data2', 'read')
 ```
 
 <!--PHP-->
@@ -473,7 +473,7 @@ hasNamedPolicy := e.HasNamedPolicy("p", "data2_admin", "data2", "read")
 
 <!--Node.js-->
 ```typescript
-const hasNamedPolicy = e.hasNamedPolicy('p', 'data2_admin', 'data2', 'read')
+const hasNamedPolicy = await e.hasNamedPolicy('p', 'data2_admin', 'data2', 'read')
 ```
 
 <!--PHP-->
@@ -659,7 +659,7 @@ has := e.HasGroupingPolicy("alice", "data2_admin")
 
 <!--Node.js-->
 ```typescript
-const has = e.hasGroupingPolicy('alice', 'data2_admin')
+const has = await e.hasGroupingPolicy('alice', 'data2_admin')
 ```
 
 <!--PHP-->
@@ -684,7 +684,7 @@ has := e.HasNamedGroupingPolicy("g", "alice", "data2_admin")
 
 <!--Node.js-->
 ```typescript
-const has = e.hasNamedGroupingPolicy('g', 'alice', 'data2_admin')
+const has = await e.hasNamedGroupingPolicy('g', 'alice', 'data2_admin')
 ```
 
 <!--PHP-->

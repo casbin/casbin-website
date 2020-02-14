@@ -162,7 +162,7 @@ Roles roles = e.getRolesForUser("alice");
 
 <!--Node.js-->
 ```js
-const roles = e.getRolesForUser('alice');
+const roles = await e.getRolesForUser('alice');
 ```
 
 <!--PHP-->
