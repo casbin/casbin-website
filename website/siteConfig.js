@@ -97,6 +97,7 @@ const siteConfig = {
     '/js/disqus.js',
     '/js/baidu-analytics.js',
     '/js/mouselog.js',
+    '/js/hotjar.js',
   ],
   stylesheets: ['/css/code-blocks-buttons.css'],
 
