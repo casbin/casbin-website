@@ -82,7 +82,7 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
-            <Button href={docUrl('overview.html', language)}><translate>Get Started</translate></Button>
+            <Button href={docUrl('overview', language)}><translate>Get Started</translate></Button>
             <Button href="https://github.com/casbin/casbin">Golang</Button>
             <Button href="https://github.com/casbin/jcasbin">Java</Button>
             <Button href="https://github.com/casbin/node-casbin">Node.js</Button>
@@ -213,7 +213,7 @@ const Showcase = props => {
       </p>
       <div className="logos">{showcase}</div>
       <div className="more-users">
-        <a className="button" href={pageUrl('users.html', props.language)}>
+        <a className="button" href={pageUrl('users', props.language)}>
           <translate>More</translate> {siteConfig.title} <translate>Users</translate>
         </a>
       </div>
