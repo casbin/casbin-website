@@ -86,6 +86,9 @@ This paper digs deeply into the design details about Casbin. Please cite the fol
 
 <!--Node.js-->
 
+### Nest.js
+
+- [How to Create Role based Authorization Middleware with Casbin and Nest.js](https://dev.to/dwipr/how-to-create-role-based-authorization-middleware-with-casbin-and-nest-js-52gm)
 - [nest.js: Casbin RESTful RBAC authorization middleware (Video)](https://www.youtube.com/watch?v=mWlPNrCgVdE)
 - [A Demo App of Attribute-based Access Control in Node.js Based on Casbin](https://github.com/Jarvie8176/casbin-example)
 - [Multi tenant SaaS starter kit with cqrs graphql microservice architecture](https://github.com/juicycleff/ultimate-backend)
