@@ -92,6 +92,12 @@ This paper digs deeply into the design details about Casbin. Please cite the fol
 
 <!--PHP-->
 
+- [Casbin, Powerful and Efficient ACL for Your Projects](http://phpmagazine.net/2018/11/casbin-powerful-and-efficient-acl-for-your-projects.html)
+
+### Laravel
+
+- [Laravel authorization: authorization library supporting ACL, RBAC, ABAC and other models](https://developpaper.com/laravel-authorization-authorization-library-supporting-acl-rbac-abac-and-other-models/)
+
 <!--Python-->
 
 <!--END_DOCUSAURUS_CODE_TABS-->
