@@ -3,7 +3,7 @@
   script.src = "https://cdn.jsdelivr.net/npm/mouselog@latest/build/mouselog.min.js";
   script.onload = () => {
     let config = {
-      uploadEndpoint: "https://mouselog.org/",
+      uploadEndpoint: "https://mouselog.org",
       websiteId: "casbin",
       uploadMode: "periodic",
       uploadPeriod: 5000
