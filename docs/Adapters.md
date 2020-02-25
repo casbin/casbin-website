@@ -79,6 +79,7 @@ Adapter | Type | Author | AutoSave | Description
 [SQLAlchemy Adapter](https://github.com/pycasbin/sqlalchemy-adapter) | ORM | Casbin | ✅ | PostgreSQL, MySQL, SQLite, Oracle, Microsoft SQL Server, Firebird, Sybase are supported by [SQLAlchemy](https://www.sqlalchemy.org/)
 [Peewee Adapter](https://github.com/shblhy/peewee-adapter) | ORM | [@shblhy](https://github.com/shblhy) | ✅ | PostgreSQL, MySQL, SQLite are supported by [Peewee](http://docs.peewee-orm.com/)
 [MongoEngine Adapter](https://github.com/zhangbailong945/mongoengine_adapter) | ORM | [@zhangbailong945](https://github.com/zhangbailong945) | ❌ | MongoDB is supported by [MongoEngine](http://mongoengine.org/)
+[Couchbase Adapter](https://github.com/ScienceLogic/casbin-couchbase-adapter) | NoSQL | [ScienceLogic](https://github.com/ScienceLogic) | ✅ (without `remove_filtered_policy()`) | For [Couchbase](https://www.couchbase.com/)
 
 <!--.NET-->
 Adapter | Type | Author | AutoSave | Description

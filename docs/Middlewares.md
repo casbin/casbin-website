@@ -60,6 +60,6 @@ Name | Description
 Name | Description
 ----|----
 [Django](https://www.djangoproject.com/) | A high-level Python Web framework, via plugin: [django-casbin](https://github.com/pycasbin/django-casbin)
-[Flask](http://flask.pocoo.org/) | A microframework for Python based on Werkzeug, Jinja 2 and good intentions, via plugin: [flask-casbin](https://github.com/pycasbin/flask-casbin) or [Flask-Casbin (3rd-party, but maybe more friendly)](https://github.com/daymien/Flask-Casbin)
+[Flask](http://flask.pocoo.org/) | A microframework for Python based on Werkzeug, Jinja 2 and good intentions, via plugin: [flask-casbin](https://github.com/pycasbin/flask-casbin) or [Flask-Casbin (3rd-party, but maybe more friendly)](https://github.com/daymien/Flask-Casbin) or [flask-casbin](https://github.com/ScienceLogic/flask-casbin)
 
 <!--END_DOCUSAURUS_CODE_TABS-->

@@ -24,6 +24,11 @@ Watcher | Type | Author | Description
 [Etcd Watcher](https://github.com/node-casbin/etcd-watcher) | KV store | Casbin | Watcher for [etcd](https://github.com/coreos/etcd)
 [Redis Watcher](https://github.com/node-casbin/redis-watcher) | KV store | Casbin | Watcher for [Redis](http://redis.io/)
 
+<!--Python-->
+Watcher | Type | Author | Description
+----|------|----|----
+[Redis Watcher](https://github.com/ScienceLogic/flask-casbin-redis-watcher) | KV store | [ScienceLogic](https://github.com/ScienceLogic) | Watcher for [Redis](http://redis.io/)
+
 <!--.NET-->
 Watcher | Type | Author | Description
 ----|------|----|----
