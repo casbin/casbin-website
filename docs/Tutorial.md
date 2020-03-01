@@ -24,6 +24,11 @@ This paper digs deeply into the design details about Casbin. Please cite the fol
 
 This is another longer-version paper published in Journal of Software. The citation is not available yet.
 
+### Videos
+
+- [Sharing user permissions in a micro-service architecture based on Casbin (in Russian)](https://www.youtube.com/watch?v=Z5dUxH4PqYM)
+- [Nest.js - Casbin RESTful RBAC authorization midleware](https://www.youtube.com/watch?v=mWlPNrCgVdE)
+
 ### PERM Meta-Model (Policy, Effect, Request, Matchers)
 
 - [Modeling Authorization with PERM in Casbin](https://vicarie.in/posts/generalized-authz.html)
