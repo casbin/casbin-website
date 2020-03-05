@@ -89,4 +89,10 @@ module.exports = [
     infoLink: 'https://ovo.id',
     pinned: true,
   },
+  {
+    caption: 'Musma',
+    image: '/img/users/musma.svg',
+    infoLink: 'https://www.musma.net/',
+    pinned: true,
+  },
 ];
