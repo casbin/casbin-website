@@ -72,6 +72,7 @@ This is another longer-version paper published in Journal of Software. The citat
 
 - [Iris + Casbin: Practice for permission management (in Chinese)](https://zxc0328.github.io/2018/05/14/casbin-iris/)
 - [Role-based access control for HTTP based on Casbin (in Chinese)](https://studyiris.com/example/exper/casbin.html)
+- [Learning iris + Casbin from scratch](https://learnku.com/articles/41416)
 
 ### VMware Harbor
 
