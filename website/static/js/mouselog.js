@@ -8,7 +8,7 @@
       uploadMode: "periodic",
       uploadPeriod: 5000
     };
-    var agent = new mouselog.Mouselog();
+    var agent = mouselog.init();
     agent.run(config);
   };
   var t = document.getElementsByTagName("script");
