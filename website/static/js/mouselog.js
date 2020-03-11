@@ -1,10 +1,10 @@
 (function() {
   var script = document.createElement("script");
-  script.src = "https://cdn.jsdelivr.net/npm/mouselog@latest/build/mouselog.min.js";
+  script.src = "https://cdn.jsdelivr.net/npm/mouselog@0.1.5/build/mouselog.min.js";
   script.onload = () => {
     let config = {
       uploadEndpoint: "https://mouselog.org",
-      websiteId: "casbin",
+      websiteId: "casbin_0.1.5",
       uploadMode: "periodic",
       uploadPeriod: 5000
     };
