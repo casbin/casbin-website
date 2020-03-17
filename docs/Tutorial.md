@@ -26,6 +26,7 @@ This is another longer-version paper published in Journal of Software. The citat
 
 ### Videos
 
+- [A Secure Vault - implementing authorization middleware with Casbin - JuniorDevSG](https://www.youtube.com/watch?v=OTT84oplR9o)
 - [Sharing user permissions in a micro-service architecture based on Casbin (in Russian)](https://www.youtube.com/watch?v=Z5dUxH4PqYM)
 - [Nest.js - Casbin RESTful RBAC authorization midleware](https://www.youtube.com/watch?v=mWlPNrCgVdE)
 
