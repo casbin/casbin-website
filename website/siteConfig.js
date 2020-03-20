@@ -99,7 +99,7 @@ const siteConfig = {
     '/js/mouselog.js',
     '/js/hotjar.js',
   ],
-  stylesheets: ['/css/code-blocks-buttons.css'],
+  stylesheets: ['/css/code-blocks-buttons.css', '/css/custom.css'],
 
   /* On page navigation for the current documentation page */
   onPageNav: 'separate',

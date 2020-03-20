@@ -68,3 +68,142 @@ Name | Description
 [Actix](https://actix.rs/) | Rust's powerful actor system and most fun web framework, via plugin: [actix-casbin](https://github.com/actix/examples/tree/master/casbin)
 
 <!--END_DOCUSAURUS_CODE_TABS-->
+
+## Examples 
+
+## Casbin-Express-Authz
+
+This is an express middleware for enforcing policies inside Express web apps.
+
+### Installation
+- Install all the required dependencies.
+```
+npm install express casbin casbin-express-authz --save
+```
+- Create ```model.conf``` and ```policy.csv``` file in your project root folder, if not already created. For reference, check this link: https://github.com/node-casbin/express-authz/tree/master/examples
+- Put this code inside your app.js file
+```javascript
+const express = require('express')
+const app = express()
+
+app.use((req, res, next) => {
+  req.locals = req.locals || {}
+  const username = req.get('Authorization') || 'anonymous'
+  req.locals.currentUser = {username}
+  req.locals.authenticated = !!username
+  next()
+})
+
+// use authz middleware
+app.use(authz(async () => {
+  // load the casbin model and policy from files, database is also supported.
+  const enforcer = await newEnforcer('model.conf', 'policy.csv')
+  return enforcer
+}))
+```
+
+Now you can send username in your Authorization header and Casbin will automatically check access according to the policy.
+
+## Casbin-Koa-Authz
+
+This is an koa middleware for enforcing policies in your koa app.
+
+### Installation
+
+- Install all the required dependencies.
+```
+npm install casbin koa koa-router koa-authz
+```
+- Create ```model.conf``` and ```policy.csv``` file in your project root folder, if not already created. For reference, check this link: https://github.com/node-casbin/koa-authz/tree/master/examples
+- Add this code into your app.js file.
+```javascript
+const casbin = require('casbin')
+const Koa = require('koa')
+const app = new Koa()
+const authz = require('koa-authz')
+
+app.use(async (ctx, next) => {
+  try {
+    const username = ctx.get('Authorization') || 'anonymous'
+    ctx.user = {username}
+    await next()
+  } catch (e) {
+    ctx.status = 503
+  }
+})
+
+// use authz middleware
+app.use(authz({
+  newEnforcer: async() => {
+    // load the casbin model and policy from files, database is also supported.
+    const enforcer = await casbin.newEnforcer('model.conf', 'policy.csv')
+    return enforcer
+  }
+}))
+
+const router = require('koa-router')({prefix: '/user'})
+router.get('/', (ctx) => {
+  ctx.body = {name: 'Chalin', age: 26}
+})
+router.put('/', (ctx) => {
+  ctx.body = {status: 'success'}
+})
+app.use(router.routes(), router.allowedMethods())
+
+app.listen(8000)
+```
+
+Now you can start your server and send your username as Authorization header and casbin will automatically provide access based on policy.
+
+## Casbin Egg Authz
+
+This is an authorization middleware for securing egg js web applications. To learn more about egg framework visit: https://eggjs.org/en/intro/
+
+### Installation
+- Create a egg project by following this steps: https://eggjs.org/en/intro/quickstart.html
+- Install all the required dependencies inside the egg project directory
+```
+npm install casbin egg-authz
+```
+- Create ```model.conf``` and ```policy.csv``` file in your project root folder, if not already created. For reference, check this link: https://github.com/node-casbin/egg-authz/tree/master/examples
+- Create a file named ```authz.js``` in the ```middleware/``` folder and paste the following code
+```javascript
+//middleware/authz.js
+module.exports = require('egg-authz')
+```
+- Create a file named ```user.js``` in the ```middleware/``` folder and paste the following code
+```javascript
+//middleware/user.js
+module.exports = options => {
+  return async function (ctx, next) {
+    const username = ctx.get('Authorization') || 'anonymous'
+    ctx.user = {username}
+    await next()
+  }
+}
+```
+- Add the following code inside your ```config/config.default.js```
+```javascript
+//config/config.default.js
+const casbin = require('casbin') // Add this line
+...
+
+module.exports = {
+  ...
+
+  config.middleware = ['user', 'authz']; // Add this line
+  // Add this line
+  config.authz = { 
+    enable: true,
+    newEnforcer: async() => {
+      const enforcer = await casbin.newEnforcer('model.conf', 'policy.csv')
+      return enforcer
+    }
+  }
+
+  ...
+  return ...
+}
+```
+
+Now you can start your server and send your username as Authorization header and you can access your site according to the policies.
