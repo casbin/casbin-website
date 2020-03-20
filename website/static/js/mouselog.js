@@ -1,12 +1,14 @@
 (function() {
   var script = document.createElement("script");
-  script.src = "https://cdn.jsdelivr.net/npm/mouselog@0.1.6/build/mouselog.min.js";
+  script.src = "https://cdn.jsdelivr.net/npm/mouselog@latest/build/mouselog.min.js";
   script.onload = () => {
     let config = {
       uploadEndpoint: "https://mouselog.org",
-      websiteId: "casbin_0.1.6",
+      websiteId: "casbin_0.1.6_2",
       uploadMode: "periodic",
-      uploadPeriod: 5000
+      uploadPeriod: 5000,
+      sizeLimit: 7000,
+      enableGet: true
     };
     var agent = mouselog.init();
     agent.run(config);
