@@ -511,6 +511,31 @@ $added = $e->addPolicy('eve', 'data3', 'read');
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
+### `AddPolicies()`
+
+AddPolicies adds authorization rules to the current policy.
+The operation is atomic in nature.
+Hence, if authorization rules consists of rules which are not consistent with the current policy, the function returns false and no policy rule is added to the current policy.
+If all authorization the rules are consistent with the policy rules, the function returns true and each policy rule is added to the current policy.
+
+For example:
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
+```go
+rules := [][] string {
+				[]string {"jack", "data4", "read"},
+				[]string {"katy", "data4", "write"},
+				[]string {"leyo", "data4", "read"},
+				[]string {"ham", "data4", "write"},
+		}
+
+areRulesAdded := e.AddPolicies(rules)
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
 ### `AddNamedPolicy()`
 
 AddNamedPolicy adds an authorization rule to the current named policy.
@@ -539,6 +564,31 @@ $added = $e->addNamedPolicy("p", "eve", "data3", "read");
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
+### `AddNamedPolicies()`
+
+AddNamedPolicies adds authorization rules to the current named policy.
+The operation is atomic in nature.
+Hence, if authorization rules consists of rules which are not consistent with the current policy, the function returns false and no policy rule is added to the current policy.
+If all authorization the rules are consistent with the policy rules, the function returns true and each policy rule is added to the current policy.
+
+For example:
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
+```go
+rules := [][] string {
+				[]string {"jack", "data4", "read"},
+				[]string {"katy", "data4", "write"},
+				[]string {"leyo", "data4", "read"},
+				[]string {"ham", "data4", "write"},
+		}
+
+areRulesAdded := e.AddNamedPolicies("p", rules)
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
 ### `RemovePolicy()`
 
 RemovePolicy removes an authorization rule from the current policy.
@@ -561,6 +611,31 @@ const removed = await e.removePolicy(...p)
 <!--PHP-->
 ```php
 $removed = $e->removePolicy("alice", "data1", "read");
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+### `RemovePolicies()`
+
+RemovePolicies removes authorization rules from the current policy.
+The operation is atomic in nature.
+Hence, if authorization rules consists of rules which are not consistent with the current policy, the function returns false and no policy rule is removed from the current policy.
+If all authorization the rules are consistent with the policy rules, the function returns true and each policy rule is removed from the current policy.
+
+For example:
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
+```go
+rules := [][] string {
+				[]string {"jack", "data4", "read"},
+				[]string {"katy", "data4", "write"},
+				[]string {"leyo", "data4", "read"},
+				[]string {"ham", "data4", "write"},
+		}
+
+areRulesRemoved := e.RemovePolicies(rules)
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -614,6 +689,31 @@ const removed = await e.removeNamedPolicy('p', ...p)
 <!--PHP-->
 ```php
 $removed = $e->removeNamedPolicy("p", "alice", "data1", "read");
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+### `RemoveNamedPolicies()`
+
+RemoveNamedPolicies removes authorization rules from the current named policy.
+The operation is atomic in nature.
+Hence, if authorization rules consists of rules which are not consistent with the current policy, the function returns false and no policy rule is removed from the current policy.
+If all authorization the rules are consistent with the policy rules, the function returns true and each policy rule is removed from the current policy.
+
+For example:
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
+```go
+rules := [][] string {
+				[]string {"jack", "data4", "read"},
+				[]string {"katy", "data4", "write"},
+				[]string {"leyo", "data4", "read"},
+				[]string {"ham", "data4", "write"},
+		}
+
+areRulesRemoved := e.RemoveNamedPolicies("p", rules)
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -721,6 +821,31 @@ $added = $e->addGroupingPolicy("group1", "data2_admin");
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
+### `AddGroupingPolicies()`
+
+AddGroupingPolicies adds role inheritance rules to the current policy.
+The operation is atomic in nature.
+Hence, if authorization rules consists of rules which are not consistent with the current policy, the function returns false and no policy rule is added to the current policy.
+If all authorization the rules are consistent with the policy rules, the function returns true and each policy rule is added to the current policy.
+
+For example:
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
+```go
+rules := [][] string {
+				[]string {"jack", "data4", "read"},
+				[]string {"katy", "data4", "write"},
+				[]string {"leyo", "data4", "read"},
+				[]string {"ham", "data4", "write"},
+		}
+
+areRulesAdded := e.AddGroupingPolicies(rules)
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
 ### `AddNamedGroupingPolicy()`
 
 AddNamedGroupingPolicy adds a named role inheritance rule to the current policy.
@@ -748,6 +873,29 @@ $added = $e->addNamedGroupingPolicy("g", "group1", "data2_admin");
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
+### `AddNamedGroupingPolicies()`
+
+AddNamedGroupingPolicies adds named role inheritance rules to the current policy.
+The operation is atomic in nature. 
+Hence, if authorization rules consists of rules which are not consistent with the current policy, the function returns false and no policy rule is added to the current policy.
+If all authorization the rules are consistent with the policy rules, the function returns true and each policy rule is added to the current policy.
+
+For example:
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
+```go
+rules := [][] string {
+				[]string {"jack", "data4", "read"},
+				[]string {"katy", "data4", "write"},
+				[]string {"leyo", "data4", "read"},
+				[]string {"ham", "data4", "write"},
+		}
+
+areRulesAdded := e.AddNamedGroupingPolicies("g", rules)
+```
+
 ### `RemoveGroupingPolicy()`
 
 RemoveGroupingPolicy removes a role inheritance rule from the current policy.
@@ -772,6 +920,29 @@ $removed = $e->removeGroupingPolicy("alice", "data2_admin");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
+
+### `RemoveGroupingPolicies()`
+
+RemoveGroupingPolicies removes role inheritance rules from the current policy.
+The operation is atomic in nature.
+Hence, if authorization rules consists of rules which are not consistent with the current policy, the function returns false and no policy rule is removed from the current policy.
+If all authorization the rules are consistent with the policy rules, the function returns true and each policy rule is removed from the current policy.
+
+For example:
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
+```go
+rules := [][] string {
+				[]string {"jack", "data4", "read"},
+				[]string {"katy", "data4", "write"},
+				[]string {"leyo", "data4", "read"},
+				[]string {"ham", "data4", "write"},
+		}
+
+areRulesRemoved := e.RemoveGroupingPolicies(rules)
+```
 
 ### `RemoveFilteredGroupingPolicy()`
 
@@ -822,6 +993,29 @@ $removed = $e->removeNamedGroupingPolicy("g", "alice");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
+
+### `RemoveNamedGroupingPolicies()`
+
+RemoveNamedGroupingPolicies removes named role inheritance rules from the current policy.
+The operation is atomic in nature.
+Hence, if authorization rules consists of rules which are not consistent with the current policy, the function returns false and no policy rule is removed from the current policy.
+If all authorization the rules are consistent with the policy rules, the function returns true and each policy rule is removed from the current policy.
+
+For example:
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
+```go
+rules := [][] string {
+				[]string {"jack", "data4", "read"},
+				[]string {"katy", "data4", "write"},
+				[]string {"leyo", "data4", "read"},
+				[]string {"ham", "data4", "write"},
+		}
+
+areRulesRemoved := e.RemoveNamedGroupingPolicies("g", rules)
+```
 
 ### `RemoveFilteredNamedGroupingPolicy()`
 
