@@ -1,14 +1,14 @@
 (function() {
   var script = document.createElement("script");
-  script.src = "https://cdn.jsdelivr.net/npm/mouselog@0.2.2/build/mouselog.min.js";
-  script.onload = () => {
-    let config = {
-      websiteId: "casbin_0.2.2-2",
+  script.src = "https://cdn.jsdelivr.net/npm/mouselog@0.2.4/build/mouselog.min.js";
+  script.onload = function() {
+    var config = {
+      websiteId: "casbin_0.2.4",
       uploadEndpoint: "https://mouselog.org/api/upload-trace",
       uploadMode: "mixed",
       uploadTimes: 1,
       uploadPeriod: 2000,
-      frequency: 200,
+      frequency: 50,
       sizeLimit: 7000,
       enableGet: true,
       encoder: "base64",
