@@ -1017,6 +1017,8 @@ rules := [][] string {
 areRulesRemoved := e.RemoveNamedGroupingPolicies("g", rules)
 ```
 
+<!--END_DOCUSAURUS_CODE_TABS-->
+
 ### `RemoveFilteredNamedGroupingPolicy()`
 
 RemoveFilteredNamedGroupingPolicy removes a role inheritance rule from the current named policy, field filters can be specified.
