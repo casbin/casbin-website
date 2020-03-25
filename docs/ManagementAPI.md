@@ -896,6 +896,8 @@ rules := [][] string {
 areRulesAdded := e.AddNamedGroupingPolicies("g", rules)
 ```
 
+<!--END_DOCUSAURUS_CODE_TABS-->
+
 ### `RemoveGroupingPolicy()`
 
 RemoveGroupingPolicy removes a role inheritance rule from the current policy.
@@ -943,6 +945,8 @@ rules := [][] string {
 
 areRulesRemoved := e.RemoveGroupingPolicies(rules)
 ```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `RemoveFilteredGroupingPolicy()`
 
