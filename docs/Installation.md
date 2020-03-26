@@ -7,7 +7,7 @@ title: Installation
 
 <!--Go-->
 ```
-go get github.com/casbin/casbin
+go get github.com/casbin/casbin/v2
 ```
 
 <!--Java-->
@@ -23,7 +23,11 @@ For Maven:
 
 <!--Node.js-->
 ```
+# NPM
 npm install casbin --save
+
+# Yarn
+yarn add casbin
 ```
 
 <!--PHP-->

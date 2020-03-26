@@ -80,19 +80,22 @@ class HomeSplash extends React.Component {
     return (
       <SplashContainer>
         <div className="inner">
+          <Button href="https://github.com/microsoft/mouselog">Need to monitor user behaviors of your site? See: Mouselog</Button>
           <ProjectTitle />
           <PromoSection>
-            <Button href={docUrl('overview.html', language)}><translate>Get Started</translate></Button>
+            <Button href={docUrl('overview', language)}><translate>Get Started</translate></Button>
             <Button href="https://github.com/casbin/casbin">Golang</Button>
             <Button href="https://github.com/casbin/jcasbin">Java</Button>
+            <Button href="https://github.com/casbin/casbin-cpp">C/C++</Button>
             <Button href="https://github.com/casbin/node-casbin">Node.js</Button>
             <Button href="https://github.com/casbin/casbin.js">Front-end js</Button>
             <Button href="https://github.com/php-casbin/php-casbin">PHP</Button>
             <Button href="https://github.com/casbin/pycasbin">Python</Button>
-            <Button href="https://github.com/casbin-net/Casbin.NET">.NET (C#)</Button>
+            <Button href="https://github.com/casbin/Casbin.NET">.NET (C#)</Button>
             <Button href="https://github.com/casbin4d/Casbin4D">Delphi</Button>
-            <Button href="https://github.com/Devolutions/casbin-rs">Rust</Button>
-            <Button href="/en/editor"><translate>Try Casbin Online Editor</translate></Button>
+            <Button href="https://github.com/casbin/casbin-rs">Rust</Button>
+            <Button href="/en/editor"><translate>Try Editor</translate></Button>
+            <Button href="https://dashboard.casbin.org/"><translate>Try Dashboard</translate></Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -212,7 +215,7 @@ const Showcase = props => {
       </p>
       <div className="logos">{showcase}</div>
       <div className="more-users">
-        <a className="button" href={pageUrl('users.html', props.language)}>
+        <a className="button" href={pageUrl('users', props.language)}>
           <translate>More</translate> {siteConfig.title} <translate>Users</translate>
         </a>
       </div>

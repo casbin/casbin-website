@@ -21,20 +21,23 @@ Adapter | Type | Author | AutoSave | Description
 [Beego ORM Adapter](https://github.com/casbin/beego-orm-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, Sqlite3 are supported by [Beego ORM](https://beego.me/docs/mvc/model/overview.md)
 [SQLX Adapter](https://github.com/memwey/casbin-sqlx-adapter) | ORM | [@memwey](https://github.com/memwey) | ✅ | MySQL, PostgreSQL, SQLite, Oracle are supported by [SQLX](https://github.com/jmoiron/sqlx)
 [GF ORM Adapter](https://github.com/vance-liu/gdb-adapter) | ORM | [@vance-liu](https://github.com/vance-liu) | ✅ | MySQL, SQLite, PostgreSQL, Oracle, SQL Server are supported by [GF ORM](https://goframe.org/database/gdb/database)
-[Go-pg Adapter](https://github.com/MonedaCacao/casbin-pg-adapter) | SQL | [MonedaCacao](https://github.com/MonedaCacao) | ✅ | For [PostgreSQL](https://www.postgresql.org/)
-[PostgreSQL Adapter](https://github.com/going/casbin-postgres-adapter) | SQL | [Going](https://github.com/going) | ❌ | For [PostgreSQL](https://www.postgresql.org/)
+[Filtered PostgreSQL Adapter](https://github.com/casbin/casbin-pg-adapter) | SQL | Casbin | ✅ | For [PostgreSQL](https://www.postgresql.org/)
+[PostgreSQL Adapter](https://github.com/cychiuae/casbin-pg-adapter) | SQL | [@cychiuae](https://github.com/cychiuae) | ✅ | For [PostgreSQL](https://www.postgresql.org/)
+[PostgreSQL Adapter (Archived)](https://github.com/going/casbin-postgres-adapter) | SQL | [Going](https://github.com/going) | ❌ | For [PostgreSQL](https://www.postgresql.org/)
 [RQLite Adapter](https://github.com/edomosystems/rqlite-adapter) | SQL | [EDOMO Systems](https://github.com/edomosystems) | ✅ | For [RQLite](https://github.com/rqlite/rqlite/)
-[MongoDB Adapter](https://github.com/casbin/mongodb-adapter) | NoSQL | Casbin | ✅ | For [MongoDB](https://www.mongodb.com)
+[MongoDB Adapter](https://github.com/casbin/mongodb-adapter) | NoSQL | Casbin | ✅ | For [MongoDB](https://www.mongodb.com) based on [MongoDB driver for Go](https://github.com/globalsign/mgo)
+[MongoDB Adapter](https://github.com/titandc/mongodb-adapter) | NoSQL | [Titan DC](https://github.com/titandc) | ✅ | For [MongoDB](https://www.mongodb.com) based on [MongoDB Go driver](https://github.com/mongodb/mongo-go-driver)
 [RethinkDB Adapter](https://github.com/adityapandey9/rethinkdb-adapter) | NoSQL | [@adityapandey9](https://github.com/adityapandey9) | ✅ | For [RethinkDB](https://rethinkdb.com/)
 [Cassandra Adapter](https://github.com/casbin/cassandra-adapter) | NoSQL | Casbin | ❌ | For [Apache Cassandra DB](http://cassandra.apache.org)
 [DynamoDB Adapter](https://github.com/HOOQTV/dynacasbin) | NoSQL | [HOOQ](https://github.com/HOOQTV) | ❌ | For [Amazon DynamoDB](https://aws.amazon.com/dynamodb/)
 [Dynacasbin](https://github.com/NewbMiao/dynacasbin) | NoSQL | [NewbMiao](https://github.com/NewbMiao) | ✅ | For [Amazon DynamoDB](https://aws.amazon.com/dynamodb/)
+[ArangoDB Adapter](https://github.com/adamwasila/arangodb-adapter) | NoSQL | [@adamwasila](https://github.com/adamwasila) | ✅ | For [ArangoDB](https://www.arangodb.com/)
 [Amazon S3 Adapter](https://github.com/Soluto/casbin-minio-adapter) | Cloud | [Soluto](https://github.com/Soluto) | ❌ | For [Minio](https://github.com/minio/minio) and [Amazon S3](https://aws.amazon.com/s3/)
 [Azure Cosmos DB Adapter](https://github.com/spacycoder/cosmos-casbin-adapter) | Cloud | [@spacycoder](https://github.com/spacycoder) | ✅ | For [Microsoft Azure Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/introduction)
 [GCP Datastore Adapter](https://github.com/livingpackets/datastore-adapter) | Cloud | [LivingPackets](https://github.com/livingpackets) | ❌ | For [Google Cloud Platform Datastore](https://cloud.google.com/datastore/)
 [Consul Adapter](https://github.com/ankitm123/consul-adapter) | KV store | [@ankitm123](https://github.com/ankitm123) | ❌ | For [HashiCorp Consul](https://www.consul.io/)
 [Redis Adapter](https://github.com/casbin/redis-adapter) | KV store | Casbin | ❌ | For [Redis](https://redis.io/)
-[Etcd Adapter](https://github.com/sebastianliu/etcd-adapter) | KV store | Casbin | ❌ | For [etcd](https://github.com/coreos/etcd)
+[Etcd Adapter](https://github.com/sebastianliu/etcd-adapter) | KV store | [@sebastianliu](https://github.com/sebastianliu) | ❌ | For [etcd](https://github.com/coreos/etcd)
 [Bolt Adapter](https://github.com/wirepair/bolt-adapter) | KV store | [@wirepair](https://github.com/wirepair) | ❌ | For [Bolt](https://github.com/boltdb/bolt)
 [Protobuf Adapter](https://github.com/casbin/protobuf-adapter) | Stream | Casbin | ❌ | For [Google Protocol Buffers](https://developers.google.com/protocol-buffers/)
 [JSON Adapter](https://github.com/casbin/json-adapter) | String | Casbin | ❌ | For [JSON](https://www.json.org/)
@@ -54,7 +57,7 @@ Adapter | Type | Author | AutoSave | Description
 [String Adapter (built-in)](https://github.com/casbin/node-casbin/blob/master/src/persist/stringAdapter.ts) | String | [@calebfaruki](https://github.com/calebfaruki) | ❌ | For String
 [Sequelize Adapter](https://github.com/node-casbin/sequelize-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, SQLite, Microsoft SQL Server are supported by [Sequelize](https://github.com/sequelize/sequelize)
 [TypeORM Adapter](https://github.com/node-casbin/typeorm-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, MariaDB, SQLite, MS SQL Server, Oracle, WebSQL, MongoDB are supported by [TypeORM](https://github.com/typeorm/typeorm)
-[Mongoose Adapter](https://github.com/elasticio/casbin-mongoose-adapter) | ORM | [elastic.io](https://github.com/elasticio) | ✅ | MongoDB is supported by [Mongoose](https://mongoosejs.com/)
+[Mongoose Adapter](https://github.com/node-casbin/mongoose-adapter) | ORM | [elastic.io](https://github.com/elasticio) and Casbin | ✅ | MongoDB is supported by [Mongoose](https://mongoosejs.com/)
 [Knex Adapter](https://github.com/sarneeh/casbin-knex-adapter) | ORM | [@sarneeh](https://github.com/sarneeh) | ✅ | MSSQL, MySQL, PostgreSQL, SQLite3, Oracle are supported by [Knex.js](https://knexjs.org/)
 [Node MongoDB Native Adapter](https://github.com/juicycleff/casbin-mongodb-adapter) | NoSQL | [@juicycleff](https://github.com/juicycleff) | ✅ | For [Node MongoDB Native](https://mongodb.github.io/node-mongodb-native/)
 [Couchbase Adapter](https://github.com/sarneeh/casbin-knex-adapter) | NoSQL | [@MarkMYoung](https://github.com/MarkMYoung) | ✅ | For [Couchbase](https://www.couchbase.com/)
@@ -68,6 +71,7 @@ Adapter | Type | Author | AutoSave | Description
 [Zend Db Adapter](https://github.com/php-casbin/zend-db-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, SQLite, Oracle, IBM DB2, Microsoft SQL Server, Other PDO Driver are supported by [zend-db](https://docs.zendframework.com/zend-db/)
 [Doctrine DBAL Adapter(Recommend)](https://github.com/php-casbin/dbal-adapter) | ORM | Casbin | ✅ | Powerful PHP database abstraction layer ([DBAL](https://github.com/doctrine/dbal)) with many features for database schema introspection and management.
 [Medoo Adapter](https://github.com/php-casbin/medoo-adapter) | ORM | Casbin | ✅ | [Medoo](https://github.com/catfan/Medoo) is a lightweight PHP Database Framework to Accelerate Development, supports all SQL databases, including `MySQL`, `MSSQL`, `SQLite`, `MariaDB`, `PostgreSQL`, `Sybase`, `Oracle` and more.
+[Redis Adapter](https://github.com/nsnake/CasbinAdapter-Redis-Adapter) | KV store | [@nsnake](https://github.com/nsnake) | ❌ | For [Redis](https://redis.io/)
 
 <!--Python-->
 Adapter | Type | Author | AutoSave | Description
@@ -76,12 +80,20 @@ Adapter | Type | Author | AutoSave | Description
 [SQLAlchemy Adapter](https://github.com/pycasbin/sqlalchemy-adapter) | ORM | Casbin | ✅ | PostgreSQL, MySQL, SQLite, Oracle, Microsoft SQL Server, Firebird, Sybase are supported by [SQLAlchemy](https://www.sqlalchemy.org/)
 [Peewee Adapter](https://github.com/shblhy/peewee-adapter) | ORM | [@shblhy](https://github.com/shblhy) | ✅ | PostgreSQL, MySQL, SQLite are supported by [Peewee](http://docs.peewee-orm.com/)
 [MongoEngine Adapter](https://github.com/zhangbailong945/mongoengine_adapter) | ORM | [@zhangbailong945](https://github.com/zhangbailong945) | ❌ | MongoDB is supported by [MongoEngine](http://mongoengine.org/)
+[Couchbase Adapter](https://github.com/ScienceLogic/casbin-couchbase-adapter) | NoSQL | [ScienceLogic](https://github.com/ScienceLogic) | ✅ (without `remove_filtered_policy()`) | For [Couchbase](https://www.couchbase.com/)
 
 <!--.NET-->
 Adapter | Type | Author | AutoSave | Description
 ----|------|----|----|----
 [File Adapter (built-in)](https://casbin.org/docs/en/adapters#file-adapter-built-in) | File | Casbin | ❌ | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files
-[EFCore Adapter](https://github.com/casbin-net/EFCore-Adapter) | ORM | Casbin | ❌ | MySQL, PostgreSQL, SQLite, Microsoft SQL Server, Oracle, DB2, etc. are supported by [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/)
+[EF Adapter](https://github.com/casbin-net/EF-Adapter) | ORM | Casbin | ❌ | MySQL, PostgreSQL, SQLite, Microsoft SQL Server, Oracle, DB2, etc. are supported by [Entity Framework 6](https://docs.microsoft.com/en-us/ef/ef6/)
+[EFCore Adapter](https://github.com/casbin-net/EFCore-Adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, SQLite, Microsoft SQL Server, Oracle, DB2, etc. are supported by [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/)
+
+<!--Rust-->
+Adapter | Type | Author | AutoSave | Description
+----|------|----|----|----
+[File Adapter (built-in)](https://casbin.org/docs/en/adapters#file-adapter-built-in) | File | Casbin | ❌ | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files
+[Diesel Adapter](https://github.com/casbin-rs/diesel-adapter) | ORM | Casbin | ✅ | [SQLite, PostgreSQL, MySQL](https://github.com/diesel-rs/diesel/blob/master/guide_drafts/backend_installation.md) are supported by [Diesel](http://diesel.rs/)
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 

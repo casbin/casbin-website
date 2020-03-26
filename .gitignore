@@ -13,3 +13,6 @@ website/i18n/*
 
 .idea/
 *.iml
+
+package-lock.json
+yarn.lock

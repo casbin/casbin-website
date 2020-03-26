@@ -12,9 +12,9 @@ Casbin is a powerful and efficient open-source access control library. It provid
 [Casbin](https://github.com/casbin/casbin) | [jCasbin](https://github.com/casbin/jcasbin) | [node-Casbin](https://github.com/casbin/node-casbin) | [PHP-Casbin](https://github.com/php-casbin/php-casbin)
 production-ready | production-ready | production-ready | production-ready
 
-[![python](https://casbin.org/img/langs/python.png)](https://github.com/casbin/pycasbin) | [![dotnet](https://casbin.org/img/langs/dotnet.png)](https://github.com/casbin-net/Casbin.NET) | [![delphi](https://casbin.org/img/langs/delphi.png)](https://github.com/casbin4d/Casbin4D) | [![rust](https://casbin.org/img/langs/rust.png)](https://github.com/casbin/casbin-rs)
+[![python](https://casbin.org/img/langs/python.png)](https://github.com/casbin/pycasbin) | [![dotnet](https://casbin.org/img/langs/dotnet.png)](https://github.com/casbin/Casbin.NET) | [![delphi](https://casbin.org/img/langs/delphi.png)](https://github.com/casbin4d/Casbin4D) | [![rust](https://casbin.org/img/langs/rust.png)](https://github.com/casbin/casbin-rs)
 ----|----|----|----
-[PyCasbin](https://github.com/casbin/pycasbin) | [Casbin.NET](https://github.com/casbin-net/Casbin.NET) | [Casbin4D](https://github.com/casbin4d/Casbin4D) | [Casbin-RS](https://github.com/casbin/casbin-rs)
+[PyCasbin](https://github.com/casbin/pycasbin) | [Casbin.NET](https://github.com/casbin/Casbin.NET) | [Casbin4D](https://github.com/casbin4d/Casbin4D) | [Casbin-RS](https://github.com/casbin/casbin-rs)
 production-ready | production-ready | experimental | WIP
 
 ## Feature set for different languages
@@ -30,7 +30,7 @@ RBAC API | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 Filtered Adapter | ✅ | ❌ | ✅ | ✅ | ❌ | ✅ | ❌ |
 Watcher | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅
 Role Manager | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
-Multi-Threading | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+Multi-Threading | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
 
 We are always working our best to make Casbin have the same set of features for all languages. But the reality is not that beautiful. The current progress is as the above table. ✅ for Watcher or Role Manager only means having the interface in the core library. Whether there is an available watcher or role manager implementation is another question.
 

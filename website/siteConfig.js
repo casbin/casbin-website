@@ -32,6 +32,7 @@ const siteConfig = {
     {doc: 'overview', label: 'Docs'},
     {doc: 'management-api', label: 'API'},
     {page: 'editor', label: 'Editor'},
+    {href: 'https://dashboard.casbin.org', label: "Dashboard"},
     {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
     {languages: true},
@@ -94,8 +95,11 @@ const siteConfig = {
     'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
     '/js/code-blocks-buttons.js',
     '/js/disqus.js',
+    '/js/baidu-analytics.js',
+    '/js/mouselog.js',
+    '/js/hotjar.js',
   ],
-  stylesheets: ['/css/code-blocks-buttons.css'],
+  stylesheets: ['/css/code-blocks-buttons.css', '/css/custom.css'],
 
   /* On page navigation for the current documentation page */
   onPageNav: 'separate',
@@ -110,7 +114,7 @@ const siteConfig = {
   nodeRepoUrl: 'https://github.com/casbin/node-casbin',
   phpRepoUrl: 'https://github.com/php-casbin/php-casbin',
   pythonRepoUrl: 'https://github.com/casbin/pycasbin',
-  dotnetRepoUrl: 'https://github.com/casbin-net/Casbin.NET',
+  dotnetRepoUrl: 'https://github.com/casbin/Casbin.NET',
 
   // Tracking ID of Google Analytics
   gaTrackingId: 'UA-119750650-1',

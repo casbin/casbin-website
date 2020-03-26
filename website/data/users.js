@@ -6,9 +6,9 @@ module.exports = [
     pinned: true,
   },
   {
-    caption: 'VMware Dispatch',
+    caption: 'VMware Harbor',
     image: '/img/users/vmware.png',
-    infoLink: 'https://github.com/vmware/dispatch',
+    infoLink: 'https://github.com/goharbor/harbor',
     pinned: true,
   },
   {
@@ -32,7 +32,7 @@ module.exports = [
   {
     caption: 'Microsoft',
     image: '/img/users/microsoft.png',
-    infoLink: 'https://www.microsoft.com',
+    infoLink: 'https://github.com/microsoft/mouselog',
     pinned: true,
   },
   {
@@ -45,6 +45,12 @@ module.exports = [
     caption: 'Red Hat',
     image: '/img/users/redhat.png',
     infoLink: 'https://github.com/skydive-project/skydive',
+    pinned: true,
+  },
+  {
+    caption: 'Tencent',
+    image: '/img/users/tencent.png',
+    infoLink: 'https://github.com/tkestack/tke',
     pinned: true,
   },
   {
@@ -62,7 +68,7 @@ module.exports = [
   {
     caption: 'IBM',
     image: '/img/users/ibm.png',
-    infoLink: 'https://github.com/strongloop/loopback-next/pull/1205',
+    infoLink: 'https://loopback.io/doc/en/lb4/Loopback-component-authorization.html#enforcer-libraries',
     pinned: true,
   },
   {
@@ -75,6 +81,18 @@ module.exports = [
     caption: 'Bose',
     image: '/img/users/bose.png',
     infoLink: 'https://github.com/casbin/casbin/issues/302',
+    pinned: true,
+  },
+  {
+    caption: 'OVO',
+    image: '/img/users/ovo.png',
+    infoLink: 'https://ovo.id',
+    pinned: true,
+  },
+  {
+    caption: 'Musma',
+    image: '/img/users/musma.svg',
+    infoLink: 'https://www.musma.net/',
     pinned: true,
   },
 ];

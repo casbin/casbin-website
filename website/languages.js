@@ -16,5 +16,20 @@ const languages = [
     name: '中文',
     tag: 'zh-CN',
   },
+  {
+    enabled: true,
+    name: '한국어',
+    tag: 'ko',
+  },
+  {
+    enabled: false,
+    name: 'Русский',
+    tag: 'ru',
+  },
+  {
+    enabled: false,
+    name: '日本語',
+    tag: 'ja',
+  },
 ];
 module.exports = languages;

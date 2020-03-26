@@ -43,7 +43,7 @@ res := e.GetRolesForUser("alice")
 
 <!--Node.js-->
 ```typescript
-const res = e.getRolesForUser('alice')
+const res = await e.getRolesForUser('alice')
 ```
 
 <!--PHP-->
@@ -68,7 +68,7 @@ res := e.GetUsersForRole("data1_admin")
 
 <!--Node.js-->
 ```typescript
-const res = e.getUsersForRole('data1_admin')
+const res = await e.getUsersForRole('data1_admin')
 ```
 
 <!--PHP-->
@@ -93,7 +93,7 @@ res := e.HasRoleForUser("alice", "data1_admin")
 
 <!--Node.js-->
 ```typescript
-const res = e.hasRoleForUser('alice', 'data1_admin')
+const res = await e.hasRoleForUser('alice', 'data1_admin')
 ```
 
 <!--PHP-->
@@ -353,7 +353,7 @@ e.GetPermissionsForUser("bob")
 
 <!--Node.js-->
 ```typescript
-e.getPermissionsForUser('bob')
+await e.getPermissionsForUser('bob')
 ```
 
 <!--PHP-->
@@ -378,7 +378,7 @@ e.HasPermissionForUser("alice", []string{"read"})
 
 <!--Node.js-->
 ```typescript
-e.hasPermissionForUser('alice', 'read')
+await e.hasPermissionForUser('alice', 'read')
 ```
 
 <!--PHP-->
@@ -411,8 +411,8 @@ e.GetImplicitRolesForUser("alice")
 ```
 
 <!--Node.js-->
-```text
-Method is not implemented
+```typescript
+await e.getImplicitRolesForUser("alice")
 ```
 
 <!--PHP-->
@@ -446,7 +446,7 @@ e.GetImplicitPermissionsForUser("alice")
 
 <!--Node.js-->
 ```text
-Method is not implemented
+await e.getImplicitPermissionsForUser("alice")
 ```
 
 <!--PHP-->
