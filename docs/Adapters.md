@@ -81,6 +81,7 @@ Adapter | Type | Author | AutoSave | Description
 [Peewee Adapter](https://github.com/shblhy/peewee-adapter) | ORM | [@shblhy](https://github.com/shblhy) | ✅ | PostgreSQL, MySQL, SQLite are supported by [Peewee](http://docs.peewee-orm.com/)
 [MongoEngine Adapter](https://github.com/zhangbailong945/mongoengine_adapter) | ORM | [@zhangbailong945](https://github.com/zhangbailong945) | ❌ | MongoDB is supported by [MongoEngine](http://mongoengine.org/)
 [Couchbase Adapter](https://github.com/ScienceLogic/casbin-couchbase-adapter) | NoSQL | [ScienceLogic](https://github.com/ScienceLogic) | ✅ (without `remove_filtered_policy()`) | For [Couchbase](https://www.couchbase.com/)
+[DynamoDB Adapter](https://github.com/abqadeer/python-dycasbin) | NoSQL | [@abqadeer](https://github.com/abqadeer/) | ✅ | For [DynamoDB](https://aws.amazon.com/dynamodb/)
 
 <!--.NET-->
 Adapter | Type | Author | AutoSave | Description
