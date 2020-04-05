@@ -15,22 +15,22 @@ production-ready | production-ready | production-ready | production-ready
 [![python](https://casbin.org/img/langs/python.png)](https://github.com/casbin/pycasbin) | [![dotnet](https://casbin.org/img/langs/dotnet.png)](https://github.com/casbin/Casbin.NET) | [![delphi](https://casbin.org/img/langs/delphi.png)](https://github.com/casbin4d/Casbin4D) | [![rust](https://casbin.org/img/langs/rust.png)](https://github.com/casbin/casbin-rs)
 ----|----|----|----
 [PyCasbin](https://github.com/casbin/pycasbin) | [Casbin.NET](https://github.com/casbin/Casbin.NET) | [Casbin4D](https://github.com/casbin4d/Casbin4D) | [Casbin-RS](https://github.com/casbin/casbin-rs)
-production-ready | production-ready | experimental | WIP
+production-ready | production-ready | experimental | production-ready
 
 ## Feature set for different languages
 
-Feature | Go | Java | Node.js | PHP | Python | C# | Delphi
-----|----|----|----|----|----|----|----
-Enforcement | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
-RBAC | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
-ABAC | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
-Adapter | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
-Management API | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
-RBAC API | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
-Filtered Adapter | ✅ | ❌ | ✅ | ✅ | ❌ | ✅ | ❌ |
-Watcher | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅
-Role Manager | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
-Multi-Threading | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+Feature | Go | Java | Node.js | PHP | Python | C# | Delphi | Rust
+----|----|----|----|----|----|----|----|----
+Enforcement | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
+RBAC | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
+ABAC | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌
+Adapter | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
+Management API | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
+RBAC API | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
+Filtered Adapter | ✅ | ❌ | ✅ | ✅ | ❌ | ✅ | ❌ | ❌
+Watcher | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅
+Role Manager | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅
+Multi-Threading | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ✅
 
 We are always working our best to make Casbin have the same set of features for all languages. But the reality is not that beautiful. The current progress is as the above table. ✅ for Watcher or Role Manager only means having the interface in the core library. Whether there is an available watcher or role manager implementation is another question.
 
