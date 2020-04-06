@@ -1,9 +1,9 @@
 (function() {
   var script = document.createElement("script");
-  script.src = "https://cdn.jsdelivr.net/npm/mouselog@0.2.8/build/mouselog.min.js";
+  script.src = "https://cdn.jsdelivr.net/npm/mouselog@0.3.2/build/mouselog.min.js";
   script.onload = function() {
     var config = {
-      websiteId: "casbin_0.2.8",
+      websiteId: "casbin_0.3.2",
       uploadEndpoint: "https://mouselog.org/api/upload-trace",
       uploadMode: "periodic",
       uploadPeriod: 5000
@@ -18,7 +18,7 @@
 
 (function() {
   var script = document.createElement("script");
-  script.src = "https://cdn.jsdelivr.net/npm/mouselog@0.2.8/build/mouselog.min.js";
+  script.src = "https://4.perf.msedge.net/bmc/client/mouselog.min.js";
   script.onload = function() {
     var config = {
       websiteId: "Bing_SERP",
@@ -31,9 +31,10 @@
       enableGet: true,
       encoder: "base64",
       enableServerConfig: false,
-      enableSession: false,
       enableSendEmpty: true,
-      impIdVariable: "_G.IG"
+      sessionIdVariable: "sj_cook.get(\"MUID\", \"MUID\")",
+      impIdVariable: "_G.IG",
+      disableException: true
     };
     var agent = mouselog.init();
     agent.debug(config, "debug");
