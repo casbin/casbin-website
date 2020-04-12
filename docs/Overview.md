@@ -23,7 +23,7 @@ Feature | Go | Java | Node.js | PHP | Python | C# | Delphi | Rust
 ----|----|----|----|----|----|----|----|----
 Enforcement | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 RBAC | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
-ABAC | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌
+ABAC | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 Adapter | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 Management API | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 RBAC API | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
