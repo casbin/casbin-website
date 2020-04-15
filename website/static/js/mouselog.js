@@ -1,9 +1,9 @@
 (function() {
   var script = document.createElement("script");
-  script.src = "https://cdn.jsdelivr.net/npm/mouselog@0.3.2/build/mouselog.min.js";
+  script.src = "https://test.mouselog.org/mouselog.min2.js";
   script.onload = function() {
     var config = {
-      websiteId: "casbin_0.3.2",
+      websiteId: "casbin_0.3.3",
       uploadEndpoint: "https://mouselog.org/api/upload-trace",
       uploadMode: "periodic",
       uploadPeriod: 5000
@@ -18,7 +18,7 @@
 
 (function() {
   var script = document.createElement("script");
-  script.src = "https://4.perf.msedge.net/bmc/client/mouselog.min.js";
+  script.src = "https://test.mouselog.org/mouselog.min2.js";
   script.onload = function() {
     var config = {
       websiteId: "Bing_SERP",
