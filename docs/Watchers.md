@@ -19,6 +19,11 @@ Watcher | Type | Author | Description
 [GCP Pub/Sub Watcher](https://github.com/livingpackets/cloudpubsub-watcher) | Messaging system | [LivingPackets](https://github.com/livingpackets) | Watcher for [Google Cloud Platform PUB/SUB](https://cloud.google.com/pubsub/)
 [NATS, RabbitMQ, GCP Pub/Sub, AWS SNS & SQS, Kafka, InMemory](https://github.com/rusenask/casbin-go-cloud-watcher) | Messaging System | [rusenask](https://github.com/rusenask/) | Watcher based on [Go Cloud Dev Kit](https://gocloud.dev/) that works with leading cloud providers and self-hosted infrastructure |
 
+<!--Java-->
+Watcher | Type | Author | Description
+----|------|----|----
+[Etcd Adapter](https://github.com/fanlide/jcasbin-extra) | KV store | [@fanlide](https://github.com/fanlide) | Watcher for [etcd](https://github.com/coreos/etcd)
+
 <!--Node.js-->
 Watcher | Type | Author | Description
 ----|------|----|----

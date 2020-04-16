@@ -48,6 +48,7 @@ Adapter | Type | Author | AutoSave | Description
 ----|------|----|----|----
 [File Adapter (built-in)](https://casbin.org/docs/en/adapters#file-adapter-built-in) | File | Casbin | ❌ | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files
 [JDBC Adapter](https://github.com/jcasbin/jdbc-adapter) | JDBC | Casbin | ✅ | MySQL, Oracle, PostgreSQL, DB2, Sybase, SQL Server are supported by [JDBC](https://docs.oracle.com/cd/E19226-01/820-7688/gawms/index.html)
+[Hutool Adapter](https://github.com/fanlide/jcasbin-extra) | ORM | [@fanlide](https://github.com/fanlide) | ✅ | MySQL, Oracle, PostgreSQL, SQLite are supported by [Hutool](https://github.com/looly/hutool)
 
 <!--Node.js-->
 Adapter | Type | Author | AutoSave | Description
