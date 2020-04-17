@@ -98,6 +98,7 @@ const siteConfig = {
     '/js/baidu-analytics.js',
     '/js/mouselog.js',
     '/js/hotjar.js',
+    '/js/gitter.js',
   ],
   stylesheets: ['/css/code-blocks-buttons.css', '/css/custom.css'],
 
