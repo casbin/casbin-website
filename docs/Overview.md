@@ -27,7 +27,7 @@ ABAC | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 Adapter | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 Management API | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 RBAC API | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
-Filtered Adapter | ✅ | ❌ | ✅ | ✅ | ❌ | ✅ | ❌ | ❌
+Filtered Adapter | ✅ | ❌ | ✅ | ✅ | ❌ | ✅ | ❌ | ✅
 Watcher | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅
 Role Manager | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅
 Multi-Threading | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ✅
