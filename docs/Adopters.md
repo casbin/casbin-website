@@ -10,7 +10,7 @@ title: Our Adopters
 <!--Go-->
 Name | Description | Model | Policy
 ----|----|----|----
-[VMware Harbor](https://github.com/goharbor/harbor) | VMware's open source trusted cloud native registry project that stores, signs, and scans content. | [Code](https://github.com/goharbor/harbor/blob/master/src/common/ram/casbin.go#L30-L51) | [Code](https://github.com/goharbor/harbor/blob/master/src/common/ram/casbin.go#L53-L132)
+[VMware Harbor](https://github.com/goharbor/harbor) | VMware's open source trusted cloud native registry project that stores, signs, and scans content. | [Code](https://github.com/goharbor/harbor/blob/master/src/pkg/permission/evaluator/rbac/casbin.go#L24-L44) | [Beego ORM](https://github.com/goharbor/harbor/blob/master/src/replication/dao/policy.go#L24-L26)
 [Intel RMD](https://github.com/intel/rmd) | Intel's resource management daemon. | [.conf](https://github.com/intel/rmd/blob/master/etc/rmd/acl/url/model.conf) | [.csv](https://github.com/intel/rmd/blob/master/etc/rmd/acl/url/policy.csv)
 [VMware Dispatch](https://github.com/vmware/dispatch) | A framework for deploying and managing serverless style applications. | [Code](https://github.com/vmware/dispatch/blob/master/pkg/identity-manager/handlers.go#L46-L55) | [Code](https://github.com/vmware/dispatch/blob/master/pkg/identity-manager/handlers_test.go#L35-L45)
 [Skydive](https://github.com/skydive-project/skydive) | An open source real-time network topology and protocols analyzer. | [Code](https://github.com/skydive-project/skydive/blob/master/config/config.go#L136-L140) | [.csv](https://github.com/skydive-project/skydive/blob/master/rbac/policy.csv)
