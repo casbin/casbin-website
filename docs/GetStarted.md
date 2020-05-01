@@ -54,6 +54,28 @@ begin
 end
 ```
 
+<!--Rust-->
+```rust
+use casbin::prelude::*;
+
+// If you use async_td as async executor
+#[cfg(feature = "runtime-async-std")]
+#[async_std::main]
+async fn main() -> Result<()> {
+    let mut e = Enforcer::new("path/to/model.conf", "path/to/policy.csv").await?;
+    Ok(())
+}
+
+// If you use tokio as async executor
+#[cfg(feature = "runtime-tokio")]
+#[tokio::main]
+async fn main() -> Result<()> {
+    let mut e = Enforcer::new("path/to/model.conf", "path/to/policy.csv").await?;
+    Ok(())
+}
+```
+
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 :::tip
@@ -144,6 +166,19 @@ else
   // Alice is sad
 ```
 
+<!--Rust-->
+```rust
+  let sub = "alice"; // the user that wants to access a resource.
+  let obj = "data1"; // the resource that is going to be accessed.
+  let act = "read"; // the operation that the user performs on the resource.
+
+  if e.enforce(&[sub, obj, act]).await? {
+      // permit alice to read data1
+  } else {
+      // error occurs
+  }
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 Casbin also provides API for permission management at run-time. For example, You can get all the roles assigned to a user as below:
@@ -177,6 +212,12 @@ roles = e.get_roles_for_user("alice")
 
 <!--Delphi-->
 ```delphi
+```
+
+
+<!--Rust-->
+```rust
+let roles = e.get_roles_for_user("alice");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
