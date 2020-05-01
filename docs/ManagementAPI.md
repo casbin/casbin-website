@@ -27,7 +27,7 @@ $e = new Enforcer('examples/rbac_model.conf', 'examples/rbac_policy.csv');
 ```
 <!--rust-->
 ```rust
-let e = Enforce::new("examples/rbac_model.conf", "examples/rbac_policy.csv").await?;
+let mut e = Enforce::new("examples/rbac_model.conf", "examples/rbac_policy.csv").await?;
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -267,9 +267,9 @@ const allNamedRoles = await e.getAllNamedRoles('g')
 $allNamedRoles = $e->getAllNamedRoles('g');
 ```
 
-<!--rust->
+<!--rust-->
 ```rust
-let all_named_roles = e.get_all_named_roles('g');
+let all_named_roles = e.get_all_named_roles("g");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -452,7 +452,7 @@ $filteredGroupingPolicy = $e->getFilteredGroupingPolicy(0, "alice");
 
 <!--rust-->
 ```rust
-let filtered_grouping_policy = e.get_filtered_grouping_policy(0, vec!"alice".to_owned()]);
+let filtered_grouping_policy = e.get_filtered_grouping_policy(0, vec!["alice".to_owned()]);
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
