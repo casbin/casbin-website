@@ -164,13 +164,12 @@ $a = new FileAdapter('examples/basic_policy.csv');
 $e = new Enforcer('examples/basic_model.conf', $a);
 ```
 
-
 <!--rust-->
 ```rust
 use casbin::prelude::*;
 
 let a = FileAdapter::new("examples/basic_policy.csv");
-let e = Enforcer::new("examples/basic_model.conf", a);
+let e = Enforcer::new("examples/basic_model.conf", a).await?;
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -211,7 +210,7 @@ conn_opts
 	.set_auth("casbin_rs", "casbin_rs");
 
 let a = DieselAdapter::new(conn_opts)?;
-let mut e = Enforcer::new("examples/basic_model.conf", a).awai?;
+let mut e = Enforcer::new("examples/basic_model.conf", a).await?;
 ```
 
 <!--PHP-->
