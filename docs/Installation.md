@@ -46,6 +46,12 @@ pip install casbin
 ```
 cargo install cargo-edit
 cargo add casbin
+
+// If you use async-std as async executor
+cargo add async-std
+
+// If you use tokio as async executor
+cargo add tokio // make sure you activate its `macros` feature
 ```
 
 <!--Delphi-->
