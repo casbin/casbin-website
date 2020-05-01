@@ -25,6 +25,10 @@ const e = await newEnforcer('examples/rbac_model.conf', 'examples/rbac_policy.cs
 ```php
 $e = new Enforcer('examples/rbac_model.conf', 'examples/rbac_policy.csv');
 ```
+<!--rust-->
+```rust
+let e = Enforce::new("examples/rbac_model.conf", "examples/rbac_policy.csv").await?;
+```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
@@ -49,6 +53,11 @@ const allSubjects = await e.getAllSubjects()
 <!--PHP-->
 ```php
 $allSubjects = $e->getAllSubjects();
+```
+
+<!--rust-->
+```rust
+let all_subjects = e.get_all_subjects();
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -76,6 +85,11 @@ const allNamedSubjects = await e.getAllNamedSubjects('p')
 $allNamedSubjects = $e->getAllNamedSubjects("p");
 ```
 
+<!--rust-->
+```rust
+let all_named_subjects = e.get_all_named_subjects("p");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetAllObjects()`
@@ -99,6 +113,11 @@ const allObjects = await e.getAllObjects()
 <!--PHP-->
 ```php
 $allObjects = $e->getAllObjects();
+```
+
+<!--rust-->
+```rust
+let all_objects = e.get_all_objects();
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -126,6 +145,11 @@ const allNamedObjects = await e.getAllNamedObjects('p')
 $allNamedObjects = $e->getAllNamedObjects("p");
 ```
 
+<!--rust-->
+```rust
+let all_named_objects = e.get_all_named_objects("p");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetAllActions()`
@@ -151,6 +175,11 @@ const allActions = await e.getAllActions()
 $allActions = $e->getAllActions();
 ```
 
+<!--rust-->
+```php
+let all_actions = e.get_all_actions();
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetAllNamedActions()`
@@ -174,6 +203,11 @@ const allNamedActions = await e.getAllNamedActions('p')
 <!--PHP-->
 ```php
 $allNamedActions = $e->getAllNamedActions("p");
+```
+
+<!--rust-->
+```rust
+let all_named_actions = e.get_all_named_actions("p");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -202,6 +236,11 @@ const allRoles = await e.getAllRoles()
 $allRoles = $e->getAllRoles();
 ```
 
+<!--rust-->
+```rust
+let all_roles = e.get_all_roles();
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetAllNamedRoles()`
@@ -228,6 +267,11 @@ const allNamedRoles = await e.getAllNamedRoles('g')
 $allNamedRoles = $e->getAllNamedRoles('g');
 ```
 
+<!--rust->
+```rust
+let all_named_roles = e.get_all_named_roles('g');
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetPolicy()`
@@ -251,6 +295,11 @@ const policy = await e.getPolicy()
 <!--PHP-->
 ```php
 $policy = $e->getPolicy();
+```
+
+<!--rust-->
+```rust
+let policy = e.get_policy();
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -279,6 +328,11 @@ const filteredPolicy = await e.getFilteredPolicy(0, 'alice')
 $filteredPolicy = $e->getFilteredPolicy(0, "alice");
 ```
 
+<!--rust-->
+```rust
+let filtered_policy = e.get_filtered_policy(0, vec!["alice".to_owned()]);
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetNamedPolicy()`
@@ -302,6 +356,11 @@ const namedPolicy = await e.getNamedPolicy('p')
 <!--PHP-->
 ```php
 $namedPolicy = $e->getNamedPolicy("p");
+```
+
+<!--rust-->
+```rust
+let named_policy = e.get_named_policy("p");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -330,6 +389,11 @@ const filteredNamedPolicy = await e.getFilteredNamedPolicy('p', 0, 'bob')
 $filteredNamedPolicy = $e->getFilteredNamedPolicy("p", 0, "bob");
 ```
 
+<!--rust-->
+```rust
+let filtered_named_policy = e.get_filtered_named_policy("p", 0, vec!["bob".to_owned()]);
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetGroupingPolicy()`
@@ -355,6 +419,11 @@ const groupingPolicy = await e.getGroupingPolicy()
 $groupingPolicy = $e->getGroupingPolicy();
 ```
 
+<!--rust-->
+```rust
+let grouping_policy = e.get_grouping_policy();
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetFilteredGroupingPolicy()`
@@ -376,9 +445,14 @@ filteredGroupingPolicy := e.GetFilteredGroupingPolicy(0, "alice")
 const filteredGroupingPolicy = await e.getFilteredGroupingPolicy(0, 'alice')
 ```
 
-<!--Go-->
-```go
+<!--PHP-->
+```php
 $filteredGroupingPolicy = $e->getFilteredGroupingPolicy(0, "alice");
+```
+
+<!--rust-->
+```rust
+let filtered_grouping_policy = e.get_filtered_grouping_policy(0, vec!"alice".to_owned()]);
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -406,6 +480,12 @@ const namedGroupingPolicy = await e.getNamedGroupingPolicy('g')
 $namedGroupingPolicy = $e->getNamedGroupingPolicy("g");
 ```
 
+<!--rust-->
+```rust
+let named_grouping_policy = e.get_named_grouping_policy("g");
+```
+
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetFilteredNamedGroupingPolicy()`
@@ -429,6 +509,11 @@ const namedGroupingPolicy = await e.getFilteredNamedGroupingPolicy('g', 0, 'alic
 <!--PHP-->
 ```php
 $namedGroupingPolicy = $e->getFilteredNamedGroupingPolicy("g", 0, "alice");
+```
+
+<!--rust-->
+```rust
+let named_grouping_policy = e.get_filtered_named_groupingPolicy("g", 0, vec!["alice".to_owned()]);
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -456,6 +541,11 @@ const hasPolicy = await e.hasPolicy('data2_admin', 'data2', 'read')
 $hasPolicy = $e->hasPolicy('data2_admin', 'data2', 'read');
 ```
 
+<!--rust-->
+```rust
+let has_policy = e.has_policy(vec!["data2_admin".to_owned(), "data2".to_owned(), "read".to_owned()]);
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `HasNamedPolicy()`
@@ -479,6 +569,11 @@ const hasNamedPolicy = await e.hasNamedPolicy('p', 'data2_admin', 'data2', 'read
 <!--PHP-->
 ```php
 $hasNamedPolicy = $e->hasNamedPolicy("p", "data2_admin", "data2", "read");
+```
+
+<!--rust-->
+```rust
+let has_named_policy = e.has_named_policy("p", vec!["data2_admin".to_owned(), "data2".to_owned(), "read".to_owned()]);
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -509,6 +604,11 @@ const added = await e.addPolicy(...p)
 $added = $e->addPolicy('eve', 'data3', 'read');
 ```
 
+<!--rust-->
+```rust
+let added = e.add_policy(vec!["eve".to_owned(), "data3".to_owned(), "read".to_owned()]);
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `AddPolicies()`
@@ -532,6 +632,18 @@ rules := [][] string {
 		}
 
 areRulesAdded := e.AddPolicies(rules)
+```
+
+<!--rust-->
+```rust
+let rules = vec![
+	vec!["jack".to_owned(), "data4".to_owned(), "read".to_owned()],
+	vec!["katy".to_owned(), "data4".to_owned(), "write".to_owned()],
+	vec!["leyo".to_owned(), "data4".to_owned(), "read".to_owned()],
+	vec!["ham".to_owned(), "data4".to_owned(), "write".to_owned()],
+];
+
+let are_rules_added = e.add_policies(rules).await?
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -562,6 +674,11 @@ const added = await e.addNamedPolicy('p', ...p)
 $added = $e->addNamedPolicy("p", "eve", "data3", "read");
 ```
 
+<!--rust-->
+```rust
+let added = e.add_named_policy("p", vec!["eve".to_owned(), "data3".to_owned(), "read".to_owned()]).await?;
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `AddNamedPolicies()`
@@ -585,6 +702,18 @@ rules := [][] string {
 		}
 
 areRulesAdded := e.AddNamedPolicies("p", rules)
+```
+
+<!--rust-->
+```rust
+let rules = vec![
+	vec!["jack".to_owned(), "data4".to_owned(), "read".to_owned()],
+	vec!["katy".to_owned(), "data4".to_owned(), "write".to_owned()],
+	vec!["leyo".to_owned(), "data4".to_owned(), "read".to_owned()],
+	vec!["ham".to_owned(), "data4".to_owned(), "write".to_owned()],
+];
+
+let are_rules_added := e.add_named_policies("p", rules).await?;
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -613,6 +742,11 @@ const removed = await e.removePolicy(...p)
 $removed = $e->removePolicy("alice", "data1", "read");
 ```
 
+<!--rust-->
+```rust
+let removed = e.remove_policy(vec!["alice".to_owned(), "data1".to_owned(), "read".to_owned()]).await?;
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `RemovePolicies()`
@@ -626,8 +760,8 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--Go-->
-```go
+<!--rust-->
+```rust
 rules := [][] string {
 				[]string {"jack", "data4", "read"},
 				[]string {"katy", "data4", "write"},
@@ -636,6 +770,18 @@ rules := [][] string {
 		}
 
 areRulesRemoved := e.RemovePolicies(rules)
+```
+
+<!--rust-->
+```rust
+let rules = vec![
+	vec!["jack".to_owned(), "data4".to_owned(), "read".to_owned()],
+	vec!["katy".to_owned(), "data4".to_owned(), "write".to_owned()],
+	vec!["leyo".to_owned(), "data4".to_owned(), "read".to_owned()],
+	vec!["ham".to_owned(), "data4".to_owned(), "write".to_owned()],
+];
+
+let are_rules_removed = e.remove_policies(rules).await?;
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -665,6 +811,11 @@ const removed = await e.removeFilteredPolicy(0, ...p)
 $removed = $e->removeFilteredPolicy(0, "alice", "data1", "read");
 ```
 
+<!--rust-->
+```rust
+let removed = e.remove_filtered_policy(0, vec!["alice".to_owned(), "data1".to_owned(), "read".to_owned()]).await?;
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `RemoveNamedPolicy()`
@@ -691,6 +842,11 @@ const removed = await e.removeNamedPolicy('p', ...p)
 $removed = $e->removeNamedPolicy("p", "alice", "data1", "read");
 ```
 
+<!--rust-->
+```rust
+let removed = e.remove_named_policy("p", vec!["alice".to_owned(), "data1".to_owned(), "read".to_owned()]).await?;
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `RemoveNamedPolicies()`
@@ -714,6 +870,18 @@ rules := [][] string {
 		}
 
 areRulesRemoved := e.RemoveNamedPolicies("p", rules)
+```
+
+<!--rust-->
+```rust
+let rules = vec![
+	vec!["jack".to_owned(), "data4".to_owned(), "read".to_owned()],
+	vec!["katy".to_owned(), "data4".to_owned(), "write".to_owned()],
+	vec!["leyo".to_owned(), "data4".to_owned(), "read".to_owned()],
+	vec!["ham".to_owned(), "data4".to_owned(), "write".to_owned()],
+];
+
+let areRulesRemoved = e.remove_named_policies("p", rules).await?;
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -742,6 +910,11 @@ const removed = await e.removeFilteredNamedPolicy('p', 0, ...p)
 $removed = $e->removeFilteredNamedPolicy("p", 0, "alice", "data1", "read");
 ```
 
+<!--rust-->
+```rust
+let removed = e.remove_filtered_named_policy("p", 0, vec!["alice".to_owned(), "data1".to_owned(), "read".to_owned()]).await?;
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `HasGroupingPolicy()`
@@ -765,6 +938,11 @@ const has = await e.hasGroupingPolicy('alice', 'data2_admin')
 <!--PHP-->
 ```php
 $has = $e->hasGroupingPolicy("alice", "data2_admin");
+```
+
+<!--rust-->
+```rust
+let has = e.has_grouping_policy(vec!["alice".to_owned(), "data2_admin".to_owned()]);
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -791,6 +969,12 @@ const has = await e.hasNamedGroupingPolicy('g', 'alice', 'data2_admin')
 ```php
 $has = $e->hasNamedGroupingPolicy("g", "alice", "data2_admin");
 ```
+
+<!--rust-->
+```rust
+let has = e.has_named_grouping_policy("g", vec!["alice".to_owned(), "data2_admin".to_owned()]);
+```
+
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
@@ -819,6 +1003,11 @@ const added = await e.addGroupingPolicy('group1', 'data2_admin')
 $added = $e->addGroupingPolicy("group1", "data2_admin");
 ```
 
+<!--rust-->
+```rust
+let added = e.add_grouping_policy(vec!["group1".to_owned(), "data2_admin".to_owned()]).await?;
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `AddGroupingPolicies()`
@@ -842,6 +1031,18 @@ rules := [][] string {
 		}
 
 areRulesAdded := e.AddGroupingPolicies(rules)
+```
+
+<!--rust-->
+```rust
+let rules = vec![
+	vec!["jack".to_owned(), "group1".to_owned(), "domain1".to_owned()],
+	vec!["katy".to_owned(), "group1".to_owned(), "domain1".to_owned()],
+	vec!["leyo".to_owned(), "group1".to_owned(), "domain1".to_owned()],
+	vec!["ham".to_owned(), "group1".to_owned(), "domain1".to_owned()],
+];
+
+let areRulesAdded = e.add_grouping_policies(rules).await?;
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -871,6 +1072,12 @@ const added = await e.addNamedGroupingPolicy('g', 'group1', 'data2_admin')
 $added = $e->addNamedGroupingPolicy("g", "group1", "data2_admin");
 ```
 
+<!--rust-->
+```rust
+let added = e.add_named_grouping_policy("g", vec!["group1".to_owned(), "data2_admin".to_owned()]).await?;
+```
+
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `AddNamedGroupingPolicies()`
@@ -896,6 +1103,19 @@ rules := [][] string {
 areRulesAdded := e.AddNamedGroupingPolicies("g", rules)
 ```
 
+<!--rust-->
+```rust
+let rules = vec![
+	vec!["jack".to_owned(), "group1".to_owned(), "domain1".to_owned()],
+	vec!["katy".to_owned(), "group1".to_owned(), "domain1".to_owned()],
+	vec!["leyo".to_owned(), "group1".to_owned(), "domain1".to_owned()],
+	vec!["ham".to_owned(), "group1".to_owned(), "domain1".to_owned()],
+];
+
+let are_rules_added = e.add_named_grouping_policies("g", rules).await?;
+```
+
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `RemoveGroupingPolicy()`
@@ -919,6 +1139,11 @@ const removed = await e.removeGroupingPolicy('alice', 'data2_admin')
 <!--PHP-->
 ```php
 $removed = $e->removeGroupingPolicy("alice", "data2_admin");
+```
+
+<!--rust-->
+```rust
+let removed = e.remove_grouping_policy(vec!["alice".to_owned(), "data2_admin".to_owned()]).await?;
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -946,6 +1171,18 @@ rules := [][] string {
 areRulesRemoved := e.RemoveGroupingPolicies(rules)
 ```
 
+<!--rust-->
+```rust
+let rules = vec![
+	vec!["jack".to_owned(), "group1".to_owned(), "domain1".to_owned()],
+	vec!["katy".to_owned(), "group1".to_owned(), "domain1".to_owned()],
+	vec!["leyo".to_owned(), "group1".to_owned(), "domain1".to_owned()],
+	vec!["ham".to_owned(), "group1".to_owned(), "domain1".to_owned()],
+];
+
+let are_rules_removed = e.remove_grouping_policies(rules).await?;
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `RemoveFilteredGroupingPolicy()`
@@ -969,6 +1206,11 @@ const removed = await e.removeFilteredGroupingPolicy(0, 'alice')
 <!--PHP-->
 ```php
 $removed = $e->removeFilteredGroupingPolicy(0, "alice");
+```
+
+<!--rust-->
+```rust
+let removed = e.remove_filtered_grouping_policy(0, vec!["alice".to_owned()]).await?;
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -996,6 +1238,11 @@ const removed = await e.removeNamedGroupingPolicy('g', 'alice')
 $removed = $e->removeNamedGroupingPolicy("g", "alice");
 ```
 
+<!--rust-->
+```rust
+let removed = e.remove_named_grouping_policy("g", vec!["alice".to_owned()]).await?;
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `RemoveNamedGroupingPolicies()`
@@ -1021,6 +1268,19 @@ rules := [][] string {
 areRulesRemoved := e.RemoveNamedGroupingPolicies("g", rules)
 ```
 
+
+<!--rust-->
+```rust
+let rules = vec![
+	vec!["jack".to_owned(), "group1".to_owned(), "domain1".to_owned()],
+	vec!["katy".to_owned(), "group1".to_owned(), "domain1".to_owned()],
+	vec!["leyo".to_owned(), "group1".to_owned(), "domain1".to_owned()],
+	vec!["ham".to_owned(), "group1".to_owned(), "domain1".to_owned()],
+];
+
+let are_rules_removed = e.remove_named_grouping_policies("g", rules).await?;
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `RemoveFilteredNamedGroupingPolicy()`
@@ -1044,6 +1304,11 @@ const removed = await e.removeFilteredNamedGroupingPolicy('g', 0, 'alice')
 <!--PHP-->
 ```php
 $removed = $e->removeFilteredNamedGroupingPolicy("g", 0, "alice");
+```
+
+<!--rust-->
+```rust
+let removed = e.remove_filtered_named_groupingPolicy("g", 0, vec!["alice".to_owned()]).await?;
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -1103,6 +1368,17 @@ func customFunctionWrapper(...$args){
 }
 
 $e->addFunction("keyMatchCustom", customFunctionWrapper);
+```
+
+
+<!--rust-->
+```rust
+fn custom_function(key1: STring, key2: String) {
+	key1 == "/alice_data2/myid/using/res_id" && key2 == "/alice_data/:resource" || key1 == "/alice_data2/myid/using/res_id" && key2 == "/alice_data2/:id/using/:resId"
+}
+
+
+e.add_function("keyMatchCustom", custom_function);
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
