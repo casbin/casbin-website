@@ -176,7 +176,7 @@ $allActions = $e->getAllActions();
 ```
 
 <!--rust-->
-```php
+```rust
 let all_actions = e.get_all_actions();
 ```
 
