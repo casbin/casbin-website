@@ -131,6 +131,13 @@ use Casbin\Enforcer;
 $e = new Enforcer('examples/basic_model.conf', 'examples/basic_policy.csv');
 ```
 
+<!--rust-->
+```rust
+use casbin::prelude::*;
+
+let mut e = Enforcer::new("examples/basic_model.conf", "examples/basic_policy.csv").await?;
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 This is the same with:
@@ -157,6 +164,15 @@ $a = new FileAdapter('examples/basic_policy.csv');
 $e = new Enforcer('examples/basic_model.conf', $a);
 ```
 
+
+<!--rust-->
+```rust
+use casbin::prelude::*;
+
+let a = FileAdapter::new("examples/basic_policy.csv");
+let e = Enforcer::new("examples/basic_model.conf", a);
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### [MySQL adapter](https://github.com/casbin/mysql-adapter)
@@ -175,6 +191,27 @@ import (
 
 a := mysqladapter.NewAdapter("mysql", "root:@tcp(127.0.0.1:3306)/")
 e := casbin.NewEnforcer("examples/basic_model.conf", a)
+```
+
+
+<!--rust-->
+```rust
+// https://github.com/casbin-rs/diesel-adapter
+// make sure you activate feature `mysql`
+
+use casbin::prelude::*;
+use diesel_adapter::{ConnOptions, DieselAdapter};
+
+let mut conn_opts = ConnOptions::default();
+conn_opts
+	.set_hostname("127.0.0.1")
+	.set_port(3306)
+	.set_host("127.0.0.1:3306") // overwrite hostname, port config
+	.set_database("casbin")
+	.set_auth("casbin_rs", "casbin_rs");
+
+let a = DieselAdapter::new(conn_opts)?;
+let mut e = Enforcer::new("examples/basic_model.conf", a).awai?;
 ```
 
 <!--PHP-->
