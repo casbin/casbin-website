@@ -26,6 +26,12 @@ const e = await newEnforcer('examples/rbac_model.conf', 'examples/rbac_policy.cs
 $e = new Enforcer('examples/rbac_model.conf', 'examples/rbac_policy.csv');
 ```
 
+<!--rust-->
+```rust
+let mut e = Enforcer::new("examples/rbac_model.conf", "examples/rbac_policy.csv").await?;
+```
+
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetRolesForUser()`
@@ -49,6 +55,11 @@ const res = await e.getRolesForUser('alice')
 <!--PHP-->
 ```php
 $res = $e->getRolesForUser("alice");
+```
+
+<!--rust-->
+```rust
+let roles = e.get_roles_for_user("alice", None); // No domain
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -76,6 +87,11 @@ const res = await e.getUsersForRole('data1_admin')
 $res = $e->getUsersForRole("data1_admin");
 ```
 
+<!--rust-->
+```rust
+let users = e.get_users_for_role("data1_admin", None); // No domain
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `HasRoleForUser()`
@@ -99,6 +115,11 @@ const res = await e.hasRoleForUser('alice', 'data1_admin')
 <!--PHP-->
 ```php
 $res = $e->hasRoleForUser("alice", "data1_admin");
+```
+
+<!--rust-->
+```rust
+let has = e.has_role_for_user("alice", "data1_admin", None); // No domain
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -127,7 +148,31 @@ await e.addRoleForUser('alice', 'data2_admin')
 $e->addRoleForUser("alice", "data2_admin");
 ```
 
+<!--rust-->
+```rust
+let added = e.add_role_for_user("alice", "data2_admin", None).await?; // No domain
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
+
+
+### `AddRolesForUser()`
+
+AddRolesForUser adds multiple roles for a user.
+Returns false if the user already has one of these roles (aka not affected).
+
+For example: 
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--rust-->
+```rust
+let roles = vec!["data1_admin".to_owned(), "data2_admin".to_owned()];
+let all_added = e.add_roles_for_user("alice", roles, None).await?; // No domain
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
 
 ### `DeleteRoleForUser()`
 
@@ -153,6 +198,12 @@ await e.deleteRoleForUser('alice', 'data1_admin')
 $e->deleteRoleForUser("alice", "data1_admin");
 ```
 
+<!--rust-->
+```rust
+let deleted = e.delete_role_for_user("alice", "data1_admin", None).await?; // No domain
+```
+
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `DeleteRolesForUser()`
@@ -177,6 +228,11 @@ await e.deleteRolesForUser('alice')
 <!--PHP-->
 ```php
 $e->deleteRolesForUser("alice");
+```
+
+<!--rust-->
+```rust
+let deleted_at_least_one = e.delete_roles_for_user("alice", None).await?; // No domain
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -205,6 +261,12 @@ await e.deleteUser('alice')
 $e->deleteUser("alice");
 ```
 
+<!--rust-->
+```rust
+let deleted = e.delete_user("alice").await?;
+```
+
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `DeleteRole()`
@@ -228,6 +290,11 @@ await e.deleteRole("data2_admin")
 <!--PHP-->
 ```php
 $e->deleteRole("data2_admin");
+```
+
+<!--rust-->
+```rust
+let deleted = e.delete_role("data2_admin").await?;
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -254,6 +321,11 @@ await e.deletePermission('read')
 <!--PHP-->
 ```php
 $e->deletePermission("read");
+```
+
+<!--rust-->
+```rust
+let deleted = e.delete_permission(vec!["read".to_owned()]).await?;
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -283,7 +355,34 @@ await e.addPermissionForUser('bob', 'read')
 $e->addPermissionForUser("bob", "read");
 ```
 
+<!--rust-->
+```rust
+let added = e.add_permission_for_user("bob", vec!["read".to_owned()]).await?;
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
+
+### `AddPermissionsForUser()`
+
+AddPermissionsForUser adds multiple permissions for a user or role.
+Returns false if the user or role already has one of the permissions (aka not affected).
+
+For example:
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--rust-->
+```rust
+let permissions = vec![
+    vec!["data1".to_owned(), "read".to_owned()],
+    vec!["data2".to_owned(), "write".to_owned()],
+];
+
+let all_added = e.add_permissions_for_user("bob", permissions).await?;
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
 
 ### `DeletePermissionForUser()`
 
@@ -307,6 +406,11 @@ await e.deletePermissionForUser("bob", "read")
 <!--PHP-->
 ```php
 $e->deletePermissionForUser("bob", "read");
+```
+
+<!--rust-->
+```rust
+let deleted = e.delete_permission_for_user("bob", vec!["read".to_owned()]).await?;
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -334,6 +438,11 @@ await e.deletePermissionsForUser('bob')
 <!--PHP-->
 ```php
 $e->deletePermissionsForUser("bob");
+```
+
+<!--rust-->
+```rust
+let deleted_at_least_one = e.delete_permissions_for_user("bob").await?;
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -386,6 +495,11 @@ await e.hasPermissionForUser('alice', 'read')
 $e->hasPermissionForUser("alice", []string{"read"});
 ```
 
+<!--rust-->
+```rust
+let has = e.has_permission_for_user("alice", vec!["data1".to_owned(), "read".to_owned()]);
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetImplicitRolesForUser()`
@@ -420,6 +534,11 @@ await e.getImplicitRolesForUser("alice")
 $e->getImplicitRolesForUser("alice");
 ```
 
+<!--rust-->
+```rust
+e.get_implicit_roles_for_user("alice", None); // No domain
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetImplicitPermissionsForUser()`
@@ -452,6 +571,11 @@ await e.getImplicitPermissionsForUser("alice")
 <!--PHP-->
 ```php
 $e->getImplicitPermissionsForUser("alice");
+```
+
+<!--rust-->
+```rust
+e.get_implicit_permissions_for_user("alice", None); // No domain
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
