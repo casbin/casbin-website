@@ -42,6 +42,12 @@ composer require casbin/casbin
 pip install casbin
 ```
 
+<!--Rust-->
+```
+cargo install cargo-edit
+cargo add casbin
+```
+
 <!--Delphi-->
 Casbin4D comes in a package (currently for Delphi 10.3 Rio) and you can install it in the IDE. However, there are no visual components which means that you can use the units independently of packages. Just import the units in your project (assuming you do not mind the number of them).
 
