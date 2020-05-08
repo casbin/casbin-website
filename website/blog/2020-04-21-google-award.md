@@ -1,9 +1,9 @@
 ---
 title: Yang Luo - Google Open Source Peer Bonus Winner
-author: Yang Luo
-authorTitle: Creator of Casbin
-authorURL: http://github.com/hsluoyz
-authorImageURL: https://avatars.githubusercontent.com/hsluoyz
+author: Casbin
+authorTitle: Official Account
+authorURL: http://github.com/casbin
+authorImageURL: https://avatars.githubusercontent.com/casbin
 ---
 
 Today, we are pleased to announce that Casbin's founder, [Yang Luo](https://github.com/hsluoyz) is awarded the "Google Open Source Peer Bonus winners" for his work on [Casbin](https://casbin.org/), [Npcap](https://nmap.org/npcap/) and [Nmap](https://nmap.org/) in 2019 Q3.
@@ -14,8 +14,14 @@ Today, we are pleased to announce that Casbin's founder, [Yang Luo](https://gith
 
 The [Google Open Source Peer Bonus](https://opensource.google.com/docs/growing/peer-bonus/) program is described as:
 
-> In the same way that a Google Peer Bonus is used to recognize a fellow Googler who has gone above and beyond, an Open Source Peer Bonus recognizes external people who have made exceptional contributions to open source.
+> _In the same way that a Google Peer Bonus is used to recognize a fellow Googler who has gone above and beyond, an Open Source Peer Bonus recognizes external people who have made exceptional contributions to open source._
 
-Yang and Casbin are listed among open source developers and projects that have a relevant impact out there, like Linux Kernel, Kubernetes, Angular, Pip, LLVM/CLang, Apache projects, Git or Gerrit.
+The [announcement for the 2019 winners](https://opensource.googleblog.com/2020/01/announcing-2019-second-cycle-google.html) is available at:
+
+> https://opensource.googleblog.com/2020/01/announcing-2019-second-cycle-google.html
+
+Yang and Casbin are listed among open source developers and projects that have a relevant impact out there, like Git, TensorFlow, V8, CPython, LLVM, Apache projects, Angular or Jenkins.
 
 We are glad to see Casbin recognized in this way for its contribution to open source and cloud security!
+
+_Thanks for flying Casbin!_
