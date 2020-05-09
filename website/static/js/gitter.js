@@ -8,15 +8,12 @@ const id = setInterval(function(){
   const gitterCollapseButton = document.getElementsByClassName('gitter-open-chat-button');
   if(gitterCollapseButton.length > 0) {
       gitterCollapseButton[0].style.backgroundColor = "#443d80";
+
       gitterCollapseButton[0].addEventListener("click", function(){
-          const id = setInterval(function(){
-              const gitterEmbedClass = document.getElementsByClassName('gitter-chat-embed');
-              if(gitterEmbedClass.length > 0) {
-                  gitterEmbedClass[0].style.top = "7%";
-                  clearInterval(id);
-              }
-          }, 500);
+        const gitterEmbedClass = document.getElementsByClassName('gitter-chat-embed');
+        gitterEmbedClass[0].style.top = "7%";
       });
+      
       clearInterval(id);
   }
 });
