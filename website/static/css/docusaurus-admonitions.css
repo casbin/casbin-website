@@ -100,3 +100,6 @@
   stroke: #f1c40f;
   fill: #f1c40f;
 }
+.container .wrapper .imageAlignSide h2 {
+  text-align: center;
+}
