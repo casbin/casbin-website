@@ -45,3 +45,11 @@ window.addEventListener('load', function() {
     }, 2000);
   });
 });
+
+const interval = setInterval(()=>{
+  const ele = document.querySelector('.container.paddingBottom.paddingTop');
+  if(ele!=null){
+    ele.classList.add('features')
+    clearInterval(interval);
+  }
+}, 50)
