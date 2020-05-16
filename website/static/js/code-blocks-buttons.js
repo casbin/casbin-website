@@ -46,7 +46,6 @@ window.addEventListener('load', function() {
   });
 });
 
-console.log('hello');
 const interval = setInterval(()=>{
   const ele = document.querySelector('.container.paddingBottom.paddingTop');
   if(ele!=null){
