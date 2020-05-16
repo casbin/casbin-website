@@ -104,7 +104,7 @@
   text-align: center;
 }
 
-.blockImage img{
+.features.container.paddingBottom.paddingTop .blockImage img{
   width: 80px;
   height: 80px;
 }
