@@ -15,6 +15,15 @@
 @media only screen and (min-width: 1500px) {
 }
 
+@media screen and (max-width: 600px){
+  .gitter-chat-embed {
+      box-sizing: border-box;
+      left: 20%;
+      top: 16% !important;
+  }
+}
+
+
 a {
     color: #0366d6;
     text-decoration: none;
