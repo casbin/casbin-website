@@ -65,7 +65,7 @@ func NewRoleManager(maxHierarchyLevel int) rbac.RoleManager {
 
 Casbin doesn't distinguish role from user in its RBAC. They are all treated as strings. If you only use single-level RBAC (a role will never be a member of another role). You can use ``e.GetAllSubjects()`` to get all users and ``e.GetAllRoles()`` to get all roles. They just list all ``u`` and all ``r`` respectively in all ``g, u, r`` rules.
 
-But if you are using multi-level RBAC (with role hierarchy), and you application doesn't record whether a name (string) is a user or a role, or you have user and role with same name. You can add a prefix to role like ``role::admin`` before passing it to Casbin. So you will know if it's a role by checking this prefix.
+But if you are using multi-level RBAC (with role hierarchy), and your application doesn't record whether a name (string) is a user or a role, or you have user and role with same name. You can add a prefix to role like ``role::admin`` before passing it to Casbin. So you will know if it's a role by checking this prefix.
 
 ## How to query implicit roles or permissions?
 
