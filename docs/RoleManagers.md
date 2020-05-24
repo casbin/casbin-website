@@ -28,6 +28,7 @@ For developers: all role managers must implement the [RoleManager](https://githu
 Role manager | Author | Description
 ----|----|----
 [Default Role Manager (built-in)](https://github.com/casbin/node-casbin/blob/master/src/rbac/defaultRoleManager.ts) | Casbin | Supports role hierarchy stored in Casbin policy
+[Session Role Manager](https://github.com/node-casbin/session-role-manager) | Casbin | Supports role hierarchy stored in Casbin policy, with time-range-based sessions
 
 For developers: all role managers must implement the [RoleManager](https://github.com/casbin/node-casbin/blob/master/src/rbac/roleManager.ts) interface. [Default Role Manager](https://github.com/casbin/node-casbin/blob/master/src/rbac/defaultRoleManager.ts) can be used as a reference implementation.
 
