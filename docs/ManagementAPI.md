@@ -646,6 +646,18 @@ let rules = vec![
 let are_rules_added = e.add_policies(rules).await?
 ```
 
+<!--Node.js-->
+```typescript
+const rules = [
+    ['jack', 'data4', 'read'],
+    ['katy', 'data4', 'write'],
+    ['leyo', 'data4', 'read'],
+    ['ham', 'data4', 'write']
+];
+
+const areRulesAdded = await e.addPolicies(rules);
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `AddNamedPolicy()`
@@ -716,6 +728,18 @@ let rules = vec![
 let are_rules_added := e.add_named_policies("p", rules).await?;
 ```
 
+<!--Node.js-->
+```typescript
+const rules = [
+    ['jack', 'data4', 'read'],
+    ['katy', 'data4', 'write'],
+    ['leyo', 'data4', 'read'],
+    ['ham', 'data4', 'write']
+];
+
+const areRulesAdded = await e.addNamedPolicies('p', rules);
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `RemovePolicy()`
@@ -760,8 +784,8 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--rust-->
-```rust
+<!--Go-->
+```go
 rules := [][] string {
 				[]string {"jack", "data4", "read"},
 				[]string {"katy", "data4", "write"},
@@ -782,6 +806,19 @@ let rules = vec![
 ];
 
 let are_rules_removed = e.remove_policies(rules).await?;
+
+<!--Node.js-->
+```typescript
+const rules = [
+    ['jack', 'data4', 'read'],
+    ['katy', 'data4', 'write'],
+    ['leyo', 'data4', 'read'],
+    ['ham', 'data4', 'write']
+];
+
+const areRulesRemoved = await e.removePolicies(rules);
+```
+
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -882,6 +919,18 @@ let rules = vec![
 ];
 
 let areRulesRemoved = e.remove_named_policies("p", rules).await?;
+```
+
+<!--Node.js-->
+```typescript
+const rules = [
+    ['jack', 'data4', 'read'],
+    ['katy', 'data4', 'write'],
+    ['leyo', 'data4', 'read'],
+    ['ham', 'data4', 'write']
+];
+
+const areRulesRemoved = await e.removeNamedPolicies('p', rules);
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -1044,6 +1093,15 @@ let rules = vec![
 
 let areRulesAdded = e.add_grouping_policies(rules).await?;
 ```
+<!--Node.js-->
+```typescript
+const groupingRules = [
+    ['ham', 'data4_admin'],
+    ['jack', 'data5_admin']
+  ];
+
+const areRulesAdded = await e.addGroupingPolicies(groupingRules);
+```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
@@ -1115,6 +1173,15 @@ let rules = vec![
 let are_rules_added = e.add_named_grouping_policies("g", rules).await?;
 ```
 
+<!--Node.js-->
+```typescript
+const groupingRules = [
+    ['ham', 'data4_admin'],
+    ['jack', 'data5_admin']
+  ];
+
+const areRulesAdded = await e.addNamedGroupingPolicies('g', groupingRules);
+```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
@@ -1181,6 +1248,16 @@ let rules = vec![
 ];
 
 let are_rules_removed = e.remove_grouping_policies(rules).await?;
+```
+
+<!--Node.js-->
+```typescript
+const groupingRules = [
+    ['ham', 'data4_admin'],
+    ['jack', 'data5_admin']
+  ];
+
+const areRulesRemoved = await e.removeGroupingPolicies(groupingRules);
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -1279,6 +1356,16 @@ let rules = vec![
 ];
 
 let are_rules_removed = e.remove_named_grouping_policies("g", rules).await?;
+```
+
+<!--Node.js-->
+```typescript
+const groupingRules = [
+    ['ham', 'data4_admin'],
+    ['jack', 'data5_admin']
+  ];
+
+const areRulesRemoved = await e.removeNamedGroupingPolicies('g', groupingRules);
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
