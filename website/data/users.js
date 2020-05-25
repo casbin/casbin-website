@@ -95,4 +95,10 @@ module.exports = [
     infoLink: 'https://www.musma.net/',
     pinned: true,
   },
+  {
+    caption: 'KubeMQ',
+    image: '/img/users/kubemq.png',
+    infoLink: 'https://docs.kubemq.io/license/open-source-software-notices',
+    pinned: true,
+  },
 ];
