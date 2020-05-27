@@ -166,9 +166,12 @@ open `http://localhost:3000/casbin/versions.html` to see other versions.
 
 ## Translation
 
-[Crowdin](https://crowdin.com/project/casbin) is used for Casbin website's translation.
+[Crowdin](https://crowdin.com/project/casbin) is used for Casbin website's translation. You can contribute to the translation of your proficient languages on that.
 
-### Manually trigger Crowdin
+### Build the translation project locally
+Please contact the Casbin team for manager access on Crowdin.
+
+### Manually trigger Crowdin [DEPRECATED]
 
 - Install Crowdin CLI:
 
