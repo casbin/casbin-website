@@ -42,6 +42,7 @@ This is another longer-version paper published in Journal of Software. The citat
 - [Casbin: A Permission Engine (in Chinese)](https://github.com/xizhibei/blog/issues/102)
 - [Implementing ABAC with Casbin (in Chinese)](https://www.cnblogs.com/studyzy/p/11380736.html)
 - [Source code analysis of Casbin (in Chinese)](https://www.cnblogs.com/yjf512/p/12200206.html)
+- [Permission evaluation with Casbin](https://cloud.tencent.com/developer/article/1534674)
 
 <!--DOCUSAURUS_CODE_TABS-->
 
