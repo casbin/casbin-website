@@ -100,7 +100,7 @@ class Footer extends React.Component {
               data-show-count={true}
               data-count-aria-label="# stargazers on GitHub"
               aria-label="Star this project on GitHub">
-              node-Casbin
+              Node-Casbin
             </a>
             &nbsp;&nbsp;&thinsp;&thinsp;
             <a
@@ -121,7 +121,7 @@ class Footer extends React.Component {
               data-show-count={true}
               data-count-aria-label="# stargazers on GitHub"
               aria-label="Star this project on GitHub">
-              pyCasbin
+              PyCasbin
             </a>
             &nbsp;&nbsp;&thinsp;&thinsp;
             <a
@@ -133,6 +133,27 @@ class Footer extends React.Component {
               data-count-aria-label="# stargazers on GitHub"
               aria-label="Star this project on GitHub">
               Casbin.NET
+            </a>
+            <a
+              className="github-button"
+              href={this.props.config.delphiRepoUrl}
+              data-icon="octicon-star"
+              data-count-href='/stargazers'
+              data-show-count={true}
+              data-count-aria-label="# stargazers on GitHub"
+              aria-label="Star this project on GitHub">
+              Casbin4D
+            </a>
+            &nbsp;&nbsp;&thinsp;&thinsp;
+            <a
+              className="github-button"
+              href={this.props.config.rustRepoUrl}
+              data-icon="octicon-star"
+              data-count-href='/stargazers'
+              data-show-count={true}
+              data-count-aria-label="# stargazers on GitHub"
+              aria-label="Star this project on GitHub">
+              Casbin-RS
             </a>
             {this.props.config.twitterUsername && (
               <div className="social">

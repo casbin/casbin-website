@@ -117,6 +117,8 @@ const siteConfig = {
   phpRepoUrl: 'https://github.com/php-casbin/php-casbin',
   pythonRepoUrl: 'https://github.com/casbin/pycasbin',
   dotnetRepoUrl: 'https://github.com/casbin/Casbin.NET',
+  delphiRepoUrl: 'https://github.com/casbin4d/Casbin4D',
+  rustRepoUrl: 'https://github.com/casbin/casbin-rs',
 
   // Tracking ID of Google Analytics
   gaTrackingId: 'UA-119750650-1',
