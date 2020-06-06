@@ -616,7 +616,7 @@ let added = e.add_policy(vec!["eve".to_owned(), "data3".to_owned(), "read".to_ow
 AddPolicies adds authorization rules to the current policy.
 The operation is atomic in nature.
 Hence, if authorization rules consists of rules which are not consistent with the current policy, the function returns false and no policy rule is added to the current policy.
-If all authorization the rules are consistent with the policy rules, the function returns true and each policy rule is added to the current policy.
+If all the authorization rules are consistent with the policy rules, the function returns true and each policy rule is added to the current policy.
 
 For example:
 
@@ -644,6 +644,18 @@ let rules = vec![
 ];
 
 let are_rules_added = e.add_policies(rules).await?
+```
+
+<!--Node.js-->
+```typescript
+const rules = [
+    ['jack', 'data4', 'read'],
+    ['katy', 'data4', 'write'],
+    ['leyo', 'data4', 'read'],
+    ['ham', 'data4', 'write']
+];
+
+const areRulesAdded = await e.addPolicies(rules);
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -686,7 +698,7 @@ let added = e.add_named_policy("p", vec!["eve".to_owned(), "data3".to_owned(), "
 AddNamedPolicies adds authorization rules to the current named policy.
 The operation is atomic in nature.
 Hence, if authorization rules consists of rules which are not consistent with the current policy, the function returns false and no policy rule is added to the current policy.
-If all authorization the rules are consistent with the policy rules, the function returns true and each policy rule is added to the current policy.
+If all the authorization rules are consistent with the policy rules, the function returns true and each policy rule is added to the current policy.
 
 For example:
 
@@ -714,6 +726,18 @@ let rules = vec![
 ];
 
 let are_rules_added := e.add_named_policies("p", rules).await?;
+```
+
+<!--Node.js-->
+```typescript
+const rules = [
+    ['jack', 'data4', 'read'],
+    ['katy', 'data4', 'write'],
+    ['leyo', 'data4', 'read'],
+    ['ham', 'data4', 'write']
+];
+
+const areRulesAdded = await e.addNamedPolicies('p', rules);
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -754,14 +778,14 @@ let removed = e.remove_policy(vec!["alice".to_owned(), "data1".to_owned(), "read
 RemovePolicies removes authorization rules from the current policy.
 The operation is atomic in nature.
 Hence, if authorization rules consists of rules which are not consistent with the current policy, the function returns false and no policy rule is removed from the current policy.
-If all authorization the rules are consistent with the policy rules, the function returns true and each policy rule is removed from the current policy.
+If all the authorization rules are consistent with the policy rules, the function returns true and each policy rule is removed from the current policy.
 
 For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--rust-->
-```rust
+<!--Go-->
+```go
 rules := [][] string {
 				[]string {"jack", "data4", "read"},
 				[]string {"katy", "data4", "write"},
@@ -782,6 +806,19 @@ let rules = vec![
 ];
 
 let are_rules_removed = e.remove_policies(rules).await?;
+
+<!--Node.js-->
+```typescript
+const rules = [
+    ['jack', 'data4', 'read'],
+    ['katy', 'data4', 'write'],
+    ['leyo', 'data4', 'read'],
+    ['ham', 'data4', 'write']
+];
+
+const areRulesRemoved = await e.removePolicies(rules);
+```
+
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -854,7 +891,7 @@ let removed = e.remove_named_policy("p", vec!["alice".to_owned(), "data1".to_own
 RemoveNamedPolicies removes authorization rules from the current named policy.
 The operation is atomic in nature.
 Hence, if authorization rules consists of rules which are not consistent with the current policy, the function returns false and no policy rule is removed from the current policy.
-If all authorization the rules are consistent with the policy rules, the function returns true and each policy rule is removed from the current policy.
+If all the authorization rules are consistent with the policy rules, the function returns true and each policy rule is removed from the current policy.
 
 For example:
 
@@ -882,6 +919,18 @@ let rules = vec![
 ];
 
 let areRulesRemoved = e.remove_named_policies("p", rules).await?;
+```
+
+<!--Node.js-->
+```typescript
+const rules = [
+    ['jack', 'data4', 'read'],
+    ['katy', 'data4', 'write'],
+    ['leyo', 'data4', 'read'],
+    ['ham', 'data4', 'write']
+];
+
+const areRulesRemoved = await e.removeNamedPolicies('p', rules);
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -1044,6 +1093,15 @@ let rules = vec![
 
 let areRulesAdded = e.add_grouping_policies(rules).await?;
 ```
+<!--Node.js-->
+```typescript
+const groupingRules = [
+    ['ham', 'data4_admin'],
+    ['jack', 'data5_admin']
+  ];
+
+const areRulesAdded = await e.addGroupingPolicies(groupingRules);
+```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
@@ -1085,7 +1143,7 @@ let added = e.add_named_grouping_policy("g", vec!["group1".to_owned(), "data2_ad
 AddNamedGroupingPolicies adds named role inheritance rules to the current policy.
 The operation is atomic in nature. 
 Hence, if authorization rules consists of rules which are not consistent with the current policy, the function returns false and no policy rule is added to the current policy.
-If all authorization the rules are consistent with the policy rules, the function returns true and each policy rule is added to the current policy.
+If all the authorization rules are consistent with the policy rules, the function returns true and each policy rule is added to the current policy.
 
 For example:
 
@@ -1115,6 +1173,15 @@ let rules = vec![
 let are_rules_added = e.add_named_grouping_policies("g", rules).await?;
 ```
 
+<!--Node.js-->
+```typescript
+const groupingRules = [
+    ['ham', 'data4_admin'],
+    ['jack', 'data5_admin']
+  ];
+
+const areRulesAdded = await e.addNamedGroupingPolicies('g', groupingRules);
+```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
@@ -1153,7 +1220,7 @@ let removed = e.remove_grouping_policy(vec!["alice".to_owned(), "data2_admin".to
 RemoveGroupingPolicies removes role inheritance rules from the current policy.
 The operation is atomic in nature.
 Hence, if authorization rules consists of rules which are not consistent with the current policy, the function returns false and no policy rule is removed from the current policy.
-If all authorization the rules are consistent with the policy rules, the function returns true and each policy rule is removed from the current policy.
+If all the authorization rules are consistent with the policy rules, the function returns true and each policy rule is removed from the current policy.
 
 For example:
 
@@ -1181,6 +1248,16 @@ let rules = vec![
 ];
 
 let are_rules_removed = e.remove_grouping_policies(rules).await?;
+```
+
+<!--Node.js-->
+```typescript
+const groupingRules = [
+    ['ham', 'data4_admin'],
+    ['jack', 'data5_admin']
+  ];
+
+const areRulesRemoved = await e.removeGroupingPolicies(groupingRules);
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -1250,7 +1327,7 @@ let removed = e.remove_named_grouping_policy("g", vec!["alice".to_owned()]).awai
 RemoveNamedGroupingPolicies removes named role inheritance rules from the current policy.
 The operation is atomic in nature.
 Hence, if authorization rules consists of rules which are not consistent with the current policy, the function returns false and no policy rule is removed from the current policy.
-If all authorization the rules are consistent with the policy rules, the function returns true and each policy rule is removed from the current policy.
+If all the authorization rules are consistent with the policy rules, the function returns true and each policy rule is removed from the current policy.
 
 For example:
 
@@ -1279,6 +1356,16 @@ let rules = vec![
 ];
 
 let are_rules_removed = e.remove_named_grouping_policies("g", rules).await?;
+```
+
+<!--Node.js-->
+```typescript
+const groupingRules = [
+    ['ham', 'data4_admin'],
+    ['jack', 'data5_admin']
+  ];
+
+const areRulesRemoved = await e.removeNamedGroupingPolicies('g', groupingRules);
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
