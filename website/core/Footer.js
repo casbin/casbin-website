@@ -80,7 +80,7 @@ class Footer extends React.Component {
               aria-label="Star this project on GitHub">
               Casbin
             </a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a
               className="github-button"
               href={this.props.config.javaRepoUrl}
@@ -102,7 +102,7 @@ class Footer extends React.Component {
               aria-label="Star this project on GitHub">
               Node-Casbin
             </a>
-            &nbsp;&nbsp;&thinsp;&thinsp;
+            &nbsp;&nbsp;&nbsp;
             <a
               className="github-button"
               href={this.props.config.phpRepoUrl}
@@ -123,7 +123,7 @@ class Footer extends React.Component {
               aria-label="Star this project on GitHub">
               PyCasbin
             </a>
-            &nbsp;&nbsp;&thinsp;&thinsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a
               className="github-button"
               href={this.props.config.dotnetRepoUrl}
@@ -144,7 +144,7 @@ class Footer extends React.Component {
               aria-label="Star this project on GitHub">
               Casbin4D
             </a>
-            &nbsp;&nbsp;&thinsp;&thinsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a
               className="github-button"
               href={this.props.config.rustRepoUrl}
