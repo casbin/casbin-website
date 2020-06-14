@@ -17,6 +17,11 @@ production-ready | production-ready | production-ready | production-ready
 [PyCasbin](https://github.com/casbin/pycasbin) | [Casbin.NET](https://github.com/casbin/Casbin.NET) | [Casbin4D](https://github.com/casbin4d/Casbin4D) | [Casbin-RS](https://github.com/casbin/casbin-rs)
 production-ready | production-ready | experimental | production-ready
 
+[![c++](https://casbin.org/img/langs/cpp.png)](https://github.com/casbin/casbin-cpp) |
+---- |
+[Casbin-CPP](https://github.com/casbin/casbin-cpp) |
+under-development |
+
 ## Feature set for different languages
 
 Feature | Go | Java | Node.js | PHP | Python | C# | Delphi | Rust
