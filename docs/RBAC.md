@@ -73,7 +73,9 @@ When a user inherits a role or permission via RBAC hierarchy instead of directly
 
 ## Use pattern matching in RBAC
 
-Sometimes, you want some subjects (or objects) with the specific pattern to be automatically granted to a role. Pattern matching functions in RBAC can help you do that. A pattern matching function shares the same parameters and return value as the previous [matcher function](https://casbin.org/docs/en/syntax-for-models#functions-in-matchers).
+Sometimes, you want some subjects, object or domains/tenants with the specific pattern to be automatically granted to a role. Pattern matching functions in RBAC can help you do that. A pattern matching function shares the same parameters and return value as the previous [matcher function](https://casbin.org/docs/en/syntax-for-models#functions-in-matchers).
+
+The pattern matching function supports each parameter of g.
 
 We know that normally RBAC is expressed as ``g(r.sub, p.sub)`` in matcher. Then we will use policy like:
 
@@ -97,11 +99,21 @@ Casbin will automatically match ``/book/1`` and ``/book/2`` into pattern ``/book
 e.rm.(*defaultrolemanager.RoleManager).AddMatchingFunc("KeyMatch2", util.KeyMatch2)
 ```
 
-You can see the full example [here](https://github.com/casbin/casbin/blob/dbdb6cbe2e7a80863e4951f9ff36da07fef01b75/model_test.go#L278-L307).
+When Using a pattern matching function in domains/tenants, You need to register the function to enforcer and model.
 
-:::note
-Only the 1st arg (aka the user) in ``g`` supports pattern functions. You are using it in 3rd arg (domain), which is currently not supported.
-:::
+register `keyMatch2` to enforcer: 
+
+```go
+e.rm.(*defaultrolemanager.RoleManager).AddDomainMatchingFunc("KeyMatch2", util.KeyMatch2)
+```
+
+register `keyMatch2` to model:
+
+```
+m = g(r.sub, p.sub, r.dom) && keyMatch2(r.dom, p.dom) && r.obj == p.obj && r.act == p.act
+```
+
+You can see the full example [here](https://github.com/casbin/casbin/blob/dbdb6cbe2e7a80863e4951f9ff36da07fef01b75/model_test.go#L278-L307).
 
 ## Role manager
 
