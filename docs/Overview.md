@@ -12,30 +12,25 @@ Casbin is a powerful and efficient open-source access control library. It provid
 [Casbin](https://github.com/casbin/casbin) | [jCasbin](https://github.com/casbin/jcasbin) | [node-Casbin](https://github.com/casbin/node-casbin) | [PHP-Casbin](https://github.com/php-casbin/php-casbin)
 production-ready | production-ready | production-ready | production-ready
 
-[![python](https://casbin.org/img/langs/python.png)](https://github.com/casbin/pycasbin) | [![dotnet](https://casbin.org/img/langs/dotnet.png)](https://github.com/casbin/Casbin.NET) | [![delphi](https://casbin.org/img/langs/delphi.png)](https://github.com/casbin4d/Casbin4D) | [![rust](https://casbin.org/img/langs/rust.png)](https://github.com/casbin/casbin-rs)
+[![python](https://casbin.org/img/langs/python.png)](https://github.com/casbin/pycasbin) | [![dotnet](https://casbin.org/img/langs/dotnet.png)](https://github.com/casbin/Casbin.NET) | [![c++](https://casbin.org/img/langs/cpp.png)](https://github.com/casbin/casbin-cpp) | [![rust](https://casbin.org/img/langs/rust.png)](https://github.com/casbin/casbin-rs)
 ----|----|----|----
-[PyCasbin](https://github.com/casbin/pycasbin) | [Casbin.NET](https://github.com/casbin/Casbin.NET) | [Casbin4D](https://github.com/casbin4d/Casbin4D) | [Casbin-RS](https://github.com/casbin/casbin-rs)
-production-ready | production-ready | experimental | production-ready
-
-[![c++](https://casbin.org/img/langs/cpp.png)](https://github.com/casbin/casbin-cpp) |
----- |
-[Casbin-CPP](https://github.com/casbin/casbin-cpp) |
-under-development |
+[PyCasbin](https://github.com/casbin/pycasbin) | [Casbin.NET](https://github.com/casbin/Casbin.NET) | [casbin-cpp](https://github.com/casbin/casbin-cpp) | [Casbin-RS](https://github.com/casbin/casbin-rs)
+production-ready | production-ready | under-development | production-ready
 
 ## Feature set for different languages
 
-Feature | Go | Java | Node.js | PHP | Python | C# | Delphi | Rust
-----|----|----|----|----|----|----|----|----
-Enforcement | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
-RBAC | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
-ABAC | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
-Adapter | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
-Management API | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
-RBAC API | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
-Filtered Adapter | ✅ | ❌ | ✅ | ✅ | ❌ | ✅ | ❌ | ✅
-Watcher | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅
-Role Manager | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅
-Multi-Threading | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ✅
+Feature | Go | Java | Node.js | PHP | Python | C# | Delphi | Rust | C++
+----|----|----|----|----|----|----|----|----|----
+Enforcement | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
+RBAC | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
+ABAC | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
+Adapter | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
+Management API | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
+RBAC API | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
+Filtered Adapter | ✅ | ❌ | ✅ | ✅ | ❌ | ✅ | ❌ | ✅ | ✅
+Watcher | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅
+Role Manager | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅
+Multi-Threading | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌
 
 We are always working our best to make Casbin have the same set of features for all languages. But the reality is not that beautiful. The current progress is as the above table. ✅ for Watcher or Role Manager only means having the interface in the core library. Whether there is an available watcher or role manager implementation is another question.
 
