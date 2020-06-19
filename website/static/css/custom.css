@@ -15,11 +15,22 @@
 @media only screen and (min-width: 1500px) {
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
   .gitter-chat-embed {
       box-sizing: border-box;
       left: 20%;
       top: 16% !important;
+  }
+
+  .gitter-open-chat-button {
+     padding: 7px 34px 7px 34px;
+
+  }
+
+  #back-to-top {
+    right: 12px;
+    width: 53px;
+    bottom: 15px;
   }
 }
 
