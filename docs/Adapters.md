@@ -40,6 +40,7 @@ Adapter | Type | Author | AutoSave | Description
 [Etcd Adapter](https://github.com/sebastianliu/etcd-adapter) | KV store | [@sebastianliu](https://github.com/sebastianliu) | ❌ | For [etcd](https://github.com/coreos/etcd)
 [BoltDB Adapter](https://github.com/speza/casbin-bolt-adapter) | KV store | [@speza](https://github.com/speza) | ✅ | For [Bolt](https://github.com/boltdb/bolt)
 [Bolt Adapter](https://github.com/wirepair/bolt-adapter) | KV store | [@wirepair](https://github.com/wirepair) | ❌ | For [Bolt](https://github.com/boltdb/bolt)
+[BadgerDB Adapter](https://github.com/inits/casbin-badgerdb-adapter) | KV store | [@inits](https://github.com/inits) | ✅ | For [BadgerDB](https://github.com/dgraph-io/badger)
 [Protobuf Adapter](https://github.com/casbin/protobuf-adapter) | Stream | Casbin | ❌ | For [Google Protocol Buffers](https://developers.google.com/protocol-buffers/)
 [JSON Adapter](https://github.com/casbin/json-adapter) | String | Casbin | ❌ | For [JSON](https://www.json.org/)
 [String Adapter](https://github.com/qiangmzsx/string-adapter) | String | [@qiangmzsx](https://github.com/qiangmzsx) | ❌ | For String
