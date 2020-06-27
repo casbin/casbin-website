@@ -34,6 +34,7 @@ const siteConfig = {
     {page: 'editor', label: 'Editor'},
     {href: 'https://dashboard.casbin.org', label: "Dashboard"},
     {href: 'https://forum.casbin.org', label: "Forum"},
+    {href: 'https://trend.casbin.org', label: "Trend"},
     {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
     {languages: true},
