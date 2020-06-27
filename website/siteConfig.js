@@ -13,7 +13,7 @@ const users = require('./data/users');
 
 const siteConfig = {
   title: 'Casbin' /* title for your website */,
-  tagline: 'An authorization library that supports access control models like ACL, RBAC, ABAC for Golang, Java, Node.js, PHP, Python, .NET (C#), Delphi and Rust',
+  tagline: 'An authorization library that supports access control models like ACL, RBAC, ABAC for Golang, Java, C/C++, Node.js, Javascript, PHP, Python, .NET (C#), Delphi, Rust, Dart/Flutter and Elixir',
   url: 'https://casbin.org' /* your website url */,
   baseUrl: '/' /* base url for your project */,
   // For github.io type URLs, you would set the url and baseUrl like:
@@ -117,6 +117,7 @@ const siteConfig = {
   phpRepoUrl: 'https://github.com/php-casbin/php-casbin',
   pythonRepoUrl: 'https://github.com/casbin/pycasbin',
   dotnetRepoUrl: 'https://github.com/casbin/Casbin.NET',
+  cppRepoUrl: 'https://github.com/casbin/casbin-cpp',
   delphiRepoUrl: 'https://github.com/casbin4d/Casbin4D',
   rustRepoUrl: 'https://github.com/casbin/casbin-rs',
 
