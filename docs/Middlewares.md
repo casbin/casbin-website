@@ -72,6 +72,7 @@ Name | Description
 <!--Rust-->
 Name | Description
 ----|----
-[Actix](https://actix.rs/) | Rust's powerful actor system and most fun web framework, via plugin: [actix-casbin-auth](https://github.com/casbin-rs/actix-casbin-auth)
+[Actix](https://github.com/actix/actix) | A Rust actors framework, via plugin: [actix-casbin](https://github.com/casbin-rs/actix-casbin)
+[Actix web](https://github.com/actix/actix-web) | A small, pragmatic, and extremely fast rust web framework, via plugin: [actix-casbin-auth](https://github.com/casbin-rs/actix-casbin-auth)
 
 <!--END_DOCUSAURUS_CODE_TABS-->
