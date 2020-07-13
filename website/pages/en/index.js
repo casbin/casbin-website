@@ -80,7 +80,7 @@ class HomeSplash extends React.Component {
     return (
       <SplashContainer>
         <div className="inner">
-          {/*<Button href="https://github.com/microsoft/mouselog">Need to monitor user behaviors of your site? See: Mouselog</Button>*/}
+          <Button href="https://github.com/casbin/casbin-forum">Need to build your own forum? See: Casbin-Forum</Button>
           <ProjectTitle />
           <PromoSection>
             <Button href={docUrl('overview', language)}><translate>Get Started</translate></Button>

@@ -23,11 +23,8 @@ class Help extends React.Component {
     let language = this.props.language || '';
     const supportLinks = [
       {
-        title: 'Browse the docs',
-        content: `Learn more about Casbin using the [official documentation](${docUrl(
-          'overview',
-          language
-        )}).`,
+        title: 'Forum',
+        content: `Discuss with maintainers or share your experience about Casbin on [Casbin Forum](https://forum.casbin.org/).`,
       },
       {
         title: 'Gitter',
@@ -42,7 +39,7 @@ class Help extends React.Component {
       {
         title: 'GitHub',
         content:
-          'At our [GitHub repo](https://github.com/casbin/casbin) Browse and submit [issues](https://github.com/casbin/casbin/issues) or [pull requests](https://github.com/casbin/casbin/pulls) for bugs you find or any new features you may want implemented.',
+          'At our [GitHub repo](https://github.com/casbin/casbin), browse and submit [issues](https://github.com/casbin/casbin/issues) or [pull requests](https://github.com/casbin/casbin/pulls) for bugs you find or any new features you may want implemented.',
       },
     ];
 
