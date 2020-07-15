@@ -806,6 +806,7 @@ let rules = vec![
 ];
 
 let are_rules_removed = e.remove_policies(rules).await?;
+```
 
 <!--Node.js-->
 ```typescript
@@ -819,7 +820,6 @@ const rules = [
 const areRulesRemoved = await e.removePolicies(rules);
 ```
 
-```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
