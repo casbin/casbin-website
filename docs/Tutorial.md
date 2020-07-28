@@ -120,8 +120,8 @@ This is another longer-version paper published in Journal of Software. The citat
 
 - [Laravel authorization: authorization library supporting ACL, RBAC, ABAC and other models](https://developpaper.com/laravel-authorization-authorization-library-supporting-acl-rbac-abac-and-other-models/)
 
-<!--Python-->
+<!--Rust-->
+
+- [Basic Role-Based HTTP Authorization in Rust with Casbin](https://www.zupzup.org/rust-casbin-example/)
 
 <!--END_DOCUSAURUS_CODE_TABS-->
-
-
