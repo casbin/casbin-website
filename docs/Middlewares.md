@@ -67,7 +67,8 @@ Name | Description
 <!--.NET-->
 Name | Description
 ----|----
-[ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core) | An open-source and cross-platform framework for building modern cloud based internet connected applications, such as web apps, IoT apps and mobile backends, via plugin: [CasbinACL-aspNetCore](https://github.com/MustafaMustafayev/CasbinACL-aspNetCore)
+[ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core) | An open-source and cross-platform framework for building modern cloud based internet connected applications, such as web apps, IoT apps and mobile backends, via plugin: [Casbin.AspNetCore](https://github.com/casbin-net/Casbin.AspNetCore)
+[ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core) | A simple demo of using Casbin at ASP.NET Core framework, via plugin: [CasbinACL-aspNetCore](https://github.com/MustafaMustafayev/CasbinACL-aspNetCore)
 
 <!--Rust-->
 Name | Description
