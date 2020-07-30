@@ -53,7 +53,7 @@ class Footer extends React.Component {
             <a href={this.pageUrl('users', this.props.language)}>
               Who's using Casbin?
             </a>
-            <a href="https://forum.casbin.org/"
+            <a href="https://forum.casbin.com/"
                target="_blank">
               Forum
             </a>

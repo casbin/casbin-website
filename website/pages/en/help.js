@@ -24,7 +24,7 @@ class Help extends React.Component {
     const supportLinks = [
       {
         title: 'Forum',
-        content: `Discuss with maintainers or share your experience about Casbin on [Casbin Forum](https://forum.casbin.org/).`,
+        content: `Discuss with maintainers or share your experience about Casbin on [Casbin Forum](https://forum.casbin.com/).`,
       },
       {
         title: 'Gitter',
