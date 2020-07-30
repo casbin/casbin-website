@@ -54,6 +54,7 @@ Adapter | Type | Author | AutoSave | Description
 [MyBatis Adapter](https://github.com/jcasbin/mybatis-adapter) | ORM | Casbin | ✅ | MySQL, Oracle, PostgreSQL, DB2, Sybase, SQL Server (the same as JDBC) are supported by [MyBatis 3](https://mybatis.org/mybatis-3/)
 [Hutool Adapter](https://github.com/fanlide/jcasbin-extra) | ORM | [@fanlide](https://github.com/fanlide) | ✅ | MySQL, Oracle, PostgreSQL, SQLite are supported by [Hutool](https://github.com/looly/hutool)
 [DynamoDB Adapter](https://github.com/jcasbin/dynamodb-adapter) | NoSQL | Casbin | ❌ | For [Amazon DynamoDB](https://aws.amazon.com/dynamodb/)
+[Hibernate Adapter](https://github.com/jcasbin/hibernate-adapter) | ORM | [@tldyl](https://github.com/tldyl) | ✅ | MySQL, Oracle are supported by [Hibernate](http://www.hibernate.org/)
 
 <!--Node.js-->
 Adapter | Type | Author | AutoSave | Description
