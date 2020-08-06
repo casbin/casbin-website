@@ -27,6 +27,7 @@ ABAC | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 Adapter | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 Management API | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 RBAC API | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
+Batch API | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ✅ | ✅
 Filtered Adapter | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ✅ | ✅
 Watcher | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅
 Role Manager | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅
