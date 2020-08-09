@@ -92,6 +92,7 @@ Adapter | Type | Author | AutoSave | Description
 [MongoEngine Adapter](https://github.com/zhangbailong945/mongoengine_adapter) | ORM | [@zhangbailong945](https://github.com/zhangbailong945) | ❌ | MongoDB is supported by [MongoEngine](http://mongoengine.org/)
 [Couchbase Adapter](https://github.com/ScienceLogic/casbin-couchbase-adapter) | NoSQL | [ScienceLogic](https://github.com/ScienceLogic) | ✅ (without `remove_filtered_policy()`) | For [Couchbase](https://www.couchbase.com/)
 [DynamoDB Adapter](https://github.com/abqadeer/python-dycasbin) | NoSQL | [@abqadeer](https://github.com/abqadeer/) | ✅ | For [DynamoDB](https://aws.amazon.com/dynamodb/)
+[Pymongo Adapter](https://github.com/Xhy-5000/pymongo-adapter) | ORM | [@Xhy-5000](https://github.com/Xhy-5000) | ❌ | MongoDB is supported by [Pymongo](https://pypi.org/project/pymongo/)
 
 <!--.NET-->
 Adapter | Type | Author | AutoSave | Description
