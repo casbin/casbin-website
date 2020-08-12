@@ -38,7 +38,8 @@
       "admin-portal",
       "service",
       "log-error",
-      "online-editor"
+      "online-editor",
+      "webpage-controller"
     ],
     "More":[
       "adopters",
