@@ -1,6 +1,6 @@
 ---
-id: webpage-controller
-title: Webpage Controller
+id: frontend
+title: Frontend Usage
 ---
 
 [Casbin.js](https://github.com/casbin/casbin.js) is a Casbin addon that facilites your access-control management in the frontend application.
