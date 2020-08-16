@@ -23,6 +23,7 @@
     "Extensions":[
       "adapters",
       "watchers",
+      "dispatchers",
       "role-managers",
       "middlewares"
     ],
