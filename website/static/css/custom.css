@@ -48,3 +48,18 @@ a:hover {
 .buttonWrapper {
     padding: 3px 3px !important;
 }
+
+.announcement {
+    background-color: #20232a;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 7px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.announcement-inner {
+    margin: 0 auto;
+    max-width: 768px;
+}
