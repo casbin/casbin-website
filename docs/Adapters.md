@@ -72,6 +72,7 @@ Adapter | Type | Author | AutoSave | Description
 [Node PostgreSQL Native Adapter](https://github.com/touchifyapp/casbin-pg-adapter) | SQL | [@touchifyapp](https://github.com/touchifyapp) | ✅ | PostgreSQL adapter with advanced policy subset loading support and improved performances built with [node-postgres](https://node-postgres.com/).
 [Couchbase Adapter](https://github.com/sarneeh/casbin-knex-adapter) | NoSQL | [@MarkMYoung](https://github.com/MarkMYoung) | ✅ | For [Couchbase](https://www.couchbase.com/)
 [Redis Adapter](https://github.com/NandaKishorJeripothula/node-casbin-redis-adapter) | KV store | [@NandaKishorJeripothula](https://github.com/NandaKishorJeripothula) | ❌ | For [Redis](https://redis.io/)
+[Basic Adapter](https://github.com/node-casbin/basic-adapter) | SQL | Casbin | ✅ | For pg, mysql, mysql2, sqlite3, oracledb, mssql.
 
 <!--PHP-->
 Adapter | Type | Author | AutoSave | Description
