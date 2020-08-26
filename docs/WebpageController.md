@@ -36,7 +36,7 @@ console.log(authorizer.can("read", "data1"));  // True
 console.log(authorizer.cannot("write", "data2"));  // True
 ```
 
-You can refer to our [React example](https://github.com/casbin-js/examples/tree/master/react) to see a practical usage of Casbin.js
+You can refer to our [React example](https://github.com/casbin-js/examples) to see a practical usage of Casbin.js
 
 
 
@@ -120,3 +120,15 @@ Check if the user can perform `action` on **all** object in `objects`.
 Check if the user can perform `action` on **any one** of the `objects`.
 
 
+## Why Casbin.js
+
+People may wonder the difference between Node-Casbin and Casbin.js. In a word, Node-Casbin is the core of Casbin implemented in NodeJS environment, and it's normally used as an access-controlling management toolkit at the server ends. Casbin.js is an frontend library that help you use Casbin to authorize your webpage user at the client side.
+
+Normally, it is not proper to directly build up a Casbin service and do the authorization/enforcement tasks at a web frontend application due to the following problems:
+1. When someone turn on the client, the enforcer will be initialized, and it will pull all the policies from the backend persistent layers. A high concurrency could bring tough pressure on the databases and cost a lot of network throughput. 
+2. Loading all policies to the client sides could bring secure risks.
+3. Difficult for the seperation between client and server as well as the agile development.
+
+We wish a tool that eases the process of using Casbin at the frontend. Actually, the core of Casbin.js is the manipulation of current user's permission at the client side. As you mentioned, Casbin.js does a fetch from a specified endpoint. This procedure will sync the permission of the user with the backend Casbin service. After having the permission data, developers can use Casbin.js interfaces to manage the behaviors of the user at the frontend side.
+
+Casbin.js avoid the two problems that mentioned above: Casbin service will no longer be pulled up repeatedly, and the size of passing messages between the client and the server are reduced. We also avoid to store all the policies at the frontend. User can only accessible to his own permission, but have no idea about anything about things like the access-control model and other users' permissions. Besides, Casbin.js can also efficiently decouple the client and the server in authorization management.
