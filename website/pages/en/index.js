@@ -232,6 +232,13 @@ class Index extends React.Component {
 
     return (
       <div>
+        <div className="announcement">
+          <div className="announcement-inner">
+            <a style={{color: "white"}} href="https://github.com/sponsors/hsluoyz">
+              💖 Sponsor us at GitHub
+            </a>
+          </div>
+        </div>
         <HomeSplash language={language} />
         <div className="mainContainer">
           <Features />

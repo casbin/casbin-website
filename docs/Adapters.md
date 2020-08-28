@@ -20,6 +20,7 @@ Adapter | Type | Author | AutoSave | Description
 [Gorm Adapter](https://github.com/casbin/gorm-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, Sqlite3, SQL Server are supported by [Gorm](https://github.com/jinzhu/gorm/)
 [Beego ORM Adapter](https://github.com/casbin/beego-orm-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, Sqlite3 are supported by [Beego ORM](https://beego.me/docs/mvc/model/overview.md)
 [SQLX Adapter](https://github.com/memwey/casbin-sqlx-adapter) | ORM | [@memwey](https://github.com/memwey) | ✅ | MySQL, PostgreSQL, SQLite, Oracle are supported by [SQLX](https://github.com/jmoiron/sqlx)
+[Sqlx Adapter](https://github.com/Blank-Xu/sqlx-adapter) | SQL | [@Blank-Xu](https://github.com/Blank-Xu) | ✅ | MySQL, PostgreSQL, MsSql, SQLite3 are supported in `master` branch and Oracle is supported in `oracle` branch by [sqlx](https://github.com/jmoiron/sqlx)
 [GF ORM Adapter](https://github.com/vance-liu/gdb-adapter) | ORM | [@vance-liu](https://github.com/vance-liu) | ✅ | MySQL, SQLite, PostgreSQL, Oracle, SQL Server are supported by [GF ORM](https://goframe.org/database/gdb/database)
 [Filtered PostgreSQL Adapter](https://github.com/casbin/casbin-pg-adapter) | SQL | Casbin | ✅ | For [PostgreSQL](https://www.postgresql.org/)
 [PostgreSQL Adapter](https://github.com/cychiuae/casbin-pg-adapter) | SQL | [@cychiuae](https://github.com/cychiuae) | ✅ | For [PostgreSQL](https://www.postgresql.org/)
@@ -69,8 +70,9 @@ Adapter | Type | Author | AutoSave | Description
 [Objection.js Adapter](https://github.com/willsoto/casbin-objection-adapter) | ORM | [@willsoto](https://github.com/willsoto) | ✅ | MSSQL, MySQL, PostgreSQL, SQLite3, Oracle are supported by [Objection.js](https://vincit.github.io/objection.js/)
 [Node MongoDB Native Adapter](https://github.com/juicycleff/casbin-mongodb-adapter) | NoSQL | [@juicycleff](https://github.com/juicycleff) | ✅ | For [Node MongoDB Native](https://mongodb.github.io/node-mongodb-native/)
 [Node PostgreSQL Native Adapter](https://github.com/touchifyapp/casbin-pg-adapter) | SQL | [@touchifyapp](https://github.com/touchifyapp) | ✅ | PostgreSQL adapter with advanced policy subset loading support and improved performances built with [node-postgres](https://node-postgres.com/).
-[Couchbase Adapter](https://github.com/sarneeh/casbin-knex-adapter) | NoSQL | [@MarkMYoung](https://github.com/MarkMYoung) | ✅ | For [Couchbase](https://www.couchbase.com/)
+[Couchbase Adapter](https://github.com/MarkMYoung/casbin-couchbase-adapter) | NoSQL | [@MarkMYoung](https://github.com/MarkMYoung) | ✅ | For [Couchbase](https://www.couchbase.com/)
 [Redis Adapter](https://github.com/NandaKishorJeripothula/node-casbin-redis-adapter) | KV store | [@NandaKishorJeripothula](https://github.com/NandaKishorJeripothula) | ❌ | For [Redis](https://redis.io/)
+[Basic Adapter](https://github.com/node-casbin/basic-adapter) | SQL | Casbin | ✅ | For pg, mysql, mysql2, sqlite3, oracledb, mssql.
 
 <!--PHP-->
 Adapter | Type | Author | AutoSave | Description
@@ -91,6 +93,7 @@ Adapter | Type | Author | AutoSave | Description
 [MongoEngine Adapter](https://github.com/zhangbailong945/mongoengine_adapter) | ORM | [@zhangbailong945](https://github.com/zhangbailong945) | ❌ | MongoDB is supported by [MongoEngine](http://mongoengine.org/)
 [Couchbase Adapter](https://github.com/ScienceLogic/casbin-couchbase-adapter) | NoSQL | [ScienceLogic](https://github.com/ScienceLogic) | ✅ (without `remove_filtered_policy()`) | For [Couchbase](https://www.couchbase.com/)
 [DynamoDB Adapter](https://github.com/abqadeer/python-dycasbin) | NoSQL | [@abqadeer](https://github.com/abqadeer/) | ✅ | For [DynamoDB](https://aws.amazon.com/dynamodb/)
+[Pymongo Adapter](https://github.com/pycasbin/pymongo-adapter) | ORM |  Casbin | ❌ | MongoDB is supported by [Pymongo](https://pypi.org/project/pymongo/)
 
 <!--.NET-->
 Adapter | Type | Author | AutoSave | Description

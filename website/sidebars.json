@@ -23,6 +23,7 @@
     "Extensions":[
       "adapters",
       "watchers",
+      "dispatchers",
       "role-managers",
       "middlewares"
     ],
@@ -38,7 +39,8 @@
       "admin-portal",
       "service",
       "log-error",
-      "online-editor"
+      "online-editor",
+      "frontend"
     ],
     "More":[
       "adopters",
