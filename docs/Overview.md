@@ -24,13 +24,13 @@ Feature | Go | Java | Node.js | PHP | Python | C# | Delphi | Rust | C++
 Enforcement | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 RBAC | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 ABAC | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
-Scaling ABAC (`eval()`) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ✅ | ✅
+Scaling ABAC (`eval()`) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅
 Adapter | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 Management API | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 RBAC API | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
-Batch API | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ✅ | ✅
+Batch API | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ✅ | ✅
 Filtered Adapter | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ✅ | ✅
-Watcher | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅ | ✅
+Watcher | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅
 Role Manager | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅
 Multi-Threading | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌
 
