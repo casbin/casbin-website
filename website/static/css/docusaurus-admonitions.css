@@ -108,3 +108,7 @@
   width: 80px;
   height: 80px;
 }
+.headerTitleWithLogo{
+  display:inline-block;
+   width:100px
+}
