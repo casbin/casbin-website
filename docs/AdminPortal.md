@@ -21,7 +21,6 @@ Project | Author | Frontend | Backend | Description
 [go-admin](https://github.com/hequan2017/go-admin) | [@hequan2017](https://github.com/hequan2017) | None | Gin | Go RESTful API gateway based on Gin + GORM + JWT + RBAC (Casbin)
 [zeus-admin](https://github.com/bullteam/zeus-admin) | [bullteam](https://github.com/bullteam) | Vue + Element UI | Gin | Unified Permission management platform based on JWT + Casbin
 [IrisAdminApi](https://github.com/snowlyg/IrisAdminApi) | [@snowlyg](https://github.com/snowlyg) | Vue + Element UI | Iris | Backend API based on Iris + Casbin
-
 <!--Python-->
 Project | Author | Frontend | Backend | Description
 ----|----|----|----|----
@@ -31,5 +30,9 @@ Project | Author | Frontend | Backend | Description
 Project | Author | Frontend | Backend | Description
 ----|----|----|----|----
 [Tadmin](https://github.com/techoner/tadmin) | [@techoner](https://github.com/techoner) | AmazeUI | ThinkPHP | Non-intrusive backend framework based on ThinkPHP 5.1+
+<!--Node-->
+Project | Author | Frontend | Backend | Description
+----|----|----|----|----
+[Cadmin-role-mgt-dashboard](https://github.com/alikhan866/Casbin-Role-Mgt-Dashboard-RBAC) | [@alikhan866](https://github.com/alikhan866) | React + Material UI | Express | Beginner friendly RBAC management with Enforcer integration to check enforcement result on the go
 
 <!--END_DOCUSAURUS_CODE_TABS-->
