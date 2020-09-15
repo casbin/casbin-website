@@ -96,7 +96,8 @@ g, /book/:id, book_group
 Casbin will automatically match ``/book/1`` and ``/book/2`` into pattern ``/book/:id`` for you. You only need to register the function with the enforcer like:
 
 ```go
-e.rm.(*defaultrolemanager.RoleManager).AddMatchingFunc("KeyMatch2", util.KeyMatch2)
+r := e.GetRoleManager()
+r.(*defaultrolemanager.RoleManager).AddMatchingFunc("KeyMatch2",util.KeyMatch2)
 ```
 
 When Using a pattern matching function in domains/tenants, You need to register the function to enforcer and model.
@@ -104,7 +105,8 @@ When Using a pattern matching function in domains/tenants, You need to register 
 register `keyMatch2` to enforcer: 
 
 ```go
-e.rm.(*defaultrolemanager.RoleManager).AddDomainMatchingFunc("KeyMatch2", util.KeyMatch2)
+r := e.GetRoleManager()
+r.(*defaultrolemanager.RoleManager).AddDomainMatchingFunc("KeyMatch2",util.KeyMatch2)
 ```
 
 register `keyMatch2` to model:
