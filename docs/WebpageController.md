@@ -88,14 +88,14 @@ func (c *APIController) GetFrontendPermission() {
     // Get the visitor from the GET parameters. (The key is "casbin_subject")
     visitor := c.Input().Get("casbin_subject")
     // `e` is an initialized instance of Casbin Enforcer
-    c.Data["perm"] = e.CasbinJsGetUserPermission(visitor) 
+    c.Data["perm"] = casbin.CasbinJsGetPermissionForUser(e, visitor) 
     // Pass the data to the fronend.
     c.ServeJSON()
 }
 ```
 
 :::note
-Currently, `CasbinJsGetUserPermission` api is only supported in Go Casbin and Node-Casbin. If you want this api to be supported in other languages, please [raise an issue](https://github.com/casbin/casbin.js/issues) or leave a comment below.
+Currently, `CasbinJsGetPermissionForUser` api is only supported in Go Casbin and Node-Casbin. If you want this api to be supported in other languages, please [raise an issue](https://github.com/casbin/casbin.js/issues) or leave a comment below.
 :::
 
 
