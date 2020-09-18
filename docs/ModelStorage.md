@@ -80,7 +80,7 @@ e = some(where (p.eft == allow))
 [matchers]
 m = g(r.sub, p.sub) && r.obj == p.obj && r.act == p.act
 `
-m := NewModel(text)
+m, _ := NewModelFromString(text)
 
 // Load the policy rules from the .CSV file adapter.
 // Replace it with your adapter to avoid files.
