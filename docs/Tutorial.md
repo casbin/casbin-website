@@ -30,6 +30,9 @@ This is another longer-version paper published in Journal of Software. The citat
 - [Sharing user permissions in a micro-service architecture based on Casbin (in Russian)](https://www.youtube.com/watch?v=Z5dUxH4PqYM)
 - [Nest.js - Casbin RESTful RBAC authorization midleware](https://www.youtube.com/watch?v=mWlPNrCgVdE)
 - [Golang's RBAC based on Casbin (in Chinese)](https://www.bilibili.com/video/BV1Kf4y1U7iJ)
+- [Learning Gin + Casbin (1): Opening & Overview (in Chinese)](https://www.bilibili.com/video/BV1bp4y1a7je)
+- [ThinkPHP 5.1 + Casbin: Introduction (in Chinese)](https://www.bilibili.com/video/BV1kz4y1Z7vd)
+- [ThinkPHP 5.1 + Casbin: RBAC authorization (in Chinese)](https://www.bilibili.com/video/BV1A541187M4)
 
 ### PERM Meta-Model (Policy, Effect, Request, Matchers)
 
