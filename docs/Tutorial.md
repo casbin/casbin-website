@@ -70,6 +70,7 @@ This is another longer-version paper published in Journal of Software. The citat
 
 - [Tutorial: Integrate Gin with Cabsin](https://dev.to/maxwellhertz/tutorial-integrate-gin-with-cabsin-56m0)
 - [Policy enforcements on K8s with Pipeline](https://banzaicloud.com/blog/policy-enforcement-k8s/)
+- [Authentication and authorization in Gin application with JWT and Casbin](https://medium.com/@tienbm90/authentication-and-authorization-in-gin-application-with-jwt-and-casbin-a56bbbdec90b)
 - [Backend API with Go: 1. Authentication based on JWT (in Chinese)](https://studygolang.com/topics/6998)
 - [Backend API with Go: 2. Authorization based on Casbin (in Chinese)](https://studygolang.com/topics/6999)
 - [Using Go's authorization library Casbin with Gin and GORM (in Japanese)](https://www.zaneli.com/blog/20181203)
