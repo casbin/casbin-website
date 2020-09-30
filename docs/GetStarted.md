@@ -172,7 +172,7 @@ else
   let obj = "data1"; // the resource that is going to be accessed.
   let act = "read"; // the operation that the user performs on the resource.
 
-  if e.enforce(&[sub, obj, act]).await? {
+  if e.enforce((sub, obj, act)).await? {
       // permit alice to read data1
   } else {
       // error occurs
