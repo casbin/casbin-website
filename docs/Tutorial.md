@@ -29,12 +29,13 @@ This is another longer-version paper published in Journal of Software. The citat
 - [A Secure Vault - implementing authorization middleware with Casbin - JuniorDevSG](https://www.youtube.com/watch?v=OTT84oplR9o)
 - [Sharing user permissions in a micro-service architecture based on Casbin (in Russian)](https://www.youtube.com/watch?v=Z5dUxH4PqYM)
 - [Nest.js - Casbin RESTful RBAC authorization midleware](https://www.youtube.com/watch?v=mWlPNrCgVdE)
+- [Gin + Casbin: Learning Permissions in Action (in Chinese)](https://www.jtthink.com/course/play/2706)
+- [jCasbin Basics: A simple RBAC example (in Chinese)](https://www.jtthink.com/course/play/2706)
 - [Golang's RBAC based on Casbin (in Chinese)](https://www.bilibili.com/video/BV1Kf4y1U7iJ)
 - [Learning Gin + Casbin (1): Opening & Overview (in Chinese)](https://www.bilibili.com/video/BV1bp4y1a7je)
 - [ThinkPHP 5.1 + Casbin: Introduction (in Chinese)](https://www.bilibili.com/video/BV1kz4y1Z7vd)
 - [ThinkPHP 5.1 + Casbin: RBAC authorization (in Chinese)](https://www.bilibili.com/video/BV1A541187M4)
 - [ThinkPHP 5.1 + Casbin: RESTful & Middleware (in Chinese)](https://www.bilibili.com/video/BV1uk4y117up)
-- [jCasbin Basics: A simple RBAC example (in Chinese)](https://www.jtthink.com/course/play/2706)
 
 ### PERM Meta-Model (Policy, Effect, Request, Matchers)
 
