@@ -25,6 +25,12 @@ const e = await newEnforcer('examples/rbac_model.conf', 'examples/rbac_policy.cs
 ```php
 $e = new Enforcer('examples/rbac_model.conf', 'examples/rbac_policy.csv');
 ```
+
+<!--.NET-->
+```csharp
+var e = new Enforcer("path/to/model.conf", "path/to/policy.csv");
+```
+
 <!--rust-->
 ```rust
 let mut e = Enforce::new("examples/rbac_model.conf", "examples/rbac_policy.csv").await?;
@@ -53,6 +59,11 @@ const allSubjects = await e.getAllSubjects()
 <!--PHP-->
 ```php
 $allSubjects = $e->getAllSubjects();
+```
+
+<!--.NET-->
+```csharp
+var allSubjects = e.GetAllSubjects();
 ```
 
 <!--rust-->
@@ -85,6 +96,11 @@ const allNamedSubjects = await e.getAllNamedSubjects('p')
 $allNamedSubjects = $e->getAllNamedSubjects("p");
 ```
 
+<!--.NET-->
+```csharp
+var allNamedSubjects = e.GetAllNamedSubjects("p");
+```
+
 <!--rust-->
 ```rust
 let all_named_subjects = e.get_all_named_subjects("p");
@@ -113,6 +129,11 @@ const allObjects = await e.getAllObjects()
 <!--PHP-->
 ```php
 $allObjects = $e->getAllObjects();
+```
+
+<!--.NET-->
+```csharp
+var allObjects = e.GetAllObjects();
 ```
 
 <!--rust-->
@@ -145,6 +166,11 @@ const allNamedObjects = await e.getAllNamedObjects('p')
 $allNamedObjects = $e->getAllNamedObjects("p");
 ```
 
+<!--.NET-->
+```csharp
+var allNamedObjects = e.GetAllNamedObjects("p");
+```
+
 <!--rust-->
 ```rust
 let all_named_objects = e.get_all_named_objects("p");
@@ -173,6 +199,11 @@ const allActions = await e.getAllActions()
 <!--PHP-->
 ```php
 $allActions = $e->getAllActions();
+```
+
+<!--.NET-->
+```csharp
+var allActions = e.GetAllActions();
 ```
 
 <!--rust-->
@@ -205,6 +236,11 @@ const allNamedActions = await e.getAllNamedActions('p')
 $allNamedActions = $e->getAllNamedActions("p");
 ```
 
+<!--.NET-->
+```csharp
+var allNamedActions = e.GetAllNamedActions("p");
+```
+
 <!--rust-->
 ```rust
 let all_named_actions = e.get_all_named_actions("p");
@@ -223,7 +259,6 @@ For example:
 <!--Go-->
 ```
 allRoles = e.GetAllRoles()
-
 ```
 
 <!--Node.js-->
@@ -234,6 +269,11 @@ const allRoles = await e.getAllRoles()
 <!--PHP-->
 ```php
 $allRoles = $e->getAllRoles();
+```
+
+<!--.NET-->
+```csharp
+var allRoles = e.GetAllRoles();
 ```
 
 <!--rust-->
@@ -254,7 +294,6 @@ For example:
 <!--Go-->
 ```go
 allNamedRoles := e.GetAllNamedRoles("g")
-
 ```
 
 <!--Node.js-->
@@ -262,9 +301,14 @@ allNamedRoles := e.GetAllNamedRoles("g")
 const allNamedRoles = await e.getAllNamedRoles('g')
 ```
 
-<!--PHP->
+<!--PHP-->
 ```php
 $allNamedRoles = $e->getAllNamedRoles('g');
+```
+
+<!--.NET-->
+```csharp
+var allNamedRoles = e.GetAllNamedRoles("g");
 ```
 
 <!--rust-->
@@ -295,6 +339,11 @@ const policy = await e.getPolicy()
 <!--PHP-->
 ```php
 $policy = $e->getPolicy();
+```
+
+<!--.NET-->
+```csharp
+var policy = e.GetPolicy();
 ```
 
 <!--rust-->
@@ -328,6 +377,11 @@ const filteredPolicy = await e.getFilteredPolicy(0, 'alice')
 $filteredPolicy = $e->getFilteredPolicy(0, "alice");
 ```
 
+<!--.NET-->
+```csharp
+var filteredPolicy = e.GetFilteredPolicy(0, "alice");
+```
+
 <!--rust-->
 ```rust
 let filtered_policy = e.get_filtered_policy(0, vec!["alice".to_owned()]);
@@ -356,6 +410,11 @@ const namedPolicy = await e.getNamedPolicy('p')
 <!--PHP-->
 ```php
 $namedPolicy = $e->getNamedPolicy("p");
+```
+
+<!--.NET-->
+```csharp
+var namedPolicy = e.GetNamedPolicy("p");
 ```
 
 <!--rust-->
@@ -389,6 +448,11 @@ const filteredNamedPolicy = await e.getFilteredNamedPolicy('p', 0, 'bob')
 $filteredNamedPolicy = $e->getFilteredNamedPolicy("p", 0, "bob");
 ```
 
+<!--.NET-->
+```csharp
+var filteredNamedPolicy = e.GetFilteredNamedPolicy("p", 0, "alice");
+```
+
 <!--rust-->
 ```rust
 let filtered_named_policy = e.get_filtered_named_policy("p", 0, vec!["bob".to_owned()]);
@@ -419,6 +483,11 @@ const groupingPolicy = await e.getGroupingPolicy()
 $groupingPolicy = $e->getGroupingPolicy();
 ```
 
+<!--.NET-->
+```csharp
+var groupingPolicy = e.GetGroupingPolicy();
+```
+
 <!--rust-->
 ```rust
 let grouping_policy = e.get_grouping_policy();
@@ -437,7 +506,6 @@ For example:
 <!--Go-->
 ```go
 filteredGroupingPolicy := e.GetFilteredGroupingPolicy(0, "alice")
-
 ```
 
 <!--Node.js-->
@@ -448,6 +516,11 @@ const filteredGroupingPolicy = await e.getFilteredGroupingPolicy(0, 'alice')
 <!--PHP-->
 ```php
 $filteredGroupingPolicy = $e->getFilteredGroupingPolicy(0, "alice");
+```
+
+<!--.NET-->
+```csharp
+var filteredGroupingPolicy = e.GetFilteredGroupingPolicy(0, "alice");
 ```
 
 <!--rust-->
@@ -478,6 +551,11 @@ const namedGroupingPolicy = await e.getNamedGroupingPolicy('g')
 <!--PHP-->
 ```php
 $namedGroupingPolicy = $e->getNamedGroupingPolicy("g");
+```
+
+<!--.NET-->
+```csharp
+var namedGroupingPolicy = e.GetNamedGroupingPolicy("g");
 ```
 
 <!--rust-->
@@ -511,6 +589,11 @@ const namedGroupingPolicy = await e.getFilteredNamedGroupingPolicy('g', 0, 'alic
 $namedGroupingPolicy = $e->getFilteredNamedGroupingPolicy("g", 0, "alice");
 ```
 
+<!--.NET-->
+```csharp
+var namedGroupingPolicy = e.GetFilteredNamedGroupingPolicy("g", 0, "alice");
+```
+
 <!--rust-->
 ```rust
 let named_grouping_policy = e.get_filtered_named_groupingPolicy("g", 0, vec!["alice".to_owned()]);
@@ -541,6 +624,11 @@ const hasPolicy = await e.hasPolicy('data2_admin', 'data2', 'read')
 $hasPolicy = $e->hasPolicy('data2_admin', 'data2', 'read');
 ```
 
+<!--.NET-->
+```csharp
+var hasPolicy = e.HasPolicy("data2_admin", "data2", "read");
+```
+
 <!--rust-->
 ```rust
 let has_policy = e.has_policy(vec!["data2_admin".to_owned(), "data2".to_owned(), "read".to_owned()]);
@@ -569,6 +657,11 @@ const hasNamedPolicy = await e.hasNamedPolicy('p', 'data2_admin', 'data2', 'read
 <!--PHP-->
 ```php
 $hasNamedPolicy = $e->hasNamedPolicy("p", "data2_admin", "data2", "read");
+```
+
+<!--.NET-->
+```csharp
+var hasNamedPolicy = e.HasNamedPolicy("p", "data2_admin", "data2", "read");
 ```
 
 <!--rust-->
@@ -602,6 +695,13 @@ const added = await e.addPolicy(...p)
 <!--PHP-->
 ```php
 $added = $e->addPolicy('eve', 'data3', 'read');
+```
+
+<!--.NET-->
+```csharp
+var added = e.AddPolicy("eve", "data3", "read");
+or
+var added = await e.AddPolicyAsync("eve", "data3", "read");
 ```
 
 <!--rust-->
@@ -686,6 +786,13 @@ const added = await e.addNamedPolicy('p', ...p)
 $added = $e->addNamedPolicy("p", "eve", "data3", "read");
 ```
 
+<!--.NET-->
+```csharp
+var added = e.AddNamedPolicy("p", "eve", "data3", "read");
+or
+var added = await e.AddNamedPolicyAsync("p", "eve", "data3", "read");
+```
+
 <!--rust-->
 ```rust
 let added = e.add_named_policy("p", vec!["eve".to_owned(), "data3".to_owned(), "read".to_owned()]).await?;
@@ -764,6 +871,13 @@ const removed = await e.removePolicy(...p)
 <!--PHP-->
 ```php
 $removed = $e->removePolicy("alice", "data1", "read");
+```
+
+<!--.NET-->
+```csharp
+var removed = e.RemovePolicyAsync("alice", "data1", "read");
+or
+var removed = await e.RemovePolicyAsync("alice", "data1", "read");
 ```
 
 <!--rust-->
@@ -848,6 +962,13 @@ const removed = await e.removeFilteredPolicy(0, ...p)
 $removed = $e->removeFilteredPolicy(0, "alice", "data1", "read");
 ```
 
+<!--.NET-->
+```csharp
+var removed = e.RemoveFilteredPolicy("alice", "data1", "read");
+or
+var removed = await e.RemoveFilteredPolicyAsync("alice", "data1", "read");
+```
+
 <!--rust-->
 ```rust
 let removed = e.remove_filtered_policy(0, vec!["alice".to_owned(), "data1".to_owned(), "read".to_owned()]).await?;
@@ -877,6 +998,13 @@ const removed = await e.removeNamedPolicy('p', ...p)
 <!--PHP-->
 ```php
 $removed = $e->removeNamedPolicy("p", "alice", "data1", "read");
+```
+
+<!--.NET-->
+```csharp
+var removed = e.RemoveNamedPolicy("p", "alice", "data1", "read");
+or
+var removed = await e.RemoveNamedPolicyAsync("p", "alice", "data1", "read");
 ```
 
 <!--rust-->
@@ -959,6 +1087,13 @@ const removed = await e.removeFilteredNamedPolicy('p', 0, ...p)
 $removed = $e->removeFilteredNamedPolicy("p", 0, "alice", "data1", "read");
 ```
 
+<!--.NET-->
+```csharp
+var removed = e.RemoveFilteredNamedPolicy("p", 0, "alice", "data1", "read");
+or
+var removed = e.RemoveFilteredNamedPolicyAync("p", 0, "alice", "data1", "read");
+```
+
 <!--rust-->
 ```rust
 let removed = e.remove_filtered_named_policy("p", 0, vec!["alice".to_owned(), "data1".to_owned(), "read".to_owned()]).await?;
@@ -989,6 +1124,11 @@ const has = await e.hasGroupingPolicy('alice', 'data2_admin')
 $has = $e->hasGroupingPolicy("alice", "data2_admin");
 ```
 
+<!--.NET-->
+```csharp
+var has = e.HasGroupingPolicy("alice", "data2_admin");
+```
+
 <!--rust-->
 ```rust
 let has = e.has_grouping_policy(vec!["alice".to_owned(), "data2_admin".to_owned()]);
@@ -1017,6 +1157,11 @@ const has = await e.hasNamedGroupingPolicy('g', 'alice', 'data2_admin')
 <!--PHP-->
 ```php
 $has = $e->hasNamedGroupingPolicy("g", "alice", "data2_admin");
+```
+
+<!--.NET-->
+```csharp
+var has = e.HasNamedGroupingPolicy("g", "alice", "data2_admin");
 ```
 
 <!--rust-->
@@ -1050,6 +1195,13 @@ const added = await e.addGroupingPolicy('group1', 'data2_admin')
 <!--PHP-->
 ```php
 $added = $e->addGroupingPolicy("group1", "data2_admin");
+```
+
+<!--.NET-->
+```csharp
+var added = e.AddGroupingPolicy("group1", "data2_admin");
+or
+var added = await e.AddGroupingPolicyAsync("group1", "data2_admin");
 ```
 
 <!--rust-->
@@ -1130,6 +1282,13 @@ const added = await e.addNamedGroupingPolicy('g', 'group1', 'data2_admin')
 $added = $e->addNamedGroupingPolicy("g", "group1", "data2_admin");
 ```
 
+<!--.NET-->
+```csharp
+var added = e.AddNamedGroupingPolicy("g", "group1", "data2_admin");
+or
+var added = await e.AddNamedGroupingPolicyAsync("g", "group1", "data2_admin");
+```
+
 <!--rust-->
 ```rust
 let added = e.add_named_grouping_policy("g", vec!["group1".to_owned(), "data2_admin".to_owned()]).await?;
@@ -1206,6 +1365,13 @@ const removed = await e.removeGroupingPolicy('alice', 'data2_admin')
 <!--PHP-->
 ```php
 $removed = $e->removeGroupingPolicy("alice", "data2_admin");
+```
+
+<!--.NET-->
+```csharp
+var removed = e.RemoveGroupingPolicy("alice", "data2_admin");
+or
+var removed = await e.RemoveGroupingPolicyAsync("alice", "data2_admin");
 ```
 
 <!--rust-->
@@ -1285,6 +1451,13 @@ const removed = await e.removeFilteredGroupingPolicy(0, 'alice')
 $removed = $e->removeFilteredGroupingPolicy(0, "alice");
 ```
 
+<!--.NET-->
+```csharp
+var removed = e.RemoveFilteredGroupingPolicy(0, "alice");
+or
+var removed = await e.RemoveFilteredGroupingPolicyAsync(0, "alice");
+```
+
 <!--rust-->
 ```rust
 let removed = e.remove_filtered_grouping_policy(0, vec!["alice".to_owned()]).await?;
@@ -1313,6 +1486,13 @@ const removed = await e.removeNamedGroupingPolicy('g', 'alice')
 <!--PHP-->
 ```php
 $removed = $e->removeNamedGroupingPolicy("g", "alice");
+```
+
+<!--.NET-->
+```csharp
+var removed = e.RemoveNamedGroupingPolicy("g", "alice");
+or 
+var removed = await e.RemoveNamedGroupingPolicyAsync("g", "alice");
 ```
 
 <!--rust-->
@@ -1391,6 +1571,13 @@ const removed = await e.removeFilteredNamedGroupingPolicy('g', 0, 'alice')
 <!--PHP-->
 ```php
 $removed = $e->removeFilteredNamedGroupingPolicy("g", 0, "alice");
+```
+
+<!--.NET-->
+```csharp
+var removed = e.RemoveFilteredNamedGroupingPolicy("g", 0, "alice");
+or
+var removed = await e.RemoveFilteredNamedGroupingPolicyAsync("g", 0, "alice");
 ```
 
 <!--rust-->

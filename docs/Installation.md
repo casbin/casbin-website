@@ -42,6 +42,11 @@ composer require casbin/casbin
 pip install casbin
 ```
 
+<!--.NET-->
+```
+dotnet add package Casbin.NET
+```
+
 <!--Rust-->
 ```
 cargo install cargo-edit

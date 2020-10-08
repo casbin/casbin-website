@@ -26,6 +26,11 @@ const e = await newEnforcer('examples/rbac_model.conf', 'examples/rbac_policy.cs
 $e = new Enforcer('examples/rbac_model.conf', 'examples/rbac_policy.csv');
 ```
 
+<!--.NET-->
+```csharp
+var e = new Enforcer("path/to/model.conf", "path/to/policy.csv");
+```
+
 <!--rust-->
 ```rust
 let mut e = Enforcer::new("examples/rbac_model.conf", "examples/rbac_policy.csv").await?;
@@ -55,6 +60,11 @@ const res = await e.getRolesForUser('alice')
 <!--PHP-->
 ```php
 $res = $e->getRolesForUser("alice");
+```
+
+<!--.NET-->
+```csharp
+var res = e.GetRolesForUser("alice");
 ```
 
 <!--rust-->
@@ -87,6 +97,11 @@ const res = await e.getUsersForRole('data1_admin')
 $res = $e->getUsersForRole("data1_admin");
 ```
 
+<!--.NET-->
+```csharp
+var res = e.GetUsersForRole("data1_admin");
+```
+
 <!--rust-->
 ```rust
 let users = e.get_users_for_role("data1_admin", None); // No domain
@@ -115,6 +130,11 @@ const res = await e.hasRoleForUser('alice', 'data1_admin')
 <!--PHP-->
 ```php
 $res = $e->hasRoleForUser("alice", "data1_admin");
+```
+
+<!--.NET-->
+```csharp
+var res = e.HasRoleForUser("alice", "data1_admin");
 ```
 
 <!--rust-->
@@ -146,6 +166,13 @@ await e.addRoleForUser('alice', 'data2_admin')
 <!--PHP-->
 ```PHP
 $e->addRoleForUser("alice", "data2_admin");
+```
+
+<!--.NET-->
+```csharp
+var added = e.AddRoleForUser("alice", "data2_admin");
+or
+var added = await e.AddRoleForUserAsync("alice", "data2_admin");
 ```
 
 <!--rust-->
@@ -198,6 +225,13 @@ await e.deleteRoleForUser('alice', 'data1_admin')
 $e->deleteRoleForUser("alice", "data1_admin");
 ```
 
+<!--.NET-->
+```csharp
+var deleted = e.DeleteRoleForUser("alice", "data1_admin");
+or
+var deleted = await e.DeleteRoleForUser("alice", "data1_admin");
+```
+
 <!--rust-->
 ```rust
 let deleted = e.delete_role_for_user("alice", "data1_admin", None).await?; // No domain
@@ -228,6 +262,13 @@ await e.deleteRolesForUser('alice')
 <!--PHP-->
 ```php
 $e->deleteRolesForUser("alice");
+```
+
+<!--.NET-->
+```csharp
+var deletedAtLeastOne = e.DeleteRolesForUser("alice");
+or
+var deletedAtLeastOne = await e.DeleteRolesForUserAsync("alice");
 ```
 
 <!--rust-->
@@ -261,11 +302,17 @@ await e.deleteUser('alice')
 $e->deleteUser("alice");
 ```
 
+<!--.NET-->
+```csharp
+var deleted = e.DeleteUser("alice");
+or
+var deleted = await e.DeleteUserAsync("alice");
+```
+
 <!--rust-->
 ```rust
 let deleted = e.delete_user("alice").await?;
 ```
-
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
@@ -290,6 +337,13 @@ await e.deleteRole("data2_admin")
 <!--PHP-->
 ```php
 $e->deleteRole("data2_admin");
+```
+
+<!--.NET-->
+```csharp
+var deleted = e.DeleteRole("data2_admin");
+or
+var deleted = await e.DeleteRoleAsync("data2_admin");
 ```
 
 <!--rust-->
@@ -323,6 +377,13 @@ await e.deletePermission('read')
 $e->deletePermission("read");
 ```
 
+<!--.NET-->
+```csharp
+var deleted = e.DeletePermission("read");
+or
+var deleted = await e.DeletePermissionAsync("read");
+```
+
 <!--rust-->
 ```rust
 let deleted = e.delete_permission(vec!["read".to_owned()]).await?;
@@ -353,6 +414,13 @@ await e.addPermissionForUser('bob', 'read')
 <!--PHP-->
 ```php
 $e->addPermissionForUser("bob", "read");
+```
+
+<!--.NET-->
+```csharp
+var added = e.AddPermissionForUser("bob", "read");
+or
+var added = await e.AddPermissionForUserAsync("bob", "read");
 ```
 
 <!--rust-->
@@ -408,6 +476,13 @@ await e.deletePermissionForUser("bob", "read")
 $e->deletePermissionForUser("bob", "read");
 ```
 
+<!--.NET-->
+```csharp
+var deleted = e.DeletePermissionForUser("bob", "read");
+or
+var deleted = await e.DeletePermissionForUserAsync("bob", "read");
+```
+
 <!--rust-->
 ```rust
 let deleted = e.delete_permission_for_user("bob", vec!["read".to_owned()]).await?;
@@ -440,6 +515,13 @@ await e.deletePermissionsForUser('bob')
 $e->deletePermissionsForUser("bob");
 ```
 
+<!--.NET-->
+```csharp
+var deletedAtLeastOne = e.DeletePermissionsForUser("bob");
+or
+var deletedAtLeastOne = await e.DeletePermissionsForUserAsync("bob");
+```
+
 <!--rust-->
 ```rust
 let deleted_at_least_one = e.delete_permissions_for_user("bob").await?;
@@ -470,6 +552,11 @@ await e.getPermissionsForUser('bob')
 $e->getPermissionsForUser("bob");
 ```
 
+<!--.NET-->
+```csharp
+var permissions = e.GetPermissionsForUser("bob");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `HasPermissionForUser()`
@@ -493,6 +580,11 @@ await e.hasPermissionForUser('alice', 'read')
 <!--PHP-->
 ```php
 $e->hasPermissionForUser("alice", []string{"read"});
+```
+
+<!--.NET-->
+```csharp
+var has = e.HasPermissionForUser("bob", "read");
 ```
 
 <!--rust-->
@@ -534,6 +626,11 @@ await e.getImplicitRolesForUser("alice")
 $e->getImplicitRolesForUser("alice");
 ```
 
+<!--.NET-->
+```csharp
+var implicitRoles = e.GetImplicitRolesForUser("alice");
+```
+
 <!--rust-->
 ```rust
 e.get_implicit_roles_for_user("alice", None); // No domain
@@ -571,6 +668,11 @@ await e.getImplicitPermissionsForUser("alice")
 <!--PHP-->
 ```php
 $e->getImplicitPermissionsForUser("alice");
+```
+
+<!--.NET-->
+```csharp
+var implicitPermissions = e.GetImplicitPermissionsForUser("alice");
 ```
 
 <!--rust-->
