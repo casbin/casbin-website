@@ -44,6 +44,13 @@ import casbin
 e = casbin.Enforcer("path/to/model.conf", "path/to/policy.csv")
 ```
 
+<!--.NET-->
+```csharp
+using NetCasbin; 
+
+var e = new Enforcer("path/to/model.conf", "path/to/policy.csv");
+```
+
 <!--Delphi-->
 ```delphi
 var
@@ -158,6 +165,22 @@ else:
     pass
 ```
 
+<!--.NET-->
+```csharp
+var sub = "alice";  # the user that wants to access a resource.
+var obj = "data1";  # the resource that is going to be accessed.
+var act = "read";  # the operation that the user performs on the resource.
+
+if (await e.EnforceAsync(sub, obj, act)) 
+{
+    // permit alice to read data1
+}
+else
+{
+    // deny the request, show an error
+}
+```
+
 <!--Delphi-->
 ```delphi
 if casbin.enforce(['alice,data1,read']) then
@@ -210,10 +233,14 @@ $roles = $e->getRolesForUser("alice");
 roles = e.get_roles_for_user("alice")
 ```
 
+<!--.NET-->
+```csharp
+var roles = e.GetRolesForUser("alice");
+```
+
 <!--Delphi-->
 ```delphi
 ```
-
 
 <!--Rust-->
 ```rust
