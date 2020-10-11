@@ -32,21 +32,17 @@ Error or panic may happen when you use Casbin for reasons like:
 
 There are five main functions you may need to care about for error or panic:
 
-Function | Behavior on error | What if I want error instead of panic?
-----|------|----
-[NewEnforcer()](https://godoc.org/github.com/casbin/casbin#NewEnforcer) | Cause panic | Please use [NewEnforcerSafe()](https://godoc.org/github.com/casbin/casbin#NewEnforcerSafe)
-[LoadModel()](https://godoc.org/github.com/casbin/casbin#Enforcer.LoadModel) | Cause panic | Please use [LoadModelSafe()](https://godoc.org/github.com/casbin/casbin#Enforcer.LoadModelSafe)
-[LoadPolicy()](https://godoc.org/github.com/casbin/casbin#Enforcer.LoadPolicy) | Return error | N/A
-[SavePolicy()](https://godoc.org/github.com/casbin/casbin#Enforcer.SavePolicy) | Return error | N/A
-[Enforce()](https://godoc.org/github.com/casbin/casbin#Enforcer.Enforce) | Cause panic | Please use [EnforceSafe()](https://godoc.org/github.com/casbin/casbin#Enforcer.EnforceSafe)
+Function | Behavior on error 
+----|-----
+[NewEnforcer()](https://godoc.org/github.com/casbin/casbin#NewEnforcer) | Return error
+[LoadModel()](https://godoc.org/github.com/casbin/casbin#Enforcer.LoadModel) | Return error
+[LoadPolicy()](https://godoc.org/github.com/casbin/casbin#Enforcer.LoadPolicy) | Return error
+[SavePolicy()](https://godoc.org/github.com/casbin/casbin#Enforcer.SavePolicy) | Return error
+[Enforce()](https://godoc.org/github.com/casbin/casbin#Enforcer.Enforce) | Return error
 
 :::note
 ``NewEnforcer()`` calls ``LoadModel()`` and ``LoadPolicy()`` inside. So you don't have to call the latter two calls when using ``NewEnforcer()``.
 :::
-
-### Why not just return error for all the functions?
-
-The author believes that Golang error is very unfriendly for developers to debug, because it's only a string and has no faulty call stack information. The panic can show call stack and integrate well with Golang IDEs. Most of the Casbin users are developers too. And they usually don't write the Casbin model or policy correctly at the first time (which causes error or panic). So they can benefit from the advantages of panic. However, there are still many people who favor error more than panic. So we provide the ``xxxSafe()`` functions which just wrap the ``xxx()`` functions by translating panic into error. You can just use ``xxx()`` or ``xxxSafe()`` functions based on personal tastes.
 
 ## Enable & disable
 
