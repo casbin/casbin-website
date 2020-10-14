@@ -1587,6 +1587,21 @@ let removed = e.remove_filtered_named_groupingPolicy("g", 0, vec!["alice".to_own
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
+### `UpdatePolicy()`
+
+UpdatePolicy update a old policy to new policy.
+
+For example:
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
+```go
+updated, err := e.UpdatePolicy([]string{"eve", "data3", "read"}, []string{"eve", "data3", "write"})
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
 ### `AddFunction()`
 
 AddFunction adds a customized function.
