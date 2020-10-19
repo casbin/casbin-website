@@ -3,7 +3,76 @@ id: get-started
 title: Get Started
 ---
 
-New a Casbin enforcer with a model file and a policy file:
+## Installation
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
+```
+go get github.com/casbin/casbin/v2
+```
+
+<!--Java-->
+For Maven:
+
+```
+<dependency>
+  <groupId>org.casbin</groupId>
+  <artifactId>jcasbin</artifactId>
+  <version>1.2.0</version>
+</dependency>
+```
+
+<!--Node.js-->
+```
+# NPM
+npm install casbin --save
+
+# Yarn
+yarn add casbin
+```
+
+<!--PHP-->
+Require this package in the `composer.json` of your project. This will download the package:
+
+```
+composer require casbin/casbin
+```
+
+<!--Python-->
+```
+pip install casbin
+```
+
+<!--.NET-->
+```
+dotnet add package Casbin.NET
+```
+
+<!--Rust-->
+```
+cargo install cargo-edit
+cargo add casbin
+
+// If you use async-std as async executor
+cargo add async-std
+
+// If you use tokio as async executor
+cargo add tokio // make sure you activate its `macros` feature
+```
+
+<!--Delphi-->
+Casbin4D comes in a package (currently for Delphi 10.3 Rio) and you can install it in the IDE. However, there are no visual components which means that you can use the units independently of packages. Just import the units in your project (assuming you do not mind the number of them).
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+## New a Casbin enforcer
+
+The new a Casbin enforcer must provide a [Model](supported-models) and a [Adapter](adapters).
+
+Casbin has a [FileAdapter](adapters#file-adapter-built-in), see [Adapter](adapters) from more Adapter.
+
+- Use the Model file and default [FileAdapter](adapters#file-adapter-built-in): 
 
 <!--DOCUSAURUS_CODE_TABS-->
 
@@ -81,13 +150,54 @@ async fn main() -> Result<()> {
     Ok(())
 }
 ```
-
-
 <!--END_DOCUSAURUS_CODE_TABS-->
 
-:::tip
-You can also initialize an enforcer with policy in DB instead of file, see [Adapters](/docs/en/adapters) section for details.
-:::
+- Use the Model text with other Adapter: 
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
+```go
+import (
+	"log"
+
+	"github.com/casbin/casbin/v2"
+	"github.com/casbin/casbin/v2/model"
+	xormadapter "github.com/casbin/xorm-adapter/v2"
+	_ "github.com/go-sql-driver/mysql"
+)
+
+// Initialize a Xorm adapter with MySQL database.
+a, err := xormadapter.NewAdapter("mysql", "mysql_username:mysql_password@tcp(127.0.0.1:3306)/casbin")
+if err != nil {
+	log.Fatalf("error: adapter: %s", err)
+}
+
+m, err := model.NewModelFromString(`
+[request_definition]
+r = sub, obj, act
+
+[policy_definition]
+p = sub, obj, act
+
+[policy_effect]
+e = some(where (p.eft == allow))
+
+[matchers]
+m = r.sub == p.sub && r.obj == p.obj && r.act == p.act
+`)
+if err != nil {
+	log.Fatalf("error: model: %s", err)
+}
+
+e, err := casbin.NewEnforcer(m, a)
+if err != nil {
+	log.Fatalf("error: enforcer: %s", err)
+}
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+### Check permissions
 
 Add an enforcement hook into your code right before the access happens:
 
