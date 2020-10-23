@@ -30,7 +30,7 @@ Watcher | Type | Author | Description
 [Etcd Watcher](https://github.com/node-casbin/etcd-watcher) | KV store | Casbin | Watcher for [etcd](https://github.com/coreos/etcd)
 [Redis Watcher](https://github.com/node-casbin/redis-watcher) | KV store | Casbin | Watcher for [Redis](http://redis.io/)
 [Pub/Sub Watcher](https://github.com/node-casbin/pubsub-watcher) | Messaging system | [hjl](https://github.com/elaijuh) | Watcher for [Google Cloud Pub/Sub](https://cloud.google.com/pubsub/docs)
-
+[Postgres Watcher](https://github.com/mcollina/casbin-pg-watcher) | Database | [Matteo Collina](https://github.com/mcollina/) | Watcher for [PostgreSQL](https://www.postgresql.org/)
 
 <!--Python-->
 Watcher | Type | Author | Description
