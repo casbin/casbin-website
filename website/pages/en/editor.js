@@ -6,7 +6,7 @@ class Editor extends React.Component {
       <div>
         <iframe
           src="https://casbin.org/casbin-editor/"
-          style={{width: '100%', height: '100vh', display: 'block'}}
+          style={{width: '100%', height: '150vh', display: 'block'}}
           title="Casbin-editor"
           allowFullScreen={true}
         />
