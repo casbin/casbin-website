@@ -64,6 +64,7 @@ Adapter | Type | Author | AutoSave | Description
 [File Adapter (built-in)](https://casbin.org/docs/en/adapters#file-adapter-built-in) | File | Casbin | ❌ | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files
 [Filtered File Adapter (built-in)](https://casbin.org/docs/en/policy-subset-loading) | File | Casbin | ❌ | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files with policy subset loading support
 [String Adapter (built-in)](https://github.com/casbin/node-casbin/blob/master/src/persist/stringAdapter.ts) | String | [@calebfaruki](https://github.com/calebfaruki) | ❌ | For String
+[Basic Adapter](https://github.com/node-casbin/basic-adapter) | Native ORM | Casbin | ✅ | pg, mysql, mysql2, sqlite3, oracledb, mssql are supported by the adapter itself
 [Sequelize Adapter](https://github.com/node-casbin/sequelize-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, SQLite, Microsoft SQL Server are supported by [Sequelize](https://github.com/sequelize/sequelize)
 [TypeORM Adapter](https://github.com/node-casbin/typeorm-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, MariaDB, SQLite, MS SQL Server, Oracle, WebSQL, MongoDB are supported by [TypeORM](https://github.com/typeorm/typeorm)
 [Mongoose Adapter](https://github.com/node-casbin/mongoose-adapter) | ORM | [elastic.io](https://github.com/elasticio) and Casbin | ✅ | MongoDB is supported by [Mongoose](https://mongoosejs.com/)
@@ -73,7 +74,6 @@ Adapter | Type | Author | AutoSave | Description
 [Node PostgreSQL Native Adapter](https://github.com/touchifyapp/casbin-pg-adapter) | SQL | [@touchifyapp](https://github.com/touchifyapp) | ✅ | PostgreSQL adapter with advanced policy subset loading support and improved performances built with [node-postgres](https://node-postgres.com/).
 [Couchbase Adapter](https://github.com/MarkMYoung/casbin-couchbase-adapter) | NoSQL | [@MarkMYoung](https://github.com/MarkMYoung) | ✅ | For [Couchbase](https://www.couchbase.com/)
 [Redis Adapter](https://github.com/NandaKishorJeripothula/node-casbin-redis-adapter) | KV store | [@NandaKishorJeripothula](https://github.com/NandaKishorJeripothula) | ❌ | For [Redis](https://redis.io/)
-[Basic Adapter](https://github.com/node-casbin/basic-adapter) | SQL | Casbin | ✅ | For pg, mysql, mysql2, sqlite3, oracledb, mssql.
 
 <!--PHP-->
 Adapter | Type | Author | AutoSave | Description
