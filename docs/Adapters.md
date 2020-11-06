@@ -47,6 +47,7 @@ Adapter | Type | Author | AutoSave | Description
 [Protobuf Adapter](https://github.com/casbin/protobuf-adapter) | Stream | Casbin | ❌ | For [Google Protocol Buffers](https://developers.google.com/protocol-buffers/)
 [JSON Adapter](https://github.com/casbin/json-adapter) | String | Casbin | ❌ | For [JSON](https://www.json.org/)
 [String Adapter](https://github.com/qiangmzsx/string-adapter) | String | [@qiangmzsx](https://github.com/qiangmzsx) | ❌ | For String
+[HTTP File Adapter](https://github.com/h4ckedneko/casbin-httpfs) | HTTP | [@h4ckedneko](https://github.com/h4ckedneko) | ❌ | For [http.FileSystem](https://golang.org/src/net/http/fs.go)
 
 <!--Java-->
 Adapter | Type | Author | AutoSave | Description
