@@ -14,7 +14,10 @@ Casbin uses the built-in ``log`` to print logs to console by default like:
 The logging is not enabled by default. You can toggle it via ``Enforcer.EnableLog()`` or the last parameter of ``NewEnforcer()``.
 
 ### Use different logger for different enforcer
+
 Every enforcer could have its own logger to log info, and it could be changed at run-time.
+
+And you could use a proper logger via the last paramter of ``NewEnforcer()``, if you using this way to initialize your enforcer, you needn't use the enabled parameter, cause the priority of the enabled field in logger is higher.
 
 ```go
 // Set a default logger as enforcer e1's logger.
@@ -23,7 +26,24 @@ e1.SetLogger(&Log.DefaultLogger{})
 
 // Set another logger as enforcer e2's logger.
 e2.SetLogger(&YouOwnLogger)
+
+// Set your logger when initialize enforcer e3.
+e3, _ := casbin.NewEnforcer("examples/rbac_model.conf", a, logger)
 ```
+
+#### Supported loggers
+
+We provide some loggers to help you log informations.
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
+Logger | Author | Description
+----|----|----
+[Defatule logger (built-in)](https://github.com/casbin/casbin/blob/master/log/default_logger.go) | Casbin | The default logger using golang log.
+[Zap logger](https://github.com/casbin/zap-logger) | Casbin | Using [zap](https://github.com/uber-go/zap), provide json encoded log and you could customize more with your own zap-logger.
+
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 #### How to write an logger
 
@@ -41,6 +61,7 @@ LogPolicy() | mandatory | Log info related to policy.
 We provide different params for different methods, you could pay more attention to those params you need.
 
 And there is a param called ``event`` to describe the log information, we have defined 7 events now:
+
 ```go
 const (
 	LogTypeGrantedAccessRequest  = iota // Enforcer grants a request.
