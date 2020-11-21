@@ -59,6 +59,7 @@ Name | Description
 [ThinkPHP 5.1](http://www.thinkphp.cn/) | The ThinkPHP 5.1 framework, via plugin: [think-casbin](https://github.com/php-casbin/think-casbin)
 [ThinkPHP 6.0](http://www.thinkphp.cn/) | The ThinkPHP 6.0 framework, via plugin: [think-authz](https://github.com/php-casbin/think-authz)
 [Symfony](https://symfony.com/) | The Symfony PHP framework, via plugin: [symfony-casbin](https://github.com/videni/symfony-casbin)
+[Hyperf](https://github.com/hyperf/hyperf) | A coroutine framework that focuses on hyperspeed and flexibility, via plugin: [hyperf-casbin](https://github.com/donjan-deng/hyperf-casbin)
 
 <!--Python-->
 Name | Description
