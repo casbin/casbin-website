@@ -1,0 +1,5 @@
+[build]
+  ignore = "/bin/false"
+  base = "website/"
+  publish="build/casbin.github.io/"
+  command ="yarn build"
