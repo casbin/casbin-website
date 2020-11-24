@@ -13,6 +13,10 @@ Casbin uses the built-in ``log`` to print logs to console by default like:
 
 The logging is not enabled by default. You can toggle it via ``Enforcer.EnableLog()`` or the last parameter of ``NewEnforcer()``.
 
+:::note  
+We already support logging the model, enforce request, role, policy in Golang. You can define your own log for logging Casbin.
+:::
+
 ### Use different logger for different enforcer
 
 Every enforcer could have its own logger to log info, and it could be changed at run-time.
@@ -33,7 +37,7 @@ e3, _ := casbin.NewEnforcer("examples/rbac_model.conf", a, logger)
 
 #### Supported loggers
 
-We provide some loggers to help you log informations.
+We provide some loggers to help you log information.
 
 <!--DOCUSAURUS_CODE_TABS-->
 
@@ -45,9 +49,9 @@ Logger | Author | Description
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
-#### How to write an logger
+#### How to write a logger
 
-You own logger should implement the ``Logger`` interface by providing at least six mandatory methods:``EnableLog(bool)``, ``IsEnabled() bool``, ``LogModel(event int, line []string, model [][]string)``, ``LogEnforce(event int, line string, request *[]interface{}, policies *[]string, result *[]interface{})``, ``LogRole(event int, line string, role []string)`` and ``LogPolicy(event int, line string, pPolicyFormat []string, gPolicyFormat []string, pPolicy *[]interface{}, gPolicy *[]interface{})``.
+Your logger should implement the [Logger](https://github.com/casbin/casbin/blob/master/log/logger.go#L20) interface.
 
 Method | Type | Description
 ----|------|----
@@ -58,92 +62,92 @@ LogEnforce() | mandatory | Log info related to enforce.
 LogRole() | mandatory | Log info related to role.
 LogPolicy() | mandatory | Log info related to policy.
 
-We provide different params for different methods, you could pay more attention to those params you need.
 
-And there is a param called ``event`` to describe the log information, we have defined 7 events now:
-
-```go
-const (
-	LogTypeGrantedAccessRequest  = iota // Enforcer grants a request.
-	LogTypeRejectedAccessRequest        // Enforcer rejects a request.
-	LogTypeLoadPolicy                   // Enforcer starts or stops auto loading policy.
-	LogTypePrintModel                   // Print model.
-	LogTypePrintPolicy                  // Print policy.
-	LogTypePrintRole                    // Print role.
-	LogTypeLinkRole                     // Build role links.
-)
-```
-
-Then, you could use your custom ``logger`` using the method of ``Enforcer.SetLogger()``.
+You can pass your custom `logger` to `Enforcer.SetLogger()`.
 
 Here is an example about how to customize a logger for Golang:
 
 ```go
 import (
 	"fmt"
-
-	"github.com/casbin/casbin/log"
+	"log"
+	"strings"
 )
 
-// Define the logger structure.
-type Logger struct {
-	enable bool // Using a field to record logger's status.
+// DefaultLogger is the implementation for a Logger using golang log.
+type DefaultLogger struct {
+	enabled bool
 }
 
-// Declare this logger.
-var logger Logger
-
-// EnableLog controls whether to print the message, you could change this value depends on your own struct.
-func (l *Logger) EnableLog(enable bool) {
-	// Change your logger status.
-	l.enable = enable
+func (l *DefaultLogger) EnableLog(enable bool) {
+	l.enabled = enable
 }
 
-// IsEnabled returns if logger is enabled, decides whether log functions are turned on.
-func (l *Logger) IsEnabled() bool {
-	return l.enable
+func (l *DefaultLogger) IsEnabled() bool {
+	return l.enabled
 }
 
-// Line is a param we generate in default form.
-func (l *Logger) LogModel(event int, line []string, model [][]string) {
-	// Judging log status.
-	if !l.IsEnabled() {
+func (l *DefaultLogger) LogModel(model [][]string) {
+	if !l.enabled {
 		return
-    }
+	}
+	var str strings.Builder
+	str.WriteString("Model: ")
+	for _, v := range model {
+		str.WriteString(fmt.Sprintf("%v\n", v))
+	}
 
-	fmt.Println(model)
+	log.Println(str.String())
 }
 
-func (l *Logger) LogEnforce(event int, line string, request *[]interface{}, policies *[]string, result *[]interface{}) {
-	if !l.IsEnabled() {
-		return
-    }
-
-	// Make different log according to different events.
-	if event == log.LogTypeGrantedAccessRequest {
-		fmt.Println("FAIL: ", request, result)
+func (l *DefaultLogger) LogEnforce(matcher string, request []interface{}, result bool, explains [][]string) {
+	if !l.enabled {
 		return
 	}
 
-	fmt.Println("PASS: ", request, policies)
+	var reqStr strings.Builder
+	reqStr.WriteString("Request: ")
+	for i, rval := range request {
+		if i != len(request)-1 {
+			reqStr.WriteString(fmt.Sprintf("%v, ", rval))
+		} else {
+			reqStr.WriteString(fmt.Sprintf("%v", rval))
+		}
+	}
+	reqStr.WriteString(fmt.Sprintf(" ---> %t\n", result))
+
+	reqStr.WriteString("Hit Policy: ")
+	for i, pval := range explains {
+		if i != len(explains)-1 {
+			reqStr.WriteString(fmt.Sprintf("%v, ", pval))
+		} else {
+			reqStr.WriteString(fmt.Sprintf("%v \n", pval))
+		}
+	}
+
+	log.Println(reqStr.String())
 }
 
-func (l *Logger) LogPolicy(event int, line string, pPolicyFormat []string, gPolicyFormat []string, pPolicy *[]interface{}, gPolicy *[]interface{}) {
-	if !l.IsEnabled() {
+func (l *DefaultLogger) LogPolicy(policy map[string][][]string) {
+	if !l.enabled {
 		return
 	}
 
-	// pPolicyFormat means the p policy's format, such as: sub sub obj act
-	// gPolicyFormat means the g policy's format, such as: _ _
-	fmt.Println(pPolicy, gPolicy)
+	var str strings.Builder
+	str.WriteString("Policy: ")
+	for k, v := range policy {
+		str.WriteString(fmt.Sprintf("%s : %v\n", k, v))
+	}
+
+	log.Println(str.String())
 }
 
-func (l *Logger) LogRole(event int, line string, role []string) {
-	if !l.IsEnabled() {
+func (l *DefaultLogger) LogRole(roles []string) {
+	if !l.enabled {
 		return
 	}
 
-	fmt.Println(role)
+	log.Println("Roles: ", roles)
 }
 
 ```
