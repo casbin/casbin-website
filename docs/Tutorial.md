@@ -119,6 +119,10 @@ This is another longer-version paper published in Journal of Software. The citat
 - [A Demo App of Attribute-based Access Control in Node.js Based on Casbin](https://github.com/Jarvie8176/casbin-example)
 - [Multi tenant SaaS starter kit with cqrs graphql microservice architecture](https://github.com/juicycleff/ultimate-backend)
 
+### Fastify
+
+- [Access Control in Node.js with Fastify and Casbin](https://www.nearform.com/blog/access-control-node-js-fastify-and-casbin/)
+
 <!--PHP-->
 
 - [Casbin, Powerful and Efficient ACL for Your Projects](http://phpmagazine.net/2018/11/casbin-powerful-and-efficient-acl-for-your-projects.html)
