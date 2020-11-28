@@ -1,5 +1,5 @@
 const PAGE_IDENTIFIER = window.location.pathname;
-const BASE_URL = 'https://casbin.org/';
+const BASE_URL = 'https://casbin.org';
 const PAGE_URL = BASE_URL + PAGE_IDENTIFIER;
 
 /**
