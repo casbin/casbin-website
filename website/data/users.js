@@ -84,8 +84,8 @@ module.exports = [
     pinned: true,
   },
   {
-    caption: 'SpaceX',
-    image: '/img/users/spacex.jfif',
+    caption: 'r/SpaceX',
+    image: '/img/users/rspacex.png',
     infoLink: 'https://github.com/r-spacex/SpaceX-API/commit/f8daa8f9878dcd7a281fc8081e3aeb8e5d216089',
     pinned: true,
   },
