@@ -69,7 +69,7 @@ Adapter | Type | Author | AutoSave | Description
 [Sequelize Adapter](https://github.com/node-casbin/sequelize-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, SQLite, Microsoft SQL Server are supported by [Sequelize](https://github.com/sequelize/sequelize)
 [TypeORM Adapter](https://github.com/node-casbin/typeorm-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, MariaDB, SQLite, MS SQL Server, Oracle, WebSQL, MongoDB are supported by [TypeORM](https://github.com/typeorm/typeorm)
 [Mongoose Adapter](https://github.com/node-casbin/mongoose-adapter) | ORM | [elastic.io](https://github.com/elasticio) and Casbin | ✅ | MongoDB is supported by [Mongoose](https://mongoosejs.com/)
-[Knex Adapter](https://github.com/sarneeh/casbin-knex-adapter) | ORM | [@sarneeh](https://github.com/sarneeh) | ✅ | MSSQL, MySQL, PostgreSQL, SQLite3, Oracle are supported by [Knex.js](https://knexjs.org/)
+[Knex Adapter](https://github.com/knex/casbin-knex-adapter) | ORM | [@sarneeh](https://github.com/sarneeh) and [knex](https://github.com/knex) | ✅ | MSSQL, MySQL, PostgreSQL, SQLite3, Oracle are supported by [Knex.js](https://knexjs.org/)
 [Objection.js Adapter](https://github.com/willsoto/casbin-objection-adapter) | ORM | [@willsoto](https://github.com/willsoto) | ✅ | MSSQL, MySQL, PostgreSQL, SQLite3, Oracle are supported by [Objection.js](https://vincit.github.io/objection.js/)
 [Node MongoDB Native Adapter](https://github.com/juicycleff/casbin-mongodb-adapter) | NoSQL | [@juicycleff](https://github.com/juicycleff) | ✅ | For [Node MongoDB Native](https://mongodb.github.io/node-mongodb-native/)
 [DynamoDB Adapter](https://github.com/fospitia/casbin-dynamodb-adapter) | NoSQL | [@fospitia](https://github.com/fospitia) | ✅ | For [Amazon DynamoDB](https://aws.amazon.com/dynamodb/)
