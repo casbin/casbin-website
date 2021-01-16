@@ -36,6 +36,7 @@ Watcher | Type | Author | Description
 Watcher | Type | Author | Description
 ----|------|----|----
 [Redis Watcher](https://github.com/ScienceLogic/flask-casbin-redis-watcher) | KV store | [ScienceLogic](https://github.com/ScienceLogic) | Watcher for [Redis](http://redis.io/)
+[PostgreSQL Watcher](https://github.com/pycasbin/postgresql-watcher) | Database | Casbin| Watcher for [PostgreSQL](https://www.postgresql.org/)
 
 <!--.NET-->
 Watcher | Type | Author | Description
