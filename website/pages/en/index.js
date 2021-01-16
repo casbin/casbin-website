@@ -80,7 +80,7 @@ class HomeSplash extends React.Component {
     return (
       <SplashContainer>
         <div className="inner">
-          <Button href="https://github.com/casbin/casbin-forum">Need to build your own forum? See: Casbin-Forum</Button>
+          {/*<Button href="https://github.com/casbin/casbin-forum">Need to build your own forum? See: Casbin-Forum</Button>*/}
           <ProjectTitle />
           <PromoSection>
             <Button href={docUrl('overview', language)}><translate>Get Started</translate></Button>
@@ -234,8 +234,8 @@ class Index extends React.Component {
       <div>
         <div className="announcement">
           <div className="announcement-inner">
-            <a style={{color: "white"}} href="https://github.com/sponsors/hsluoyz">
-              💖 Sponsor us at GitHub
+            <a style={{color: "white"}} href="https://github.com/casbin/casbin-forum" target="_blank">
+              💖 Want to build your own forum for free? See here!
             </a>
           </div>
         </div>
