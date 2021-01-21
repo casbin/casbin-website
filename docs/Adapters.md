@@ -111,6 +111,7 @@ Adapter | Type | Author | AutoSave | Description
 [File Adapter (built-in)](https://casbin.org/docs/en/adapters#file-adapter-built-in) | File | Casbin | ❌ | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files
 [Diesel Adapter](https://github.com/casbin-rs/diesel-adapter) | ORM | Casbin | ✅ | [SQLite, PostgreSQL, MySQL](https://github.com/diesel-rs/diesel/blob/master/guide_drafts/backend_installation.md) are supported by [Diesel](http://diesel.rs/)
 [Sqlx Adapter](https://github.com/casbin-rs/sqlx-adapter) | ORM | Casbin | ✅ | PostgreSQL, MySQL are supported by [Sqlx](https://github.com/launchbadge/sqlx) with fully asynchronous operation
+[YAML Adapter](https://github.com/casbin-rs/yaml-adapter) | String | Casbin | ✅ | For [YAML](https://yaml.org/)
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
