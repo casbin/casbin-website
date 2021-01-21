@@ -32,7 +32,8 @@
     ],
     "Advanced Usage": [
       "multi-threading",
-      "benchmark"
+      "benchmark",
+      "performance"
     ],
     "Management":[
       "admin-portal",
