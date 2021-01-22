@@ -22,7 +22,7 @@ Watcher | Type | Author | Description
 <!--Java-->
 Watcher | Type | Author | Description
 ----|------|----|----
-[Etcd Adapter](https://github.com/fanlide/jcasbin-extra) | KV store | [@fanlide](https://github.com/fanlide) | Watcher for [etcd](https://github.com/coreos/etcd)
+[Etcd Adapter](https://github.com/mapleafgo/jcasbin-extra) | KV store | [@mapleafgo](https://github.com/mapleafgo) | Watcher for [etcd](https://github.com/coreos/etcd)
 
 <!--Node.js-->
 Watcher | Type | Author | Description

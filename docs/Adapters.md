@@ -56,7 +56,7 @@ Adapter | Type | Author | AutoSave | Description
 [JDBC Adapter](https://github.com/jcasbin/jdbc-adapter) | JDBC | Casbin | ✅ | MySQL, Oracle, PostgreSQL, DB2, Sybase, SQL Server are supported by [JDBC](https://docs.oracle.com/cd/E19226-01/820-7688/gawms/index.html)
 [Hibernate Adapter](https://github.com/jcasbin/hibernate-adapter) | ORM | Casbin | ✅ | Oracle, DB2, SQL Server, Sybase, MySQL, PostgreSQL are supported by [Hibernate](http://www.hibernate.org/)
 [MyBatis Adapter](https://github.com/jcasbin/mybatis-adapter) | ORM | Casbin | ✅ | MySQL, Oracle, PostgreSQL, DB2, Sybase, SQL Server (the same as JDBC) are supported by [MyBatis 3](https://mybatis.org/mybatis-3/)
-[Hutool Adapter](https://github.com/fanlide/jcasbin-extra) | ORM | [@fanlide](https://github.com/fanlide) | ✅ | MySQL, Oracle, PostgreSQL, SQLite are supported by [Hutool](https://github.com/looly/hutool)
+[Hutool Adapter](https://github.com/mapleafgo/jcasbin-extra) | ORM | [@mapleafgo](https://github.com/mapleafgo) | ✅ | MySQL, Oracle, PostgreSQL, SQLite are supported by [Hutool](https://github.com/looly/hutool)
 [DynamoDB Adapter](https://github.com/jcasbin/dynamodb-adapter) | NoSQL | Casbin | ❌ | For [Amazon DynamoDB](https://aws.amazon.com/dynamodb/)
 
 <!--Node.js-->
