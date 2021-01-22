@@ -13,7 +13,7 @@ global variable `e` is Enforcer instance.
 
 <!--Go-->
 ```go
-e := NewEnforcer("examples/rbac_model.conf", "examples/rbac_policy.csv")
+e, err := NewEnforcer("examples/rbac_model.conf", "examples/rbac_policy.csv")
 ```
 
 <!--Node.js-->
