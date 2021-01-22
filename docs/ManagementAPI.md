@@ -31,7 +31,7 @@ $e = new Enforcer('examples/rbac_model.conf', 'examples/rbac_policy.csv');
 var e = new Enforcer("path/to/model.conf", "path/to/policy.csv");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let mut e = Enforce::new("examples/rbac_model.conf", "examples/rbac_policy.csv").await?;
 ```
@@ -66,7 +66,7 @@ $allSubjects = $e->getAllSubjects();
 var allSubjects = e.GetAllSubjects();
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let all_subjects = e.get_all_subjects();
 ```
@@ -101,7 +101,7 @@ $allNamedSubjects = $e->getAllNamedSubjects("p");
 var allNamedSubjects = e.GetAllNamedSubjects("p");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let all_named_subjects = e.get_all_named_subjects("p");
 ```
@@ -136,7 +136,7 @@ $allObjects = $e->getAllObjects();
 var allObjects = e.GetAllObjects();
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let all_objects = e.get_all_objects();
 ```
@@ -171,7 +171,7 @@ $allNamedObjects = $e->getAllNamedObjects("p");
 var allNamedObjects = e.GetAllNamedObjects("p");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let all_named_objects = e.get_all_named_objects("p");
 ```
@@ -206,7 +206,7 @@ $allActions = $e->getAllActions();
 var allActions = e.GetAllActions();
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let all_actions = e.get_all_actions();
 ```
@@ -241,7 +241,7 @@ $allNamedActions = $e->getAllNamedActions("p");
 var allNamedActions = e.GetAllNamedActions("p");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let all_named_actions = e.get_all_named_actions("p");
 ```
@@ -276,7 +276,7 @@ $allRoles = $e->getAllRoles();
 var allRoles = e.GetAllRoles();
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let all_roles = e.get_all_roles();
 ```
@@ -311,7 +311,7 @@ $allNamedRoles = $e->getAllNamedRoles('g');
 var allNamedRoles = e.GetAllNamedRoles("g");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let all_named_roles = e.get_all_named_roles("g");
 ```
@@ -346,7 +346,7 @@ $policy = $e->getPolicy();
 var policy = e.GetPolicy();
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let policy = e.get_policy();
 ```
@@ -382,7 +382,7 @@ $filteredPolicy = $e->getFilteredPolicy(0, "alice");
 var filteredPolicy = e.GetFilteredPolicy(0, "alice");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let filtered_policy = e.get_filtered_policy(0, vec!["alice".to_owned()]);
 ```
@@ -417,7 +417,7 @@ $namedPolicy = $e->getNamedPolicy("p");
 var namedPolicy = e.GetNamedPolicy("p");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let named_policy = e.get_named_policy("p");
 ```
@@ -453,7 +453,7 @@ $filteredNamedPolicy = $e->getFilteredNamedPolicy("p", 0, "bob");
 var filteredNamedPolicy = e.GetFilteredNamedPolicy("p", 0, "alice");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let filtered_named_policy = e.get_filtered_named_policy("p", 0, vec!["bob".to_owned()]);
 ```
@@ -488,7 +488,7 @@ $groupingPolicy = $e->getGroupingPolicy();
 var groupingPolicy = e.GetGroupingPolicy();
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let grouping_policy = e.get_grouping_policy();
 ```
@@ -523,7 +523,7 @@ $filteredGroupingPolicy = $e->getFilteredGroupingPolicy(0, "alice");
 var filteredGroupingPolicy = e.GetFilteredGroupingPolicy(0, "alice");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let filtered_grouping_policy = e.get_filtered_grouping_policy(0, vec!["alice".to_owned()]);
 ```
@@ -558,7 +558,7 @@ $namedGroupingPolicy = $e->getNamedGroupingPolicy("g");
 var namedGroupingPolicy = e.GetNamedGroupingPolicy("g");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let named_grouping_policy = e.get_named_grouping_policy("g");
 ```
@@ -594,7 +594,7 @@ $namedGroupingPolicy = $e->getFilteredNamedGroupingPolicy("g", 0, "alice");
 var namedGroupingPolicy = e.GetFilteredNamedGroupingPolicy("g", 0, "alice");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let named_grouping_policy = e.get_filtered_named_groupingPolicy("g", 0, vec!["alice".to_owned()]);
 ```
@@ -629,7 +629,7 @@ $hasPolicy = $e->hasPolicy('data2_admin', 'data2', 'read');
 var hasPolicy = e.HasPolicy("data2_admin", "data2", "read");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let has_policy = e.has_policy(vec!["data2_admin".to_owned(), "data2".to_owned(), "read".to_owned()]);
 ```
@@ -664,7 +664,7 @@ $hasNamedPolicy = $e->hasNamedPolicy("p", "data2_admin", "data2", "read");
 var hasNamedPolicy = e.HasNamedPolicy("p", "data2_admin", "data2", "read");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let has_named_policy = e.has_named_policy("p", vec!["data2_admin".to_owned(), "data2".to_owned(), "read".to_owned()]);
 ```
@@ -704,7 +704,7 @@ or
 var added = await e.AddPolicyAsync("eve", "data3", "read");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let added = e.add_policy(vec!["eve".to_owned(), "data3".to_owned(), "read".to_owned()]);
 ```
@@ -734,7 +734,7 @@ rules := [][] string {
 areRulesAdded := e.AddPolicies(rules)
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let rules = vec![
 	vec!["jack".to_owned(), "data4".to_owned(), "read".to_owned()],
@@ -793,7 +793,7 @@ or
 var added = await e.AddNamedPolicyAsync("p", "eve", "data3", "read");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let added = e.add_named_policy("p", vec!["eve".to_owned(), "data3".to_owned(), "read".to_owned()]).await?;
 ```
@@ -823,7 +823,7 @@ rules := [][] string {
 areRulesAdded := e.AddNamedPolicies("p", rules)
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let rules = vec![
 	vec!["jack".to_owned(), "data4".to_owned(), "read".to_owned()],
@@ -880,7 +880,7 @@ or
 var removed = await e.RemovePolicyAsync("alice", "data1", "read");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let removed = e.remove_policy(vec!["alice".to_owned(), "data1".to_owned(), "read".to_owned()]).await?;
 ```
@@ -910,7 +910,7 @@ rules := [][] string {
 areRulesRemoved := e.RemovePolicies(rules)
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let rules = vec![
 	vec!["jack".to_owned(), "data4".to_owned(), "read".to_owned()],
@@ -969,7 +969,7 @@ or
 var removed = await e.RemoveFilteredPolicyAsync("alice", "data1", "read");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let removed = e.remove_filtered_policy(0, vec!["alice".to_owned(), "data1".to_owned(), "read".to_owned()]).await?;
 ```
@@ -1007,7 +1007,7 @@ or
 var removed = await e.RemoveNamedPolicyAsync("p", "alice", "data1", "read");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let removed = e.remove_named_policy("p", vec!["alice".to_owned(), "data1".to_owned(), "read".to_owned()]).await?;
 ```
@@ -1037,7 +1037,7 @@ rules := [][] string {
 areRulesRemoved := e.RemoveNamedPolicies("p", rules)
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let rules = vec![
 	vec!["jack".to_owned(), "data4".to_owned(), "read".to_owned()],
@@ -1094,7 +1094,7 @@ or
 var removed = e.RemoveFilteredNamedPolicyAync("p", 0, "alice", "data1", "read");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let removed = e.remove_filtered_named_policy("p", 0, vec!["alice".to_owned(), "data1".to_owned(), "read".to_owned()]).await?;
 ```
@@ -1129,7 +1129,7 @@ $has = $e->hasGroupingPolicy("alice", "data2_admin");
 var has = e.HasGroupingPolicy("alice", "data2_admin");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let has = e.has_grouping_policy(vec!["alice".to_owned(), "data2_admin".to_owned()]);
 ```
@@ -1164,7 +1164,7 @@ $has = $e->hasNamedGroupingPolicy("g", "alice", "data2_admin");
 var has = e.HasNamedGroupingPolicy("g", "alice", "data2_admin");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let has = e.has_named_grouping_policy("g", vec!["alice".to_owned(), "data2_admin".to_owned()]);
 ```
@@ -1204,7 +1204,7 @@ or
 var added = await e.AddGroupingPolicyAsync("group1", "data2_admin");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let added = e.add_grouping_policy(vec!["group1".to_owned(), "data2_admin".to_owned()]).await?;
 ```
@@ -1234,7 +1234,7 @@ rules := [][] string {
 areRulesAdded := e.AddGroupingPolicies(rules)
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let rules = vec![
 	vec!["jack".to_owned(), "group1".to_owned(), "domain1".to_owned()],
@@ -1289,7 +1289,7 @@ or
 var added = await e.AddNamedGroupingPolicyAsync("g", "group1", "data2_admin");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let added = e.add_named_grouping_policy("g", vec!["group1".to_owned(), "data2_admin".to_owned()]).await?;
 ```
@@ -1320,7 +1320,7 @@ rules := [][] string {
 areRulesAdded := e.AddNamedGroupingPolicies("g", rules)
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let rules = vec![
 	vec!["jack".to_owned(), "group1".to_owned(), "domain1".to_owned()],
@@ -1374,7 +1374,7 @@ or
 var removed = await e.RemoveGroupingPolicyAsync("alice", "data2_admin");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let removed = e.remove_grouping_policy(vec!["alice".to_owned(), "data2_admin".to_owned()]).await?;
 ```
@@ -1404,7 +1404,7 @@ rules := [][] string {
 areRulesRemoved := e.RemoveGroupingPolicies(rules)
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let rules = vec![
 	vec!["jack".to_owned(), "group1".to_owned(), "domain1".to_owned()],
@@ -1458,7 +1458,7 @@ or
 var removed = await e.RemoveFilteredGroupingPolicyAsync(0, "alice");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let removed = e.remove_filtered_grouping_policy(0, vec!["alice".to_owned()]).await?;
 ```
@@ -1495,7 +1495,7 @@ or
 var removed = await e.RemoveNamedGroupingPolicyAsync("g", "alice");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let removed = e.remove_named_grouping_policy("g", vec!["alice".to_owned()]).await?;
 ```
@@ -1526,7 +1526,7 @@ areRulesRemoved := e.RemoveNamedGroupingPolicies("g", rules)
 ```
 
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let rules = vec![
 	vec!["jack".to_owned(), "group1".to_owned(), "domain1".to_owned()],
@@ -1580,7 +1580,7 @@ or
 var removed = await e.RemoveFilteredNamedGroupingPolicyAsync("g", 0, "alice");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let removed = e.remove_filtered_named_groupingPolicy("g", 0, vec!["alice".to_owned()]).await?;
 ```
@@ -1660,7 +1660,7 @@ $e->addFunction("keyMatchCustom", customFunctionWrapper);
 ```
 
 
-<!--rust-->
+<!--Rust-->
 ```rust
 fn custom_function(key1: STring, key2: String) {
 	key1 == "/alice_data2/myid/using/res_id" && key2 == "/alice_data/:resource" || key1 == "/alice_data2/myid/using/res_id" && key2 == "/alice_data2/:id/using/:resId"

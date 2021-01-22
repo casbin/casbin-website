@@ -31,7 +31,7 @@ $e = new Enforcer('examples/rbac_model.conf', 'examples/rbac_policy.csv');
 var e = new Enforcer("path/to/model.conf", "path/to/policy.csv");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let mut e = Enforcer::new("examples/rbac_model.conf", "examples/rbac_policy.csv").await?;
 ```
@@ -67,7 +67,7 @@ $res = $e->getRolesForUser("alice");
 var res = e.GetRolesForUser("alice");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let roles = e.get_roles_for_user("alice", None); // No domain
 ```
@@ -102,7 +102,7 @@ $res = $e->getUsersForRole("data1_admin");
 var res = e.GetUsersForRole("data1_admin");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let users = e.get_users_for_role("data1_admin", None); // No domain
 ```
@@ -137,7 +137,7 @@ $res = $e->hasRoleForUser("alice", "data1_admin");
 var res = e.HasRoleForUser("alice", "data1_admin");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let has = e.has_role_for_user("alice", "data1_admin", None); // No domain
 ```
@@ -175,7 +175,7 @@ or
 var added = await e.AddRoleForUserAsync("alice", "data2_admin");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let added = e.add_role_for_user("alice", "data2_admin", None).await?; // No domain
 ```
@@ -192,7 +192,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let roles = vec!["data1_admin".to_owned(), "data2_admin".to_owned()];
 let all_added = e.add_roles_for_user("alice", roles, None).await?; // No domain
@@ -232,7 +232,7 @@ or
 var deleted = await e.DeleteRoleForUser("alice", "data1_admin");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let deleted = e.delete_role_for_user("alice", "data1_admin", None).await?; // No domain
 ```
@@ -271,7 +271,7 @@ or
 var deletedAtLeastOne = await e.DeleteRolesForUserAsync("alice");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let deleted_at_least_one = e.delete_roles_for_user("alice", None).await?; // No domain
 ```
@@ -309,7 +309,7 @@ or
 var deleted = await e.DeleteUserAsync("alice");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let deleted = e.delete_user("alice").await?;
 ```
@@ -346,7 +346,7 @@ or
 var deleted = await e.DeleteRoleAsync("data2_admin");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let deleted = e.delete_role("data2_admin").await?;
 ```
@@ -384,7 +384,7 @@ or
 var deleted = await e.DeletePermissionAsync("read");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let deleted = e.delete_permission(vec!["read".to_owned()]).await?;
 ```
@@ -423,7 +423,7 @@ or
 var added = await e.AddPermissionForUserAsync("bob", "read");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let added = e.add_permission_for_user("bob", vec!["read".to_owned()]).await?;
 ```
@@ -439,7 +439,7 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let permissions = vec![
     vec!["data1".to_owned(), "read".to_owned()],
@@ -483,7 +483,7 @@ or
 var deleted = await e.DeletePermissionForUserAsync("bob", "read");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let deleted = e.delete_permission_for_user("bob", vec!["read".to_owned()]).await?;
 ```
@@ -522,7 +522,7 @@ or
 var deletedAtLeastOne = await e.DeletePermissionsForUserAsync("bob");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let deleted_at_least_one = e.delete_permissions_for_user("bob").await?;
 ```
@@ -587,7 +587,7 @@ $e->hasPermissionForUser("alice", []string{"read"});
 var has = e.HasPermissionForUser("bob", "read");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 let has = e.has_permission_for_user("alice", vec!["data1".to_owned(), "read".to_owned()]);
 ```
@@ -631,7 +631,7 @@ $e->getImplicitRolesForUser("alice");
 var implicitRoles = e.GetImplicitRolesForUser("alice");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 e.get_implicit_roles_for_user("alice", None); // No domain
 ```
@@ -675,7 +675,7 @@ $e->getImplicitPermissionsForUser("alice");
 var implicitPermissions = e.GetImplicitPermissionsForUser("alice");
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 e.get_implicit_permissions_for_user("alice", None); // No domain
 ```

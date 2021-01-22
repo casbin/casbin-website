@@ -145,7 +145,7 @@ use Casbin\Enforcer;
 $e = new Enforcer('examples/basic_model.conf', 'examples/basic_policy.csv');
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 use casbin::prelude::*;
 
@@ -178,7 +178,7 @@ $a = new FileAdapter('examples/basic_policy.csv');
 $e = new Enforcer('examples/basic_model.conf', $a);
 ```
 
-<!--rust-->
+<!--Rust-->
 ```rust
 use casbin::prelude::*;
 
@@ -207,7 +207,7 @@ e := casbin.NewEnforcer("examples/basic_model.conf", a)
 ```
 
 
-<!--rust-->
+<!--Rust-->
 ```rust
 // https://github.com/casbin-rs/diesel-adapter
 // make sure you activate feature `mysql`
