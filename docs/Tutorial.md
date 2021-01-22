@@ -29,6 +29,8 @@ This is another longer-version paper published in Journal of Software. The citat
 - [A Secure Vault - implementing authorization middleware with Casbin - JuniorDevSG](https://www.youtube.com/watch?v=OTT84oplR9o)
 - [Sharing user permissions in a micro-service architecture based on Casbin (in Russian)](https://www.youtube.com/watch?v=Z5dUxH4PqYM)
 - [Nest.js - Casbin RESTful RBAC authorization midleware](https://www.youtube.com/watch?v=mWlPNrCgVdE)
+- [Gin Tutorial Chapter 10: Learn Casbin basic models in 30 minutes](https://www.bilibili.com/video/BV1qz4y167XP)
+- [Gin Tutorial Chapter 11: Coding, API and custom function in Casbin](https://www.bilibili.com/video/BV13r4y1M7AC)
 - [Gin + Casbin: Learning Permissions in Action (in Chinese)](https://www.jtthink.com/course/132)
 - [jCasbin Basics: A simple RBAC example (in Chinese)](https://www.jtthink.com/course/play/2706)
 - [Golang's RBAC based on Casbin (in Chinese)](https://www.bilibili.com/video/BV1Kf4y1U7iJ)
