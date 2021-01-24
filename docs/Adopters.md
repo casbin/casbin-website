@@ -22,6 +22,7 @@ Name | Description | Model | Policy
 [IRIS Community](https://github.com/irisnet/iris-community) | Website for IRIS Community Activities. | [.conf](https://github.com/irisnet/iris-community/blob/master/authz/authz_model.conf) | [.csv](https://github.com/irisnet/iris-community/blob/master/authz/authz_policy.csv)
 [Metadata DB](https://github.com/Bnei-Baruch/mdb) | BB archive metadata database. | [.conf](https://github.com/Bnei-Baruch/mdb/blob/master/data/permissions_model.conf) | [.csv](https://github.com/Bnei-Baruch/mdb/blob/master/data/permissions_policy.csv)
 [Qilin API](https://github.com/ProtocolONE/qilin.api) | ProtocolONE's licenses managemen tool for game content. | [Code](https://github.com/ProtocolONE/rbac/blob/master/model.go) | [.csv](https://github.com/ProtocolONE/rbac/tree/master/conf)
+[Devtron Labs](https://github.com/devtron-labs/devtron) | Software Delivery Workflow For Kubernetes. | [.conf](https://github.com/devtron-labs/devtron/blob/main/auth_model.conf) | [Xorm](https://github.com/devtron-labs/devtron/blob/main/internal/casbin/Adapter.go)
 
 <!--Java-->
 Name | Description | Model | Policy
