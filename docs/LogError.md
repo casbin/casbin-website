@@ -15,6 +15,7 @@ The logging is not enabled by default. You can toggle it via ``Enforcer.EnableLo
 
 :::note  
 We already support logging the model, enforce request, role, policy in Golang. You can define your own log for logging Casbin.
+If you are using Python, pycasbin leverages the default Python logging mechanism. The pycasbin package makes a call to logging.getLogger() to set the logger. No special logging configuration is needed other than initializing the logger in the parent application. If no logging is intitilized within the parent application you will not see any log messages from pycasbin. 
 :::
 
 ### Use different logger for different enforcer
