@@ -1602,6 +1602,21 @@ updated, err := e.UpdatePolicy([]string{"eve", "data3", "read"}, []string{"eve",
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
+### `UpdatePolicies()`
+
+UpdatePolicies updates all old policies to new policies.
+
+For example:
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
+```go
+updated, err := e.UpdatePolicies([][]string{{"eve", "data3", "read"}, {"jack", "data3", "read"}}, [][]string{{"eve", "data3", "write"}, {"jack", "data3", "write"}})
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
 ### `AddFunction()`
 
 AddFunction adds a customized function.
