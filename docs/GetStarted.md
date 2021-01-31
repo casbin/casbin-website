@@ -220,6 +220,11 @@ if ok == true {
 } else {
     // deny the request, show an error
 }
+
+// You could use BatchEnforce() to enforce some requests in batches.
+// This method returns a bool slice, and this slice's index corresponds to the row index of the two-dimensional array.
+// e.g. results[0] is the result of {"alice", "data1", "read"}
+results, err := e.BatchEnforce([][]interface{}{{"alice", "data1", "read"}, {"bob", "data2", "write"}, {"jack", "data3", "read"}})
 ```
 
 <!--Java-->
