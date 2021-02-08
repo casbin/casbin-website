@@ -45,6 +45,8 @@ This is another longer-version paper published in Journal of Software. The citat
 - [Modeling Authorization with PERM in Casbin](https://vicarie.in/posts/generalized-authz.html)
 - [Designing a Flexible Permissions System with Casbin](https://medium.com/silo-blog/designing-a-flexible-permissions-system-with-casbin-f5d97fef17b8)
 - [Access control with PERM and Casbin (in Persian)](https://vrgl.ir/npwoy)
+- [RBAC? ABAC? .. PERM! New Way of Authorization for Cloud-Based Web Services and Apps (in Russian)](https://habr.com/ru/post/539778/)
+- [Practice & Examples of Flexible Authorization Using Casbin & PERM (in Russian)](https://habr.com/ru/post/540454/)
 - [Permission management with Casbin (in Chinese)](http://www.cnblogs.com/wang_yb/archive/2018/11/20/9987397.html)
 - [Analysis of Casbin (in Chinese)](https://www.cnblogs.com/xiaohunshi/p/10372881.html)
 - [Design of System Permissions (in Chinese)](https://github.com/xizhibei/blog/issues/101)
