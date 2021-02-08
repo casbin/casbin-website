@@ -90,6 +90,12 @@ module.exports = [
     pinned: true,
   },
   {
+    caption: 'Elastic',
+    image: '/img/users/elastic.svg',
+    infoLink: 'https://www.elastic.co/guide/en/cloud-on-k8s/master/k8s-dependencies.html',
+    pinned: true,
+  },
+  {
     caption: 'OVO',
     image: '/img/users/ovo.png',
     infoLink: 'https://ovo.id',
