@@ -36,7 +36,6 @@ Adapter | Type | Author | AutoSave | Description
 [ArangoDB Adapter](https://github.com/adamwasila/arangodb-adapter) | NoSQL | [@adamwasila](https://github.com/adamwasila) | ✅ | For [ArangoDB](https://www.arangodb.com/)
 [Amazon S3 Adapter](https://github.com/Soluto/casbin-minio-adapter) | Cloud | [Soluto](https://github.com/Soluto) | ❌ | For [Minio](https://github.com/minio/minio) and [Amazon S3](https://aws.amazon.com/s3/)
 [Azure Cosmos DB Adapter](https://github.com/spacycoder/cosmos-casbin-adapter) | Cloud | [@spacycoder](https://github.com/spacycoder) | ✅ | For [Microsoft Azure Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/introduction)
-[GCP Datastore Adapter](https://github.com/livingpackets/datastore-adapter) | Cloud | [LivingPackets](https://github.com/livingpackets) | ❌ | For [Google Cloud Platform Datastore](https://cloud.google.com/datastore/)
 [GCP Firestore Adapter](https://github.com/reedom/casbin-firestore-adapter) | Cloud | [@reedom](https://github.com/reedom) | ❌ | For [Google Cloud Platform Firestore](https://cloud.google.com/firestore/)
 [Consul Adapter](https://github.com/ankitm123/consul-adapter) | KV store | [@ankitm123](https://github.com/ankitm123) | ❌ | For [HashiCorp Consul](https://www.consul.io/)
 [Redis Adapter](https://github.com/casbin/redis-adapter) | KV store | Casbin | ❌ | For [Redis](https://redis.io/)

@@ -16,7 +16,6 @@ Watcher | Type | Author | Description
 [NATS Watcher](https://github.com/Soluto/casbin-nats-watcher) | Messaging system | [Soluto](https://github.com/Soluto) | Watcher for [NATS](https://nats.io/)
 [ZooKeeper Watcher](https://github.com/grepsr/casbin-zk-watcher) | KV store | [Grepsr](https://github.com/grepsr) | Watcher for [Apache ZooKeeper](https://zookeeper.apache.org/)
 [Redis Watcher](https://github.com/billcobbler/casbin-redis-watcher) | KV store | [@billcobbler](https://github.com/billcobbler) | Watcher for [Redis](http://redis.io/)
-[GCP Pub/Sub Watcher](https://github.com/livingpackets/cloudpubsub-watcher) | Messaging system | [LivingPackets](https://github.com/livingpackets) | Watcher for [Google Cloud Platform PUB/SUB](https://cloud.google.com/pubsub/)
 [NATS, RabbitMQ, GCP Pub/Sub, AWS SNS & SQS, Kafka, InMemory](https://github.com/rusenask/casbin-go-cloud-watcher) | Messaging System | [rusenask](https://github.com/rusenask/) | Watcher based on [Go Cloud Dev Kit](https://gocloud.dev/) that works with leading cloud providers and self-hosted infrastructure |
 
 <!--Java-->
@@ -29,7 +28,7 @@ Watcher | Type | Author | Description
 ----|------|----|----
 [Etcd Watcher](https://github.com/node-casbin/etcd-watcher) | KV store | Casbin | Watcher for [etcd](https://github.com/coreos/etcd)
 [Redis Watcher](https://github.com/node-casbin/redis-watcher) | KV store | Casbin | Watcher for [Redis](http://redis.io/)
-[Pub/Sub Watcher](https://github.com/node-casbin/pubsub-watcher) | Messaging system | [hjl](https://github.com/elaijuh) | Watcher for [Google Cloud Pub/Sub](https://cloud.google.com/pubsub/docs)
+[Pub/Sub Watcher](https://github.com/node-casbin/pubsub-watcher) | Messaging system | Casbin | Watcher for [Google Cloud Pub/Sub](https://cloud.google.com/pubsub/docs)
 [Postgres Watcher](https://github.com/mcollina/casbin-pg-watcher) | Database | [Matteo Collina](https://github.com/mcollina/) | Watcher for [PostgreSQL](https://www.postgresql.org/)
 
 <!--Python-->
