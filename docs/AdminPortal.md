@@ -3,7 +3,7 @@ id: admin-portal
 title: Admin Portal
 ---
 
-We provide a [web-based portal](https://github.com/casbin/web-ui) for model management and policy management:
+We provide a [web-based portal called Casdoor](https://github.com/casbin/casdoor) for model management and policy management:
 
 ![model editor](https://hsluoyz.github.io/casbin/ui_model_editor.png)
 
@@ -16,6 +16,7 @@ There are also 3rd-party admin portal projects that use Casbin as authorization 
 <!--Go-->
 Project | Author | Frontend | Backend | Description
 ----|----|----|----|----
+[Casdoor](https://github.com/casbin/casdoor) | Casbin | React + Ant Design | Beego | Based on Beego + XORM + React
 [gin-vue-admin](https://github.com/piexlmax/gin-vue-admin) | [@piexlmax](https://github.com/piexlmax) | Vue + Element UI | Gin | Based on Gin + GORM + Vue
 [gin-admin](https://github.com/LyricTian/gin-admin) | [@LyricTian](https://github.com/LyricTian) | React + Ant Design | Gin | RBAC scaffolding based on Gin + GORM + Casbin + Ant Design React
 [go-admin](https://github.com/hequan2017/go-admin) | [@hequan2017](https://github.com/hequan2017) | None | Gin | Go RESTful API gateway based on Gin + GORM + JWT + RBAC (Casbin)
@@ -30,7 +31,7 @@ Project | Author | Frontend | Backend | Description
 <!--Python-->
 Project | Author | Frontend | Backend | Description
 ----|----|----|----|----
-[Web UI](https://github.com/casbin/web-ui) | Casbin | Bootstrap | Django | The Web UI for Casbin
+[openstack-policy-editor](https://github.com/casbin/openstack-policy-editor) | Casbin | Bootstrap | Django | The Web UI for Casbin
 
 <!--PHP-->
 Project | Author | Frontend | Backend | Description
