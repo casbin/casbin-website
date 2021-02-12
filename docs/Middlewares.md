@@ -24,17 +24,17 @@ Name | Description
 [gqlgen](https://gqlgen.com/) | Go library for building GraphQL servers without any fuss, via plugin: [gqlgen_casbin_RBAC_example](https://github.com/WenyXu/gqlgen_casbin_RBAC_example)
 [Macaron](https://github.com/go-macaron/macaron) | A high productive and modular web framework in Go, via plugin: [authz](https://github.com/go-macaron/authz)
 [DotWeb](https://github.com/devfeel/dotweb) | Simple and easy go web micro framework, via plugin: [authz](https://github.com/devfeel/middleware/tree/master/authz)
-[Tango](https://github.com/lunny/tango) | Micro & pluggable web framework for Go, via plugin: [authz](https://github.com/tango-contrib/authz)
+[Tango](https://github.com/lunny/tango) | Micro & pluggable web framework for Go, via plugin: [authz](https://gitea.com/tango/authz)
 [Baa](https://github.com/go-baa/baa) | An express Go web framework with routing, middleware, dependency injection and http context, via plugin: [authz](https://github.com/baa-middleware/authz)
 
 <!--Java-->
 Name | Description
 ----|----
-[Spring Boot](https://projects.spring.io/spring-boot/) | Makes it easy to create Spring-powered applications and services, via plugin: [casbin-spring-boot-starter](https://github.com/jcasbin/casbin-spring-boot-starter) or [jcasbin-springboot-plugin](https://github.com/jcasbin/jcasbin-springboot-plugin) or [Spring's Method Security RBAC Demo](https://github.com/jveverka/java-11-examples/tree/master/spring/spring-jcasbin)
+[Spring Boot](https://projects.spring.io/spring-boot/) | Makes it easy to create Spring-powered applications and services, via plugin: [casbin-spring-boot-starter](https://github.com/jcasbin/casbin-spring-boot-starter) or [jcasbin-springboot-plugin](https://github.com/jcasbin/jcasbin-springboot-plugin) or [Simple SpringBoot security demo with jCasbin](https://github.com/jveverka/spring-examples/tree/master/spring-jcasbin)
 [Apache Shiro](https://shiro.apache.org/) | A powerful and easy-to-use Java security framework that performs authentication, authorization, cryptography, and session management, via plugin: [shiro-casbin](https://github.com/jcasbin/shiro-casbin) or [shiro-jcasbin-spring-boot-starter](https://github.com/mapleafgo/shiro-jcasbin-spring-boot-starter)
 [Vert.x](https://vertx.io/) | A tool-kit for building reactive applications on the JVM, via plugin: [vertx-auth-jcasbin](https://github.com/vert-x3/vertx-auth/pull/215)
-[JFinal](http://www.jfinal.com/) | A simple, light, rapid, independent and extensible Java WEB + ORM framework, via plugin: [jcasbin-jfinal-plugin](https://github.com/jcasbin/jcasbin-jfinal-plugin)
-[Nutz](https://nutzam.com/) | Web framework (MVC/IOC/AOP/DAO/JSON) for all Java developers, via plugin: [jcasbin-nutz-plugin](https://github.com/jcasbin/jcasbin-nutz-plugin)
+[JFinal](http://www.jfinal.com/) | A simple, light, rapid, independent and extensible Java WEB + ORM framework, via plugin: [jfinal-authz](https://github.com/jcasbin/jfinal-authz)
+[Nutz](https://nutzam.com/) | Web framework (MVC/IOC/AOP/DAO/JSON) for all Java developers, via plugin: [nutz-authz](https://github.com/jcasbin/nutz-authz)
 [mangoo I/O](https://github.com/svenkubiak/mangooio) | An intuitive, lightweight, high performance full stack Java web framework, via built-in plugin: [AuthorizationService.java](https://github.com/svenkubiak/mangooio/blob/e8c647a3f7c427bce27377025bec074f6d767f50/mangooio-core/src/main/java/io/mangoo/services/AuthorizationService.java)
 
 <!--Node.js-->
@@ -52,9 +52,8 @@ Name | Description
 <!--PHP-->
 Name | Description
 ----|----
-[Laravel](https://laravel.com/) | The PHP framework for web artisans, via plugin: [laravel-casbin](https://github.com/php-casbin/laravel-casbin)
-[Laravel](https://laravel.com/) | An authorization library for the laravel framework, via plugin: [Laravel Authorization](https://github.com/php-casbin/laravel-authz)
-[Yii PHP Framework](https://www.yiiframework.com/) | A fast, secure, and efficient PHP framework, via plugin: [yii-casbin](https://github.com/php-casbin/yii-casbin)
+[Laravel](https://laravel.com/) | The PHP framework for web artisans, via plugin: [laravel-authz](https://github.com/php-casbin/laravel-authz)
+[Yii PHP Framework](https://www.yiiframework.com/) | A fast, secure, and efficient PHP framework, via plugin: [yii-permission](https://github.com/php-casbin/yii-permission)
 [CakePHP](https://cakephp.org/) | Build fast, grow solid PHP Framework, via plugin: [cake-casbin](https://github.com/php-casbin/cake-casbin)
 [CodeIgniter4](https://codeigniter.com/) | Associate users with roles and permissions in CodeIgniter4 Web Framework, via plugin: [CodeIgniter Permission](https://github.com/php-casbin/codeigniter-permission)
 [ThinkPHP 5.1](http://www.thinkphp.cn/) | The ThinkPHP 5.1 framework, via plugin: [think-casbin](https://github.com/php-casbin/think-casbin)
@@ -66,7 +65,7 @@ Name | Description
 Name | Description
 ----|----
 [Django](https://www.djangoproject.com/) | A high-level Python Web framework, via plugin: [django-casbin](https://github.com/pycasbin/django-casbin)
-[Flask](http://flask.pocoo.org/) | A microframework for Python based on Werkzeug, Jinja 2 and good intentions, via plugin: [flask-casbin](https://github.com/pycasbin/flask-casbin) or [Flask-Casbin (3rd-party, but maybe more friendly)](https://github.com/daymien/Flask-Casbin) or [flask-casbin](https://github.com/ScienceLogic/flask-casbin)
+[Flask](http://flask.pocoo.org/) | A microframework for Python based on Werkzeug, Jinja 2 and good intentions, via plugin: [flask-authz](https://github.com/pycasbin/flask-authz) or [Flask-Casbin (3rd-party, but maybe more friendly)](https://github.com/daymien/Flask-Casbin)
 
 <!--.NET-->
 Name | Description
