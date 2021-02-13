@@ -1,4 +1,4 @@
-# [casbin.org](https://casbin.org/) [![Build Status](https://travis-ci.org/casbin/casbin-website.svg?branch=master)](https://travis-ci.org/casbin/casbin-website)
+# [casbin.org](https://casbin.org/) [![Build Status](https://travis-ci.com/casbin/casbin-website.svg?branch=master)](https://travis-ci.com/casbin/casbin-website)
 
 The site configuration and documentation powering Casbin's website: https://casbin.org
 
