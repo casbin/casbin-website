@@ -234,8 +234,8 @@ class Index extends React.Component {
       <div>
         <div className="announcement">
           <div className="announcement-inner">
-            <a style={{color: "white"}} href="https://github.com/casbin/casbin-forum" target="_blank">
-              💖 Want to build your own forum for free? See here!
+            <a style={{color: "white"}} href="https://github.com/casbin/casdoor" target="_blank">
+              💖 Also need authentication / Single-Sign-On (SSO)? See Casdoor!
             </a>
           </div>
         </div>
