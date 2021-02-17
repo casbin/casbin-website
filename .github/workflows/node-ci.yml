@@ -1,0 +1,51 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Node.js CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  deploy:
+
+    env:
+      GH_EMAIL: ${{ secrets.GH_EMAIL }}
+      GH_NAME: ${{ secrets.GH_NAME }}
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [ 12.x ]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - run: git config --global user.name "${GH_NAME}"
+      - run: git config --global user.email "${GH_EMAIL}"
+      - run: cd website && yarn install && yarn run write-translations && cd ..
+      - run: tree
+
+      - name: crowdin action
+        uses: crowdin/github-action@1.0.18
+        env:
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+        with:
+          upload_sources: true
+          download_translations: true
+          config: ./crowdin_gh.yaml
+
+      - run: echo "machine github.com login ${GH_NAME} password ${GH_TOKEN}" > ~/.netrc
+      - run: cd website && yarn install && GIT_USER="${GH_NAME}" yarn run publish-gh-pages
