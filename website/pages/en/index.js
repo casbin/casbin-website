@@ -94,6 +94,7 @@ class HomeSplash extends React.Component {
             <Button href="https://github.com/casbin/Casbin.NET">.NET (C#)</Button>
             <Button href="https://github.com/casbin4d/Casbin4D">Delphi</Button>
             <Button href="https://github.com/casbin/casbin-rs">Rust</Button>
+            <Button href="https://github.com/evrone/casbin-ruby">Ruby</Button>
             <Button href="https://github.com/casbin/lua-casbin">Lua</Button>
             <Button href="https://github.com/casbin/dart-casbin">Dart (Flutter)</Button>
             <Button href="https://github.com/casbin/casbin-ex">Elixir</Button>
@@ -234,7 +235,7 @@ class Index extends React.Component {
         <div className="announcement">
           <div className="announcement-inner">
             <a style={{color: "white"}} href="https://github.com/casbin/casdoor" target="_blank">
-              💖 Also need authentication / Single-Sign-On (SSO)? See Casdoor!
+              💖 Also Need Authentication / Single-Sign-On? Try Casdoor!
             </a>
           </div>
         </div>
