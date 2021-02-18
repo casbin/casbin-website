@@ -98,7 +98,6 @@ class HomeSplash extends React.Component {
             <Button href="https://github.com/casbin/dart-casbin">Dart (Flutter)</Button>
             <Button href="https://github.com/casbin/casbin-ex">Elixir</Button>
             <Button href="/en/editor"><translate>Try Editor</translate></Button>
-            <Button href="https://dashboard.casbin.org/"><translate>Try Dashboard</translate></Button>
           </PromoSection>
         </div>
       </SplashContainer>
