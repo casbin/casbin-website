@@ -38,6 +38,34 @@ let mut e = Enforce::new("examples/rbac_model.conf", "examples/rbac_policy.csv")
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
+### `Enforce()`
+
+Enforce decides whether a "subject" can access a "object" with the operation "action", input parameters are usually: (sub, obj, act).
+
+For example:
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
+```go
+ok, err := e.Enforce(request)
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+### `BatchEnforce()`
+
+BatchEnforce enforces each request and returns result in a bool array
+
+For example:
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
+```go
+boolArray, err := e.BatchEnforce(requests)
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
+
 ### `GetAllSubjects()`
 
 GetAllSubjects gets the list of subjects that show up in the current policy.
@@ -1685,4 +1713,47 @@ fn custom_function(key1: STring, key2: String) {
 e.add_function("keyMatchCustom", custom_function);
 ```
 
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+### `LoadFilteredPolicy()`
+
+LoadIncrementalFilteredPolicy append a filtered policy from file/database.
+
+For example:
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
+```go
+err := e.LoadIncrementalFilteredPolicy()
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+### `UpdateGroupingPolicy()`
+
+UpdateGroupingPolicy updates oldRule to newRulein `g` section
+
+For example:
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
+```go
+succeed, err : = e.UpdateGroupingPolicy([]string{"data3_admin", "data4_admin"}, []string{"admin", "data4_admin"})
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+### `UpdateNamedGroupingPolicy()`
+
+UpdateNamedGroupingPolicy updates oldRule named `ptype` to newRulein `g` section
+
+For example:
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
+```go
+succeed, err : = e.UpdateGroupingPolicy("g1",[]string{"data3_admin", "data4_admin"}, []string{"admin", "data4_admin"})
+```
 <!--END_DOCUSAURUS_CODE_TABS-->
