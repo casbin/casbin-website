@@ -52,6 +52,48 @@ ok, err := e.Enforce(request)
 ```
 <!--END_DOCUSAURUS_CODE_TABS-->
 
+### `EnforceWithMatcher()`
+
+EnforceWithMatcher use a custom matcher to decides whether a "subject" can access a "object" with the operation "action", input parameters are usually: (matcher, sub, obj, act), use model matcher by default when matcher is "".
+
+For example:
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
+```go
+ok, err := e.EnforceWithMatcher(matcher, request)
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+### `EnforceEx()`
+
+EnforceEx explain enforcement by informing matched rules.
+
+For example:
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
+```go
+ok, reason, err := e.EnforceEx(request)
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+### `EnforceExWithMatcher()`
+
+EnforceExWithMatcher use a custom matcher and explain enforcement by informing matched rules.
+
+For example:
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
+```go
+ok, reason, err := e.EnforceExWithMatcher(matcher, request)
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
+
 ### `BatchEnforce()`
 
 BatchEnforce enforces each request and returns result in a bool array
