@@ -23,3 +23,44 @@ Dispatcher | Type | Author | Description
 
 
 <!--END_DOCUSAURUS_CODE_TABS-->
+
+### SyncedEnforcer
+
+SyncedEnforcer wraps Enforcer and provides synchronized access. SyncedEnforcer can ensure the consistency of multiple Casbin instances in distributed situations.
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
+```go
+    // Must guarantee that the initial state of all instances is the same, 
+    e, _ := casbin.NewSyncedEnforcer("examples/basic_model.conf", "examples/basic_policy.csv")
+
+    // Need to provide the ID and URL of all nodes in the cluster. 
+    peers := make(map[uint64]string)
+    peers[1] = "127.0.0.1:8001"
+    peers[2] = "127.0.0.1:8002"
+    d := casbinraft.NewDispathcer(1, peers)
+
+    e.SetDispathcer(d)
+    e.EnableautoNotifyDispatcher(true)
+
+    go d.Start()
+
+    // Then you can continue to use the enforcer normally, and when the policy changes, dispathcer will automatically synchronize all clusters
+    e.AddPolicy("alice", "data2", "read") 
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+### DistributedEnforcer
+
+DistributedEnforcer wraps SyncedEnforcer for dispatcher.
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
+```go
+    e, _ := casbin.NewDistributedEnforcer("examples/basic_model.conf", "examples/basic_policy.csv")
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+
