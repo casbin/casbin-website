@@ -123,4 +123,10 @@ module.exports = [
     infoLink: "https://jdlt.co.uk",
     pinned: true,
   },
+  {
+    caption: "VuDecor",
+    image: "/img/users/jdlt.svg",
+    infoLink: "https://vudecor.com",
+    pinned: true,
+  }
 ];
