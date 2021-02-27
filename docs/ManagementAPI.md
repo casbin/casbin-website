@@ -1759,6 +1759,21 @@ e.add_function("keyMatchCustom", custom_function);
 
 ### `LoadFilteredPolicy()`
 
+LoadFilteredPolicy loads filtered policies from file/database.
+
+For example:
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
+```go
+err := e.LoadFilteredPolicy()
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+### `LoadIncrementalFilteredPolicy()`
+
 LoadIncrementalFilteredPolicy append a filtered policy from file/database.
 
 For example:
