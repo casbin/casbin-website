@@ -25,3 +25,5 @@ enforcer.LoadFilteredPolicy(filter)
 
 // The loaded policy now only contains the entries pertaining to "domain1".
 ```
+
+There's another method support subset loading feature: `LoadIncrementalFilteredPolicy`. `LoadIncrementalFilteredPolicy` is similar to LoadFilteredPolicy, but it does not clear previous loaded policy, only append.
