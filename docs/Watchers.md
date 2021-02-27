@@ -47,3 +47,16 @@ Watcher | Type | Author | Description
 ## WatcherEx
 
 In order to support incremental synchronization between multiple instances, we provide the `WatcherEx` interface. We hope it can notify other instances when the policy changes, but there is currently no implementation of `WatcherEx`. We recommend that you use dispatcher to achieve this. 
+
+Compared with `Watcher` interface, with implementing `WatcherEx` what kind of update action can be distinguished, etc `AddPolicy`, `RemovePolicy`, etc. 
+
+WatcherEx Apis:
+| api | description |
+| ---- | ---- |
+| SetUpdateCallback(func(string)) error | SetUpdateCallback sets the callback function that the watcher will call, when the policy in DB has been changed by other instances. A classic callback is Enforcer.LoadPolicy(). |
+| Update() error | Update calls the update callback of other instances to synchronize their policy. It is usually called after changing the policy in DB, like Enforcer.SavePolicy(), Enforcer.AddPolicy(), Enforcer.RemovePolicy(), etc. |
+| Close() | Close stops and releases the watcher, the callback function will not be called any more. |
+| UpdateForAddPolicy(params ...string) error | UpdateForAddPolicy calls the update callback of other instances to synchronize their policy. It is called after Enforcer.AddPolicy() |
+| UpdateForRemovePolicy(params ...string) error | UPdateForRemovePolicy calls the update callback of other instances to synchronize their policy. It is called after Enforcer.RemovePolicy() |
+| UpdateForRemoveFilteredPolicy(fieldIndex int, fieldValues ...string) error | UpdateForRemoveFilteredPolicy calls the update callback of other instances to synchronize their policy. It is called after Enforcer.RemoveFilteredNamedGroupingPolicy() |
+| UpdateForSavePolicy(model model.Model) error | UpdateForSavePolicy calls the update callback of other instances to synchronize their policy. It is called after Enforcer.RemoveFilteredNamedGroupingPolicy() |
