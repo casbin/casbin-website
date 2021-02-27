@@ -22,12 +22,17 @@ const languages = [
     tag: 'ko',
   },
   {
-    enabled: false,
+    enabled: true,
     name: 'Русский',
     tag: 'ru',
   },
   {
-    enabled: false,
+    enabled: true,
+    name: 'Français',
+    tag: 'fr',
+  },
+  {
+    enabled: true,
     name: '日本語',
     tag: 'ja',
   },
