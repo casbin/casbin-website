@@ -12,7 +12,8 @@
       "function",
       "rbac",
       "rbac-with-domains",
-      "abac"
+      "abac",
+      "priority-model"
     ],
     "Storage":[
       "model-storage",
