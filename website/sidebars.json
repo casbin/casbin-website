@@ -28,6 +28,7 @@
       "middlewares"
     ],
     "API": [
+      "api-tutorial",
       "management-api",
       "rbac-api"
     ],
