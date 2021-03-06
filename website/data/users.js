@@ -70,7 +70,7 @@ module.exports = [
     caption: "IBM",
     image: "/img/users/ibm.png",
     infoLink:
-      "https://loopback.io/doc/en/lb4/Loopback-component-authorization.html#enforcer-libraries",
+      "https://loopback.io/doc/en/lb4/migration-auth-access-control-example.html#using-casbin",
     pinned: true,
   },
   {
