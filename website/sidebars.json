@@ -12,6 +12,7 @@
       "function",
       "rbac",
       "rbac-with-domains",
+      "rbac-96",
       "abac",
       "priority-model"
     ],
