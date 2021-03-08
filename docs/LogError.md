@@ -48,6 +48,11 @@ Logger | Author | Description
 [Defatule logger (built-in)](https://github.com/casbin/casbin/blob/master/log/default_logger.go) | Casbin | The default logger using golang log.
 [Zap logger](https://github.com/casbin/zap-logger) | Casbin | Using [zap](https://github.com/uber-go/zap), provide json encoded log and you could customize more with your own zap-logger.
 
+<!--PHP-->
+Logger | Author | Description
+----|----|----
+[psr3-bridge logger](https://github.com/php-casbin/psr3-bridge) | Casbin | Provides a [PSR-3](https://www.php-fig.org/psr/psr-3/) compliant bridge.
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 #### How to write a logger
