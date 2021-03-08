@@ -82,8 +82,10 @@ Adapter | Type | Author | AutoSave | Description
 [File Adapter (built-in)](https://casbin.org/docs/en/adapters#file-adapter-built-in) | File | Casbin | ❌ | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files
 [Database Adapter](https://github.com/php-casbin/database-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, SQLite, Microsoft SQL Server are supported by [techone/database](https://github.com/techoner/database)
 [Zend Db Adapter](https://github.com/php-casbin/zend-db-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, SQLite, Oracle, IBM DB2, Microsoft SQL Server, Other PDO Driver are supported by [zend-db](https://docs.zendframework.com/zend-db/)
-[Doctrine DBAL Adapter(Recommend)](https://github.com/php-casbin/dbal-adapter) | ORM | Casbin | ✅ | Powerful PHP database abstraction layer ([DBAL](https://github.com/doctrine/dbal)) with many features for database schema introspection and management.
+[Doctrine DBAL Adapter (Recommend)](https://github.com/php-casbin/dbal-adapter) | ORM | Casbin | ✅ | Powerful PHP database abstraction layer ([DBAL](https://github.com/doctrine/dbal)) with many features for database schema introspection and management.
 [Medoo Adapter](https://github.com/php-casbin/medoo-adapter) | ORM | Casbin | ✅ | [Medoo](https://github.com/catfan/Medoo) is a lightweight PHP Database Framework to Accelerate Development, supports all SQL databases, including `MySQL`, `MSSQL`, `SQLite`, `MariaDB`, `PostgreSQL`, `Sybase`, `Oracle` and more.
+[Laminas-db Adapter](https://github.com/php-casbin/laminas-db-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, Oracle, IBM DB2, Microsoft Sql Server, PDO, etc. are supported by [laminas-db](https://github.com/laminas/laminas-db)
+[Zend-db Adapter](https://github.com/php-casbin/zend-db-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, Oracle, IBM DB2, Microsoft Sql Server, PDO, etc. are supported by [zend-db](https://github.com/zendframework/zend-db)
 [Redis Adapter](https://github.com/nsnake/CasbinAdapter-Redis-Adapter) | KV store | [@nsnake](https://github.com/nsnake) | ❌ | For [Redis](https://redis.io/)
 
 <!--Python-->

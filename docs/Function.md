@@ -27,6 +27,7 @@ keyMatch3 | a URL path like ``/alice_data/resource1`` | a URL path or a ``{}`` p
 keyMatch4 | a URL path like ``/alice_data/123/book/123`` | a URL path or a ``{}`` pattern like ``/alice_data/{id}/book/{id}`` |
 regexMatch | any string | a regular expression pattern | [keymatch_model.conf](https://github.com/casbin/casbin/blob/master/examples/keymatch_model.conf)/[keymatch_policy.csv](https://github.com/casbin/casbin/blob/master/examples/keymatch_policy.csv)
 ipMatch | an IP address like ``192.168.2.123`` | an IP address or a CIDR like ``192.168.2.0/24`` | [ipmatch_model.conf](https://github.com/casbin/casbin/blob/master/examples/ipmatch_model.conf)/[ipmatch_policy.csv](https://github.com/casbin/casbin/blob/master/examples/ipmatch_policy.csv)
+globMatch | a path-like path like ``/alice_data/resource1`` | a glob pattern like ``/alice_data/*`` | 
 
 See details for above functions at: https://github.com/casbin/casbin/blob/master/util/builtin_operators_test.go
 
