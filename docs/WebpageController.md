@@ -10,6 +10,7 @@ title: Frontend Usage
 
 ```
 npm install casbin.js
+npm install casbin
 ```
 or
 ```
@@ -17,10 +18,9 @@ yarn add casbin.js
 ```
 
 ## Quick Start
-You can use `manual` mode in your frontend application, and set the permission whenever you wish:
+You can use `manual` mode in your frontend application, and set the permission whenever you wish.
 ```Javascript
 const casbinjs = require("casbin.js");
-
 // Set the user's permission:
 // He/She can read `data1` and `data2` objects and can write `data1` object
 const permission = {
@@ -30,15 +30,39 @@ const permission = {
 
 // Run casbin.js in manual mode, which requires you to set the permission manually.
 const authorizer = new casbinjs.Authorizer("manual");
-
-authorizer.setPermission(permission);
-console.log(authorizer.can("read", "data1"));  // True
-console.log(authorizer.cannot("write", "data2"));  // True
 ```
 
+now we got an authorizer `authorizer`. We can get permission rules from it by using the API `authorizer.can()` and `authorizer.cannot()`. The return values of these 2 APIs are JavaScript Promises ([details here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)), so we should use the `then()` method of the return value like this:
+
+```javascript
+result = authorizer.can("write", "data1");
+result.then((success, failed) => {
+    if (success) {
+        console.log("you can write data1");
+    } else {
+        console.log("you cannot write data1");
+    }
+});
+// output: you can write data1
+```
+
+and `cannot()` is used in the same way:
+
+```javascript
+result = authorizer.cannot("read", "data2");
+result.then((success, failed) => {
+    if (success) {
+        console.log("you cannot read data2");
+    } else {
+        console.log("you can read data2");
+    }
+});
+// output: you can read data2
+```
+
+in the code above, variable `success` in parameters means the request get the result without throwing an error, and doesn't mean that the permission rule is `true`. `failed` is also unrelated to the permission rules. It only makes sense when something goes wrong in the process of the request.
+
 You can refer to our [React example](https://github.com/casbin-js/examples) to see a practical usage of Casbin.js
-
-
 
 <!-- #### Permission Object
 Casbin.js will accept a JSON object to manipulate the correspoding permission of a visitor. For example:
@@ -72,9 +96,12 @@ const authorizer = new casbinjs.Authorizer(
 authorizer.setUser("Tom");
 
 // Evaluate the permission
-if authorizer.can("read", "data1") {
-    // Some frontend procedure ...
-}
+result = authorizer.can("read", "data1");
+result.then((success, failed) => {
+    if (success) {
+        // Some frontend procedure ...
+    }
+});
 ```
 
 Correspondingly, you need to expose an interface (e.g. a RestAPI) to generate the permission object and pass it to the frontend. In your API controller, call `CasbinJsGetUserPermission` to construct the permission object. Here is an example in Beego:
