@@ -53,13 +53,16 @@ Name | Description
 Name | Description
 ----|----
 [Laravel](https://laravel.com/) | The PHP framework for web artisans, via plugin: [laravel-authz](https://github.com/php-casbin/laravel-authz)
-[Yii PHP Framework](https://www.yiiframework.com/) | A fast, secure, and efficient PHP framework, via plugin: [yii-permission](https://github.com/php-casbin/yii-permission)
-[CakePHP](https://cakephp.org/) | Build fast, grow solid PHP Framework, via plugin: [cake-casbin](https://github.com/php-casbin/cake-casbin)
-[CodeIgniter4](https://codeigniter.com/) | Associate users with roles and permissions in CodeIgniter4 Web Framework, via plugin: [CodeIgniter Permission](https://github.com/php-casbin/codeigniter-permission)
+[Yii PHP Framework](https://www.yiiframework.com/) | A fast, secure, and efficient PHP framework, via plugin: [yii-permission](https://github.com/php-casbin/yii-permission) or [yii-casbin](https://github.com/php-casbin/yii-casbin)
+[CakePHP](https://cakephp.org/) | Build fast, grow solid PHP Framework, via plugin: [cake-permission](https://github.com/php-casbin/cake-permission)
+[CodeIgniter](https://codeigniter.com/) | Associate users with roles and permissions in CodeIgniter4 Web Framework, via plugin: [CodeIgniter Permission](https://github.com/php-casbin/codeigniter-permission)
 [ThinkPHP 5.1](http://www.thinkphp.cn/) | The ThinkPHP 5.1 framework, via plugin: [think-casbin](https://github.com/php-casbin/think-casbin)
 [ThinkPHP 6.0](http://www.thinkphp.cn/) | The ThinkPHP 6.0 framework, via plugin: [think-authz](https://github.com/php-casbin/think-authz)
-[Symfony](https://symfony.com/) | The Symfony PHP framework, via plugin: [symfony-casbin](https://github.com/videni/symfony-casbin)
-[Hyperf](https://github.com/hyperf/hyperf) | A coroutine framework that focuses on hyperspeed and flexibility, via plugin: [hyperf-casbin](https://github.com/donjan-deng/hyperf-casbin)
+[Symfony](https://symfony.com/) | The Symfony PHP framework, via plugin: [symfony-permission](https://github.com/php-casbin/symfony-permission) or [symfony-casbin](https://github.com/videni/symfony-casbin)
+[Hyperf](https://github.com/hyperf/hyperf) | A coroutine framework that focuses on hyperspeed and flexibility, via plugin: [hyperf-permission](https://github.com/php-casbin/hyperf-permission) or [hyperf-casbin](https://github.com/donjan-deng/hyperf-casbin)
+[EasySwoole](https://www.easyswoole.com/) | A distributed, persistent memory PHP framework based on the Swoole extension, via plugin: [easyswoole-permission](https://github.com/php-casbin/easyswoole-permission) or [easyswoole-hyperfOrm-permission](https://github.com/ice-leng/easyswoole-hyperfOrm-permission)
+[Slim](https://www.slimframework.com/) | A PHP micro framework that helps you quickly write simple yet powerful web applications and APIs, via plugin: [casbin-with-slim](https://github.com/php-casbin/casbin-with-slim)
+[Phalcon](https://phalcon.io/) | A full-stack PHP framework delivered as a C-extension, via plugin: [phalcon-permission](https://github.com/php-casbin/phalcon-permission)
 
 <!--Python-->
 Name | Description
