@@ -33,6 +33,7 @@ const siteConfig = {
     {doc: 'management-api', label: 'API'},
     {page: 'editor', label: 'Editor'},
     {href: 'https://plugins.jetbrains.com/plugin/14809-casbin', label: 'JetBrains Plugin'},
+    {href: 'https://github.com/casbin/casbin-vscode-plugin', label: 'VSCode Plugin'},
     {href: 'https://door.casbin.com', label: "Casdoor"},
     {href: 'https://forum.casbin.com', label: "Forum"},
     {href: 'https://oa.casbin.com', label: "OA"},
