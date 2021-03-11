@@ -3,7 +3,7 @@ id: tutorials
 title: Tutorials
 ---
 
-Some tutorials are for the Casbin's model and work for all Casbin implementations in different languages. Some other tutorials are language-specific.
+Before reading, please note that some tutorials are for the Casbin's model and work for all Casbin implementations in different languages. Some other tutorials are language-specific.
 
 ### Our Papers
 
@@ -22,7 +22,7 @@ This paper digs deeply into the design details about Casbin. Please cite the fol
 
 - [Access Control Policy Specification Language Based on Metamodel (in Chinese)](http://www.jos.org.cn/1000-9825/5624.htm)
 
-This is another longer-version paper published in Journal of Software. The citation for different formats (Refworks, EndNote, etc.) can be found at: https://kns.cnki.net/kcms/detail/Detail.aspx?dbname=CJFDLAST2020&filename=RJXB202002012&v=
+This is another longer-version paper published in Journal of Software. The citation for different formats (Refworks, EndNote, etc.) can be found at: [(another version) Access Control Policy Specification Language Based on Metamodel (in Chinese)](https://kns.cnki.net/kcms/detail/Detail.aspx?dbname=CJFDLAST2020&filename=RJXB202002012&v=)
 
 ### Videos
 

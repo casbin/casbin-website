@@ -68,9 +68,13 @@ Casbin4D comes in a package (currently for Delphi 10.3 Rio) and you can install 
 
 ## New a Casbin enforcer
 
-The new a Casbin enforcer must provide a [Model](supported-models) and a [Adapter](adapters).
+Casbin uses configuration files to set the access control model.
 
-Casbin has a [FileAdapter](adapters#file-adapter-built-in), see [Adapter](adapters) from more Adapter.
+It has two configuration files, `model.conf` and `policy.csv`. Among them, `model.conf` stores our access model, and `policy.csv` stores our specific user permission configuration. The use of Casbin is very refined. Basically, we just need one main structure: **enforcer**. When constructing this structure, `model.conf` and `policy.csv` will be loaded.
+
+In another word, to new a Casbin enforcer, you must provide a [Model](supported-models) and an [Adapter](adapters).
+
+Casbin has a [FileAdapter](adapters#file-adapter-built-in), see [Adapter](adapters) from more Adapter. 
 
 - Use the Model file and default [FileAdapter](adapters#file-adapter-built-in): 
 
