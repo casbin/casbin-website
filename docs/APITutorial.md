@@ -58,19 +58,24 @@ This code loads the access control model and policies from local files. Function
 
 Code `ok, err := enforcer.Enforce("alice", "data1", "read")`  is to confirm access permissions. If alice can access the data1 with the operation read, the returned value `ok` will be `true`, otherwise it'll be `false`. In this example, the value of `ok` is `true`. 
 
-Of course, Casbin prepared a lot of APIs like this. Those APIs added some extra functions on the basic one. They are:
+Sometimes you may wonder which policy allowed the request, so we prepared the function `EnforceEx()`. You can use it like this: 
+
+```go
+ok, reason, err := enforcer.EnforceEx("amber", "data1", "read")
+fmt.Println(ok, reason) // true [admin data1 read]
+```
+
+function `EnforceEx()` will return the exact policy string in the return value `reason`. In this example, `amber` is a role of `admin`, so policy `p, admin, data1, read` made this request `true`. The out put of this code is in the comment.
+
+Casbin prepared a lot of APIs like this. Those APIs added some extra functions on the basic one. They are:
 
 - `ok, err := enforcer.EnforceWithMatcher(matcher, request)`
 
   With a matcher.
 
-- `ok, reason, err := enforcer.EnforceEx(request)` 
-
-  Return the matched rule to the variable  `reason`.
-
 - `ok, reason, err := enforcer.EnforceExWithMatcher(matcher, request)` 
 
-  A combination of the above.
+  A combination of `EnforceWithMatcher()` and `EnforceEx()`.
 
 - `boolArray, err := enforcer.BatchEnforce(requests)` 
 
