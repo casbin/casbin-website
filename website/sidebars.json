@@ -31,7 +31,8 @@
     "API": [
       "api-tutorial",
       "management-api",
-      "rbac-api"
+      "rbac-api",
+      "rolemanager-api"
     ],
     "Advanced Usage": [
       "multi-threading",

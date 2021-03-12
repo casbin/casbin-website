@@ -47,3 +47,7 @@ Role manager | Author | Description
 For developers: all role managers must implement the [RoleManager](https://github.com/casbin/pycasbin/blob/master/casbin/rbac/role_manager.py) interface. [Default Role Manager](https://github.com/casbin/pycasbin/blob/master/casbin/rbac/default_role_manager/role_manager.py) can be used as a reference implementation.
 
 <!--END_DOCUSAURUS_CODE_TABS-->
+
+## API
+
+See [API](/docs/en/rolemanager-api) section for details.
