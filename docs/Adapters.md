@@ -74,6 +74,7 @@ Adapter | Type | Author | AutoSave | Description
 [DynamoDB Adapter](https://github.com/fospitia/casbin-dynamodb-adapter) | NoSQL | [@fospitia](https://github.com/fospitia) | ✅ | For [Amazon DynamoDB](https://aws.amazon.com/dynamodb/)
 [Node PostgreSQL Native Adapter](https://github.com/touchifyapp/casbin-pg-adapter) | SQL | [@touchifyapp](https://github.com/touchifyapp) | ✅ | PostgreSQL adapter with advanced policy subset loading support and improved performances built with [node-postgres](https://node-postgres.com/).
 [Couchbase Adapter](https://github.com/MarkMYoung/casbin-couchbase-adapter) | NoSQL | [@MarkMYoung](https://github.com/MarkMYoung) | ✅ | For [Couchbase](https://www.couchbase.com/)
+[Redis Adapter](https://github.com/node-casbin/redis-adapter) | KV store | Casbin | ❌ | For [Redis](https://redis.io/)
 [Redis Adapter](https://github.com/NandaKishorJeripothula/node-casbin-redis-adapter) | KV store | [@NandaKishorJeripothula](https://github.com/NandaKishorJeripothula) | ❌ | For [Redis](https://redis.io/)
 
 <!--PHP-->
