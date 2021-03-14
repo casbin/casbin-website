@@ -42,8 +42,11 @@
       "admin-portal",
       "service",
       "log-error",
-      "online-editor",
       "frontend"
+    ],
+    "Editor": [
+      "online-editor",
+      "ide-plugins"
     ],
     "More":[
       "adopters",
