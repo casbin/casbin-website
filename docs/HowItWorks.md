@@ -5,6 +5,41 @@ title: How it Works
 
 In Casbin, an access control model is abstracted into a CONF file based on the **PERM metamodel (Policy, Effect, Request, Matchers)**. So switching or upgrading the authorization mechanism for a project is just as simple as modifying a configuration. You can customize your own access control model by combining the available models. For example, you can get RBAC roles and ABAC attributes together inside one model and share one set of policy rules.
 
+The PERM model is composed of four foundations (Policy, Effect, Request, Matchers) describing the relationship between resources and users.
+
+### Request
+Define the request parameters. A basic request is a tuple object, at least including subject (accessed entity), object (accessed resource) and action (access method)
+
+For instance, a request definition may look like this:
+`r={sub,obj,act}`
+
+It actually defines the parameter name and order which we should provide for access control matching function.
+
+### Policy
+Define the model of the access strategy. In fact, it is to define the name and order of the fields in the Policy rule document.
+
+For instace:
+`p={sub, obj, act}` or `p={sub, obj, act, eft}`
+
+Note: If eft (policy result) is not defined, then the result field in the policy file will not be read, and the matching policy result will be allowed by default.
+
+### Matcher
+Matching rules of Request and Policy.
+
+For example: `m = r.sub == p.sub && r.act == p.act && r.obj == p.obj`
+This simple and common matching rule means that if the requested parameters (entities, resources, and methods) are equal, that is, if they can be found in the policy, then the policy result (`p.eft`) is returned. The result of the strategy will be saved in `p.eft`.
+
+### Effect
+It can be understood as a model in which a logical combination judgment is performed again on the matching results of Matchers.
+
+For example: `e = some(where(p.eft == allow))`
+
+This sentence means that if the matching strategy result p.eft has the result of (some) allow, then the final result is true
+
+Let's look at another example:
+`e = some(where (p.eft == allow)) && !some(where (p.eft == deny))`
+The logical meaning of this example combination is: if there is a strategy that matches the result of allow and no strategy that matches the result of deny, the result is true. In other words, it is true when the matching strategies are all allow, if there is any deny, both are false (more simply, when allow and deny exist at the same time, deny takes precedence)
+
 The most basic and simplest model in Casbin is ACL. ACL's model CONF is:
 
 ```ini
