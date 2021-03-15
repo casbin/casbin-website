@@ -9,22 +9,12 @@ In this document, we'll compare Casbin RBAC with [RBAC96](https://profsandhu.com
 
 Casbin RBAC supports almost all the features of RBAC96, and added new features above that.
 
-- RBAC0: fully supported
-
-  RBAC0 is the basic version of RBAC96. It clarified the relationship between Users, Roles and Permissions.
-
-- RBAC1: fully supported
-
-  RBAC1 added role hierarchies on RBAC0, meaning if `alice` has `role1`, `role1` has `role2`, then `alice` will also have `role2` and inherit its permissions.
-
-- RBAC2: mutually exclusive handling is supported ([like this](https://casbin.org/docs/en/syntax-for-models#policy-effect)), but quantitative limits are not
-
-  RBAC2 added constrains on RBAC0. So RBAC2 can handle mutually exclusions found in policies.
-
-- RBAC3: mutually exclusive handling is supported ([like this](https://casbin.org/docs/en/syntax-for-models#policy-effect)), but quantitative limits are not
-
-  RBAC3 is a combination of RBAC1 and RBAC2. RBAC3 supports role hierarchies and constrains in RBAC1 and RBAC2.
-
+RBAC version | Support Level | Description
+--- | --- | ---
+RBAC0| fully supported |RBAC0 is the basic version of RBAC96. It clarified the relationship between Users, Roles and Permissions.
+RBAC1| fully supported |RBAC1 added role hierarchies on RBAC0, meaning if `alice` has `role1`, `role1` has `role2`, then `alice` will also have `role2` and inherit its permissions.
+RBAC2|  mutually exclusive handling is supported ([like this](https://casbin.org/docs/en/syntax-for-models#policy-effect)), but quantitative limits are not|RBAC2 added constrains on RBAC0. So RBAC2 can handle mutually exclusions found in policies.
+RBAC3| mutually exclusive handling is supported ([like this](https://casbin.org/docs/en/syntax-for-models#policy-effect)), but quantitative limits are not| RBAC3 is a combination of RBAC1 and RBAC2. RBAC3 supports role hierarchies and constrains in RBAC1 and RBAC2.
 ## Difference between Casbin RBAC and RBAC96
 
 1. In Casbin, the distinction between User and Role is not clear
