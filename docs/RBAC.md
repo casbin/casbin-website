@@ -115,6 +115,8 @@ register `keyMatch2` to model:
 m = g(r.sub, p.sub, r.dom) && keyMatch2(r.dom, p.dom) && r.obj == p.obj && r.act == p.act
 ```
 
+If you don't understand what `g(r.sub, p.sub, r.dom)` means, please read [this](https://casbin.org/docs/en/rbac-with-domains). In short, `g(r.sub, p.sub, r.dom)` will check whether the user `r.sub` has a role `p.sub` in the domain `r.dom`. So this is how the matcher work.
+
 You can see the full example [here](https://github.com/casbin/casbin/blob/dbdb6cbe2e7a80863e4951f9ff36da07fef01b75/model_test.go#L278-L307).
 
 ## Role manager
