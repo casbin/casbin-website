@@ -945,7 +945,7 @@ $removed = $e->removePolicy("alice", "data1", "read");
 
 <!--.NET-->
 ```csharp
-var removed = e.RemovePolicyAsync("alice", "data1", "read");
+var removed = e.RemovePolicy("alice", "data1", "read");
 or
 var removed = await e.RemovePolicyAsync("alice", "data1", "read");
 ```
