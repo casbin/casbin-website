@@ -42,7 +42,7 @@ This is another longer-version paper published in Journal of Software. The citat
 
 ### PERM Meta-Model (Policy, Effect, Request, Matchers)
 
-- [Modeling Authorization with PERM in Casbin](https://vicarie.in/posts/generalized-authz.html)
+- [Modeling Authorization with PERM in Casbin](https://www.narendraj9.dev/posts/generalized-authz.html)
 - [Designing a Flexible Permissions System with Casbin](https://medium.com/silo-blog/designing-a-flexible-permissions-system-with-casbin-f5d97fef17b8)
 - [Access control with PERM and Casbin (in Persian)](https://vrgl.ir/npwoy)
 - [RBAC? ABAC? .. PERM! New Way of Authorization for Cloud-Based Web Services and Apps (in Russian)](https://habr.com/ru/post/539778/)
