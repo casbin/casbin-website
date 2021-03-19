@@ -37,6 +37,7 @@ Adapter | Type | Author | AutoSave | Description
 [Amazon S3 Adapter](https://github.com/Soluto/casbin-minio-adapter) | Cloud | [Soluto](https://github.com/Soluto) | ❌ | For [Minio](https://github.com/minio/minio) and [Amazon S3](https://aws.amazon.com/s3/)
 [Azure Cosmos DB Adapter](https://github.com/spacycoder/cosmos-casbin-adapter) | Cloud | [@spacycoder](https://github.com/spacycoder) | ✅ | For [Microsoft Azure Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/introduction)
 [GCP Firestore Adapter](https://github.com/reedom/casbin-firestore-adapter) | Cloud | [@reedom](https://github.com/reedom) | ❌ | For [Google Cloud Platform Firestore](https://cloud.google.com/firestore/)
+[GCP Cloud Storage Adapter](https://github.com/qurami/casbin-cloud-storage-adapter) | Cloud | [qurami](https://github.com/qurami) | ❌ | For [Google Cloud Platform Cloud Storage](https://cloud.google.com/storage/)
 [Consul Adapter](https://github.com/ankitm123/consul-adapter) | KV store | [@ankitm123](https://github.com/ankitm123) | ❌ | For [HashiCorp Consul](https://www.consul.io/)
 [Redis Adapter](https://github.com/casbin/redis-adapter) | KV store | Casbin | ❌ | For [Redis](https://redis.io/)
 [Etcd Adapter](https://github.com/sebastianliu/etcd-adapter) | KV store | [@sebastianliu](https://github.com/sebastianliu) | ❌ | For [etcd](https://github.com/coreos/etcd)
