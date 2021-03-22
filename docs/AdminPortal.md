@@ -39,4 +39,6 @@ Project | Author | Frontend | Backend | Description
 ----|----|----|----|----
 [Tadmin](https://github.com/techoner/tadmin) | [@techoner](https://github.com/techoner) | AmazeUI | ThinkPHP | Non-intrusive backend framework based on ThinkPHP 5.1+
 [video.tinywan.com](https://github.com/Tinywan/video.tinywan.com) | [@Tinywanner](https://github.com/Tinywan) | LayUI | ThinkPHP | RESTful API gateway based on ThinkPHP5 + ORM + JWT + RBAC (Casbin)
+[laravel-casbin-admin](https://github.com/pl1998/laravel-casbin-admin) | [@pl1998](https://github.com/pl1998) | Vue + Element UI | Laravel | RBAC permission management system based on vue-element-admin and Laravel
+
 <!--END_DOCUSAURUS_CODE_TABS-->
