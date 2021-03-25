@@ -57,6 +57,7 @@ Adapter | Type | Author | AutoSave | Description
 [Hibernate Adapter](https://github.com/jcasbin/hibernate-adapter) | ORM | Casbin | ✅ | Oracle, DB2, SQL Server, Sybase, MySQL, PostgreSQL are supported by [Hibernate](http://www.hibernate.org/)
 [MyBatis Adapter](https://github.com/jcasbin/mybatis-adapter) | ORM | Casbin | ✅ | MySQL, Oracle, PostgreSQL, DB2, Sybase, SQL Server (the same as JDBC) are supported by [MyBatis 3](https://mybatis.org/mybatis-3/)
 [Hutool Adapter](https://github.com/mapleafgo/jcasbin-extra) | ORM | [@mapleafgo](https://github.com/mapleafgo) | ✅ | MySQL, Oracle, PostgreSQL, SQLite are supported by [Hutool](https://github.com/looly/hutool)
+[MongoDB Adapter](https://github.com/zzl221000/jcasbin-mongo-adapter) | NoSQL |  Casbin | ✅ | MongoDB is supported by [mongodb-driver-sync](https://mongodb.github.io/mongo-java-driver/)
 [DynamoDB Adapter](https://github.com/jcasbin/dynamodb-adapter) | NoSQL | Casbin | ❌ | For [Amazon DynamoDB](https://aws.amazon.com/dynamodb/)
 
 <!--Node.js-->
@@ -68,12 +69,12 @@ Adapter | Type | Author | AutoSave | Description
 [Basic Adapter](https://github.com/node-casbin/basic-adapter) | Native ORM | Casbin | ✅ | pg, mysql, mysql2, sqlite3, oracledb, mssql are supported by the adapter itself
 [Sequelize Adapter](https://github.com/node-casbin/sequelize-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, SQLite, Microsoft SQL Server are supported by [Sequelize](https://github.com/sequelize/sequelize)
 [TypeORM Adapter](https://github.com/node-casbin/typeorm-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, MariaDB, SQLite, MS SQL Server, Oracle, WebSQL, MongoDB are supported by [TypeORM](https://github.com/typeorm/typeorm)
-[Mongoose Adapter](https://github.com/node-casbin/mongoose-adapter) | ORM | [elastic.io](https://github.com/elasticio) and Casbin | ✅ | MongoDB is supported by [Mongoose](https://mongoosejs.com/)
 [Knex Adapter](https://github.com/knex/casbin-knex-adapter) | ORM | [@sarneeh](https://github.com/sarneeh) and [knex](https://github.com/knex) | ✅ | MSSQL, MySQL, PostgreSQL, SQLite3, Oracle are supported by [Knex.js](https://knexjs.org/)
 [Objection.js Adapter](https://github.com/willsoto/casbin-objection-adapter) | ORM | [@willsoto](https://github.com/willsoto) | ✅ | MSSQL, MySQL, PostgreSQL, SQLite3, Oracle are supported by [Objection.js](https://vincit.github.io/objection.js/)
+[Node PostgreSQL Native Adapter](https://github.com/touchifyapp/casbin-pg-adapter) | SQL | [@touchifyapp](https://github.com/touchifyapp) | ✅ | PostgreSQL adapter with advanced policy subset loading support and improved performances built with [node-postgres](https://node-postgres.com/).
+[Mongoose Adapter](https://github.com/node-casbin/mongoose-adapter) | NoSQL | [elastic.io](https://github.com/elasticio) and Casbin | ✅ | MongoDB is supported by [Mongoose](https://mongoosejs.com/)
 [Node MongoDB Native Adapter](https://github.com/juicycleff/casbin-mongodb-adapter) | NoSQL | [@juicycleff](https://github.com/juicycleff) | ✅ | For [Node MongoDB Native](https://mongodb.github.io/node-mongodb-native/)
 [DynamoDB Adapter](https://github.com/fospitia/casbin-dynamodb-adapter) | NoSQL | [@fospitia](https://github.com/fospitia) | ✅ | For [Amazon DynamoDB](https://aws.amazon.com/dynamodb/)
-[Node PostgreSQL Native Adapter](https://github.com/touchifyapp/casbin-pg-adapter) | SQL | [@touchifyapp](https://github.com/touchifyapp) | ✅ | PostgreSQL adapter with advanced policy subset loading support and improved performances built with [node-postgres](https://node-postgres.com/).
 [Couchbase Adapter](https://github.com/MarkMYoung/casbin-couchbase-adapter) | NoSQL | [@MarkMYoung](https://github.com/MarkMYoung) | ✅ | For [Couchbase](https://www.couchbase.com/)
 [Redis Adapter](https://github.com/node-casbin/redis-adapter) | KV store | Casbin | ❌ | For [Redis](https://redis.io/)
 [Redis Adapter](https://github.com/NandaKishorJeripothula/node-casbin-redis-adapter) | KV store | [@NandaKishorJeripothula](https://github.com/NandaKishorJeripothula) | ❌ | For [Redis](https://redis.io/)
@@ -100,7 +101,7 @@ Adapter | Type | Author | AutoSave | Description
 [MongoEngine Adapter](https://github.com/zhangbailong945/mongoengine_adapter) | ORM | [@zhangbailong945](https://github.com/zhangbailong945) | ❌ | MongoDB is supported by [MongoEngine](http://mongoengine.org/)
 [Couchbase Adapter](https://github.com/ScienceLogic/casbin-couchbase-adapter) | NoSQL | [ScienceLogic](https://github.com/ScienceLogic) | ✅ (without `remove_filtered_policy()`) | For [Couchbase](https://www.couchbase.com/)
 [DynamoDB Adapter](https://github.com/abqadeer/python-dycasbin) | NoSQL | [@abqadeer](https://github.com/abqadeer/) | ✅ | For [DynamoDB](https://aws.amazon.com/dynamodb/)
-[Pymongo Adapter](https://github.com/pycasbin/pymongo-adapter) | ORM |  Casbin | ❌ | MongoDB is supported by [Pymongo](https://pypi.org/project/pymongo/)
+[Pymongo Adapter](https://github.com/pycasbin/pymongo-adapter) | NoSQL |  Casbin | ❌ | MongoDB is supported by [Pymongo](https://pypi.org/project/pymongo/)
 
 <!--.NET-->
 Adapter | Type | Author | AutoSave | Description
