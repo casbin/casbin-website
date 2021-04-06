@@ -26,7 +26,7 @@ module.exports = [
   },
   {
     caption: "Cisco Cloud",
-    image: "/img/users/cisco.png",
+    image: "/img/users/cisco.svg",
     infoLink: "https://www.linkedin.com/in/openmohan/",
     pinned: true,
   },
@@ -121,6 +121,18 @@ module.exports = [
     caption: "JDLT",
     image: "/img/users/jdlt.svg",
     infoLink: "https://jdlt.co.uk",
+    pinned: true,
+  },
+  {
+    caption: "360",
+    image: "/img/users/360.jfif",
+    infoLink: "https://www.linkedin.com/in/andrew-weng/",
+    pinned: true,
+  },
+  {
+    caption: "Honeywell",
+    image: "/img/users/honeywell.png",
+    infoLink: "https://www.linkedin.com/search/results/people/headless?origin=CLUSTER_EXPANSION&keywords=casbin&lipi=urn%3Ali%3Apage%3Asearch_results_generic_index%3BFOVsvEXCTtiykug2mPyiSQ%3D%3D",
     pinned: true,
   },
 ];
