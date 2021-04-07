@@ -681,3 +681,26 @@ e.get_implicit_permissions_for_user("alice", None); // No domain
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
+
+### `GetDomainsForUser`
+GetDomainsForUser get all domains which a user has.
+
+For example:
+p, admin, domain1, data1, read
+p, admin, domain2, data2, read
+p, admin, domain2, data2, write
+g, alice, admin, domain1
+g, alice, admin, domain2
+
+GetDomainsForUser("alice") could get ["domain1", "domain2"]
+
+For example:
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
+```go
+result, err := e.GetDomainsForUser("alice")
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
