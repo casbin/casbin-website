@@ -190,3 +190,17 @@ For example:
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
+
+### `GetDomains()`
+GetDomains gets domains that a user has
+
+For example:
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
+```go
+    result, err := rm.GetDomains(name)
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
