@@ -26,6 +26,11 @@ const e = await newEnforcer('examples/rbac_model.conf', 'examples/rbac_policy.cs
 $e = new Enforcer('examples/rbac_model.conf', 'examples/rbac_policy.csv');
 ```
 
+<!--Python-->
+```python
+e = casbin.Enforcer("examples/rbac_model.conf", "examples/rbac_policy.csv")
+```
+
 <!--.NET-->
 ```csharp
 var e = new Enforcer("path/to/model.conf", "path/to/policy.csv");
@@ -50,6 +55,17 @@ For example:
 ```go
 ok, err := e.Enforce(request)
 ```
+
+<!--PHP-->
+```php
+$ok = $e->enforcer($request);
+```
+
+<!--Python-->
+```python
+ok = e.enforcer($request);
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `EnforceWithMatcher()`
@@ -64,6 +80,17 @@ For example:
 ```go
 ok, err := e.EnforceWithMatcher(matcher, request)
 ```
+
+<!--PHP-->
+```php
+$ok = $e->enforceWithMatcher($matcher, $request);
+```
+
+<!--Python-->
+```python
+ok = e.enforce_with_matcher(matcher, request);
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `EnforceEx()`
@@ -78,6 +105,17 @@ For example:
 ```go
 ok, reason, err := e.EnforceEx(request)
 ```
+
+<!--PHP-->
+```php
+list($ok, $reason) = $e->enforceEx($request);
+```
+
+<!--Python-->
+```python
+ok, reason = e.enforce_ex(request);
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `EnforceExWithMatcher()`
