@@ -59,6 +59,7 @@ Adapter | Type | Author | AutoSave | Description
 [Hutool Adapter](https://github.com/mapleafgo/jcasbin-extra) | ORM | [@mapleafgo](https://github.com/mapleafgo) | ✅ | MySQL, Oracle, PostgreSQL, SQLite are supported by [Hutool](https://github.com/looly/hutool)
 [MongoDB Adapter](https://github.com/zzl221000/jcasbin-mongo-adapter) | NoSQL |  Casbin | ✅ | MongoDB is supported by [mongodb-driver-sync](https://mongodb.github.io/mongo-java-driver/)
 [DynamoDB Adapter](https://github.com/jcasbin/dynamodb-adapter) | NoSQL | Casbin | ❌ | For [Amazon DynamoDB](https://aws.amazon.com/dynamodb/)
+[Redis Adapter](https://github.com/jcasbin/redis-adapter) | KV store | Casbin | ✅ | For [Redis](https://redis.io/)
 
 <!--Node.js-->
 Adapter | Type | Author | AutoSave | Description
