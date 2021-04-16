@@ -94,6 +94,7 @@ For example:
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
+
 ### `DeleteLink()`
 
 DeleteLink deletes the inheritance link between two roles. role: name1 and role: name2.
