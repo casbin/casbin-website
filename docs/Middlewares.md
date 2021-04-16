@@ -11,8 +11,9 @@ title: Middlewares
 Name | Description
 ----|----
 [Gin](https://github.com/gin-gonic/gin) | A HTTP web framework featuring a Martini-like API with much better performance, via plugin: [authz](https://github.com/gin-contrib/authz) or [gin-casbin](https://github.com/maxwellhertz/gin-casbin)
-[Beego](https://github.com/astaxie/beego) | An open-source, high-performance web framework for Go, via built-in plugin: [plugins/authz](https://github.com/astaxie/beego/blob/master/plugins/authz)
-[Caddy](https://github.com/mholt/caddy) | Fast, cross-platform HTTP/2 web server with automatic HTTPS, via plugin: [caddy-authz](https://github.com/casbin/caddy-authz)
+[Beego](https://github.com/beego/beego) | An open-source, high-performance web framework for Go, via built-in plugin: [plugins/authz](https://github.com/astaxie/beego/blob/master/plugins/authz)
+[Caddy](https://github.com/caddyserver/caddy) | Fast, cross-platform HTTP/2 web server with automatic HTTPS, via plugin: [caddy-authz](https://github.com/casbin/caddy-authz)
+[Traefik](https://github.com/traefik/traefik) | The cloud native application proxy, via plugin: [traefik-auth-plugin](https://github.com/Knight-7/auth-plugin)
 [Go kit](https://github.com/go-kit/kit) | A toolkit for microservices, via built-in plugin: [plugins/authz](https://github.com/go-kit/kit/tree/master/auth/casbin)
 [Fiber](https://github.com/gofiber/fiber) | An Express inspired web framework written in Go, via middleware: [fiber-casbin](https://github.com/arsmn/fiber-casbin) or [fiber-casbinrest](https://github.com/prongbang/fiber-casbinrest) or [fiber-boilerplate](https://github.com/sujit-baniya/fiber-boilerplate)
 [Revel](https://github.com/revel/revel) | A high productivity, full-stack web framework for the Go language, via plugin: [auth/casbin](https://github.com/revel/modules/tree/master/auth/casbin)
