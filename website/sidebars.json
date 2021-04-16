@@ -14,7 +14,8 @@
       "rbac-with-domains",
       "rbac-96",
       "abac",
-      "priority-model"
+      "priority-model",
+      "superadmin"
     ],
     "Storage":[
       "model-storage",
