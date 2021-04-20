@@ -33,7 +33,8 @@
       "management-api",
       "rbac-api",
       "rolemanager-api",
-      "data-permissions"
+      "data-permissions",
+      "effector-api"
     ],
     "Advanced Usage": [
       "multi-threading",
