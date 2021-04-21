@@ -15,7 +15,8 @@
       "rbac-96",
       "abac",
       "priority-model",
-      "superadmin"
+      "superadmin",
+      "effector"
     ],
     "Storage":[
       "model-storage",
