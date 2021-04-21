@@ -44,6 +44,11 @@ Watcher | Type | Author | Description
 ----|------|----|----
 [Redis Watcher](https://github.com/Sbou/Casbin.NET-Redis-Watcher) | KV store | [@Sbou](https://github.com/Sbou) | Watcher for [Redis](http://redis.io/)
 
+<!--Ruby-->
+Watcher | Type | Author | Description
+----|------|----|----
+[Redis Watcher](https://github.com/evrone/casbin-ruby-redis-watcher) | KV store | [evrone](https://github.com/evrone) | Watcher for [Redis](http://redis.io/)
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ## WatcherEx
