@@ -126,25 +126,6 @@ Casbin.NET | C# | https://github.com/davideicardi/DynamicExpresso
 Casbin4D | Delphi | https://github.com/casbin4d/Casbin4D/tree/master/SourceCode/Common/Third%20Party/TExpressionParser
 casbin-rs | Rust | https://github.com/jonathandturner/rhai
 
-
-#### The "in" syntax in various languages
-While we use **in** syntax in some high-level languages to realize checking if ```sub``` is in an array in matcher, we conclude the functionality of **in** in various languages, and we list them here:
-
-|Package|Features|Available|
-|-|-|-|
-|Casbin|Judge if an element is in the array|✅|
-|jCasbin|Sorry, jCasbin don't support "in" syntax, however, we can use ```contains()``` method|❌|
-|Node-Casbin|Sorry, Node-Casbin don't support "in" syntax, however, we can use ```includes()``` method|❌|
-|PHP-Casbin|Sorry, PHP-Casbin don't support "in" syntax, however, we can use ```in_array()``` method|❌|
-|PyCasbin|Judge if an element is in the array|✅|
-|Casbin-CPP|Sorry, Casbin-CPP don't support "in" syntax, however, we can use ```std::find()``` algorithm|❌|
-|Casbin.NET|Sorry, Casbin.NET don't support "in" syntax, however, we can use ```Contains()``` method|❌|
-|Casbin4D|Judge if an element is in the array|✅|
-|Casbin-RS|Judge if an element is in the array|✅|
-|Lua-Casbin|Judge if an element is in the array|✅|
-|Dart-Casbin|Judge if an element is in the array|✅|
-|Elixir-Casbin|Judge if an element is in the array|✅|
-
 :::note
 If you encounter performance issue about Casbin, it's probably caused by the low efficiency of the expression evaluator. You can both send issue to Casbin or the expression evaluator directly for advice to speed up. See [Benchmarks](/docs/en/benchmark) section for details.
 :::
