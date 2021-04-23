@@ -25,15 +25,15 @@ Enforcement | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅|✅|✅|✅
 RBAC | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅|✅|✅|✅
 ABAC | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅|✅|✅|✅
 Scaling ABAC (`eval()`) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅|✅|✅|✅
-Adapter | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅|✅|✅|✅
+Adapter | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅|✅|✅|❌
 Management API | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅|✅|✅|✅
 RBAC API | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅|✅|✅|✅
-Batch API | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅|✅|✅|✅
-Filtered Adapter | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅|✅|✅|✅
-Watcher | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅|✅|✅|✅
-Role Manager | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅|✅|✅|✅
+Batch API | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅|✅|❌|❌
+Filtered Adapter | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅|✅|❌|❌
+Watcher | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅|✅|❌|❌
+Role Manager | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅|✅|✅|❌
 Multi-Threading | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ❌ | ✅ | ❌|❌|❌|❌
-'in' of matcher |✅|❌|❌|❌|✅|❌|✅|✅|❌|✅|✅|✅
+'in' of matcher |✅|❌|❌|❌|✅|❌|✅|❌|❌|❌|✅|✅
 
 We are always working our best to make Casbin have the same set of features for all languages. But the reality is not that beautiful. The current progress is as the above table. ✅ for Watcher or Role Manager only means having the interface in the core library. Whether there is an available watcher or role manager implementation is another question.
 
