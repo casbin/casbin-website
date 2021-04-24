@@ -3,12 +3,12 @@ id: how-it-works
 title: How it Works
 ---
 
-In Casbin, an access control model is abstracted into a CONF file based on the **PERM metamodel (Policy, Effect, Request, Matchers)**. So switching or upgrading the authorization mechanism for a project is just as simple as modifying a configuration. You can customize your own access control model by combining the available models. For example, you can get RBAC roles and ABAC attributes together inside one model and share one set of policy rules.
+In Casbin, an access control model is abstracted into a CONF file based on the **PERM metamodel (Policy, Effect, Request, Matchers)**. So switching or upgrading the authorization mechanism for a project is just as simple as modifying a configuration. You can customize your own access control model by combining the available models. For example, you can combine RBAC roles and ABAC attributes together inside one model and share one set of policy rules.
 
 The PERM model is composed of four foundations (Policy, Effect, Request, Matchers) describing the relationship between resources and users.
 
 ### Request
-Define the request parameters. A basic request is a tuple object, at least including subject (accessed entity), object (accessed resource) and action (access method)
+Define the request parameters. A basic request is a tuple object, requiring at least a subject (accessed entity), object (accessed resource) and action (access method)
 
 For instance, a request definition may look like this:
 `r={sub,obj,act}`
@@ -16,9 +16,9 @@ For instance, a request definition may look like this:
 It actually defines the parameter name and order which we should provide for access control matching function.
 
 ### Policy
-Define the model of the access strategy. In fact, it is to define the name and order of the fields in the Policy rule document.
+Define the model of the access strategy. In fact, it defines the name and order of the fields in the Policy rule document.
 
-For instace:
+For instance:
 `p={sub, obj, act}` or `p={sub, obj, act, eft}`
 
 Note: If eft (policy result) is not defined, then the result field in the policy file will not be read, and the matching policy result will be allowed by default.
@@ -82,7 +82,7 @@ m = r.sub == p.sub && r.obj == p.obj \
   && r.act == p.act
 ```
 
-Further more, if you are using ABAC,  you can try operator `in` like following in Casbin **golang** edition (jCasbin and Node-Casbin are not supported yet):
+Furthermore, if you are using ABAC,  you can try operator `in` like the following in Casbin **golang** edition (jCasbin and Node-Casbin are not supported yet):
 
 ```ini
 # Matchers
