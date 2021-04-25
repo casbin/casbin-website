@@ -64,6 +64,10 @@ This is another longer-version paper published in Journal of Software. The citat
 
 - [Basic Role-Based HTTP Authorization in Go with Casbin](https://zupzup.org/casbin-http-role-auth) (or [Chinese translation](https://studygolang.com/articles/12323))
 
+### Watcher
+
+- [RBAC Distributed Synchronization via Casbin Watcher (in Chinese)](https://hongker.github.io/2021/02/19/golang-rbac-watcher/)
+
 ### Beego
 
 - [Using Casbin with Beego: 1. Get started and test (in Chinese)](https://blog.csdn.net/hotqin888/article/details/78460385)
