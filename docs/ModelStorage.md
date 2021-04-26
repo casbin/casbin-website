@@ -41,6 +41,12 @@ e := casbin.NewEnforcer("examples/rbac_model.conf", "examples/rbac_policy.csv")
 The model can be initialized dynamically from code instead of using ``.CONF`` file. Here's an example for the RBAC model:
 
 ```go
+import (
+	"github.com/casbin/casbin/v2"
+	"github.com/casbin/casbin/v2/model"
+	"github.com/casbin/casbin/v2/persist/file-adapter"
+)
+
 // Initialize the model from Go code.
 m := model.NewModel()
 m.AddDef("r", "r", "sub, obj, act")
@@ -51,7 +57,7 @@ m.AddDef("m", "m", "g(r.sub, p.sub) && r.obj == p.obj && r.act == p.act")
 
 // Load the policy rules from the .CSV file adapter.
 // Replace it with your adapter to avoid files.
-a := persist.NewFileAdapter("examples/rbac_policy.csv")
+a := fileadapter.NewAdapter("examples/rbac_policy.csv")
 
 // Create the enforcer.
 e := casbin.NewEnforcer(m, a)
@@ -62,6 +68,11 @@ e := casbin.NewEnforcer(m, a)
 Or you can just load the entire model text from a multi-line string. The good point for this way is that you do not need to maintain a model file.
 
 ```go
+import (
+	"github.com/casbin/casbin/v2"
+	"github.com/casbin/casbin/v2/model"
+)
+
 // Initialize the model from a string.
 text :=
 `
@@ -80,11 +91,11 @@ e = some(where (p.eft == allow))
 [matchers]
 m = g(r.sub, p.sub) && r.obj == p.obj && r.act == p.act
 `
-m, _ := NewModelFromString(text)
+m, _ := model.NewModelFromString(text)
 
 // Load the policy rules from the .CSV file adapter.
 // Replace it with your adapter to avoid files.
-a := persist.NewFileAdapter("examples/rbac_policy.csv")
+a := model.NewModelFromString("examples/rbac_policy.csv")
 
 // Create the enforcer.
 e := casbin.NewEnforcer(m, a)
