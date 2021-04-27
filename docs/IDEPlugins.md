@@ -3,10 +3,13 @@ id: ide-plugins
 title: IDE Plugins
 ---
 
-## IDE Plugins
+We have plugins for these IDEs:
 
-We have plugins for these IDE:
+## JetBrains
 
-- JetBrains: https://plugins.jetbrains.com/plugin/14809-casbin
+- Download: https://plugins.jetbrains.com/plugin/14809-casbin
+- Source code: https://github.com/will7200/casbin-idea-plugin
 
-- VSCode: https://github.com/casbin/casbin-vscode-plugin 
+## VSCode (WIP)
+
+- Source code: https://github.com/casbin/casbin-vscode-plugin 

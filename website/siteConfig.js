@@ -32,6 +32,7 @@ const siteConfig = {
     {doc: 'overview', label: 'Docs'},
     {doc: 'management-api', label: 'API'},
     {page: 'editor', label: 'Editor'},
+    {doc: 'ide-plugins', label: "IDE Plugins"},
     {href: 'https://door.casbin.com', label: "Casdoor"},
     {href: 'https://forum.casbin.com', label: "Forum"},
     {href: 'https://oa.casbin.com', label: "OA"},

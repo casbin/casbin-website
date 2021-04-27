@@ -236,7 +236,7 @@ class Index extends React.Component {
         <div className="announcement">
           <div className="announcement-inner">
             <a style={{color: "white"}} href="https://github.com/casbin/casdoor" target="_blank">
-              💖 Also Need Authentication / Single-Sign-On? Try Casdoor!
+              💖 Also need authentication/SSO? Find more at: Casdoor
             </a>
           </div>
         </div>
