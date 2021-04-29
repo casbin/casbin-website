@@ -2,11 +2,8 @@
 id: effector
 title: Effector
 ---
-## Effector
 
-Effect is the result for a policy rule.  
-
-And the Effector is the interface for Casbin effectors.
+Effect is the result of a policy rule. And the ```Effector``` is the interface for Casbin effectors.
 
 ### `MergeEffects()`
 
