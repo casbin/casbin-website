@@ -9,14 +9,14 @@
     "Model":[
       "supported-models",
       "syntax-for-models",
+      "effector",
       "function",
       "rbac",
       "rbac-with-domains",
       "rbac-96",
       "abac",
       "priority-model",
-      "superadmin",
-      "effector"
+      "superadmin"
     ],
     "Storage":[
       "model-storage",
