@@ -69,7 +69,7 @@ But if you are using multi-level RBAC (with role hierarchy), and your applicatio
 
 ## How to query implicit roles or permissions?
 
-When a user inherits a role or permission via RBAC hierarchy instead of directly assigning them in a policy rule, we call such type of assignment as ``implicit``. To query such implicit relations, you need to use these 2 APIs: ``GetImplicitRolesForUser()`` and ``GetImplicitPermissionsForUser`` instead of ``GetRolesForUser()`` and ``GetPermissionsForUser``. For more details, please see [this GitHub issue](https://github.com/casbin/casbin/issues/137).
+When a user inherits a role or permission via RBAC hierarchy instead of directly assigning them in a policy rule, we call such type of assignment as ``implicit``. To query such implicit relations, you need to use these 2 APIs: ``GetImplicitRolesForUser()`` and ``GetImplicitPermissionsForUser()`` instead of ``GetRolesForUser()`` and ``GetPermissionsForUser()``. For more details, please see [this GitHub issue](https://github.com/casbin/casbin/issues/137).
 
 ## Use pattern matching in RBAC
 
@@ -115,9 +115,25 @@ register `keyMatch2` to model:
 m = g(r.sub, p.sub, r.dom) && keyMatch2(r.dom, p.dom) && r.obj == p.obj && r.act == p.act
 ```
 
-If you don't understand what `g(r.sub, p.sub, r.dom)` means, please read [this](https://casbin.org/docs/en/rbac-with-domains). In short, `g(r.sub, p.sub, r.dom)` will check whether the user `r.sub` has a role `p.sub` in the domain `r.dom`. So this is how the matcher work.
+If you don't understand what `g(r.sub, p.sub, r.dom)` means, please read [this](https://casbin.org/docs/en/rbac-with-domains). In short, `g(r.sub, p.sub, r.dom)` will check whether the user `r.sub` has a role `p.sub` in the domain `r.dom`. So this is how the matcher work. You can see the full example [here](https://github.com/casbin/casbin/blob/dbdb6cbe2e7a80863e4951f9ff36da07fef01b75/model_test.go#L278-L307).
 
-You can see the full example [here](https://github.com/casbin/casbin/blob/dbdb6cbe2e7a80863e4951f9ff36da07fef01b75/model_test.go#L278-L307).
+Apart from the pattern matching syntax above, we can also use pure domain pattern.
+
+For example,  if we want ```sub``` to have access in different domains, ```domain1``` and ```domain2```, we can use the pure domain pattern:
+
+```
+p, admin, domain1, data1, read
+p, admin, domain1, data1, write
+p, admin, domain2, data2, read
+p, admin, domain2, data2, write
+
+g, alice, admin, *
+g, bob, admin, domain2
+```
+
+In this example, we want ```alice``` to read and write ```data``` in domain1 and domain2, pattern matching ```*``` in ```g``` makes ```alice``` have the access to two domains.
+
+By using pattern matching, especially in the scenarios which is more complicated and there are a lot of domains or objects we need to take into consideration, we can implement the ```policy_definition``` more elegant and effective.
 
 ## Role manager
 
