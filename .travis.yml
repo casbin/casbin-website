@@ -24,4 +24,4 @@ script:
   - crowdin --config crowdin.yaml upload sources --auto-update -b master
   - crowdin --config crowdin.yaml download -b master
   # build and publish website
-  - cd website && yarn install && GIT_USER="${GH_NAME}" yarn run publish-gh-pages
+  - yarn install && GIT_USER="${GH_NAME}" yarn run publish-gh-pages
