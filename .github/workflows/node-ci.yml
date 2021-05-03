@@ -38,7 +38,7 @@ jobs:
           git config --global user.name "${GH_NAME}"
           git config --global user.email "${GH_EMAIL}"
           echo "machine github.com login ${GH_NAME} password ${GH_TOKEN}" > ~/.netrc
-          cd website && yarn install && yarn run write-translations && cd ..
+          yarn install && yarn run write-translations && cd ..
 
       - name: Crowdin Action
         uses: crowdin/github-action@1.0.18
@@ -49,4 +49,4 @@ jobs:
           create_pull_request: false
 
       - name: Deploy Website
-        run: cd website && yarn install && GIT_USER="${GH_NAME}" yarn run publish-gh-pages
+        run: yarn install && GIT_USER="${GH_NAME}" yarn run publish-gh-pages

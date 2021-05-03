@@ -25,4 +25,4 @@ jobs:
 
       - name: Init Website
         run: |
-          cd website && yarn install && yarn run write-translations && cd ..
+          yarn install && yarn run write-translations && cd ..
