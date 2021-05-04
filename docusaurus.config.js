@@ -11,8 +11,8 @@ module.exports = {
   projectName: 'casbin.github.io', // Usually your repo name.
   
   i18n: {
-    defaultLocale: 'English',
-    locales: ['English', '中文', '한국어', 'Pусский', 'Français', '日本語'],
+    defaultLocale: 'en',
+    locales: ['en', 'zh', 'kr', 'ru', 'fr', 'jp'],
   },
 
   themeConfig: {
