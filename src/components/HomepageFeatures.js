@@ -17,7 +17,7 @@ const FeatureList = [
     Svg: require('../../static/img/storage.svg').default,
     description: (
       <>
-        esides memory and file, Casbin policy can be stored into lots of places. Currently, dozens of databases are supported, from MySQL, Postgres, Oracle to MongoDB, Redis, Cassandra, AWS S3. Check the full supported list at: https://casbin.org/docs/en/adapters
+        Besides memory and file, Casbin policy can be stored into lots of places. Currently, dozens of databases are supported, from MySQL, Postgres, Oracle to MongoDB, Redis, Cassandra, AWS S3. Check the full supported list at: https://casbin.org/docs/en/adapters
       </>
     ),
   },

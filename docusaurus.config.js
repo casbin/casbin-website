@@ -10,6 +10,11 @@ module.exports = {
   organizationName: 'casbin', // Usually your GitHub org/user name.
   projectName: 'casbin.github.io', // Usually your repo name.
   
+  i18n: {
+    defaultLocale: 'English',
+    locales: ['English', '中文', '한국어', 'Pусский', 'Français', '日本語'],
+  },
+
   themeConfig: {
 
     //Website navbar config
@@ -144,13 +149,13 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © 2021 Casbin contributors.`,
     },
     announcementBar: {
-      id: 'announcement', // 用于标记此消息的任何值。
+      id: 'announcement', // ID of the announcement bar
       content:
-        '<a href="https://github.com/casbin/casdoor">💖 Also need authentication/SSO? Find more at: Casdoor</a>',
-      backgroundColor: '#fafbfc', // 默认为 `#fff`。
+        '<a href="https://github.com/casbin/casdoor">💖 Also need authentication/SSO? Find more at: Casdoor🚪</a>',
+      backgroundColor: '#fafbfc',
       textColor: '#091E42', // 默认为 `#000`。
       isCloseable: false, // 默认为 `true`。
     },

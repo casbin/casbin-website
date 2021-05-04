@@ -2,12 +2,17 @@ import React, {useEffect} from 'react';
 import GitHubButton from 'react-github-btn';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
+
+import Head from '@docusaurus/Head'
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HomepageFeatures from '../components/HomepageFeatures';
+import useBaseUrl from '@docusaurus/useBaseUrl'
 
 import CodeBlock from '@theme/CodeBlock';
+
+//const {siteConfig} = useDocusaurusContext();
 function imgUrl(img) {
   return siteConfig.baseUrl + 'img/' + img;
 }
@@ -35,7 +40,7 @@ const textContent = {
   <br/><br/>
   To use filtered policies with a supported adapter, simply call the <code>LoadFilteredPolicy</code> method. The valid format for the filter parameter depends on the adapter used. 
   To prevent accidental data loss, the <code>SavePolicy</code> method is disabled when a filtered policy is loaded. 
-  <br/><br/>
+  <br><br>
   For example, the following code snippet uses the built-in filtered file adapter and the RBAC model with domains. In this case, the filter limits the policy to a single domain. 
   Any policy lines for domains other than <code>domain1</code> are omitted from the loaded policy:
   `,
@@ -139,59 +144,41 @@ function TwoColumns({columnOne, columnTwo, reverse}) {
   );
 }
 
-class Button extends React.Component {
-  render() {
-    return (
-      <div className="pluginWrapper buttonWrapper">
-        <a className="button" href={this.props.href} target={this.props.target}>
-          {this.props.children}
-        </a>
-      </div>
-    );
-  }
-}
-
-const PromoSection = props => (
-  <div className="section promoSection">
-    <div className="promoRow">
-      <div className="pluginRowBlock">{props.children}</div>
-    </div>
-  </div>
-);
-
-Button.defaultProps = {
-  target: '_self',
-};
 
 //Policy persistence section
-function PolicyPersistence(){
+function PolicyPersistence() {
   return (
+
     <Section className="PolicyPersistence" background="light">
       <TwoColumns
       reverse
       columnOne={
+      <div className="text--center padding-horiz--md">
       <TextColumn
+      className={styles.features}
       title="Policy Persistence"
       text={textContent.policyPersistence}
-      />}
+      /></div>}
       columnTwo={<img alt="" src='img/store.png' />}
       />
       </Section>
+
   )
 }
 
-function PolicyEnforcement(){
+function PolicyEnforcement() {
   return (
     <Section className="PolicyEnforcement" background="tint">
       <TwoColumns
       reverse
       columnOne={
+        <div className="text--center padding-horiz--md">
         <TextColumn
         title="Policy enforcement at scale"
         text={textContent.policyEnforcement}
-        />
+        /></div>
       }
-        columnTwo={<img alt="" src='img/scale.png' />}
+        columnTwo={<img alt="" src={useBaseUrl('img/scale.png')}/>}
         />
     </Section>
   )
@@ -203,10 +190,11 @@ function RoleManager(){
       <TwoColumns
       reverse
       columnOne={
+        <div className="text--center padding-horiz--md">
         <TextColumn
         title="Role manager"
         text={textContent.roleManager}
-        />}
+        /></div>}
         columnTwo={<img alt="" src='img/role.png' height="500" wigth="500" />}
         />
     </Section>
@@ -222,9 +210,8 @@ function HomepageHeader() {
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div>
           <Link
-              className="button"
+              className="button button--lg"
               to='/docs/get-started'
-
             >
               Get Start
             </Link>
@@ -232,85 +219,86 @@ function HomepageHeader() {
             <br></br>
         <div className={styles.buttons}>
           <Link
-            className="button"
+            className="button button--lg"
             to="https://github.com/casbin/casbin">
             Golang
           </Link>
           <Link
-            className="button"
+            className="button button--lg"
             to="https://github.com/casbin/jcasbin">
             Java
           </Link>
           <Link
-            className="button"
+            className="button button--lg"
             to="https://github.com/casbin/casbin-cpp">
             C/C++
           </Link>
           <Link
-            className="button"
+            className="button button--lg"
             to="https://github.com/casbin/node-casbin">
             Node.js
           </Link>
           <Link
-            className="button"
+            className="button button--lg"
             to="https://github.com/casbin/casbin.js">
             Front-end JS
           </Link>
           <Link
-            className="button"
+            className="button button--lg"
             to="https://github.com/casbin/php-casbin">
             PHP
           </Link>
           <Link
-            className="button"
-            to="https://github.com/casbin/laravel-authz">
+            className="button button--lg"
+            to="https://github.com/php-casbin/laravel-authz">
             Laravel
           </Link>
           <Link
-            className="button"
+            className="button button--lg"
             to="https://github.com/casbin/pycasbin">
             Python
           </Link>
           <Link
-            className="button"
+            className="button button--lg"
             to="https://github.com/casbin/Casbin.NET">
             .NET(C#)
           </Link>
           
         </div>
+        <br />
         <div>
         <Link
-            className="button"
+            className="button button--lg"
             to="https://github.com/casbin/Casbin4D">
             Delphi
           </Link>
           <Link
-            className="button"
+            className="button button--lg"
             to="https://github.com/casbin/casbin-rs">
             Rust
           </Link>
           <Link
-            className="button"
+            className="button button--lg"
             to="https://github.com/casbin/casbin-ruby">
             Ruby
           </Link>
           <Link
-            className="button"
+            className="button button--lg"
             to="https://github.com/casbin/SwiftCasbin">
             Swift (Objective-C)
           </Link>
           <Link
-            className="button"
+            className="button button--lg"
             to="https://github.com/casbin/lua-casbin">
             Lua (OpenResty)
           </Link>
           <Link
-            className="button"
+            className="button button--lg"
             to="https://github.com/casbin/dart-casbin">
             Dart (Flutter)
           </Link>
           <Link
-            className="button"
+            className="button button--lg"
             to="https://github.com/casbin/casbin-ex">
             Elixir
           </Link>
@@ -322,7 +310,6 @@ function HomepageHeader() {
   );
 }
 
-
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -331,9 +318,15 @@ export default function Home() {
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
         <HomepageFeatures />
+        <section className={styles.container}>
+          <div className="container">
+          <div className="row">
         <PolicyPersistence />
         <PolicyEnforcement />
         <RoleManager />
+        </div>
+        </div>
+        </section>
     </Layout>
   );
 }
