@@ -34,6 +34,7 @@
       "api-tutorial",
       "management-api",
       "rbac-api",
+      "rbac-with-domains-api",
       "rolemanager-api",
       "data-permissions"
     ],
