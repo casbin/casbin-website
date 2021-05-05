@@ -38,3 +38,14 @@
   padding: 2rem 0;
   width: 100%;
 }
+
+.leftLayout {
+  float: left;
+  width:600px;
+  height:500px;
+}
+
+.rightLayout {
+  margin-left:400px;
+  height:500px;
+}

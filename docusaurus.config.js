@@ -71,6 +71,10 @@ module.exports = {
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
+          type: 'search',
+          position: 'right',
+        },
+        {
           type: 'localeDropdown',
           position: 'right',
           dropdownItemsAfter: [
@@ -85,6 +89,7 @@ module.exports = {
           className: 'header-github-link',
           position: 'right',
           'aria-label': 'GitHub repository',
+          src: 'img/github.png'
         },
       ],
     },
@@ -145,6 +150,13 @@ module.exports = {
             {
               label: 'GitHub',
               href: 'https://github.com/casbin/casbin',
+            },
+            {
+              html: `
+                  <a class="badge-footer" href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria-label="Deploys by Netlify">
+                    <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" />
+                  </a>
+                `
             },
           ],
         },

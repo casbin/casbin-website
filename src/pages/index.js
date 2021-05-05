@@ -7,8 +7,10 @@ import Head from '@docusaurus/Head'
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
+import custom from '../css/custom.css'
 import HomepageFeatures from '../components/HomepageFeatures';
 import useBaseUrl from '@docusaurus/useBaseUrl'
+//import users from './users'
 
 import CodeBlock from '@theme/CodeBlock';
 
@@ -37,7 +39,7 @@ const textContent = {
   Some adapters support filtered policy management. 
   This means that the policy loaded by Casbin is a subset of the policy in storage based on a given filter. 
   This allows for efficient policy enforcement in large, multi-tenant environments when parsing the entire policy becomes a performance bottleneck.
-  <br/><br/>
+  <br /><br />
   To use filtered policies with a supported adapter, simply call the <code>LoadFilteredPolicy</code> method. The valid format for the filter parameter depends on the adapter used. 
   To prevent accidental data loss, the <code>SavePolicy</code> method is disabled when a filtered policy is loaded. 
   <br><br>
@@ -51,49 +53,6 @@ const textContent = {
   To keep light-weight, we don't put role manager code in the main library (except the default role manager). 
   A complete list of Casbin role managers is provided as: https://casbin.org/docs/en/role-managers
   `
-}
-
-function ActionButton({href, type = 'primary', target, children}) {
-  return (
-    <a className={`ActionButton ${type}`} href={href} target={target}>
-      {children}
-    </a>
-  );
-}
-
-function HomeCallToAction() {
-  return (
-    <>
-      <ActionButton
-        type="primary"
-        href={useBaseUrl('docs/get-started')}
-        target="_self">
-        Get started
-      </ActionButton>
-      <ActionButton
-        type="secondary"
-        href={useBaseUrl('docs/tutorial')}
-        target="_self">
-        Learn basics
-      </ActionButton>
-    </>
-  );
-}
-
-//Used to the headings which is bold font
-function Heading({text}) {
-  return <h2 className="Heading">{text}</h2>;
-}
-
-//Create a column for text content
-function TextColumn({title, text, moreContent}) {
-  return (
-    <>
-      <Heading text={title} />
-      <div dangerouslySetInnerHTML={{__html: text}} />
-      {moreContent}
-    </>
-  );
 }
 
 //Twitter button used to click and follow casbinnews
@@ -121,83 +80,85 @@ function GithubStartButton(){
   );
 }
 
-function Section({
-  element = 'section',
-  children,
-  className,
-  background = 'light',
-}) {
-  const El = element;
-  return <El className={`Section ${className} ${background}`}>{children}</El>;
-}
-
-function TwoColumns({columnOne, columnTwo, reverse}) {
-  return (
-    <div className={`TwoColumns ${reverse ? 'reverse' : ''}`}>
-      <div className={`column first ${reverse ? 'right' : 'left'}`}>
-        {columnOne}
-      </div>
-      <div className={`column last ${reverse ? 'left' : 'right'}`}>
-        {columnTwo}
-      </div>
-    </div>
-  );
-}
-
 
 //Policy persistence section
 function PolicyPersistence() {
   return (
-
-    <Section className="PolicyPersistence" background="light">
-      <TwoColumns
-      reverse
-      columnOne={
-      <div className="text--center padding-horiz--md">
-      <TextColumn
-      className={styles.features}
-      title="Policy Persistence"
-      text={textContent.policyPersistence}
-      /></div>}
-      columnTwo={<img alt="" src='img/store.png' />}
-      />
-      </Section>
+    <section className={styles.container}>
+    <div className="container">
+    <div className="row"></div>
+  <div>
+  <div className={styles.leftLayout}>
+    <div className="text--center padding-horiz--md">
+      <h2>Policy persistence</h2>
+      In Casbin, the policy storage is implemented as an adapter(aka middleware for Casbin).
+  To keep light-weight, we don't put adapter code in the main library (except the default file adapter). 
+  A complete list of Casbin adapters is provided as below. 
+  Any 3rd-party contribution on a new adapter is welcomed, please inform us and I will put it in this list:) 
+  For details of adapters, please refer to the documentation: <a href='https://casbin.org/docs/en/adapters'>https://casbin.org/docs/en/adapters</a>
+      </div>
+      </div>
+  <div className={styles.rightLayout}><img src='img/store.png' /></div>
+  <br />
+  </div>
+  </div>
+  <br />
+  </section>
 
   )
 }
 
 function PolicyEnforcement() {
   return (
-    <Section className="PolicyEnforcement" background="tint">
-      <TwoColumns
-      reverse
-      columnOne={
-        <div className="text--center padding-horiz--md">
-        <TextColumn
-        title="Policy enforcement at scale"
-        text={textContent.policyEnforcement}
-        /></div>
-      }
-        columnTwo={<img alt="" src={useBaseUrl('img/scale.png')}/>}
-        />
-    </Section>
+    <section className={styles.container}>
+    <div className="container">
+    <div className="row"></div>
+    <div>
+    <div className={styles.leftLayout}><img src='img/scale.png' /></div>
+    <div className={styles.rightLayout}>
+      <div className="text--center padding-horiz--md">
+      <h2>Policy enforcement at scale</h2>
+      Some adapters support filtered policy management. 
+  This means that the policy loaded by Casbin is a subset of the policy in storage based on a given filter. 
+  This allows for efficient policy enforcement in large, multi-tenant environments when parsing the entire policy becomes a performance bottleneck.
+  <br /><br />
+  To use filtered policies with a supported adapter, simply call the <code>LoadFilteredPolicy</code> method. The valid format for the filter parameter depends on the adapter used. 
+  To prevent accidental data loss, the <code>SavePolicy</code> method is disabled when a filtered policy is loaded. 
+  <br /><br />
+  For example, the following code snippet uses the built-in filtered file adapter and the RBAC model with domains. In this case, the filter limits the policy to a single domain. 
+  Any policy lines for domains other than <code>domain1</code> are omitted from the loaded policy:
+        <br />
+        </div>
+        </div>
+    </div>
+    </div>
+    <br />
+    <br />
+    </section>
   )
 }
 
 function RoleManager(){
   return (
-    <Section className="RoleManager">
-      <TwoColumns
-      reverse
-      columnOne={
-        <div className="text--center padding-horiz--md">
-        <TextColumn
-        title="Role manager"
-        text={textContent.roleManager}
-        /></div>}
-        columnTwo={<img alt="" src='img/role.png' height="500" wigth="500" />}
-        />
-    </Section>
+    <section className={styles.container}>
+    <div className="container">
+    <div className="row"></div>
+  <div>
+  <div className={styles.leftLayout}>
+    <div className="text--center padding-horiz--md">
+    <h2>Role manager</h2>
+    The role manager is used to manage the RBAC role hierarchy (user-role mapping) in Casbin. 
+  A role manager can retrieve the role data from Casbin policy rules or external sources such as LDAP, Okta, Auth0, Azure AD, etc. 
+  We support different implementations of a role manager. 
+  To keep light-weight, we don't put role manager code in the main library (except the default role manager). 
+  A complete list of Casbin role managers is provided as: <a href='https://casbin.org/docs/en/role-managers'>https://casbin.org/docs/en/role-managers</a>
+      </div>
+      </div>
+  <div className={styles.rightLayout}><img src='img/role.png' /></div>
+  </div>
+  </div>
+  <br />
+  </section>
   )
 }
 
@@ -304,10 +265,28 @@ function HomepageHeader() {
           </Link>
         </div>
       </div>
-
     </header>
-    
   );
+}
+
+function Showcase() {
+  return (
+    <div className="text--center padding-horiz--md">
+    <h2 >
+      <font color='#443F7C'>
+        Who's using Casbin?
+        </font>
+      </h2>
+      <p>
+        Hundreds of projects are using Casbin
+        <br></br>
+        From established Fortune 500 companies to hot new startups.
+        <br></br>
+        If you&#x27;re curious to see what can be accomplished with Casbin, check out these apps!
+      </p>
+      </div>
+
+  )
 }
 
 export default function Home() {
@@ -318,15 +297,21 @@ export default function Home() {
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
         <HomepageFeatures />
-        <section className={styles.container}>
-          <div className="container">
-          <div className="row">
+        <br />
         <PolicyPersistence />
+        <br />
+        <br />
         <PolicyEnforcement />
+        <br />
+        <br />
+        <br />
         <RoleManager />
-        </div>
-        </div>
-        </section>
+        <br />
+        <br />
+        <br />
+        <Showcase />
+        
     </Layout>
+
   );
 }
