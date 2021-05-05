@@ -1,0 +1,15 @@
+.deals {
+    display: flex;        /* Flex layout so items have equal height  */
+    flex-flow: row wrap;  /* Allow items to wrap into multiple lines */
+  }
+  .sale-item {
+    display: flex;        /* Lay out each item using flex layout */
+    flex-flow: column;    /* Lay out item’s contents vertically  */
+  }
+  .sale-item > img {
+    order: -1;            /* Shift image before other content (in visual order) */
+    align-self: center;   /* Center the image cross-wise (horizontally)         */
+  }
+  .sale-item > button {
+    margin-top: auto;     /* Auto top margin pushes button to bottom */
+  }

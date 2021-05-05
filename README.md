@@ -115,11 +115,11 @@ be in reverse chronological order.
 
 ## Website configuration
 
-The main config file for the website can be found at `website/siteConfig.js`.
+The main config file for the website can be found at `docusaurus.config.js`.
 This file tells Docusaurus [how to build the website](http://docusaurus.io/docs/en/site-config.html).
 Edits to this file are rarely necessary.
 
-The `pages/` subdirectory contains the Casbin components that make up the
+The `src/pages/` subdirectory contains the Casbin components that make up the
 non-documentation pages of the site, such as the homepage.
 
 The `showcase.json` file contains the list of users that are highlighted in the
