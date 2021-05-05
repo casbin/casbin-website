@@ -15,7 +15,7 @@ script:
   - git config --global user.email "${GH_EMAIL}"
   - echo "machine github.com login ${GH_NAME} password ${GH_TOKEN}" > ~/.netrc
   # install Docusaurus and generate file of English strings
-  - cd website && yarn install && yarn run write-translations && cd ..
+  - yarn install && yarn run write-translations && cd ..
   # crowdin install
   - sudo apt-get install default-jre
   - wget https://artifacts.crowdin.com/repo/deb/crowdin.deb -O crowdin.deb

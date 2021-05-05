@@ -38,7 +38,7 @@ jobs:
           git config --global user.name "${GH_NAME}"
           git config --global user.email "${GH_EMAIL}"
           echo "machine github.com login ${GH_NAME} password ${GH_TOKEN}" > ~/.netrc
-          yarn install && yarn run write-translations && cd ..
+          yarn install && yarn run write-translations
 
       - name: Crowdin Action
         uses: crowdin/github-action@1.0.18

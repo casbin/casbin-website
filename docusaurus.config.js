@@ -9,11 +9,6 @@ module.exports = {
   favicon: 'img/favicon.png',
   organizationName: 'casbin', // Usually your GitHub org/user name.
   projectName: 'casbin.github.io', // Usually your repo name.
-  
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'zh', 'kr', 'ru', 'fr', 'jp'],
-  },
 
   themeConfig: {
 
@@ -85,11 +80,9 @@ module.exports = {
           ]
         },
         {
+          label: 'Github',
           href: 'https://github.com/casbin/casbin',
-          className: 'header-github-link',
           position: 'right',
-          'aria-label': 'GitHub repository',
-          src: 'img/github.png'
         },
       ],
     },
