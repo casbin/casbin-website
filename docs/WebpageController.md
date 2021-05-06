@@ -106,6 +106,16 @@ result.then((success, failed) => {
 
 Correspondingly, you need to expose an interface (e.g. a RestAPI) to generate the permission object and pass it to the frontend. In your API controller, call `CasbinJsGetUserPermission` to construct the permission object. Here is an example in Beego:
 
+:::note
+Your endpoint server should return something like
+```json
+{
+    "other":"other",
+    "data": "What you get from `CasbinJsGetPermissionForUser`"
+}
+```
+:::
+
 ```Go
 // Router
 beego.Router("api/casbin", &controllers.APIController{}, "GET:GetFrontendPermission")
