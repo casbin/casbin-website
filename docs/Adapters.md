@@ -26,7 +26,6 @@ Adapter | Type | Author | AutoSave | Description
 [GoFrame ORM Adapter](https://github.com/kotlin2018/adapter) | ORM | [@kotlin2018](https://github.com/kotlin2018) | ✅ | MySQL, SQLite, PostgreSQL, Oracle, SQL Server are supported by [GoFrame ORM](https://goframe.org/pages/viewpage.action?pageId=1114686)
 [Filtered PostgreSQL Adapter](https://github.com/casbin/casbin-pg-adapter) | SQL | Casbin | ✅ | For [PostgreSQL](https://www.postgresql.org/)
 [PostgreSQL Adapter](https://github.com/cychiuae/casbin-pg-adapter) | SQL | [@cychiuae](https://github.com/cychiuae) | ✅ | For [PostgreSQL](https://www.postgresql.org/)
-[PostgreSQL Adapter (Archived)](https://github.com/going/casbin-postgres-adapter) | SQL | [Going](https://github.com/going) | ❌ | For [PostgreSQL](https://www.postgresql.org/)
 [RQLite Adapter](https://github.com/edomosystems/rqlite-adapter) | SQL | [EDOMO Systems](https://github.com/edomosystems) | ✅ | For [RQLite](https://github.com/rqlite/rqlite/)
 [MongoDB Adapter](https://github.com/casbin/mongodb-adapter) | NoSQL | Casbin | ✅ | For [MongoDB](https://www.mongodb.com) based on [MongoDB driver for Go](https://github.com/globalsign/mgo)
 [RethinkDB Adapter](https://github.com/adityapandey9/rethinkdb-adapter) | NoSQL | [@adityapandey9](https://github.com/adityapandey9) | ✅ | For [RethinkDB](https://rethinkdb.com/)
