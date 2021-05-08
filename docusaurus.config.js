@@ -12,6 +12,14 @@ module.exports = {
 
   themeConfig: {
 
+    prism: {
+      additionalLanguages: [
+        'java',
+        'ini',
+        'python',
+      ],
+    },
+
     //Website navbar config
     navbar: {
       title: 'Casbin',
