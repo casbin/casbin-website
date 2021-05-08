@@ -23,6 +23,7 @@ Project | Author | Frontend | Backend | Description
 [zeus-admin](https://github.com/bullteam/zeus-admin) | [bullteam](https://github.com/bullteam) | Vue + Element UI | Gin | Unified Permission management platform based on JWT + Casbin
 [IrisAdminApi](https://github.com/snowlyg/IrisAdminApi) | [@snowlyg](https://github.com/snowlyg) | Vue + Element UI | Iris | Backend API based on Iris + Casbin
 [Gfast](https://github.com/tiger1103/gfast) | [@tiger1103](https://github.com/tiger1103) | Vue + Element UI | Go Frame | Admin portal based on GF (Go Frame)
+[Echo-Admin](https://github.com/RealLiuSha/echo-admin) | [@RealLiuSha](https://github.com/RealLiuSha) | Vue 2.x + Element UI | Echo | Admin portal based on Echo + Gorm + Casbin + Uber-FX
 
 <!--Node.js-->
 Project | Author | Frontend | Backend | Description
