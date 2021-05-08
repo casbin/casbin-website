@@ -79,7 +79,7 @@ For example:
 
 <!--Go-->
 ```go
-res := e.GetUsersForRoleInDomain("alice", "domain1")
+res := e.GetPermissionsForUserInDomain("alice", "domain1")
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
