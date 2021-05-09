@@ -14,7 +14,6 @@ The site configuration and documentation powering Casbin's website: https://casb
 
 1.  `git clone https://github.com/casbin/casbin-website` to download source code.
 1.  `cd casbin-website` to go into the project root.
-1.  `cd website` to go into the website portion of the project.
 1.  `yarn` to install the website's npm dependencies (or `npm install`, if not using Yarn).
 
 ### Running locally
@@ -38,8 +37,7 @@ docs, you'll probably want to take a look at the `docs/` directory.
 
 To edit the internals of how the site is built, you may want to get familiarized
 with how the site is built. The Casbin website is a static site generated
-using [Docusaurus](https://docusaurus.io). The website configuration can be
-found in the `website/` directory. Visit the Docusaurus website to learn more
+using [Docusaurus](https://docusaurus.io). Visit the [Docusaurus website](https://docusaurus.io) to learn more
 about all the available configuration options.
 
 ## Directory structure
@@ -52,31 +50,32 @@ casbin-website/
 │   ├── assets/
 │   ├── accessibility.md
 │   └── ...
-└── website/
-    ├── blog/
-    │   ├── assets/
-    │   ├── 2015-03-26-casbin-bringing-modern-web-techniques-to-mobile.md
-    │   └── ...
-    ├── core/
-    ├── pages/
-    │   └── en/
-    │       ├── ...
-    │       ├── index.js
-    │       └── ...
-    ├── static/
-    │   ├── css/
-    │   ├── img/
-    │   └── js/
-    ├── versioned_docs/
-    │   ├── version-0.5/
-    │   └── ...
-    ├── versioned_sidebars/
-    │   ├── version-0.5-sidebars.json
-    │   └── ...
-    ├── showcase.json
-    ├── sidebars.json
-    ├── siteConfig.js
-    └── versions.json
+├── blog/
+│   ├── assets/
+│   ├── 2015-03-26-casbin-bringing-modern-web-techniques-to-mobile.md
+│   └── ...
+├── src/
+|   ├── pages/
+|   │   └── en/
+|   │       ├── ...
+|   │       ├── index.js
+|   │       └── ...
+|   ├── css/
+|   |	└── custom.css
+|   └── components/
+|    	├── HomepageFeature.js
+|    	└── ...
+├── static/
+│   └── img/
+|		├── langs/
+|			├── ...
+|		├── users/
+|			├── ...
+├── packages.json
+├── sidebars.js
+├── docusaurus.config.js
+├── babel.config.js
+└── versions.json
 ```
 
 ## Documentation sources
@@ -84,39 +83,14 @@ casbin-website/
 As mentioned above, the `docs/` folder contains the source files for all of the
 docs in the Casbin website. In most cases, you will want to edit the files
 within this directory. If you're adding a new doc or you need to alter the order
-the docs appear in the sidebar, take a look at the `sidebars.json` file in the
-`website/` directory. The sidebars file contains a list of document ids that
+the docs appear in the sidebar, take a look at the `sidebars.json` file. The sidebars file contains a list of document ids that
 should match those defined in the header metadata (aka frontmatter) of the docs
 markdown files.
-
-### Versioned docs
-
-The Casbin website is versioned as to allow users to go back and see the
-API reference docs for any given release. A new version of the website is
-generally made whenever there is a new Casbin release. When this happens,
-any changes made to the `docs/` and `website/sidebars.json` files will be copied
-over to the corresponding location within `website/versioned_docs/` and
-`website/versioned_sidebars/`.
-
-> Do not edit the auto-generated files within `versioned_docs/` or
-> `versioned_sidebars/` unless you are sure it is necessary. Edits made to older
-> versions will not be propagated to newer versions of the docs.
-
-Docusaurus keeps track of the list of versions for the site in the
-`website/versions.json` file. The ordering of the versions in this file should
-be in reverse chronological order.
-
-#### Cutting a new version
-
-1.  `cd casbin-website` to go into the project root
-1.  `cd website` to go into the website portion of the project
-1.  Run `yarn version <version>` where `<version>` is the new version being
-    released.
 
 ## Website configuration
 
 The main config file for the website can be found at `docusaurus.config.js`.
-This file tells Docusaurus [how to build the website](http://docusaurus.io/docs/en/site-config.html).
+This file tells Docusaurus [how to build the website](https://docusaurus.io/docs/configuration).
 Edits to this file are rarely necessary.
 
 The `src/pages/` subdirectory contains the Casbin components that make up the
@@ -138,14 +112,12 @@ Casbin showcase.
 
 1.  Follow the [Running locally](#running-locally) instructions.
 1.  Save the files and check in the browser. Some changes may require a server restart.
-1.  Changes to `/docs` will only be visible in the latest version of the documentation (master).
-
-open `http://localhost:3000/casbin/versions.html` to see other versions.
+1.  Changes to `/docs` will only be visible in the latest version of the documentation (master). **Note that the new version of docusaurus can handle markdown and MDX, if there are multi-language code blocks in new docs file, we need to create MDX file and follow [this](https://docusaurus.io/docs/next/markdown-features/code-blocks#multi-language-support-code-blocks) to render code tabs.**
 
 ### Test the change
 
-1.  If possible, test any visual changes in all latest versions of common
-    browsers, on both desktop and mobile.
+If possible, test any visual changes in all latest versions of common
+browsers, on both desktop and mobile.
 
 ### Push it
 
