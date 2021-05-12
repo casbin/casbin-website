@@ -19,6 +19,7 @@ Adapter | Type | Author | AutoSave | Description
 [SQL Adapter](https://github.com/Blank-Xu/sql-adapter) | SQL | [@Blank-Xu](https://github.com/Blank-Xu) | ✅ | MySQL, PostgreSQL, SQL Server, SQLite3 are supported in `master` branch and Oracle is supported in `oracle` branch by `database/sql`
 [Xorm Adapter](https://github.com/casbin/xorm-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, TiDB, SQLite, SQL Server, Oracle are supported by [Xorm](https://github.com/go-xorm/xorm/)
 [Gorm Adapter](https://github.com/casbin/gorm-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, Sqlite3, SQL Server are supported by [Gorm](https://github.com/jinzhu/gorm/)
+[Ent Adapter](https://github.com/casbin/ent-adapter) | ORM | Casbin | ✅ | MySQL, MariaDB, PostgreSQL, SQLite, Gremlin-based graph databases are supported by [ent ORM](https://entgo.io/)
 [Beego ORM Adapter](https://github.com/casbin/beego-orm-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, Sqlite3 are supported by [Beego ORM](https://beego.me/docs/mvc/model/overview.md)
 [SQLX Adapter](https://github.com/memwey/casbin-sqlx-adapter) | ORM | [@memwey](https://github.com/memwey) | ✅ | MySQL, PostgreSQL, SQLite, Oracle are supported by [SQLX](https://github.com/jmoiron/sqlx)
 [Sqlx Adapter](https://github.com/Blank-Xu/sqlx-adapter) | SQL | [@Blank-Xu](https://github.com/Blank-Xu) | ✅ | MySQL, PostgreSQL, SQL Server, SQLite3 are supported in `master` branch and Oracle is supported in `oracle` branch by [sqlx](https://github.com/jmoiron/sqlx)
