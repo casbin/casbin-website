@@ -359,6 +359,7 @@ var roles = e.GetRolesForUser("alice");
 
 <!--Delphi-->
 ```delphi
+roles = e.rolesForEntity("alice")
 ```
 
 <!--Rust-->
