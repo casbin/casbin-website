@@ -3,13 +3,27 @@ id: watchers
 title: Watchers
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 We support to use distributed messaging systems like [etcd](https://github.com/coreos/etcd) to keep consistence between multiple Casbin enforcer instances. So our users can concurrently use multiple Casbin enforcers to handle large number of permission checking requests.
 
 Similar to policy storage adapters, we don't put watcher code in the main library. Any support for a new messaging system should be implemented as a watcher. A complete list of Casbin watchers is provided as below. Any 3rd-party contribution on a new watcher is welcomed, please inform us and I will put it in this list:)
 
-<!--DOCUSAURUS_CODE_TABS-->
+<Tabs
+  defaultValue="go"
+  values={[
+    { label: 'Go', value: 'go'},
+    { label: 'Java', value: 'java'},
+    { label: 'Node.js', value: 'nodejs'},
+    { label: 'Python', value: 'python'},
+    { label: '.NET', value: 'c#'},
+    { label: 'Ruby', value: 'ruby'},
+  ]
+}>
 
-<!--Go-->
+<TabItem value="go">
+
 Watcher | Type | Author | Description
 ----|------|----|----
 [Etcd Watcher](https://github.com/casbin/etcd-watcher) | KV store | Casbin | Watcher for [etcd](https://github.com/coreos/etcd)
@@ -20,12 +34,18 @@ Watcher | Type | Author | Description
 [NATS, RabbitMQ, GCP Pub/Sub, AWS SNS & SQS, Kafka, InMemory](https://github.com/rusenask/casbin-go-cloud-watcher) | Messaging System | [@rusenask](https://github.com/rusenask/) | Watcher based on [Go Cloud Dev Kit](https://gocloud.dev/) that works with leading cloud providers and self-hosted infrastructure |
 [RocketMQ Watcher](https://github.com/fmyxyz/casbin-rocketmq-watcher) | Messaging system | [@fmyxyz](https://github.com/fmyxyz) | Watcher for [Apache RocketMQ](https://rocketmq.apache.org/)
 
-<!--Java-->
+</TabItem>
+
+<TabItem value="java">
+
 Watcher | Type | Author | Description
 ----|------|----|----
 [Etcd Adapter](https://github.com/mapleafgo/jcasbin-extra) | KV store | [@mapleafgo](https://github.com/mapleafgo) | Watcher for [etcd](https://github.com/coreos/etcd)
 
-<!--Node.js-->
+</TabItem>
+
+<TabItem value="nodejs">
+
 Watcher | Type | Author | Description
 ----|------|----|----
 [Etcd Watcher](https://github.com/node-casbin/etcd-watcher) | KV store | Casbin | Watcher for [etcd](https://github.com/coreos/etcd)
@@ -33,23 +53,34 @@ Watcher | Type | Author | Description
 [Pub/Sub Watcher](https://github.com/node-casbin/pubsub-watcher) | Messaging system | Casbin | Watcher for [Google Cloud Pub/Sub](https://cloud.google.com/pubsub/docs)
 [Postgres Watcher](https://github.com/mcollina/casbin-pg-watcher) | Database | [Matteo Collina](https://github.com/mcollina/) | Watcher for [PostgreSQL](https://www.postgresql.org/)
 
-<!--Python-->
+</TabItem>
+
+<TabItem value="python">
+
 Watcher | Type | Author | Description
 ----|------|----|----
 [Redis Watcher](https://github.com/ScienceLogic/flask-casbin-redis-watcher) | KV store | [ScienceLogic](https://github.com/ScienceLogic) | Watcher for [Redis](http://redis.io/)
 [PostgreSQL Watcher](https://github.com/pycasbin/postgresql-watcher) | Database | Casbin| Watcher for [PostgreSQL](https://www.postgresql.org/)
 
-<!--.NET-->
+</TabItem>
+
+<TabItem value="c#">
+
 Watcher | Type | Author | Description
 ----|------|----|----
 [Redis Watcher](https://github.com/Sbou/Casbin.NET-Redis-Watcher) | KV store | [@Sbou](https://github.com/Sbou) | Watcher for [Redis](http://redis.io/)
 
-<!--Ruby-->
+</TabItem>
+
+<TabItem value="ruby">
+
 Watcher | Type | Author | Description
 ----|------|----|----
 [Redis Watcher](https://github.com/evrone/casbin-ruby-redis-watcher) | KV store | [evrone](https://github.com/evrone) | Watcher for [Redis](http://redis.io/)
 
-<!--END_DOCUSAURUS_CODE_TABS-->
+</TabItem>
+
+</Tabs>
 
 ## WatcherEx
 
@@ -58,8 +89,9 @@ In order to support incremental synchronization between multiple instances, we p
 Compared with `Watcher` interface, with implementing `WatcherEx` what kind of update action can be distinguished, etc `AddPolicy`, `RemovePolicy`, etc. 
 
 WatcherEx Apis:
+
 | api | description |
-| ---- | ---- |
+| :-- | :-: |
 | SetUpdateCallback(func(string)) error | SetUpdateCallback sets the callback function that the watcher will call, when the policy in DB has been changed by other instances. A classic callback is Enforcer.LoadPolicy(). |
 | Update() error | Update calls the update callback of other instances to synchronize their policy. It is usually called after changing the policy in DB, like Enforcer.SavePolicy(), Enforcer.AddPolicy(), Enforcer.RemovePolicy(), etc. |
 | Close() | Close stops and releases the watcher, the callback function will not be called any more. |

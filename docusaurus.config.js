@@ -17,6 +17,11 @@ module.exports = {
         'java',
         'ini',
         'python',
+        'csv',
+        'php',
+        'ruby',
+        'pascal',
+        'rust',
       ],
     },
 

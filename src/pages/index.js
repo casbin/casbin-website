@@ -10,6 +10,7 @@ import styles from './index.module.css';
 import custom from '../css/custom.css'
 import HomepageFeatures from '../components/HomepageFeatures';
 import useBaseUrl from '@docusaurus/useBaseUrl'
+//import Users from './users'
 //import users from './users'
 
 import CodeBlock from '@theme/CodeBlock';
@@ -310,7 +311,6 @@ export default function Home() {
         <br />
         <br />
         <Showcase />
-        
     </Layout>
 
   );

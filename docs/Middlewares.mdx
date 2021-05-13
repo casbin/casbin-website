@@ -3,11 +3,26 @@ id: middlewares
 title: Middlewares
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 ### Web frameworks
 
-<!--DOCUSAURUS_CODE_TABS-->
+<Tabs
+  defaultValue="go"
+  values={[
+    { label: 'Go', value: 'go'},
+    { label: 'Java', value: 'java'},
+    { label: 'Node.js', value: 'nodejs'},
+    { label: 'Python', value: 'python'},
+    { label: '.NET', value: 'c#'},
+    { label: 'PHP', value: 'php'},
+    { label: 'Rust', value: 'rust'},
+  ]
+}>
 
-<!--Go-->
+<TabItem value="go">
+
 Name | Description
 ----|----
 [Gin](https://github.com/gin-gonic/gin) | A HTTP web framework featuring a Martini-like API with much better performance, via plugin: [authz](https://github.com/gin-contrib/authz) or [gin-casbin](https://github.com/maxwellhertz/gin-casbin)
@@ -29,7 +44,10 @@ Name | Description
 [Tango](https://github.com/lunny/tango) | Micro & pluggable web framework for Go, via plugin: [authz](https://gitea.com/tango/authz)
 [Baa](https://github.com/go-baa/baa) | An express Go web framework with routing, middleware, dependency injection and http context, via plugin: [authz](https://github.com/baa-middleware/authz)
 
-<!--Java-->
+</TabItem>
+
+<TabItem value="java">
+
 Name | Description
 ----|----
 [Spring Boot](https://projects.spring.io/spring-boot/) | Makes it easy to create Spring-powered applications and services, via plugin: [casbin-spring-boot-starter](https://github.com/jcasbin/casbin-spring-boot-starter) or [jcasbin-springboot-plugin](https://github.com/jcasbin/jcasbin-springboot-plugin) or [Simple SpringBoot security demo with jCasbin](https://github.com/jveverka/spring-examples/tree/master/spring-jcasbin)
@@ -39,7 +57,10 @@ Name | Description
 [Nutz](https://nutzam.com/) | Web framework (MVC/IOC/AOP/DAO/JSON) for all Java developers, via plugin: [nutz-authz](https://github.com/jcasbin/nutz-authz)
 [mangoo I/O](https://github.com/svenkubiak/mangooio) | An intuitive, lightweight, high performance full stack Java web framework, via built-in plugin: [AuthorizationService.java](https://github.com/svenkubiak/mangooio/blob/e8c647a3f7c427bce27377025bec074f6d767f50/mangooio-core/src/main/java/io/mangoo/services/AuthorizationService.java)
 
-<!--Node.js-->
+</TabItem>
+
+<TabItem value="nodejs">
+
 Name | Description
 ----|----
 [Express](https://github.com/expressjs/express) | Fast, unopinionated, minimalist web framework for node, via plugin: [express-authz](https://github.com/node-casbin/express-authz)
@@ -51,7 +72,10 @@ Name | Description
 [hapi](https://hapi.dev/) | The Simple, Secure Framework Developers Trust. via plugin: [hapi-authz](https://github.com/node-casbin/hapi-authz)
 [Casbin JWT Express](https://github.com/tiagostutz/casbin-jwt-express) | Authorization middleware that uses stateless JWT token to validate ACL rules using Casbin
 
-<!--PHP-->
+</TabItem>
+
+<TabItem value="php">
+
 Name | Description
 ----|----
 [Laravel](https://laravel.com/) | The PHP framework for web artisans, via plugin: [laravel-authz](https://github.com/php-casbin/laravel-authz)
@@ -66,24 +90,35 @@ Name | Description
 [Slim](https://www.slimframework.com/) | A PHP micro framework that helps you quickly write simple yet powerful web applications and APIs, via plugin: [casbin-with-slim](https://github.com/php-casbin/casbin-with-slim)
 [Phalcon](https://phalcon.io/) | A full-stack PHP framework delivered as a C-extension, via plugin: [phalcon-permission](https://github.com/php-casbin/phalcon-permission)
 
-<!--Python-->
+</TabItem>
+
+<TabItem value="python">
+
 Name | Description
 ----|----
 [Django](https://www.djangoproject.com/) | A high-level Python Web framework, via plugin: [django-casbin](https://github.com/pycasbin/django-casbin)
 [Flask](http://flask.pocoo.org/) | A microframework for Python based on Werkzeug, Jinja 2 and good intentions, via plugin: [flask-authz](https://github.com/pycasbin/flask-authz) or [Flask-Casbin (3rd-party, but maybe more friendly)](https://github.com/daymien/Flask-Casbin)
 [FastAPI](https://github.com/tiangolo/fastapi) | A modern, fast (high-performance), web framework for building APIs with Python 3.6+ based on standard Python type hints, via plugin: [fastapi-authz](https://github.com/pycasbin/fastapi-authz)
 
-<!--.NET-->
+</TabItem>
+
+<TabItem value="c#">
+
 Name | Description
 ----|----
 [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core) | An open-source and cross-platform framework for building modern cloud based internet connected applications, such as web apps, IoT apps and mobile backends, via plugin: [Casbin.AspNetCore](https://github.com/casbin-net/Casbin.AspNetCore)
 [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core) | A simple demo of using Casbin at ASP.NET Core framework, via plugin: [CasbinACL-aspNetCore](https://github.com/MustafaMustafayev/CasbinACL-aspNetCore)
 
-<!--Rust-->
+</TabItem>
+
+<TabItem value="rust">
+
 Name | Description
 ----|----
 [Actix](https://github.com/actix/actix) | A Rust actors framework, via plugin: [actix-casbin](https://github.com/casbin-rs/actix-casbin)
 [Actix web](https://github.com/actix/actix-web) | A small, pragmatic, and extremely fast rust web framework, via plugin: [actix-casbin-auth](https://github.com/casbin-rs/actix-casbin-auth)
 [Rocket](https://github.com/SergioBenitez/Rocket) | a web framework for Rust that makes it simple to write fast, secure web applications without sacrificing flexibility, usability, or type safety, template: [rocket-casbin-demo](https://github.com/simoin/Rocket_Casbin_Demo)
 
-<!--END_DOCUSAURUS_CODE_TABS-->
+</TabItem>
+
+</Tabs>

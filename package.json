@@ -18,6 +18,7 @@
     "@docusaurus/theme-search-algolia": "^2.0.0-alpha.74",
     "@mdx-js/react": "^1.6.22",
     "clsx": "^1.1.1",
+    "prism-react-renderer": "^1.2.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-github-btn": "^1.2.0"

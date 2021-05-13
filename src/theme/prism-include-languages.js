@@ -13,17 +13,19 @@ const prismIncludeLanguages = (PrismObject) => {
       themeConfig: {prism: {additionalLanguages = []} = {}},
     } = siteConfig;
     window.Prism = PrismObject;
-    additionalLanguages.forEach((ini) => {
-      require(`./prism-ini`); // eslint-disable-line
-    },
-    (java) => {
-      require('./prism-java');
-    },
-    (python) => {
+    additionalLanguages.forEach((lang) => {
+      require(`./prism-${lang}`); // eslint-disable-line
+    });
+
+      require('./prism-java');//java language support
       require('./prism-python');
-    }
+      require('./prism-rust');
+      require('./prism-csv');
+      require('./prism-php');
+      require('./prism-pascal');
+      require('./prism-csharp');
+      require('./prism-ruby');
     
-    );
     delete window.Prism;
   }
 };
