@@ -101,6 +101,7 @@ Adapter | Type | Author | AutoSave | Description
 [Async Databases Adapter](https://github.com/sampingantech/databases-casbin-adapter) | ORM | [sampingantech](https://github.com/sampingantech) | ✅ | PostgreSQL, MySQL, SQLite, Oracle, Microsoft SQL Server, Firebird, Sybase are supported by [Databases](https://www.encode.io/databases/)
 [Peewee Adapter](https://github.com/shblhy/peewee-adapter) | ORM | [@shblhy](https://github.com/shblhy) | ✅ | PostgreSQL, MySQL, SQLite are supported by [Peewee](http://docs.peewee-orm.com/)
 [MongoEngine Adapter](https://github.com/zhangbailong945/mongoengine_adapter) | ORM | [@zhangbailong945](https://github.com/zhangbailong945) | ❌ | MongoDB is supported by [MongoEngine](http://mongoengine.org/)
+[Pony ORM Adapter](https://github.com/drorvinkler/pycasbin-pony-adapter) | ORM | [@drorvinkler](https://github.com/drorvinkler) | ✅ | MySQL, PostgreSQL, SQLite, Oracle, CockroachDB are supported by [Pony ORM](https://ponyorm.org/)
 [Couchbase Adapter](https://github.com/ScienceLogic/casbin-couchbase-adapter) | NoSQL | [ScienceLogic](https://github.com/ScienceLogic) | ✅ (without `remove_filtered_policy()`) | For [Couchbase](https://www.couchbase.com/)
 [DynamoDB Adapter](https://github.com/abqadeer/python-dycasbin) | NoSQL | [@abqadeer](https://github.com/abqadeer/) | ✅ | For [DynamoDB](https://aws.amazon.com/dynamodb/)
 [Pymongo Adapter](https://github.com/pycasbin/pymongo-adapter) | NoSQL |  Casbin | ❌ | MongoDB is supported by [Pymongo](https://pypi.org/project/pymongo/)
