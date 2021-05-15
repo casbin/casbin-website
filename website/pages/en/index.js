@@ -95,7 +95,7 @@ class HomeSplash extends React.Component {
             <Button href="https://github.com/casbin/Casbin.NET">.NET (C#)</Button>
             <Button href="https://github.com/casbin4d/Casbin4D">Delphi</Button>
             <Button href="https://github.com/casbin/casbin-rs">Rust</Button>
-            <Button href="https://github.com/evrone/casbin-ruby">Ruby</Button>
+            <Button href="https://github.com/CasbinRuby/casbin-ruby">Ruby</Button>
             <Button href="https://github.com/casbin/SwiftCasbin">Swift (Objective-C)</Button>
             <Button href="https://github.com/casbin/lua-casbin">Lua (OpenResty)</Button>
             <Button href="https://github.com/casbin/dart-casbin">Dart (Flutter)</Button>
