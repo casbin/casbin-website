@@ -84,6 +84,6 @@ Name | Description
 ----|----
 [Actix](https://github.com/actix/actix) | A Rust actors framework, via plugin: [actix-casbin](https://github.com/casbin-rs/actix-casbin)
 [Actix web](https://github.com/actix/actix-web) | A small, pragmatic, and extremely fast rust web framework, via plugin: [actix-casbin-auth](https://github.com/casbin-rs/actix-casbin-auth)
-[Rocket](https://github.com/SergioBenitez/Rocket) | a web framework for Rust that makes it simple to write fast, secure web applications without sacrificing flexibility, usability, or type safety, template: [rocket-casbin-demo](https://github.com/simoin/Rocket_Casbin_Demo)
+[Rocket](https://github.com/SergioBenitez/Rocket) | a web framework for Rust that makes it simple to write fast, secure web applications without sacrificing flexibility, usability, or type safety, via plugin: [rocket-authz](https://github.com/casbin-rs/rocket-authz)
 
 <!--END_DOCUSAURUS_CODE_TABS-->
