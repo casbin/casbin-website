@@ -3,6 +3,9 @@ id: log-error
 title: Log & Error Handling
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 ## Logging
 
 Casbin uses the built-in ``log`` to print logs to console by default like:
@@ -13,7 +16,7 @@ Casbin uses the built-in ``log`` to print logs to console by default like:
 
 The logging is not enabled by default. You can toggle it via ``Enforcer.EnableLog()`` or the last parameter of ``NewEnforcer()``.
 
-:::note  
+:::note
 We already support logging the model, enforce request, role, policy in Golang. You can define your own log for logging Casbin.
 If you are using Python, pycasbin leverages the default Python logging mechanism. The pycasbin package makes a call to logging.getLogger() to set the logger. No special logging configuration is needed other than initializing the logger in the parent application. If no logging is intitilized within the parent application you will not see any log messages from pycasbin. 
 :::
@@ -40,20 +43,32 @@ e3, _ := casbin.NewEnforcer("examples/rbac_model.conf", a, logger)
 
 We provide some loggers to help you log information.
 
-<!--DOCUSAURUS_CODE_TABS-->
+<Tabs
+  defaultValue="go"
+  values={[
+    { label: 'Go', value: 'go'},
+    { label: 'PHP', value: 'php'},
+  ]
+}>
 
-<!--Go-->
+<TabItem value="go">
+
 Logger | Author | Description
 ----|----|----
 [Defatule logger (built-in)](https://github.com/casbin/casbin/blob/master/log/default_logger.go) | Casbin | The default logger using golang log.
 [Zap logger](https://github.com/casbin/zap-logger) | Casbin | Using [zap](https://github.com/uber-go/zap), provide json encoded log and you could customize more with your own zap-logger.
 
-<!--PHP-->
+</TabItem>
+
+<TabItem value="php">
+
 Logger | Author | Description
 ----|----|----
 [psr3-bridge logger](https://github.com/php-casbin/psr3-bridge) | Casbin | Provides a [PSR-3](https://www.php-fig.org/psr/psr-3/) compliant bridge.
 
-<!--END_DOCUSAURUS_CODE_TABS-->
+</TabItem>
+
+</Tabs>
 
 #### How to write a logger
 

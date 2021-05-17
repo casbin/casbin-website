@@ -7,7 +7,7 @@ title: Function
 
 You can even specify functions in a matcher to make it more powerful. You can use the built-in functions or specify your own function. All built-in functions take such a format(except ``keyGet`` and ``keyGet2``):
 
-```C
+```java
 bool function_name(string arg1, string arg2)
 ```
 

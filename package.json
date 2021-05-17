@@ -17,6 +17,7 @@
     "@docusaurus/preset-classic": "2.0.0-alpha.74",
     "@docusaurus/theme-search-algolia": "^2.0.0-alpha.74",
     "@mdx-js/react": "^1.6.22",
+    "antd": "^4.15.5",
     "clsx": "^1.1.1",
     "prism-react-renderer": "^1.2.0",
     "react": "^17.0.1",

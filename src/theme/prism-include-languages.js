@@ -25,7 +25,7 @@ const prismIncludeLanguages = (PrismObject) => {
       require('./prism-pascal');
       require('./prism-csharp');
       require('./prism-ruby');
-    
+      require('./prism-latex');    
     delete window.Prism;
   }
 };

@@ -5,9 +5,23 @@ title: Our Adopters
 
 ## Direct integration
 
-<!--DOCUSAURUS_CODE_TABS-->
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-<!--Go-->
+<Tabs
+  defaultValue="go"
+  values={[
+    { label: 'Go', value: 'go'},
+    { label: 'Node.js', value: 'nodejs'},
+    { label: 'Python', value: 'python'},
+    { label: '.NET', value: 'c#'},
+    { label: 'PHP', value: 'php'},
+    { label: 'Rust', value: 'rust'},
+  ]
+}>
+
+<TabItem value="go">
+
 Name | Description | Model | Policy
 ----|----|----|----
 [VMware Harbor](https://github.com/goharbor/harbor) | VMware's open source trusted cloud native registry project that stores, signs, and scans content. | [Code](https://github.com/goharbor/harbor/blob/master/src/pkg/permission/evaluator/rbac/casbin.go#L24-L44) | [Beego ORM](https://github.com/goharbor/harbor/blob/master/src/replication/dao/policy.go#L24-L26)
@@ -24,22 +38,33 @@ Name | Description | Model | Policy
 [Qilin API](https://github.com/ProtocolONE/qilin.api) | ProtocolONE's licenses managemen tool for game content. | [Code](https://github.com/ProtocolONE/rbac/blob/master/model.go) | [.csv](https://github.com/ProtocolONE/rbac/tree/master/conf)
 [Devtron Labs](https://github.com/devtron-labs/devtron) | Software Delivery Workflow For Kubernetes. | [.conf](https://github.com/devtron-labs/devtron/blob/main/auth_model.conf) | [Xorm](https://github.com/devtron-labs/devtron/blob/main/internal/casbin/Adapter.go)
 
-<!--Java-->
+</TabItem>
+
+<TabItem value="java">
+
 Name | Description | Model | Policy
 ----|----|----|----
 [lighty.io](https://github.com/PantheonTechnologies/lighty-core) | OpenDaylight's solution for SDN controller. | [README](https://github.com/PantheonTechnologies/lighty-core/blob/6f2ceaae6a68e08c96d14d2fa8ee060ad9f61606/lighty-examples/lighty-controller-springboot-netconf/README.md#security) | N/A
 
-<!--Node.js-->
+</TabItem>
+
+<TabItem value="nodejs">
+
 Name | Description | Model | Policy
 ----|----|----|----
 [Notadd](https://github.com/notadd/notadd) | A micro-service development architecture based on Nest.js. | [.conf](https://github.com/notadd/notadd/blob/e58d0a0cf5d691c3fe20170e94cdd8e2c627abd4/apps/nest-upms/src/casbin/rbac_model.conf) | [DB adapter](https://github.com/notadd/notadd/blob/e58d0a0cf5d691c3fe20170e94cdd8e2c627abd4/apps/nest-upms/src/casbin/adapter.ts)
 
-<!--Python-->
+</TabItem>
+
+<TabItem value="python">
+
 Name | Description | Model | Policy
 ----|----|----|----
 [dtrace](https://github.com/EduScaled/dtrace) | EduScaled's tracing system. | [Commit](https://github.com/EduScaled/dtrace/commit/6e8d6b52ec2fa120e8ad63f84a4aecc3eae14c02) | N/A
 
-<!--END_DOCUSAURUS_CODE_TABS-->
+</TabItem>
+
+</Tabs>
 
 
 ## Integration via plugin

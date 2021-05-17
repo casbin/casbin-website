@@ -83,9 +83,10 @@ casbin-website/
 As mentioned above, the `docs/` folder contains the source files for all of the
 docs in the Casbin website. In most cases, you will want to edit the files
 within this directory. If you're adding a new doc or you need to alter the order
-the docs appear in the sidebar, take a look at the `sidebars.json` file. The sidebars file contains a list of document ids that
-should match those defined in the header metadata (aka frontmatter) of the docs
+the docs appear in the sidebar, take a look at the `sidebars.json` file. The sidebars file contains a list of document ids that should match those defined in the header metadata (aka frontmatter) of the docs
 markdown files.
+
+Note that the new version documentations is based on docusaurus v2, and the documentation file is [MDX](https://mdxjs.com/) file, you can try MDX syntax in [MDX playground](https://mdxjs.com/playground/). For more details, please see the [Docusaurus docs](https://docusaurus.io/docs/markdown-features).
 
 ## Website configuration
 

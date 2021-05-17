@@ -3,6 +3,9 @@ id: rolemanager-api
 title: RoleManager API
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 ## RoleManager
 
 RoleManager provides interface to define the operations for managing roles.
@@ -21,15 +24,23 @@ MatchingFunc will work when operating role matching.
 
 For example:
 
-<!--DOCUSAURUS_CODE_TABS-->
+<Tabs
+  defaultValue="go"
+  values={[
+    { label: 'Go', value: 'go'},
+  ]
+}>
 
-<!--Go-->
+<TabItem value="go">
+
 ```go
     e, _ := casbin.NewEnforcer("path/to/model", "path/to/policy")
     e.AddNamedMatchingFunc("g", "", util.MatchKey)
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
+</TabItem>
+
+</Tabs>
 
 ### `AddNamedDomainMatchingFunc()`
 
@@ -38,15 +49,23 @@ AddNamedDomainMatchingFunc add MatchingFunc by ptype to RoleManager.
 
 For example:
 
-<!--DOCUSAURUS_CODE_TABS-->
+<Tabs
+  defaultValue="go"
+  values={[
+    { label: 'Go', value: 'go'},
+  ]
+}>
 
-<!--Go-->
+<TabItem value="go">
+
 ```go
     e, _ := casbin.NewEnforcer("path/to/model", "path/to/policy")
     e.AddNamedDomainMatchingFunc("g", "", util.MatchKey)
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
+</TabItem>
+
+</Tabs>
 
 ### `GetRoleManager()`
 
@@ -54,14 +73,22 @@ GetRoleManager gets the current role manager for `g`.
 
 For example:
 
-<!--DOCUSAURUS_CODE_TABS-->
+<Tabs
+  defaultValue="go"
+  values={[
+    { label: 'Go', value: 'go'},
+  ]
+}>
 
-<!--Go-->
+<TabItem value="go">
+
 ```go
     rm := e.GetRoleManager()
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
+</TabItem>
+
+</Tabs>
 
 ### `Clear()`
 
@@ -70,14 +97,22 @@ Clear clears all stored data and resets the role manager to the initial state.
 
 For example:
 
-<!--DOCUSAURUS_CODE_TABS-->
+<Tabs
+  defaultValue="go"
+  values={[
+    { label: 'Go', value: 'go'},
+  ]
+}>
 
-<!--Go-->
+<TabItem value="go">
+
 ```go
     rm.Clear()
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
+</TabItem>
+
+</Tabs>
 
 ### `AddLink()`
 
@@ -86,14 +121,22 @@ Domain is a prefix to the roles (can be used for other purposes).
 
 For example:
 
-<!--DOCUSAURUS_CODE_TABS-->
+<Tabs
+  defaultValue="go"
+  values={[
+    { label: 'Go', value: 'go'},
+  ]
+}>
 
-<!--Go-->
+<TabItem value="go">
+
 ```go
     rm.AddLink("u1", "g1", "domain1")
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
+</TabItem>
+
+</Tabs>
 
 ### `DeleteLink()`
 
@@ -102,14 +145,22 @@ Domain is a prefix to the roles (can be used for other purposes).
 
 For example:
 
-<!--DOCUSAURUS_CODE_TABS-->
+<Tabs
+  defaultValue="go"
+  values={[
+    { label: 'Go', value: 'go'},
+  ]
+}>
 
-<!--Go-->
+<TabItem value="go">
+
 ```go
     rm := DeleteLink("u1", "g1", "domain1")
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
+</TabItem>
+
+</Tabs>
 
 ###	`HasLink()`
 
@@ -118,14 +169,22 @@ Domain is a prefix to the roles (can be used for other purposes).
 
 For example:
 
-<!--DOCUSAURUS_CODE_TABS-->
+<Tabs
+  defaultValue="go"
+  values={[
+    { label: 'Go', value: 'go'},
+  ]
+}>
 
-<!--Go-->
+<TabItem value="go">
+
 ```go
     rm.HasLink("u1", "g1", "domain1")
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
+</TabItem>
+
+</Tabs>
 
 ### `GetRoles()`
 
@@ -134,14 +193,22 @@ Domain is a prefix to the roles (can be used for other purposes).
 
 For example:
 
-<!--DOCUSAURUS_CODE_TABS-->
+<Tabs
+  defaultValue="go"
+  values={[
+    { label: 'Go', value: 'go'},
+  ]
+}>
 
-<!--Go-->
+<TabItem value="go">
+
 ```go
     rm.GetRoles("u1", "domain1")
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
+</TabItem>
+
+</Tabs>
 
 ### `GetUsers()`
 
@@ -150,14 +217,22 @@ Domain is a prefix to the users (can be used for other purposes).
 
 For example:
 
-<!--DOCUSAURUS_CODE_TABS-->
+<Tabs
+  defaultValue="go"
+  values={[
+    { label: 'Go', value: 'go'},
+  ]
+}>
 
-<!--Go-->
+<TabItem value="go">
+
 ```go
     rm.GetUsers("g1")
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
+</TabItem>
+
+</Tabs>
 
 ### `PrintRoles()`
 
@@ -165,14 +240,22 @@ PrintRoles prints all the roles to log.
 
 For example:
 
-<!--DOCUSAURUS_CODE_TABS-->
+<Tabs
+  defaultValue="go"
+  values={[
+    { label: 'Go', value: 'go'},
+  ]
+}>
 
-<!--Go-->
+<TabItem value="go">
+
 ```go
     rm.PrintRoles()
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
+</TabItem>
+
+</Tabs>
 
 ### `SetLogger()`
 
@@ -180,9 +263,15 @@ SetLogger sets role manager's logger.
 
 For example:
 
-<!--DOCUSAURUS_CODE_TABS-->
+<Tabs
+  defaultValue="go"
+  values={[
+    { label: 'Go', value: 'go'},
+  ]
+}>
 
-<!--Go-->
+<TabItem value="go">
+
 ```go
 	logger := log.DefaultLogger{}
 	logger.EnableLog(true)
@@ -190,18 +279,28 @@ For example:
 	_ = rm.PrintRoles()
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
+</TabItem>
+
+</Tabs>
 
 ### `GetDomains()`
 GetDomains gets domains that a user has
 
 For example:
 
-<!--DOCUSAURUS_CODE_TABS-->
+<Tabs
+  defaultValue="go"
+  values={[
+    { label: 'Go', value: 'go'},
+  ]
+}>
 
-<!--Go-->
+<TabItem value="go">
+
 ```go
     result, err := rm.GetDomains(name)
 ```
 
-<!--END_DOCUSAURUS_CODE_TABS-->
+</TabItem>
+
+</Tabs>

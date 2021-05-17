@@ -6,6 +6,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './help.css';
 import HomepageFeatures from '../components/HomepageFeatures';
+import { Row, Col } from 'antd';
 
 import CodeBlock from '@theme/CodeBlock';
 function imgUrl(img) {
@@ -74,7 +75,17 @@ export default function Help() {
             </header>
             <p>
             If you need help with Casbin, you can try one of the mechanisms below.
+            <SupportLink />
             </p>
+            <>
+          <Row>
+        <Col span={6}>col-6</Col>
+        <Col span={6}>col-6</Col>
+        <Col span={6}>col-6</Col>
+        <Col span={6}>col-6</Col>
+        </Row>
+        </>
         </Layout>
+
     )
 }

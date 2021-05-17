@@ -3,6 +3,9 @@ id: admin-portal
 title: Admin Portal
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 We provide a [web-based portal called Casdoor](https://github.com/casbin/casdoor) for model management and policy management:
 
 ![model editor](https://hsluoyz.github.io/casbin/ui_model_editor.png)
@@ -11,9 +14,18 @@ We provide a [web-based portal called Casdoor](https://github.com/casbin/casdoor
 
 There are also 3rd-party admin portal projects that use Casbin as authorization engine. You can get started to build your own Casbin service based on these projects.
 
-<!--DOCUSAURUS_CODE_TABS-->
+<Tabs
+  defaultValue="go"
+  values={[
+    { label: 'Go', value: 'go'},
+    { label: 'Node.js', value: 'nodejs'},
+    { label: 'Python', value: 'python'},
+    { label: 'PHP', value: 'php'},
+  ]
+}>
 
-<!--Go-->
+<TabItem value="go">
+
 Project | Author | Frontend | Backend | Description
 ----|----|----|----|----
 [Casdoor](https://github.com/casbin/casdoor) | Casbin | React + Ant Design | Beego | Based on Beego + XORM + React
@@ -24,17 +36,26 @@ Project | Author | Frontend | Backend | Description
 [IrisAdminApi](https://github.com/snowlyg/IrisAdminApi) | [@snowlyg](https://github.com/snowlyg) | Vue + Element UI | Iris | Backend API based on Iris + Casbin
 [Gfast](https://github.com/tiger1103/gfast) | [@tiger1103](https://github.com/tiger1103) | Vue + Element UI | Go Frame | Admin portal based on GF (Go Frame)
 
-<!--Node.js-->
+</TabItem>
+
+<TabItem value="nodejs">
+
 Project | Author | Frontend | Backend | Description
 ----|----|----|----|----
 [Casbin-Role-Mgt-Dashboard-RBAC](https://github.com/alikhan866/Casbin-Role-Mgt-Dashboard-RBAC) | [@alikhan866](https://github.com/alikhan866) | React + Material UI | Express | Beginner friendly RBAC management with Enforcer integration to check enforcement result on the go
 
-<!--Python-->
+</TabItem>
+
+<TabItem value="python">
+
 Project | Author | Frontend | Backend | Description
 ----|----|----|----|----
 [openstack-policy-editor](https://github.com/casbin/openstack-policy-editor) | Casbin | Bootstrap | Django | The Web UI for Casbin
 
-<!--PHP-->
+</TabItem>
+
+<TabItem value="php">
+
 Project | Author | Frontend | Backend | Description
 ----|----|----|----|----
 [Tadmin](https://github.com/techoner/tadmin) | [@techoner](https://github.com/techoner) | AmazeUI | ThinkPHP | Non-intrusive backend framework based on ThinkPHP 5.1+
@@ -42,4 +63,6 @@ Project | Author | Frontend | Backend | Description
 [laravel-casbin-admin](https://github.com/pl1998/laravel-casbin-admin) | [@pl1998](https://github.com/pl1998) | Vue + Element UI | Laravel | RBAC permission management system based on vue-element-admin and Laravel
 larke-admin ([Frontend](https://github.com/deatil/larke-admin-frontend), [Backend](https://github.com/deatil/larke-admin)) | [@deatil](https://github.com/deatil) | Vue 2 + Element UI | Laravel 8 | Admin portal based on Laravel 8, JWT and RBAC
 
-<!--END_DOCUSAURUS_CODE_TABS-->
+</TabItem>
+
+</Tabs>

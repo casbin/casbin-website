@@ -63,7 +63,7 @@ m = r.sub == p.sub && r.obj == p.obj && r.act == p.act
 
 An example policy for ACL model is like:
 
-```
+```bash
 p, alice, data1, read
 p, bob, data2, write
 ```

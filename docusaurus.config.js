@@ -22,6 +22,7 @@ module.exports = {
         'ruby',
         'pascal',
         'rust',
+        'latex',
       ],
     },
 
