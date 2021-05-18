@@ -77,14 +77,6 @@ export default function Help() {
             If you need help with Casbin, you can try one of the mechanisms below.
             <SupportLink />
             </p>
-            <>
-          <Row>
-        <Col span={6}>col-6</Col>
-        <Col span={6}>col-6</Col>
-        <Col span={6}>col-6</Col>
-        <Col span={6}>col-6</Col>
-        </Row>
-        </>
         </Layout>
 
     )

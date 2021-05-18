@@ -3,6 +3,14 @@ import GitHubButton from 'react-github-btn';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 
+import Button from'@material-ui/core/Button';
+import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
+import Avatar from '@material-ui/core/Avatar';
+import { makeStyles } from '@material-ui/core/styles';
+import { deepOrange, green } from '@material-ui/core/colors';
+
 import Head from '@docusaurus/Head'
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -15,46 +23,30 @@ import useBaseUrl from '@docusaurus/useBaseUrl'
 
 import CodeBlock from '@theme/CodeBlock';
 
-//const {siteConfig} = useDocusaurusContext();
-function imgUrl(img) {
-  return siteConfig.baseUrl + 'img/' + img;
-}
-
-function docUrl(doc, language) {
-  return siteConfig.baseUrl + 'docs/' + (language ? language + '/' : '') + doc;
-}
-
-function pageUrl(page, language) {
-  return siteConfig.baseUrl + (language ? language + '/' : '') + page;
-}
-
-const textContent = {
-  policyPersistence: `
-  In Casbin, the policy storage is implemented as an adapter(aka middleware for Casbin).
-  To keep light-weight, we don't put adapter code in the main library (except the default file adapter). 
-  A complete list of Casbin adapters is provided as below. 
-  Any 3rd-party contribution on a new adapter is welcomed, please inform us and I will put it in this list:) 
-  For details of adapters, please refer to the documentation: https://casbin.org/docs/en/adapters
-  `,
-  policyEnforcement: `
-  Some adapters support filtered policy management. 
-  This means that the policy loaded by Casbin is a subset of the policy in storage based on a given filter. 
-  This allows for efficient policy enforcement in large, multi-tenant environments when parsing the entire policy becomes a performance bottleneck.
-  <br /><br />
-  To use filtered policies with a supported adapter, simply call the <code>LoadFilteredPolicy</code> method. The valid format for the filter parameter depends on the adapter used. 
-  To prevent accidental data loss, the <code>SavePolicy</code> method is disabled when a filtered policy is loaded. 
-  <br><br>
-  For example, the following code snippet uses the built-in filtered file adapter and the RBAC model with domains. In this case, the filter limits the policy to a single domain. 
-  Any policy lines for domains other than <code>domain1</code> are omitted from the loaded policy:
-  `,
-  roleManager: `
-  The role manager is used to manage the RBAC role hierarchy (user-role mapping) in Casbin. 
-  A role manager can retrieve the role data from Casbin policy rules or external sources such as LDAP, Okta, Auth0, Azure AD, etc. 
-  We support different implementations of a role manager. 
-  To keep light-weight, we don't put role manager code in the main library (except the default role manager). 
-  A complete list of Casbin role managers is provided as: https://casbin.org/docs/en/role-managers
-  `
-}
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    '& > *': {
+      margin: theme.spacing(1),
+    },
+  },
+  square: {
+//    color: theme.palette.getContrastText(deepOrange[500]),
+//    backgroundColor: deepOrange[500],
+  },
+  rounded: {
+    color: '#fff',
+    backgroundColor: green[500],
+  },
+  small: {
+    width: theme.spacing(3),
+    height: theme.spacing(3),
+  },
+  large: {
+    width: theme.spacing(7),
+    height: theme.spacing(7),
+  },
+}));
 
 //Twitter button used to click and follow casbinnews
 function TwitterButton(){
@@ -81,85 +73,76 @@ function GithubStartButton(){
   );
 }
 
-
 //Policy persistence section
 function PolicyPersistence() {
   return (
-    <section className={styles.container}>
-    <div className="container">
-    <div className="row"></div>
-  <div>
-  <div className={styles.leftLayout}>
-    <div className="text--center padding-horiz--md">
-      <h2>Policy persistence</h2>
-      In Casbin, the policy storage is implemented as an adapter(aka middleware for Casbin).
-  To keep light-weight, we don't put adapter code in the main library (except the default file adapter). 
-  A complete list of Casbin adapters is provided as below. 
-  Any 3rd-party contribution on a new adapter is welcomed, please inform us and I will put it in this list:) 
-  For details of adapters, please refer to the documentation: <a href='https://casbin.org/docs/en/adapters'>https://casbin.org/docs/en/adapters</a>
-      </div>
-      </div>
-  <div className={styles.rightLayout}><img src='img/store.png' /></div>
-  <br />
-  </div>
-  </div>
-  <br />
-  </section>
+  <Container>
+  <Grid container spacing={3} align="center" justify="center">
+  <Grid item xs={6}>
+  <Container>
+    <h2>Policy persistence</h2>
+    In Casbin, the policy storage is implemented as an adapter(aka middleware for Casbin).
+    To keep light-weight, we don't put adapter code in the main library (except the default file adapter). 
+    A complete list of Casbin adapters is provided as below. 
+    Any 3rd-party contribution on a new adapter is welcomed, please inform us and I will put it in this list:) 
+    For details of adapters, please refer to the documentation: <a href='https://casbin.org/docs/en/adapters'>https://casbin.org/docs/en/adapters</a>
+  </Container>
+  </Grid>
+  <Grid item xs={6}>
+  <Container><img src='img/store.png' /></Container>
+  </Grid>
+  </Grid>
+  </Container>
 
   )
 }
 
 function PolicyEnforcement() {
   return (
-    <section className={styles.container}>
-    <div className="container">
-    <div className="row"></div>
-    <div>
-    <div className={styles.leftLayout}><img src='img/scale.png' /></div>
-    <div className={styles.rightLayout}>
-      <div className="text--center padding-horiz--md">
+    <Container>
+      <Grid container spacing={3} align="center" justify="center">
+      <Grid item xs={6}>
+      <Container><img src='img/scale.png' /></Container>
+      </Grid>
+      <Grid item xs={6}>
+      <Container>
       <h2>Policy enforcement at scale</h2>
       Some adapters support filtered policy management. 
-  This means that the policy loaded by Casbin is a subset of the policy in storage based on a given filter. 
-  This allows for efficient policy enforcement in large, multi-tenant environments when parsing the entire policy becomes a performance bottleneck.
-  <br /><br />
-  To use filtered policies with a supported adapter, simply call the <code>LoadFilteredPolicy</code> method. The valid format for the filter parameter depends on the adapter used. 
-  To prevent accidental data loss, the <code>SavePolicy</code> method is disabled when a filtered policy is loaded. 
-  <br /><br />
-  For example, the following code snippet uses the built-in filtered file adapter and the RBAC model with domains. In this case, the filter limits the policy to a single domain. 
-  Any policy lines for domains other than <code>domain1</code> are omitted from the loaded policy:
-        <br />
-        </div>
-        </div>
-    </div>
-    </div>
-    <br />
-    <br />
-    </section>
+      This means that the policy loaded by Casbin is a subset of the policy in storage based on a given filter. 
+      This allows for efficient policy enforcement in large, multi-tenant environments when parsing the entire policy becomes a performance bottleneck.
+      
+      <br /><br />
+      To use filtered policies with a supported adapter, simply call the <code>LoadFilteredPolicy</code> method. The valid format for the filter parameter depends on the adapter used. 
+      To prevent accidental data loss, the <code>SavePolicy</code> method is disabled when a filtered policy is loaded. 
+      <br /><br />
+      For example, the following code snippet uses the built-in filtered file adapter and the RBAC model with domains. In this case, the filter limits the policy to a single domain. 
+      Any policy lines for domains other than <code>domain1</code> are omitted from the loaded policy:
+      </Container>
+      </Grid>
+      </Grid>
+    </Container>
   )
 }
 
 function RoleManager(){
   return (
-    <section className={styles.container}>
-    <div className="container">
-    <div className="row"></div>
-  <div>
-  <div className={styles.leftLayout}>
-    <div className="text--center padding-horiz--md">
+    <Container>
+      <Grid container spacing={3} align="center" justify="center">
+      <Grid item xs={6}>
+      <Container>
     <h2>Role manager</h2>
     The role manager is used to manage the RBAC role hierarchy (user-role mapping) in Casbin. 
   A role manager can retrieve the role data from Casbin policy rules or external sources such as LDAP, Okta, Auth0, Azure AD, etc. 
   We support different implementations of a role manager. 
   To keep light-weight, we don't put role manager code in the main library (except the default role manager). 
   A complete list of Casbin role managers is provided as: <a href='https://casbin.org/docs/en/role-managers'>https://casbin.org/docs/en/role-managers</a>
-      </div>
-      </div>
-  <div className={styles.rightLayout}><img src='img/role.png' /></div>
-  </div>
-  </div>
-  <br />
-  </section>
+  </Container>
+  </Grid>
+  <Grid item xs={6}>
+  <Container><img src='img/role.png' /></Container>
+  </Grid>
+  </Grid>
+  </Container>
   )
 }
 
@@ -271,8 +254,10 @@ function HomepageHeader() {
 }
 
 function Showcase() {
+  const classes = useStyles();
   return (
-    <div className="text--center padding-horiz--md">
+    <Box display="flex" align="center" justify="center">
+    <Container>
     <h2 >
       <font color='#443F7C'>
         Who's using Casbin?
@@ -285,8 +270,13 @@ function Showcase() {
         <br></br>
         If you&#x27;re curious to see what can be accomplished with Casbin, check out these apps!
       </p>
-      </div>
+      
+      </Container>
+      <br />
 
+      
+      </Box>
+      
   )
 }
 
@@ -298,20 +288,12 @@ export default function Home() {
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
         <HomepageFeatures />
-        <br />
+        <Container>
         <PolicyPersistence />
-        <br />
-        <br />
+        </Container>
         <PolicyEnforcement />
-        <br />
-        <br />
-        <br />
         <RoleManager />
-        <br />
-        <br />
-        <br />
         <Showcase />
-    </Layout>
-
+      </Layout>
   );
 }
