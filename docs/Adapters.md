@@ -28,7 +28,7 @@ Adapter | Type | Author | AutoSave | Description
 [Filtered PostgreSQL Adapter](https://github.com/casbin/casbin-pg-adapter) | SQL | Casbin | ✅ | For [PostgreSQL](https://www.postgresql.org/)
 [PostgreSQL Adapter](https://github.com/cychiuae/casbin-pg-adapter) | SQL | [@cychiuae](https://github.com/cychiuae) | ✅ | For [PostgreSQL](https://www.postgresql.org/)
 [RQLite Adapter](https://github.com/edomosystems/rqlite-adapter) | SQL | [EDOMO Systems](https://github.com/edomosystems) | ✅ | For [RQLite](https://github.com/rqlite/rqlite/)
-[MongoDB Adapter](https://github.com/casbin/mongodb-adapter) | NoSQL | Casbin | ✅ | For [MongoDB](https://www.mongodb.com) based on [MongoDB driver for Go](https://github.com/globalsign/mgo)
+[MongoDB Adapter](https://github.com/casbin/mongodb-adapter) | NoSQL | Casbin | ✅ | For [MongoDB](https://www.mongodb.com) based on [MongoDB Go Driver](https://github.com/mongodb/mongo-go-driver)
 [RethinkDB Adapter](https://github.com/adityapandey9/rethinkdb-adapter) | NoSQL | [@adityapandey9](https://github.com/adityapandey9) | ✅ | For [RethinkDB](https://rethinkdb.com/)
 [Cassandra Adapter](https://github.com/casbin/cassandra-adapter) | NoSQL | Casbin | ❌ | For [Apache Cassandra DB](http://cassandra.apache.org)
 [DynamoDB Adapter](https://github.com/HOOQTV/dynacasbin) | NoSQL | [HOOQ](https://github.com/HOOQTV) | ❌ | For [Amazon DynamoDB](https://aws.amazon.com/dynamodb/)
