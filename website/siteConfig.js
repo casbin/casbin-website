@@ -36,7 +36,6 @@ const siteConfig = {
     {href: 'https://door.casbin.com', label: "Casdoor"},
     {href: 'https://forum.casbin.com', label: "Forum"},
     {href: 'https://oa.casbin.com', label: "OA"},
-    {href: 'https://trend.casbin.org', label: "Trend"},
     {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
     {languages: true},
