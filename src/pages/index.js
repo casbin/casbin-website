@@ -8,8 +8,8 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import Avatar from '@material-ui/core/Avatar';
-import { makeStyles } from '@material-ui/core/styles';
-import { deepOrange, green } from '@material-ui/core/colors';
+import { makeStyles, ThemeProvider, createMuiTheme, withStyles } from '@material-ui/core/styles';
+import { purple, green } from '@material-ui/core/colors';
 
 import Head from '@docusaurus/Head'
 import Link from '@docusaurus/Link';
@@ -31,8 +31,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   square: {
-//    color: theme.palette.getContrastText(deepOrange[500]),
-//    backgroundColor: deepOrange[500],
+
   },
   rounded: {
     color: '#fff',
@@ -72,6 +71,16 @@ function GithubStartButton(){
     </div>
   );
 }
+
+const LangButton = withStyles((theme) =>({
+  root: {
+    color: theme.palette.getContrastText('#443E7E'),
+    backgroundColor: '#443E7E',
+    '&:hover': {
+      backgroundColor: '#443E7E',
+    },
+  },
+}))(Button);
 
 //Policy persistence section
 function PolicyPersistence() {
@@ -148,21 +157,20 @@ function RoleManager(){
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
+  const classes = useStyles();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
+      <Container align="center">
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div>
-          <Link
+        <Link
               className="button button--lg"
-              to='/docs/get-started'
-            >
+              to='/docs/get-started'>
               Get Start
-            </Link>
-            </div>
-            <br></br>
-        <div className={styles.buttons}>
+          </Link>
+          <br />
+          <br />
+        <Grid align="center" container spaceing={7} className={classes.root}>
           <Link
             className="button button--lg"
             to="https://github.com/casbin/casbin">
@@ -208,11 +216,7 @@ function HomepageHeader() {
             to="https://github.com/casbin/Casbin.NET">
             .NET(C#)
           </Link>
-          
-        </div>
-        <br />
-        <div>
-        <Link
+          <Link
             className="button button--lg"
             to="https://github.com/casbin/Casbin4D">
             Delphi
@@ -237,6 +241,7 @@ function HomepageHeader() {
             to="https://github.com/casbin/lua-casbin">
             Lua (OpenResty)
           </Link>
+          <Container align="center">
           <Link
             className="button button--lg"
             to="https://github.com/casbin/dart-casbin">
@@ -247,8 +252,9 @@ function HomepageHeader() {
             to="https://github.com/casbin/casbin-ex">
             Elixir
           </Link>
-        </div>
-      </div>
+          </Container>
+        </Grid>
+      </Container>
     </header>
   );
 }
@@ -256,8 +262,8 @@ function HomepageHeader() {
 function Showcase() {
   const classes = useStyles();
   return (
-    <Box display="flex" align="center" justify="center">
-    <Container>
+    <>
+    <Container align="center">
     <h2 >
       <font color='#443F7C'>
         Who's using Casbin?
@@ -273,10 +279,93 @@ function Showcase() {
       
       </Container>
       <br />
+        <Container align="center">
+          <Grid container spaceing={3} className={classes.root}>
+        <a href="https://github.com/intel/rmd">
+          <img src="img/users/intel.png" height="150" width="150" title="Intel RMD" />
+        </a>
+        <a href="https://github.com/goharbor/harbor">
+          <img src="img/users/vmware.png" height="150" width="150" title="Vmware Harbor" />
+        </a>
+        <a href="https://docs.docker.com/engine/extend/legacy_plugins/#authorization-plugins">
+          <img src="img/users/docker.png" height="150" width="150" title="Docker" />
+        </a>
+        <a href="https://github.com/orange-cloudfoundry/gobis">
+          <img src="img/users/orange.png" height="150" width="150" title="Orange Gobis" />
+        </a>
+        <a href="https://www.linkedin.com/in/openmohan/">
+          <img src="img/users/cisco.svg" height="150" width="150" title="Cisco" />
+        </a>
+        <a href="https://github.com/microsoft/mouselog">
+          <img src="img/users/microsoft.png" height="150" width="150" title="Microsoft" />
+        </a>
+        <a href="https://github.com/casbin/casbin/pull/56">
+          <img src="img/users/verizon.png" height="150" width="150" title="Verizon" />
+        </a>
+        <a href="https://github.com/skydive-project/skydive">
+          <img src="img/users/redhat.png" height="150" width="150" title="Redhat" />
+        </a>
+        <a href="https://github.com/tkestack/tke">
+          <img src="img/users/tencent.png" height="150" width="150" title="Tencent" />
+        </a>
+        <a href="https://github.com/netsec-ethz/">
+          <img src="img/users/eth.jpg" height="150" width="150" title="ETH Zurich" />
+        </a>
+        <a href="https://github.com/tmobile/jazz">
+          <img src="img/users/t-mobile.png" height="150" width="150" title="T-Mobile" />
+        </a>
+        <a href="https://loopback.io/doc/en/lb4/migration-auth-access-control-example.html#using-casbin">
+          <img src="img/users/ibm.png" height="150" width="150" title="IBM" />
+        </a>
+        <a href="https://github.com/casbin/casbin/issues/299">
+          <img src="img/users/f5.png" height="150" width="150" title="F5" />
+        </a>
+        <a href="https://github.com/casbin/casbin/issues/302">
+          <img src="img/users/bose.png" height="150" width="150" title="Bose" />
+        </a>
+        <a href="https://github.com/r-spacex/SpaceX-API/commit/f8daa8f9878dcd7a281fc8081e3aeb8e5d216089">
+          <img src="img/users/rspacex.png" height="150" width="150" title="r/SpaceX" />
+        </a>
+        <a href="https://www.elastic.co/guide/en/cloud-on-k8s/master/k8s-dependencies.html">
+          <img src="img/users/elastic.svg" height="150" width="150" title="Elastic" />
+        </a>
+        <a href="https://ovo.id/">
+          <img src="img/users/ovo.png" height="150" width="150" title="OVO" />
+        </a>
+        <a href="https://www.musma.net/">
+          <img src="img/users/musma.svg" height="150" width="150" title="Musma" />
+        </a>
+        <a href="https://docs.kubemq.io/license/open-source-software-notices">
+          <img src="img/users/kubemq.png" height="150" width="150" title />
+        </a>
+        <a href="https://jdlt.co.uk/">
+          <img src="img/users/jdlt.svg" height="150" width="150" />
+        </a>
+        <a href="https://www.linkedin.com/in/andrew-weng/">
+          <img src="img/users/360.jfif" height="150" width="150" />
+        </a>
+      </Grid>
+      <br />
+      <br />
+      <Button align="center" variant="outlined" color="#443F7C">
+        More Casbin Uesrs
+      </Button>
+      </Container>
+      <Container>
+      <script src="https://opencollective.com/casbin/banner.js"></script>
+      </Container>
+      </>
+      
+  )
+}
 
-      
-      </Box>
-      
+function Support(){
+  return (
+    <Container align="center">
+      6 individuals are supporting Casbin
+      <br />
+      <a href="https://opencollective.com/casbin">Contribute on Open Collective</a>
+    </Container>
   )
 }
 
@@ -294,6 +383,7 @@ export default function Home() {
         <PolicyEnforcement />
         <RoleManager />
         <Showcase />
+        <Support />
       </Layout>
   );
 }
