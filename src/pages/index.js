@@ -137,21 +137,21 @@ function RoleManager(){
   return (
     <Container>
       <Grid container spacing={3} align="center" justify="center">
-      <Grid item xs={6}>
-      <Container>
-    <h2>Role manager</h2>
-    The role manager is used to manage the RBAC role hierarchy (user-role mapping) in Casbin. 
-  A role manager can retrieve the role data from Casbin policy rules or external sources such as LDAP, Okta, Auth0, Azure AD, etc. 
-  We support different implementations of a role manager. 
-  To keep light-weight, we don't put role manager code in the main library (except the default role manager). 
-  A complete list of Casbin role managers is provided as: <a href='https://casbin.org/docs/en/role-managers'>https://casbin.org/docs/en/role-managers</a>
-  </Container>
-  </Grid>
-  <Grid item xs={6}>
-  <Container><img src='img/role.png' /></Container>
-  </Grid>
-  </Grid>
-  </Container>
+        <Grid item xs={6}>
+          <Container>
+          <h2>Role manager</h2>
+          The role manager is used to manage the RBAC role hierarchy (user-role mapping) in Casbin. 
+          A role manager can retrieve the role data from Casbin policy rules or external sources such as LDAP, Okta, Auth0, Azure AD, etc. 
+          We support different implementations of a role manager. 
+          To keep light-weight, we don't put role manager code in the main library (except the default role manager). 
+          A complete list of Casbin role managers is provided as: <a href='https://casbin.org/docs/en/role-managers'>https://casbin.org/docs/en/role-managers</a>
+          </Container>
+        </Grid>
+        <Grid item xs={6}>
+          <Container><img src='img/role.png' /></Container>
+        </Grid>
+      </Grid>
+    </Container>
   )
 }
 
@@ -351,9 +351,6 @@ function Showcase() {
         More Casbin Uesrs
       </Button>
       </Container>
-      <Container>
-      <script src="https://opencollective.com/casbin/banner.js"></script>
-      </Container>
       </>
       
   )
@@ -361,10 +358,8 @@ function Showcase() {
 
 function Support(){
   return (
-    <Container align="center">
-      6 individuals are supporting Casbin
-      <br />
-      <a href="https://opencollective.com/casbin">Contribute on Open Collective</a>
+    <Container>
+      <script src="https://opencollective.com/casbin/banner.js"></script>
     </Container>
   )
 }
