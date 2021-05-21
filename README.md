@@ -194,6 +194,8 @@ crowdin --config ../crowdin.yaml upload sources --auto-update -b master
 crowdin --config ../crowdin.yaml download -b master
 ```
 
+> Noting that the translation of the official website will update after a Pull Request is merged
+
 ## License
 
 Casbin is [Apache licensed](./LICENSE).
