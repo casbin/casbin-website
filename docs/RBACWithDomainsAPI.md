@@ -180,3 +180,6 @@ ok, err := e.DeleteDomains("domain1", "domain2")
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
+:::note
+If you are handling a domain like ```name::domain```, it may lead to unexpected behavior. In Casbin, ```::``` is a reversed keyword, just like ```for```, ```if``` in a programming language, we should never put ```::``` in a domain.
+:::
