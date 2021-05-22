@@ -18,7 +18,7 @@ import styles from './index.module.css';
 import custom from '../css/custom.css'
 import HomepageFeatures from '../components/HomepageFeatures';
 import useBaseUrl from '@docusaurus/useBaseUrl'
-//import Users from './users'
+import Users from './users'
 //import users from './users'
 
 import CodeBlock from '@theme/CodeBlock';
@@ -347,9 +347,11 @@ function Showcase() {
       </Grid>
       <br />
       <br />
-      <Button align="center" variant="outlined" color="#443F7C">
-        More Casbin Uesrs
-      </Button>
+      <Link
+            className="button button--primary"
+            to='/users'>
+            Swift (Objective-C)
+          </Link>
       </Container>
       </>
       
