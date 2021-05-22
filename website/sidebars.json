@@ -28,7 +28,8 @@
       "watchers",
       "dispatchers",
       "role-managers",
-      "middlewares"
+      "middlewares",
+      "cloud-native"
     ],
     "API": [
       "api-tutorial",
