@@ -125,6 +125,7 @@ This is another longer-version paper published in Journal of Software. The citat
 ### Koa
 
 - [Authorisation with Casbin and Koa Part 1](https://dev.to/gerybbg/authorisation-with-casbin-and-koa-part-1-2gh)
+- [Authorisation with Casbin and Koa Part 2](https://dev.to/gerybbg/authorisation-with-casbin-and-koa-part-2-2io5)
 
 ### Nest
 
@@ -152,5 +153,7 @@ This is another longer-version paper published in Journal of Software. The citat
 <!--Rust-->
 
 - [Basic Role-Based HTTP Authorization in Rust with Casbin](https://www.zupzup.org/rust-casbin-example/)
+- [How to use casbin authorization in your rust web-app [Part - 1]](https://dev.to/smrpn/how-to-use-casbin-authorization-in-your-rust-web-app-part-1-4f8f)
+- [How to use casbin authorization in your rust web-app [Part - 2]](https://dev.to/smrpn/how-to-use-casbin-authorization-in-your-rust-web-app-part-2-1bnm)
 
 <!--END_DOCUSAURUS_CODE_TABS-->
