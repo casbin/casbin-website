@@ -638,6 +638,30 @@ e.get_implicit_roles_for_user("alice", None); // No domain
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
+### `GetImplicitUsersForRole()`
+
+GetImplicitUsersForRole gets all users inheriting the role.
+Compared to GetUsersForRole(), this function retrieves indirect users.
+
+For example:  
+g, alice, role:admin  
+g, role:admin, role:user  
+
+GetUsersForRole("role:user") can only get: ["role:admin"].  
+But GetImplicitUesrsForRole("role:user") will get: ["role:admin", "alice"].
+
+
+For example:
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
+```go
+users := e.GetImplicitUsersForRole("role:user")
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
 ### `GetImplicitPermissionsForUser()`
 
 GetImplicitPermissionsForUser gets implicit permissions for a user or role.  
@@ -682,8 +706,8 @@ e.get_implicit_permissions_for_user("alice", None); // No domain
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
-### `GetDomainsForUser`
-GetDomainsForUser get all domains which a user has.
+### `GetDomainsForUser()`
+GetDomainsForUser gets all domains which a user has.
 
 For example:
 p, admin, domain1, data1, read
@@ -701,6 +725,34 @@ For example:
 <!--Go-->
 ```go
 result, err := e.GetDomainsForUser("alice")
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+### `GetImplicitResourcesForUser()`
+
+GetImplicitResourcesForUser returns all policies that should be true for user.
+
+For example:
+
+```csv
+p, alice, data1, read
+p, bob, data2, write
+p, data2_admin, data2, read
+p, data2_admin, data2, write
+
+g, alice, data2_admin
+```
+
+GetImplicitResourcesForUser("alice") will return 
+`[[alice data1 read] [alice data2 read] [alice data2 write]]`
+
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
+```go
+resources, err := e.GetImplicitResourcesForUser("alice")
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
