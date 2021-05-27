@@ -141,7 +141,7 @@ const siteConfig = {
 
   // Twitter
   twitter: 'true',
-  twitterUsername: 'CasbinNews',
+  twitterUsername: 'casbinHQ',
   /* Open Graph and Twitter card images */
   ogImage: 'img/casbin.svg',
   twitterImage: 'img/casbin.svg',
