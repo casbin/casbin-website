@@ -1,6 +1,6 @@
 ---
 id: rbac-with-domains-api
-title: RBAC WITH DOMAINS API
+title: RBAC with Domains API
 ---
 
 A more friendly API for RBAC with domains. This API is a subset of Management API. The RBAC users could use this API to simplify the code. 
