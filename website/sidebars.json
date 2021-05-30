@@ -29,6 +29,7 @@
       "dispatchers",
       "role-managers",
       "middlewares",
+      "graphql-middlewares",
       "cloud-native"
     ],
     "API": [
