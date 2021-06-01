@@ -41,6 +41,7 @@ Name | Description
 <!--Node.js-->
 Name | Description
 ----|----
+[Shield](https://github.com/odpf/shield) | An authZ server and authZ aware reverse-proxy built on top of casbin.
 [Express](https://github.com/expressjs/express) | Fast, unopinionated, minimalist web framework for node, via plugin: [express-authz](https://github.com/node-casbin/express-authz)
 [Koa](https://github.com/koajs/koa) | Expressive middleware for node.js using ES2017 async functions, via plugin: [koa-authz](https://github.com/node-casbin/koa-authz) or [koajs-starter](https://github.com/djordjep/koajs-starter) or [koa-casbin](https://github.com/zcong1993/koa-casbin)
 [LoopBack 4](https://github.com/koajs/koa) | A highly extensible Node.js and TypeScript framework for building APIs and microservices, via plugin: [loopback4-authorization](https://github.com/sourcefuse/loopback4-authorization)
