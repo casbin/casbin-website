@@ -23,11 +23,11 @@ keyMatch | a URL path like ``/alice_data/resource1`` | a URL path or a ``*`` pat
 keyGet | a URL path like ``/alice_data/resource1`` | a URL path or a ``*`` pattern like ``/alice_data/*`` | [keyget_model.conf](https://github.com/casbin/casbin/blob/master/examples/keyget_model.conf)/[keymatch_policy.csv](https://github.com/casbin/casbin/blob/master/examples/keymatch_policy.csv)
 keyMatch2 | a URL path like ``/alice_data/resource1`` | a URL path or a ``:`` pattern like ``/alice_data/:resource`` | [keymatch2_model.conf](https://github.com/casbin/casbin/blob/master/examples/keymatch2_model.conf)/[keymatch2_policy.csv](https://github.com/casbin/casbin/blob/master/examples/keymatch2_policy.csv)
 keyGet2 | a URL path like ``/alice_data/resource1`` | a URL path or ``:`` pattern like ``/alice_data/:resource`` | [keyget2_model.conf](https://github.com/casbin/casbin/blob/master/examples/keyget2_model.conf)/[keymatch2_policy.csv](https://github.com/casbin/casbin/blob/master/examples/keymatch2_policy.csv)
-keyMatch3 | a URL path like ``/alice_data/resource1`` | a URL path or a ``{}`` pattern like ``/alice_data/{resource}`` |
-keyMatch4 | a URL path like ``/alice_data/123/book/123`` | a URL path or a ``{}`` pattern like ``/alice_data/{id}/book/{id}`` |
+keyMatch3 | a URL path like ``/alice_data/resource1`` | a URL path or a ``{}`` pattern like ``/alice_data/{resource}`` | https://github.com/casbin/casbin/blob/277c1a2b85698272f764d71a94d2595a8d425915/util/builtin_operators_test.go#L171-L196
+keyMatch4 | a URL path like ``/alice_data/123/book/123`` | a URL path or a ``{}`` pattern like ``/alice_data/{id}/book/{id}`` | https://github.com/casbin/casbin/blob/277c1a2b85698272f764d71a94d2595a8d425915/util/builtin_operators_test.go#L208-L222
 regexMatch | any string | a regular expression pattern | [keymatch_model.conf](https://github.com/casbin/casbin/blob/master/examples/keymatch_model.conf)/[keymatch_policy.csv](https://github.com/casbin/casbin/blob/master/examples/keymatch_policy.csv)
 ipMatch | an IP address like ``192.168.2.123`` | an IP address or a CIDR like ``192.168.2.0/24`` | [ipmatch_model.conf](https://github.com/casbin/casbin/blob/master/examples/ipmatch_model.conf)/[ipmatch_policy.csv](https://github.com/casbin/casbin/blob/master/examples/ipmatch_policy.csv)
-globMatch | a path-like path like ``/alice_data/resource1`` | a glob pattern like ``/alice_data/*`` | 
+globMatch | a path-like path like ``/alice_data/resource1`` | a glob pattern like ``/alice_data/*`` | https://github.com/casbin/casbin/blob/277c1a2b85698272f764d71a94d2595a8d425915/util/builtin_operators_test.go#L426-L466
 
 See details for above functions at: https://github.com/casbin/casbin/blob/master/util/builtin_operators_test.go
 
