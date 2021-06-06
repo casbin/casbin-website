@@ -112,3 +112,7 @@
   display:inline-block;
   width:100px
 }
+header>a:hover{
+  color:#fff;
+  text-decoration: none;
+}
