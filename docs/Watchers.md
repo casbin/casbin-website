@@ -25,6 +25,7 @@ Watcher | Type | Author | Description
 Watcher | Type | Author | Description
 ----|------|----|----
 [Etcd Adapter](https://github.com/mapleafgo/jcasbin-extra) | KV store | [@mapleafgo](https://github.com/mapleafgo) | Watcher for [etcd](https://github.com/coreos/etcd)
+[Redis Watcher](https://github.com/jcasbin/redis-watcher) | KV store | Casbin | Watcher for [Redis](http://redis.io/)
 
 <!--Node.js-->
 Watcher | Type | Author | Description
