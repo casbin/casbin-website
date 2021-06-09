@@ -109,6 +109,25 @@ You can use arithmetic like ``+, -, *, /`` and logical operators like ``&&, ||, 
 Although it seems like there will be multiple matchers such as ``m1``, ``m2`` like other primitives, currently, we only support one matcher ``m``. You can always use the above logical operators to implement complicated logic judgment in one matcher. So we believe there is no need to support multiple matchers for now. Let me know if you have other opinions.
 :::
 
+### Speical Grammer
+
+You could also use ``in``, the only operator with a text name. This operator checks the right-hand side array to see if it contains a value that is equal to the left-side value. Equality is determined by the use of the == operator, and this library doesn't check types between the values. Any two values, when cast to interface{}, and can still be checked for equality with == will act as expected. Note that you can use a parameter for the array, but it must be an ``[]interface{}``.
+
+Also refer to [rbac_model_matcher_using_in_op](https://github.com/casbin/casbin/blob/277c1a2b85698272f764d71a94d2595a8d425915/examples/rbac_model_matcher_using_in_op.conf), [keyget2_model](https://github.com/casbin/casbin/blob/277c1a2b85698272f764d71a94d2595a8d425915/examples/keyget2_model.conf) and [keyget_model](https://github.com/casbin/casbin/blob/277c1a2b85698272f764d71a94d2595a8d425915/examples/keyget_model.conf)
+
+Example:
+```ini
+[request_definition]
+r = sub, obj
+...
+[matchers]
+m = r.sub.Name in (r.obj.Admins)
+```
+
+```go
+e.Enforce(Sub{Name: "alice"}, Obj{Name: "a book", Admins: []interface{}{"alice", "bob"}})
+```
+
 ### Expression evaluator
 
 The matcher evaluation in Casbin is implemented by expression evaluators in each language. Casbin integrates their powers to provide the unified PERM language. Besides all the model syntax provided here, those expression evaluators may provide extra functionality, which may be not supported by another language or implementation. Use it at your own risk.
