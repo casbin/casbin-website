@@ -33,7 +33,7 @@
       "cloud-native"
     ],
     "API": [
-      "api-tutorial",
+      "api-overview",
       "management-api",
       "rbac-api",
       "rbac-with-domains-api",

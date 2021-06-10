@@ -1,15 +1,13 @@
 ---
-id: api-tutorial
-title: API tutorial
+id: api-overview
+title: API Overview
 ---
 
-## Casbin API Tutorial
-
-This tutorial only shows you how to use Casbin APIs and doesn't explain how Casbin is installed and how it works. You can find those tutorials here: [installation of Casbin](https://casbin.org/docs/en/get-started) and [how Casbin works](https://casbin.org/docs/en/how-it-works). So, when you start reading this tutorial, we assume that you have fully installed and imported Casbin into your code.
+This overview only shows you how to use Casbin APIs and doesn't explain how Casbin is installed and how it works. You can find those tutorials here: [installation of Casbin](https://casbin.org/docs/en/get-started) and [how Casbin works](https://casbin.org/docs/en/how-it-works). So, when you start reading this tutorial, we assume that you have fully installed and imported Casbin into your code.
 
 ## Enforce API
 
-Let's start at the enforce API of Casbin. We will load a RBAC model from `model.conf`, and load policies from `policy.csv`. You can learn the Model syntax [here](https://casbin.org/docs/en/syntax-for-models), and we won't talk about it in this tutorial. We assume that you can understand the config files given below:
+Let's start at the Enforce APIs of Casbin. We will load a RBAC model from `model.conf`, and load policies from `policy.csv`. You can learn the Model syntax [here](https://casbin.org/docs/en/syntax-for-models), and we won't talk about it in this tutorial. We assume that you can understand the config files given below:
 
 `model.conf`
 
@@ -58,6 +56,8 @@ This code loads the access control model and policies from local files. Function
 
 Code `ok, err := enforcer.Enforce("alice", "data1", "read")`  is to confirm access permissions. If alice can access the data1 with the operation read, the returned value `ok` will be `true`, otherwise it'll be `false`. In this example, the value of `ok` is `true`. 
 
+## EnforceEx API
+
 Sometimes you may wonder which policy allowed the request, so we prepared the function `EnforceEx()`. You can use it like this: 
 
 ```go
@@ -83,7 +83,9 @@ Casbin prepared a lot of APIs like this. Those APIs added some extra functions o
 
 This is a simple use of Casbin. You can use Casbin to start an authorization server via these APIs. We will show you some other types of APIs in the next paragraphs.
 
-## Getter API
+## Management API
+
+### Get API
 
 These APIs are used to get exact objects in policies. This time we loaded an enforcer like the last example and get something from it.
 
@@ -123,7 +125,7 @@ Besides, we have more getters for policies. The call method and return value are
 - `namedGroupingPolicy := e.GetNamedGroupingPolicy("g")` gets all the role inheritance rules in the policy.
 - `namedGroupingPolicy := e.GetFilteredNamedGroupingPolicy("g", 0, "alice")` gets all the role inheritance rules in the policy.
 
-## Policy API
+### Add, Delete, Update API
 
 Casbin prepared a lot of APIs for policies. These APIs allow you to add, delete or edit policies dynamically at runtime.
 
