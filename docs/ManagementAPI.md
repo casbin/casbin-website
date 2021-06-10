@@ -5,6 +5,30 @@ title: Management API
 
 The primitive API that provides full support for Casbin policy management.
 
+## Filtered API
+
+Almost all filtered api has the same parameters ``(fieldIndex int, fieldValues ...string)``. `fieldIndex` is the index where matching start, `fieldValues` denotes the values result should have. Note that empty string in fieldValues could be any word.
+
+Example:
+
+```csv
+p, alice, book, read
+p, bob, book, read
+p, bob, book, write
+p, alice, pen, get
+p, bob, pen ,get
+```
+
+```go
+e.GetFilteredPolicy(1, "book") // will return: [[alice book read] [bob book read] [bob book write]]
+
+e.GetFilteredPolicy(1, "book", "read") // will return: [[alice book read] [bob book read]]
+
+e.GetFilteredPolicy(0, "alice", "", "read") // will return: [[alice book read]]
+
+e.GetFilteredPolicy(0, "alice") // will return: [[alice book read] [alice pen get]]
+```
+
 ## Reference
 
 global variable `e` is Enforcer instance.
