@@ -42,3 +42,6 @@ pre .btnIcon:hover {
   bottom: 50px;
   right: 50px;
 }
+.icon {
+  margin-right: .4em;
+}

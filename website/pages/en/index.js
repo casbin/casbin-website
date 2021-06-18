@@ -31,7 +31,8 @@ class Button extends React.Component {
   render() {
     return (
       <div className="pluginWrapper buttonWrapper">
-        <a className="button" href={this.props.href} target={this.props.target}>
+        <a className="button" href={this.props.href} target={this.props.target} icon={this.props.icon}>
+          <embed className="icon" src = {this.props.icon} height ={"20px"} align={"left"}/>
           {this.props.children}
         </a>
       </div>
@@ -84,23 +85,23 @@ class HomeSplash extends React.Component {
           <ProjectTitle />
           <PromoSection>
             <Button href={docUrl('overview', language)}><translate>Get Started</translate></Button>
-            <Button href="https://github.com/casbin/casbin">Golang</Button>
-            <Button href="https://github.com/casbin/jcasbin">Java</Button>
-            <Button href="https://github.com/casbin/casbin-cpp">C/C++</Button>
-            <Button href="https://github.com/casbin/node-casbin">Node.js</Button>
-            <Button href="https://github.com/casbin/casbin.js">Front-end js</Button>
-            <Button href="https://github.com/php-casbin/php-casbin">PHP</Button>
-            <Button href="https://github.com/php-casbin/laravel-authz">Laravel</Button>
-            <Button href="https://github.com/casbin/pycasbin">Python</Button>
-            <Button href="https://github.com/casbin/Casbin.NET">.NET (C#)</Button>
-            <Button href="https://github.com/casbin4d/Casbin4D">Delphi</Button>
-            <Button href="https://github.com/casbin/casbin-rs">Rust</Button>
-            <Button href="https://github.com/CasbinRuby/casbin-ruby">Ruby</Button>
-            <Button href="https://github.com/casbin/SwiftCasbin">Swift (Objective-C)</Button>
-            <Button href="https://github.com/casbin/lua-casbin">Lua (OpenResty)</Button>
-            <Button href="https://github.com/casbin/dart-casbin">Dart (Flutter)</Button>
-            <Button href="https://github.com/casbin/casbin-ex">Elixir</Button>
-            <Button href="https://github.com/casbin/k8s-authz">Kubernetes (k8s)</Button>
+            <Button href="https://github.com/casbin/casbin" icon="https://cdn.casbin.org/language/go-logo-1.svg">Golang</Button>
+            <Button href="https://github.com/casbin/jcasbin"icon="https://cdn.casbin.org/language/jee-3.svg">Java</Button>
+            <Button href="https://github.com/casbin/casbin-cpp"icon="https://cdn.casbin.org/language/c.svg">C/C++</Button>
+            <Button href="https://github.com/casbin/node-casbin"icon="https://cdn.casbin.org/language/nodejs-1.svg">Node.js</Button>
+            <Button href="https://github.com/casbin/casbin.js"icon="https://cdn.casbin.org/language/logo-javascript.svg">Front-end js</Button>
+            <Button href="https://github.com/php-casbin/php-casbin"icon="https://cdn.casbin.org/language/PHP-logo.svg">PHP</Button>
+            <Button href="https://github.com/php-casbin/laravel-authz"icon="https://cdn.casbin.org/language/laravel-2.svg">Laravel</Button>
+            <Button href="https://github.com/casbin/pycasbin" icon="https://cdn.casbin.org/language/python-5.svg">Python</Button>
+            <Button href="https://github.com/casbin/Casbin.NET"icon="https://cdn.casbin.org/language/dotnet-logo.svg">.NET (C#)</Button>
+            <Button href="https://github.com/casbin4d/Casbin4D"icon="https://cdn.casbin.org/language/delphi-2.svg">Delphi</Button>
+            <Button href="https://github.com/casbin/casbin-rs"icon="https://cdn.casbin.org/language/rust.svg">Rust</Button>
+            <Button href="https://github.com/CasbinRuby/casbin-ruby"icon="https://cdn.casbin.org/language/ruby.svg">Ruby</Button>
+            <Button href="https://github.com/casbin/SwiftCasbin"icon="https://cdn.casbin.org/language/swift-15.svg">Swift (Objective-C)</Button>
+            <Button href="https://github.com/casbin/lua-casbin"icon="https://cdn.casbin.org/language/lua-5.svg">Lua (OpenResty)</Button>
+            <Button href="https://github.com/casbin/dart-casbin"icon="https://cdn.casbin.org/language/dart.svg">Dart (Flutter)</Button>
+            <Button href="https://github.com/casbin/casbin-ex"icon="https://cdn.casbin.org/language/elixir-lang-icon.svg">Elixir</Button>
+            <Button href="https://github.com/casbin/k8s-authz"icon="https://cdn.casbin.org/language/kubernets.svg">Kubernetes (k8s)</Button>
           </PromoSection>
         </div>
       </SplashContainer>
