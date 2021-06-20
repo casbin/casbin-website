@@ -32,7 +32,7 @@ class Button extends React.Component {
     return (
       <div className="pluginWrapper buttonWrapper">
         <a className="button" href={this.props.href} target={this.props.target} icon={this.props.icon}>
-          <embed className="icon" src = {this.props.icon} height ={"20px"} align={"left"}/>
+          <embed className="icon" src = {this.props.icon} height ={"20px"} width={"20px"} align={"left"}/>
           {this.props.children}
         </a>
       </div>
