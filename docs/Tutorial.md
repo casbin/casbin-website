@@ -42,6 +42,7 @@ This is another longer-version paper published in Journal of Software. The citat
 
 ### PERM Meta-Model (Policy, Effect, Request, Matchers)
 
+- [Understanding Casbin with different Access Control Model Configurations](https://medium.com/wesionary-team/understanding-casbin-with-different-access-control-model-configurations-faebc60f6da5)
 - [Modeling Authorization with PERM in Casbin](https://www.narendraj9.dev/posts/generalized-authz.html)
 - [Designing a Flexible Permissions System with Casbin](https://medium.com/silo-blog/designing-a-flexible-permissions-system-with-casbin-f5d97fef17b8)
 - [Authorize with Access Control Lists](https://medium.com/pragmatic-programmers/authorize-with-access-control-lists-92fbec57a920)
