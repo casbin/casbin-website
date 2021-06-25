@@ -30,6 +30,7 @@ A complete list of Casbin GraphQL middlewares is provided as below. Any 3rd-part
 <!--Go-->
 Middleware | GraphQL Implementation | Author | Description
 ----|----|----|----
+[graphql-authz](https://github.com/casbin/graphql-authz) | [graphql](https://github.com/graphql-go/graphql) | Casbin | An authorization middleware for graphql-go
 [graphql-casbin](https://github.com/esmaeilpour/graphql-casbin) | [graphql](https://github.com/graphql-go/graphql) | [@esmaeilpour](https://github.com/esmaeilpour) | An Implementation of using Graphql and Casbin together
 [gqlgen_casbin_RBAC_example](https://github.com/WenyXu/gqlgen_casbin_RBAC_example) | [gqlgen](https://github.com/99designs/gqlgen) | [@WenyXu](https://github.com/WenyXu) | (empty)
 
