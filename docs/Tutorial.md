@@ -80,6 +80,7 @@ This is another longer-version paper published in Journal of Software. The citat
 
 ### Gin
 
+- [Authorization in Golang Projects using Casbin](https://medium.com/wesionary-team/authorization-in-golang-projects-using-casbin-f8fad744dae5)
 - [Tutorial: Integrate Gin with Cabsin](https://dev.to/maxwellhertz/tutorial-integrate-gin-with-cabsin-56m0)
 - [Policy enforcements on K8s with Pipeline](https://banzaicloud.com/blog/policy-enforcement-k8s/)
 - [Authentication and authorization in Gin application with JWT and Casbin](https://medium.com/@tienbm90/authentication-and-authorization-in-gin-application-with-jwt-and-casbin-a56bbbdec90b)
