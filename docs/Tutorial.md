@@ -113,7 +113,7 @@ This is another longer-version paper published in Journal of Software. The citat
 
 <!--Java-->
 
-### SprintBoot
+### SpringBoot
 
 - [jCasbin: a more light-weight permission management solution (in Chinese)](https://blog.csdn.net/waynelee0809/article/details/85702551)
 - [Integrating jCasbin with JFinal (in Chinese)](http://www.jfinal.com/share/842)
