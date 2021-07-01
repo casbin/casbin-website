@@ -370,6 +370,23 @@ func (a *Adapter) RemoveFilteredPolicy(sec string, ptype string, fieldIndex int,
 
 Casbin enforcer will ignore the ``not implemented`` error when calling these three optional functions.
 
+There're details about how to write an adapter.
+
+* Data Structure. Adapter should support reading at ***least*** six columns.
+* Database Name. The default database name should be `casbin`.
+* Table Name. The default table name should be `casbin_rule`.
+* Ptype Column. Name of this column should be `ptype` instead of `p_type` or `Ptype`.
+* Table definition should be `(id int primary key, ptype varchar, v0 varchar, v1 varchar, v2 varchar, v3 varchar, v4 varchar, v5 varchar)`.
+* The unique key index should be built on columns `ptype,v0,v1,v2,v3,v4,v5`.
+* `LoadFilteredPolicy` requires a `filter` as parameter. The filter should be something like this.
+    ```json
+    {
+        "p":[ [ "alice" ], [ "bob" ] ],
+        "g":[ [ "", "book_group" ], [ "", "pen_group" ] ],
+        "g2":[ [ "alice" ] ]
+    }
+    ```
+
 ### Who is responsible to create the DB?
 
 As a convention, the adapter should be able to automatically create a database named ``casbin``  if it doesn't exist and use it for policy storage. Please use the Xorm adapter as a reference implementation: https://github.com/casbin/xorm-adapter
