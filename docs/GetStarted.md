@@ -64,6 +64,22 @@ cargo add tokio // make sure you activate its `macros` feature
 <!--Delphi-->
 Casbin4D comes in a package (currently for Delphi 10.3 Rio) and you can install it in the IDE. However, there are no visual components which means that you can use the units independently of packages. Just import the units in your project (assuming you do not mind the number of them).
 
+<!--Lua-->
+
+```
+luarocks install casbin  
+```
+
+If report Error: Your user does not have write permissions in /usr/local/lib/luarocks/rocks 
+-- you may want to run as a privileged user or use your local tree with --local.
+you can add --local behind your command like this to fix:
+
+```
+luarocks install casbin  --local
+```
+
+
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ## New a Casbin enforcer
@@ -154,6 +170,15 @@ async fn main() -> Result<()> {
     Ok(())
 }
 ```
+
+<!--Lua-->
+
+```lua
+lua_package_path "$prefix/lua/?.lua;$prefix/lua-casbin/?.lua;;";
+local Enforcer = require("src.main.Enforcer")
+local e = Enforcer:new("path/to/model.conf","path/to/policy.cvs") -- The Casbin Enforcer
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 - Use the Model text with other Adapter: 
@@ -319,6 +344,17 @@ else
   } else {
       // error occurs
   }
+```
+<!--Lua-->
+
+```lua
+if e:enforce("alice", "data1", "read")
+then
+   --[ permit alice to read data1 --]
+else
+   --[ error occurs --]
+end
+
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
