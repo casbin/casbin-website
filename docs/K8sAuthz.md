@@ -2,9 +2,9 @@
 id: k8s
 title: Authorization of Kubernetes
 ---
-[K8s-authz](https://github.com/casbin/k8s-authz) is a Kubernetes (k8s) RBAC & ABAC authorization middleware based on Casbin. This middleware uses K8s validation admission webhook to check the policies defined by casbin, for every request of the k8s resources. These custom admission controllers perform some kind of validation on the request object that was forwarded by api server and based on a logic, sends back a response to api server that contains information on whether to allow or reject the request. These controllers are registered with Kubernetes using the ValidatingAdmissionWebhook.
+[K8s-authz](https://github.com/casbin/k8s-authz) is a Kubernetes (k8s) RBAC & ABAC authorization middleware based on Casbin. This middleware uses K8s validation admission webhook to check the policies defined by casbin, for every request of the k8s resources. These custom admission controllers perform some kind of validation on the request object that was forwarded by api server and based on a logic, sends back a response to api server that contains information on whether to allow or reject the request. These controllers are registered with Kubernetes using the `ValidatingAdmissionWebhook`.
 
-The K8s API server needs to know when to send the incoming request to our admission controller. For this part, we have defined a validation webhook which would proxy the requests for any type of K8s resource/sub-resource and perform policy verification on it. The user would be allowed to perform the operations on these resources, only if the casbin enforcer authorizes it. The enforcer checks the roles of the user defined in the policies. This middleware would be deployed on the K8s cluster.
+The K8s API server needs to know when to send the incoming request to our admission controller. For this part, we have defined a validation webhook which would proxy the requests for any type of K8s resource/sub-resource and perform policy verification on it. The user would be allowed to perform the operations on these resources, only if the casbin enforcer authorizes it. The [enforcer](https://casbin.org/docs/en/get-started#new-a-casbin-enforcer) checks the roles of the user defined in the policies. This middleware would be deployed on the K8s cluster. 
 
 ## Requirements
 
