@@ -37,6 +37,6 @@ Middleware | GraphQL Implementation | Author | Description
 <!--Node.js-->
 Middleware | GraphQL Implementation | Author | Description
 ----|----|----|----
-[graphql-casbin](https://github.com/knotel/graphql-casbin) | [GraphQL.js](https://github.com/graphql/graphql-js) | [Knotel](https://github.com/knotel) | Add authorization to your GraphQL API using schema directives
+[graphql-authz](https://github.com/node-casbin/graphql-authz) | [GraphQL.js](https://github.com/graphql/graphql-js) | Casbin | A Casbin authorization middleware for [GraphQL.js](https://github.com/graphql/graphql-js)
 
 <!--END_DOCUSAURUS_CODE_TABS-->

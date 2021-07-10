@@ -17,6 +17,12 @@ or
 yarn add casbin.js
 ```
 
+## 3rd-Party Middlewares
+
+Middleware | Type | Author | Description
+----|------|----|----
+[rbac-react](https://github.com/daobeng/rbac-react) | React | [@daobeng](https://github.com/daobeng) | Role Based Access Control in React using HOCs, CASL and Casbin.js
+
 ## Quick Start
 You can use `manual` mode in your frontend application, and set the permission whenever you wish.
 ```Javascript

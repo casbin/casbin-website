@@ -45,7 +45,7 @@ Name | Description
 [Express](https://github.com/expressjs/express) | Fast, unopinionated, minimalist web framework for node, via plugin: [express-authz](https://github.com/node-casbin/express-authz)
 [Koa](https://github.com/koajs/koa) | Expressive middleware for node.js using ES2017 async functions, via plugin: [koa-authz](https://github.com/node-casbin/koa-authz) or [koajs-starter](https://github.com/djordjep/koajs-starter) or [koa-casbin](https://github.com/zcong1993/koa-casbin)
 [LoopBack 4](https://github.com/koajs/koa) | A highly extensible Node.js and TypeScript framework for building APIs and microservices, via plugin: [loopback4-authorization](https://github.com/sourcefuse/loopback4-authorization)
-[Nest](https://nestjs.com/) | Progressive Node.js framework for building efficient and scalable server-side applications on top of TypeScript & JavaScript. via plugin: [nest-authz](https://github.com/dreamdevil00/nest-authz) or [nest-casbin](https://github.com/pardjs/nest-casbin) or [NestJS Casbin Module](https://github.com/switchit-conseil/nestjs-casbin-module) or [nestjs-casbin](https://github.com/juicycleff/nestjs-casbin) or [shanbe-api](https://github.com/merajsahebdar/shanbe-api) or [https://github.com/Twiddlle/acl-nest](acl-nest)
+[Nest](https://nestjs.com/) | Progressive Node.js framework for building efficient and scalable server-side applications on top of TypeScript & JavaScript. via plugin: [nest-authz](https://github.com/dreamdevil00/nest-authz) or [nest-casbin](https://github.com/pardjs/nest-casbin) or [NestJS Casbin Module](https://github.com/switchit-conseil/nestjs-casbin-module) or [nestjs-casbin](https://github.com/juicycleff/nestjs-casbin) or [shanbe-api](https://github.com/merajsahebdar/shanbe-api) or [https://github.com/Twiddlle/acl-nest](acl-nest) or [nestjs-casbin-typeorm](https://github.com/0xb4lamx/nestjs-casbin-typeorm)
 [Fastify](https://github.com/fastify/fastify) | Fast and low overhead web framework, for Node.js. via plugin: [fastify-casbin](https://github.com/nearform/fastify-casbin) or [fastify-casbin-rest](https://github.com/nearform/fastify-casbin-rest)
 [Egg](https://github.com/eggjs/egg) | Born to build better enterprise frameworks and apps with Node.js & Koa, via plugin: [egg-authz](https://github.com/node-casbin/egg-authz) or [egg-zrole](https://github.com/klren0312/egg-zrole)
 [hapi](https://hapi.dev/) | The Simple, Secure Framework Developers Trust. via plugin: [hapi-authz](https://github.com/node-casbin/hapi-authz)
@@ -70,7 +70,7 @@ Name | Description
 Name | Description
 ----|----
 [Django](https://www.djangoproject.com/) | A high-level Python Web framework, via plugin: [django-casbin](https://github.com/pycasbin/django-casbin)
-[Flask](http://flask.pocoo.org/) | A microframework for Python based on Werkzeug, Jinja 2 and good intentions, via plugin: [flask-authz](https://github.com/pycasbin/flask-authz) or [Flask-Casbin (3rd-party, but maybe more friendly)](https://github.com/daymien/Flask-Casbin)
+[Flask](http://flask.pocoo.org/) | A microframework for Python based on Werkzeug, Jinja 2 and good intentions, via plugin: [flask-authz](https://github.com/pycasbin/flask-authz) or [Flask-Casbin (3rd-party, but maybe more friendly)](https://github.com/daymien/Flask-Casbin) or [rbac-flask](https://github.com/daobeng/rbac-flask/tree/flask-casbin)
 [FastAPI](https://github.com/tiangolo/fastapi) | A modern, fast (high-performance), web framework for building APIs with Python 3.6+ based on standard Python type hints, via plugin: [fastapi-authz](https://github.com/pycasbin/fastapi-authz) or [Fastapi-app](https://github.com/lqmanh/fastapi-app)
 [OpenStack](https://www.openstack.org/) | The most widely deployed open source cloud software in the world, via plugin: [openstack-patron](https://github.com/casbin/openstack-patron)
 
@@ -91,5 +91,23 @@ Name | Description
 Name | Description
 ----|----
 [OpenResty](https://openresty.org/) | A dynamic web platform based on NGINX and LuaJIT, via plugin: [lua-resty-casbin](https://github.com/casbin-lua/lua-resty-casbin) and [casbin-openresty-example](https://github.com/rushitote/casbin-openresty-example)
+
+<!--Swift-->
+Name | Description
+----|----
+[Vapor](https://github.com/vapor/vapor) | A server-side Swift web framework, via plugin: [vapor-authz](https://github.com/SwiftCasbin/vapor-authz)
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+
+### Cloud providers
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Node.js-->
+Name | Description
+----|----
+[Okta](https://okta.com/) | One trusted platform to secure every identity, via plugin: [casbin-spring-boot-demo](https://github.com/myriad-personal/casbin-spring-boot-demo)
+[Auth0](https://auth0.com/) | An easy to implement, adaptable authentication and authorization platform, via plugin: [casbin-auth0-rbac](https://auth0.com/)
 
 <!--END_DOCUSAURUS_CODE_TABS-->

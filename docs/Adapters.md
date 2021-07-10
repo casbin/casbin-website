@@ -40,7 +40,8 @@ Adapter | Type | Author | AutoSave | Description
 [GCP Cloud Storage Adapter](https://github.com/qurami/casbin-cloud-storage-adapter) | Cloud | [qurami](https://github.com/qurami) | ❌ | For [Google Cloud Platform Cloud Storage](https://cloud.google.com/storage/)
 [GCP Cloud Spanner Adapter](https://github.com/flowerinthenight/casbin-spanner-adapter) | Cloud | [@flowerinthenight](https://github.com/flowerinthenight) | ✅ | For [Google Cloud Platform Cloud Spanner](https://cloud.google.com/spanner/)
 [Consul Adapter](https://github.com/ankitm123/consul-adapter) | KV store | [@ankitm123](https://github.com/ankitm123) | ❌ | For [HashiCorp Consul](https://www.consul.io/)
-[Redis Adapter](https://github.com/casbin/redis-adapter) | KV store | Casbin | ❌ | For [Redis](https://redis.io/)
+[Redis Adapter (Redigo)](https://github.com/casbin/redis-adapter) | KV store | Casbin | ✅ | For [Redis](https://redis.io/)
+[Redis Adapter (go-redis)](https://github.com/mlsen/casbin-redis-adapter) | KV store | [@mlsen](https://github.com/mlsen) | ✅ | For [Redis](https://redis.io/)
 [Etcd Adapter](https://github.com/sebastianliu/etcd-adapter) | KV store | [@sebastianliu](https://github.com/sebastianliu) | ❌ | For [etcd](https://github.com/coreos/etcd)
 [BoltDB Adapter](https://github.com/speza/casbin-bolt-adapter) | KV store | [@speza](https://github.com/speza) | ✅ | For [Bolt](https://github.com/boltdb/bolt)
 [Bolt Adapter](https://github.com/wirepair/bolt-adapter) | KV store | [@wirepair](https://github.com/wirepair) | ❌ | For [Bolt](https://github.com/boltdb/bolt)
@@ -114,6 +115,7 @@ Adapter | Type | Author | AutoSave | Description
 [File Adapter (built-in)](https://casbin.org/docs/en/adapters#file-adapter-built-in) | File | Casbin | ❌ | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files
 [EF Adapter](https://github.com/casbin-net/EF-Adapter) | ORM | Casbin | ❌ | MySQL, PostgreSQL, SQLite, Microsoft SQL Server, Oracle, DB2, etc. are supported by [Entity Framework 6](https://docs.microsoft.com/en-us/ef/ef6/)
 [EFCore Adapter](https://github.com/casbin-net/EFCore-Adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, SQLite, Microsoft SQL Server, Oracle, DB2, etc. are supported by [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/)
+[EFCore Adapter (.NET Core 5)](https://github.com/g4dvali/CasbinRBACAdapter) | ORM | [@g4dvali](https://github.com/g4dvali) | ✅ | MySQL, PostgreSQL, SQLite, Microsoft SQL Server, Oracle, DB2, etc. are supported by [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/)
 
 <!--Rust-->
 Adapter | Type | Author | AutoSave | Description
@@ -122,6 +124,19 @@ Adapter | Type | Author | AutoSave | Description
 [Diesel Adapter](https://github.com/casbin-rs/diesel-adapter) | ORM | Casbin | ✅ | [SQLite, PostgreSQL, MySQL](https://github.com/diesel-rs/diesel/blob/master/guide_drafts/backend_installation.md) are supported by [Diesel](http://diesel.rs/)
 [Sqlx Adapter](https://github.com/casbin-rs/sqlx-adapter) | ORM | Casbin | ✅ | PostgreSQL, MySQL are supported by [Sqlx](https://github.com/launchbadge/sqlx) with fully asynchronous operation
 [YAML Adapter](https://github.com/casbin-rs/yaml-adapter) | String | Casbin | ✅ | For [YAML](https://yaml.org/)
+
+<!--Ruby-->
+Adapter | Type | Author | AutoSave | Description
+----|------|----|----|----
+[File Adapter (built-in)](https://casbin.org/docs/en/adapters#file-adapter-built-in) | File | Casbin | ❌ | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files
+[Sequel Adapter](https://github.com/CasbinRuby/casbin-ruby-sql-adapter) | ORM | [CasbinRuby](https://github.com/CasbinRuby) | ✅ | [ADO, Amalgalite, IBM_DB, JDBC, MySQL, Mysql2, ODBC, Oracle, PostgreSQL, SQLAnywhere, SQLite3, and TinyTDS](http://sequel.jeremyevans.net/) are supported by [Sequel](http://sequel.jeremyevans.net/)
+
+<!--Swift-->
+Adapter | Type | Author | AutoSave | Description
+----|------|----|----|----
+[File Adapter (built-in)](https://casbin.org/docs/en/adapters#file-adapter-built-in) | File | Casbin | ❌ | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files
+[Memory Adapter (built-in)](https://github.com/casbin/SwiftCasbin/blob/master/Sources/Casbin/Adapter/MemoryAdapter.swift) | Memory | Casbin | ❌ | For memory
+[Fluent Adapter](https://github.com/SwiftCasbin/fluent-adapter) | ORM | Casbin | ✅ | [PostgreSQL, SQLite, MySQL, MongoDB](https://docs.vapor.codes/4.0/fluent/overview/#drivers) are supported by [Fluent](https://github.com/vapor/fluent)
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 

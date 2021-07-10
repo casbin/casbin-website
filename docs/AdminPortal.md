@@ -25,15 +25,23 @@ Project | Author | Frontend | Backend | Description
 [IrisAdminApi](https://github.com/snowlyg/IrisAdminApi) | [@snowlyg](https://github.com/snowlyg) | Vue + Element UI | Iris | Backend API based on Iris + Casbin
 [Gfast](https://github.com/tiger1103/gfast) | [@tiger1103](https://github.com/tiger1103) | Vue + Element UI | Go Frame | Admin portal based on GF (Go Frame)
 echo-admin ([Frontend](https://github.com/RealLiuSha/echo-admin-ui), [Backend](https://github.com/RealLiuSha/echo-admin)) | [@RealLiuSha](https://github.com/RealLiuSha) | Vue 2.x + Element UI | Echo | Admin portal based on Echo + Gorm + Casbin + Uber-FX
+[Spec-Center](https://github.com/atul-wankhade/Spec-Center) | [@atul-wankhade](https://github.com/atul-wankhade) | None | Mux | Golang RESTful platform based on Casbin + MongoDB
+
+<!--Java-->
+Project | Author | Frontend | Backend | Description
+----|----|----|----|----
+[spring-boot-web](https://github.com/BazookaW/spring-boot-web) | [@BazookaW](https://github.com/BazookaW) | None | SpringBoot | Admin portal based on SpringBoot 2.0 + MyBatisPlus + Casbin
 
 <!--Node.js-->
 Project | Author | Frontend | Backend | Description
 ----|----|----|----|----
+[node-mysql-rest-api](https://github.com/JoemaNequinto/node-mysql-rest-api) | [@JoemaNequinto](https://github.com/JoemaNequinto) | None | Express | A boilerplate application for building RESTful APIs Microservice in Node.js using Express, Sequelize, JWT and Casbin.
 [Casbin-Role-Mgt-Dashboard-RBAC](https://github.com/alikhan866/Casbin-Role-Mgt-Dashboard-RBAC) | [@alikhan866](https://github.com/alikhan866) | React + Material UI | Express | Beginner friendly RBAC management with Enforcer integration to check enforcement result on the go
 
 <!--Python-->
 Project | Author | Frontend | Backend | Description
 ----|----|----|----|----
+[fastapi-mysql-generator](https://github.com/CoderCharm/fastapi-mysql-generator) | [@CoderCharm](https://github.com/CoderCharm) | None | FastAPI | FastAPI + MySQL + JWT + Casbin
 [FastAPI-MySQL-Tortoise-Casbin](https://github.com/xingxingzaixian/FastAPI-MySQL-Tortoise-Casbin) | [@xingxingzaixian](https://github.com/xingxingzaixian) | None | FastAPI | FastAPI + MySQL + Tortoise + Casbin
 [openstack-policy-editor](https://github.com/casbin/openstack-policy-editor) | Casbin | Bootstrap | Django | The Web UI for Casbin
 

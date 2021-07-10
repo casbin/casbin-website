@@ -49,7 +49,8 @@ Watcher | Type | Author | Description
 <!--Ruby-->
 Watcher | Type | Author | Description
 ----|------|----|----
-[Redis Watcher](https://github.com/CasbinRuby/casbin-ruby-redis-watcher) | KV store | [evrone](https://github.com/CasbinRuby) | Watcher for [Redis](http://redis.io/)
+[Redis Watcher](https://github.com/CasbinRuby/casbin-ruby-redis-watcher) | KV store | [CasbinRuby](https://github.com/CasbinRuby) | Watcher for [Redis](http://redis.io/)
+[RabbitMQ Watcher](https://github.com/CasbinRuby/casbin-ruby-rabbitmq-watcher) | Messaging system | [CasbinRuby](https://github.com/CasbinRuby) | Watcher for [RabbitMQ](https://www.rabbitmq.com/)
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
