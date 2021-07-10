@@ -38,6 +38,7 @@ Adapter | Type | Author | AutoSave | Description
 [Azure Cosmos DB Adapter](https://github.com/spacycoder/cosmos-casbin-adapter) | Cloud | [@spacycoder](https://github.com/spacycoder) | ✅ | For [Microsoft Azure Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/introduction)
 [GCP Firestore Adapter](https://github.com/reedom/casbin-firestore-adapter) | Cloud | [@reedom](https://github.com/reedom) | ❌ | For [Google Cloud Platform Firestore](https://cloud.google.com/firestore/)
 [GCP Cloud Storage Adapter](https://github.com/qurami/casbin-cloud-storage-adapter) | Cloud | [qurami](https://github.com/qurami) | ❌ | For [Google Cloud Platform Cloud Storage](https://cloud.google.com/storage/)
+[GCP Cloud Spanner Adapter](https://github.com/flowerinthenight/casbin-spanner-adapter) | Cloud | [@flowerinthenight](https://github.com/flowerinthenight) | ✅ | For [Google Cloud Platform Cloud Spanner](https://cloud.google.com/spanner/)
 [Consul Adapter](https://github.com/ankitm123/consul-adapter) | KV store | [@ankitm123](https://github.com/ankitm123) | ❌ | For [HashiCorp Consul](https://www.consul.io/)
 [Redis Adapter](https://github.com/casbin/redis-adapter) | KV store | Casbin | ❌ | For [Redis](https://redis.io/)
 [Etcd Adapter](https://github.com/sebastianliu/etcd-adapter) | KV store | [@sebastianliu](https://github.com/sebastianliu) | ❌ | For [etcd](https://github.com/coreos/etcd)
@@ -75,6 +76,7 @@ Adapter | Type | Author | AutoSave | Description
 [Objection.js Adapter](https://github.com/willsoto/casbin-objection-adapter) | ORM | [@willsoto](https://github.com/willsoto) | ✅ | MSSQL, MySQL, PostgreSQL, SQLite3, Oracle are supported by [Objection.js](https://vincit.github.io/objection.js/)
 [Node PostgreSQL Native Adapter](https://github.com/touchifyapp/casbin-pg-adapter) | SQL | [@touchifyapp](https://github.com/touchifyapp) | ✅ | PostgreSQL adapter with advanced policy subset loading support and improved performances built with [node-postgres](https://node-postgres.com/).
 [Mongoose Adapter](https://github.com/node-casbin/mongoose-adapter) | NoSQL | [elastic.io](https://github.com/elasticio) and Casbin | ✅ | MongoDB is supported by [Mongoose](https://mongoosejs.com/)
+[Mongoose Adapter (No-Transaction)](https://github.com/minhducck/casbin-mongoose-adapter) | NoSQL | [minhducck](https://github.com/minhducck) | ✅ | MongoDB is supported by [Mongoose](https://mongoosejs.com/)
 [Node MongoDB Native Adapter](https://github.com/juicycleff/casbin-mongodb-adapter) | NoSQL | [@juicycleff](https://github.com/juicycleff) | ✅ | For [Node MongoDB Native](https://mongodb.github.io/node-mongodb-native/)
 [DynamoDB Adapter](https://github.com/fospitia/casbin-dynamodb-adapter) | NoSQL | [@fospitia](https://github.com/fospitia) | ✅ | For [Amazon DynamoDB](https://aws.amazon.com/dynamodb/)
 [Couchbase Adapter](https://github.com/MarkMYoung/casbin-couchbase-adapter) | NoSQL | [@MarkMYoung](https://github.com/MarkMYoung) | ✅ | For [Couchbase](https://www.couchbase.com/)

@@ -24,7 +24,7 @@ Project | Author | Frontend | Backend | Description
 [zeus-admin](https://github.com/bullteam/zeus-admin) | [bullteam](https://github.com/bullteam) | Vue + Element UI | Gin | Unified Permission management platform based on JWT + Casbin
 [IrisAdminApi](https://github.com/snowlyg/IrisAdminApi) | [@snowlyg](https://github.com/snowlyg) | Vue + Element UI | Iris | Backend API based on Iris + Casbin
 [Gfast](https://github.com/tiger1103/gfast) | [@tiger1103](https://github.com/tiger1103) | Vue + Element UI | Go Frame | Admin portal based on GF (Go Frame)
-[Echo-Admin](https://github.com/RealLiuSha/echo-admin) | [@RealLiuSha](https://github.com/RealLiuSha) | Vue 2.x + Element UI | Echo | Admin portal based on Echo + Gorm + Casbin + Uber-FX
+echo-admin ([Frontend](https://github.com/RealLiuSha/echo-admin-ui), [Backend](https://github.com/RealLiuSha/echo-admin)) | [@RealLiuSha](https://github.com/RealLiuSha) | Vue 2.x + Element UI | Echo | Admin portal based on Echo + Gorm + Casbin + Uber-FX
 
 <!--Node.js-->
 Project | Author | Frontend | Backend | Description
@@ -34,6 +34,7 @@ Project | Author | Frontend | Backend | Description
 <!--Python-->
 Project | Author | Frontend | Backend | Description
 ----|----|----|----|----
+[FastAPI-MySQL-Tortoise-Casbin](https://github.com/xingxingzaixian/FastAPI-MySQL-Tortoise-Casbin) | [@xingxingzaixian](https://github.com/xingxingzaixian) | None | FastAPI | FastAPI + MySQL + Tortoise + Casbin
 [openstack-policy-editor](https://github.com/casbin/openstack-policy-editor) | Casbin | Bootstrap | Django | The Web UI for Casbin
 
 <!--PHP-->
@@ -43,5 +44,6 @@ Project | Author | Frontend | Backend | Description
 [video.tinywan.com](https://github.com/Tinywan/video.tinywan.com) | [@Tinywanner](https://github.com/Tinywan) | LayUI | ThinkPHP | RESTful API gateway based on ThinkPHP5 + ORM + JWT + RBAC (Casbin)
 [laravel-casbin-admin](https://github.com/pl1998/laravel-casbin-admin) | [@pl1998](https://github.com/pl1998) | Vue + Element UI | Laravel | RBAC permission management system based on vue-element-admin and Laravel
 larke-admin ([Frontend](https://github.com/deatil/larke-admin-frontend), [Backend](https://github.com/deatil/larke-admin)) | [@deatil](https://github.com/deatil) | Vue 2 + Element UI | Laravel 8 | Admin portal based on Laravel 8, JWT and RBAC
+[hyperf-vuetify-admin](https://github.com/TragicMale/hyperf-vuetify-admin) | [@TragicMale](https://github.com/TragicMale) | Vue + Vuetify 2.x | Hyperf | Admin portal based on Hyperf, Vuetify and Casbin
 
 <!--END_DOCUSAURUS_CODE_TABS-->
