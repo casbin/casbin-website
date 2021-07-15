@@ -91,6 +91,7 @@ some(where (p.eft == allow)) | allow-override | [ACL, RBAC, etc.](/docs/en/suppo
 !some(where (p.eft == deny)) | deny-override | [Deny-override](/docs/en/supported-models#examples)
 some(where (p.eft == allow)) && !some(where (p.eft == deny)) | allow-and-deny | [Allow-and-deny](/docs/en/supported-models#examples)
 priority(p.eft) &#124;&#124; deny | priority | [Priority](/docs/en/supported-models#examples)
+subjectPriority(p.eft) | priority base on role | [Subject-Priority](/docs/en/supported-models#examples) 
 
 ## Matchers
 
