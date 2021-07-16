@@ -62,3 +62,70 @@ alice, data1, write --> true // for `p, 1, alice, data1, write, allow` has highe
 bob, data2, read --> false
 bob, data2, write --> true // for bob has role of `data2_allow_group` which has right to write data2, and there's no deny policy with higher priority 
 ```
+## Load Policy with Priority Based on Role and User Hierarchy
+
+The inherited structure of roles and users can only be multiple trees, not graphs. If one user has multiple roles,you have to make sure the user has the same level in different trees. If two roles have the same level,the policy(the role corresponding) appeared earlier has higher priority. more details also see [casbin#833](https://github.com/casbin/casbin/pull/833)、[casbin#831](https://github.com/casbin/casbin/issues/831)
+
+model.conf:
+```ini
+[request_definition]
+r = sub, obj, act
+
+[policy_definition]
+p = sub, obj, act, eft
+
+[role_definition]
+g = _, _
+
+[policy_effect]
+e = subjectPriority(p.eft) || deny
+
+[matchers]
+m = g(r.sub, p.sub) && r.obj == p.obj && r.act == p.act 
+```
+
+policy.csv
+```csv
+p, root, data1, read, deny
+p, admin, data1, read, deny
+
+p, editor, data1, read, deny
+p, subscriber, data1, deny
+
+p, jane, data1, read, allow
+p, alice, data1, read, allow
+
+g, admin, root
+
+g, editor, admin
+g, subscriber, admin
+
+g, jane, editor
+g, alice, subscriber 
+```
+
+Request:
+```
+jane, data1, read --> true // jane is at the bottom,so priority is higher than editor, admin and root
+alice, data1, read --> true
+```
+
+ The role hierarchy like this: 
+```
+role: root
+ └─ role: admin
+    ├─ role editor
+    │  └─ user: jane
+    │
+    └─ role: subscriber
+       └─ user: john
+```
+
+The priority automatically like this: 
+
+```
+role: root                 # auto priority: 30
+ └─ role: admin            # auto priority: 20
+     ├─ role: editor       # auto priority: 10
+     └─ role: subscriber   # auto priority: 10
+```
