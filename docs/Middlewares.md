@@ -92,6 +92,7 @@ Name | Description
 ----|----
 [OpenResty](https://openresty.org/) | A dynamic web platform based on NGINX and LuaJIT, via plugin: [lua-resty-casbin](https://github.com/casbin-lua/lua-resty-casbin) and [casbin-openresty-example](https://github.com/rushitote/casbin-openresty-example)
 [Kong](https://github.com/Kong/kong) | A cloud-native, platform-agnostic, scalable API Gateway distinguished for its high performance and extensibility via plugins, via plugin: [kong-authz](https://github.com/casbin-lua/kong-authz)
+[APISIX](https://github.com/apache/apisix) | A dynamic, real-time, high-performance API gateway, via plugin: [apisix-authz](https://github.com/casbin-lua/apisix-authz)
 
 <!--Swift-->
 Name | Description

@@ -15,6 +15,7 @@ Watcher | Type | Author | Description
 [Etcd Watcher](https://github.com/casbin/etcd-watcher) | KV store | Casbin | Watcher for [etcd](https://github.com/coreos/etcd)
 [Redis Watcher](https://github.com/casbin/redis-watcher) | KV store | Casbin | Watcher for [Redis](http://redis.io/)
 [Redis Watcher](https://github.com/billcobbler/casbin-redis-watcher) | KV store | [@billcobbler](https://github.com/billcobbler) | Watcher for [Redis](http://redis.io/)
+[TiKV Watcher](https://github.com/casbin/tikv-watcher) | KV store | Casbin | Watcher for [TiKV](https://github.com/tikv/tikv)
 [Kafka Watcher](https://github.com/wgarunap/casbin-kafka-watcher) | Messaging system | [@wgarunap](https://github.com/wgarunap) | Watcher for [Apache Kafka](https://kafka.apache.org/)
 [NATS Watcher](https://github.com/Soluto/casbin-nats-watcher) | Messaging system | [Soluto](https://github.com/Soluto) | Watcher for [NATS](https://nats.io/)
 [ZooKeeper Watcher](https://github.com/grepsr/casbin-zk-watcher) | Messaging system | [Grepsr](https://github.com/grepsr) | Watcher for [Apache ZooKeeper](https://zookeeper.apache.org/)
