@@ -100,6 +100,30 @@ module.exports = [
     pinned: true,
   },
   {
+    caption: "360",
+    image: "/img/users/360.jfif",
+    infoLink: "https://www.linkedin.com/in/andrew-weng/",
+    pinned: true,
+  },
+  {
+    caption: "Honeywell",
+    image: "/img/users/honeywell.png",
+    infoLink: "https://www.linkedin.com/search/results/people/headless?origin=CLUSTER_EXPANSION&keywords=casbin&lipi=urn%3Ali%3Apage%3Asearch_results_generic_index%3BFOVsvEXCTtiykug2mPyiSQ%3D%3D",
+    pinned: true,
+  },
+  {
+    caption: "SIEMENS",
+    image: "/img/users/siemens.svg",
+    infoLink: "https://www.linkedin.com/in/kshitij-rastogi19",
+    pinned: true,
+  },
+  {
+    caption: "KubeMQ",
+    image: "/img/users/kubemq.png",
+    infoLink: "https://docs.kubemq.io/license/open-source-software-notices",
+    pinned: true,
+  },
+  {
     caption: "OVO",
     image: "/img/users/ovo.png",
     infoLink: "https://ovo.id",
@@ -112,27 +136,9 @@ module.exports = [
     pinned: true,
   },
   {
-    caption: "KubeMQ",
-    image: "/img/users/kubemq.png",
-    infoLink: "https://docs.kubemq.io/license/open-source-software-notices",
-    pinned: true,
-  },
-  {
     caption: "JDLT",
     image: "/img/users/jdlt.svg",
     infoLink: "https://jdlt.co.uk",
-    pinned: true,
-  },
-  {
-    caption: "360",
-    image: "/img/users/360.jfif",
-    infoLink: "https://www.linkedin.com/in/andrew-weng/",
-    pinned: true,
-  },
-  {
-    caption: "Honeywell",
-    image: "/img/users/honeywell.png",
-    infoLink: "https://www.linkedin.com/search/results/people/headless?origin=CLUSTER_EXPANSION&keywords=casbin&lipi=urn%3Ali%3Apage%3Asearch_results_generic_index%3BFOVsvEXCTtiykug2mPyiSQ%3D%3D",
     pinned: true,
   },
 ];
