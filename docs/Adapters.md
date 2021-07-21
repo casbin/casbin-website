@@ -108,6 +108,7 @@ Adapter | Type | Author | AutoSave | Description
 [Couchbase Adapter](https://github.com/ScienceLogic/casbin-couchbase-adapter) | NoSQL | [ScienceLogic](https://github.com/ScienceLogic) | ✅ (without `remove_filtered_policy()`) | For [Couchbase](https://www.couchbase.com/)
 [DynamoDB Adapter](https://github.com/abqadeer/python-dycasbin) | NoSQL | [@abqadeer](https://github.com/abqadeer/) | ✅ | For [DynamoDB](https://aws.amazon.com/dynamodb/)
 [Pymongo Adapter](https://github.com/pycasbin/pymongo-adapter) | NoSQL |  Casbin | ❌ | MongoDB is supported by [Pymongo](https://pypi.org/project/pymongo/)
+[Tortoise ORM Adapter](https://github.com/thearchitector/casbin-tortoise-adapter) | ORM |  [@thearchitector](https://github.com/thearchitector) | ✅ | PostgreSQL (>=9.4), MySQL, MariaDB, and SQLite are supported by [Tortoise ORM](https://tortoise.github.io/databases.html)
 
 <!--.NET-->
 Adapter | Type | Author | AutoSave | Description
