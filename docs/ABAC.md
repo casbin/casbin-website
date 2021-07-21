@@ -49,6 +49,10 @@ Currently, only request elements like ``r.sub``, ``r.obj``, ``r.act`` and so on 
 You can use multiple ABAC attributes in a matcher, for example: ``m = r.sub.Domain == r.obj.Domain``.
 :::
 
+:::tip
+If you need to use comma in policy which conflicts with csv's separator and we need to escape it. Casbin parses policy file through [csv library](https://pkg.go.dev/encoding/csv), you could surround statement with quotation marks. For example, `"keyMatch("bob", r.sub.Role)"` will not be split.
+:::
+
 ## Scaling the model for complex and large number of ABAC rules.
 
 The above instance of ABAC implementation is at its core very simple, but oftentimes the authorization system needs a very complex and large number of ABAC rules. To fit this necessity the above implementation will increase the verbosity of the model to a large extent. So, it’s wise to add the rules in the policy instead of in the model. This is done by introducing a ``eval()`` functional construct. Below is the example instance to manage such ABAC models.
