@@ -3,7 +3,7 @@ id: admin-portal
 title: Admin Portal
 ---
 
-We provide a [web-based portal called Casdoor](https://github.com/casbin/casdoor) for model management and policy management:
+We provide a [web-based portal called Casdoor](https://casdoor.org) for model management and policy management:
 
 ![model editor](https://hsluoyz.github.io/casbin/ui_model_editor.png)
 
@@ -16,7 +16,7 @@ There are also 3rd-party admin portal projects that use Casbin as authorization 
 <!--Go-->
 Project | Author | Frontend | Backend | Description
 ----|----|----|----|----
-[Casdoor](https://github.com/casbin/casdoor) | Casbin | React + Ant Design | Beego | Based on Beego + XORM + React
+[Casdoor](https://casdoor.org) | Casbin | React + Ant Design | Beego | Based on Beego + XORM + React
 [go-admin-team/go-admin](https://github.com/go-admin-team/go-admin) | [@go-admin-team](https://github.com/go-admi-team) | Vue + Element UI | Gin | go-admin Based on Gin + Casbin + GORM
 [gin-vue-admin](https://github.com/piexlmax/gin-vue-admin) | [@piexlmax](https://github.com/piexlmax) | Vue + Element UI | Gin | Based on Gin + GORM + Vue
 [gin-admin](https://github.com/LyricTian/gin-admin) | [@LyricTian](https://github.com/LyricTian) | React + Ant Design | Gin | RBAC scaffolding based on Gin + GORM + Casbin + Ant Design React
