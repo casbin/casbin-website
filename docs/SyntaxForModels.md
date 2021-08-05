@@ -44,10 +44,6 @@ Each line in a policy is called a policy rule. Each policy rule starts with a ``
 (bob, write-all-objects) -> (p2.sub, p2.act)
 ```
 
-:::note
-Currently only single policy definition ``p`` is supported. ``p2`` is yet not supported. Because for common cases, our user doesn't have the need to use multiple policy definitions. If your requirement has to use additional policy definitions, please send an issue about it.
-:::
-
 :::tip
 The elements in a policy rule are always regarded as``string``. If you have any question about this, please see the discussion at: https://github.com/casbin/casbin/issues/113
 :::
@@ -106,9 +102,35 @@ The above matcher is the simplest, it means that the subject, object and action 
 
 You can use arithmetic like ``+, -, *, /`` and logical operators like ``&&, ||, !`` in matchers.
 
-:::note
-Although it seems like there will be multiple matchers such as ``m1``, ``m2`` like other primitives, currently, we only support one matcher ``m``. You can always use the above logical operators to implement complicated logic judgment in one matcher. So we believe there is no need to support multiple matchers for now. Let me know if you have other opinions.
-:::
+## Multiple sections type
+
+If you need multiple policy definitions or multiple matcher, you can use like ``p2``, ``m2``. In fact, all of the above four sections can use multiple types and the syntax is ``r``+number, such as ``r2``, ``e2``. By default these four sections should correspond one to one. Such as your ``r2`` will only use matcher ``m2`` to match policies ``p2``.  
+
+You can pass in ``EnforceContext`` as the first parameter of ``enforce`` method to specify the types, the ``EnforceContext`` is like this
+
+``````go
+EnforceContext{"r2","p2","e2","m2"}
+type EnforceContext struct {
+	rType string
+	pType string
+	eType string
+	mType string
+}
+``````
+
+Example usage, see [model](https://github.com/casbin/casbin/blob/master/examples/multiple_policy_definitions_model.conf) and [policy](https://github.com/casbin/casbin/blob/master/examples/multiple_policy_definitions_policy.csv), the request is as follows
+
+``````go
+// Pass in a suffix as parameter to NewEnforceContext,such as 2 or 3 and it will create r2,p2,etc..
+enforceContext := NewEnforceContext("2")
+// You can also specify a certain type individually
+enforceContext.eType = "e"
+// Don't pass in EnforceContext,the default is r,p,e,m
+e.Enforce("alice", "data2", "read")		// true
+// pass in EnforceContext
+e.Enforce(enforceContext, struct{ Age int }{Age: 70}, "/data1", "read")		//false
+e.Enforce(enforceContext, struct{ Age int }{Age: 30}, "/data1", "read")		//true
+``````
 
 ### Special Grammer
 
@@ -148,4 +170,4 @@ casbin-rs | Rust | https://github.com/jonathandturner/rhai
 
 :::note
 If you encounter performance issue about Casbin, it's probably caused by the low efficiency of the expression evaluator. You can both send issue to Casbin or the expression evaluator directly for advice to speed up. See [Benchmarks](/docs/en/benchmark) section for details.
-:::
+:::	
