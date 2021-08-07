@@ -101,7 +101,7 @@ class HomeSplash extends React.Component {
             <Button href="https://github.com/casbin/lua-casbin"icon="https://cdn.casbin.org/language/lua-5.svg">Lua (OpenResty, Kong, APISIX)</Button>
             <Button href="https://github.com/casbin/dart-casbin"icon="https://cdn.casbin.org/language/dart.svg">Dart (Flutter)</Button>
             <Button href="https://github.com/casbin/casbin-ex"icon="https://cdn.casbin.org/language/elixir-lang-icon.svg">Elixir</Button>
-            <Button href="https://github.com/casbin/k8s-authz"icon="https://cdn.casbin.org/language/kubernets.svg">Kubernetes (k8s)</Button>
+            <Button href="/docs/en/cloud-native"icon="https://cdn.casbin.org/language/kubernets.svg">Cloud Native (Kubernetes, Istio, Envoy, KubeSphere)</Button>
           </PromoSection>
         </div>
       </SplashContainer>
