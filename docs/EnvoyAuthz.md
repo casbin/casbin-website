@@ -2,7 +2,7 @@
 id: envoy
 title: Authorization of Service Mesh through Envoy
 ---
-[Envoy-authz](https://github.com/casbin/envoy-authz) is a middleware of Envoy which performs external RBAC & ABAC authorization through casbin. This middleware uses [Envoy's external authorization API](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/security/ext_authz_filter.html) THROUGH A gRPC server. This proxy would be deployed on any type of envoy-based service meshes like Istio.
+[Envoy-authz](https://github.com/casbin/envoy-authz) is a middleware of Envoy which performs external RBAC & ABAC authorization through casbin. This middleware uses [Envoy's external authorization API](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/security/ext_authz_filter.html) through a gRPC server. This proxy would be deployed on any type of envoy-based service meshes like Istio.
 
 ## Requirements
 
