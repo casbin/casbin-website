@@ -16,7 +16,7 @@ This is the [guide](https://master--kubernetes-io-master-staging.netlify.app/doc
 - OpenSSL
 
 ## Usage
-- Generate the certificates and keys for every user by using openssl and running *make certs* or the following script:-  
+- Generate the certificates and keys for every user by using openssl and running the following script:-  
 ```
 ./gen_cert.sh
 ```
