@@ -158,4 +158,10 @@ This is another longer-version paper published in Journal of Software. The citat
 - [How to use casbin authorization in your rust web-app [Part - 1]](https://dev.to/smrpn/how-to-use-casbin-authorization-in-your-rust-web-app-part-1-4f8f)
 - [How to use casbin authorization in your rust web-app [Part - 2]](https://dev.to/smrpn/how-to-use-casbin-authorization-in-your-rust-web-app-part-2-1bnm)
 
+<!--Lua-->
+
+### APISIX
+
+- [Authorization in APISIX using Casbin](https://medium.com/@rushitote/authorization-in-apisix-using-casbin-59b693669d6d)
+
 <!--END_DOCUSAURUS_CODE_TABS-->
