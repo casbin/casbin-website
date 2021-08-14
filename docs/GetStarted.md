@@ -350,9 +350,9 @@ else
 ```lua
 if e:enforce("alice", "data1", "read")
 then
-   --[ permit alice to read data1 --]
+   --permit alice to read data1
 else
-   --[ error occurs --]
+   --error occurs
 end
 
 ```
@@ -399,8 +399,15 @@ roles = e.rolesForEntity("alice")
 ```
 
 <!--Rust-->
+
 ```rust
 let roles = e.get_roles_for_user("alice");
+```
+
+<!--Lua-->
+
+```lua
+local roles =e:GetRolesForUser("alice")
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
