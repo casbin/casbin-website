@@ -140,6 +140,14 @@ Adapter | Type | Author | AutoSave | Description
 [Memory Adapter (built-in)](https://github.com/casbin/SwiftCasbin/blob/master/Sources/Casbin/Adapter/MemoryAdapter.swift) | Memory | Casbin | ❌ | For memory
 [Fluent Adapter](https://github.com/SwiftCasbin/fluent-adapter) | ORM | Casbin | ✅ | [PostgreSQL, SQLite, MySQL, MongoDB](https://docs.vapor.codes/4.0/fluent/overview/#drivers) are supported by [Fluent](https://github.com/vapor/fluent)
 
+<!--Lua-->
+Adapter | Type | Author | AutoSave | Description
+----|------|----|----|----
+[File Adapter (built-in)](https://casbin.org/docs/en/adapters#file-adapter-built-in) | File | Casbin | ❌ | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files
+[Filtered File Adapter (built-in)](https://casbin.org/docs/en/policy-subset-loading) | File | Casbin | ❌ | For [.CSV (Comma-Separated Values)](https://en.wikipedia.org/wiki/Comma-separated_values) files with policy subset loading support
+[LuaSQL Adapter](https://github.com/casbin-lua/luasql-adapter) | ORM | Casbin | ✅ | MySQL, PostgreSQL, SQLite3 are supported by [LuaSQL](https://keplerproject.github.io/luasql/)
+[4DaysORM Adapter](https://github.com/casbin-lua/4daysorm-adapter) | ORM | Casbin | ✅ | MySQL, SQLite3 are supported by [4DaysORM](https://github.com/itdxer/4DaysORM)
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 :::note
