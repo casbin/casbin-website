@@ -174,9 +174,8 @@ async fn main() -> Result<()> {
 <!--Lua-->
 
 ```lua
-lua_package_path "$prefix/lua/?.lua;$prefix/lua-casbin/?.lua;;";
-local Enforcer = require("src.main.Enforcer")
-local e = Enforcer:new("path/to/model.conf","path/to/policy.cvs") -- The Casbin Enforcer
+local Enforcer = require("casbin")
+local e = Enforcer:new("path/to/model.conf", "path/to/policy.csv") -- The Casbin Enforcer
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -348,11 +347,10 @@ else
 <!--Lua-->
 
 ```lua
-if e:enforce("alice", "data1", "read")
-then
-   --permit alice to read data1
+if e:enforce("alice", "data1", "read") then
+   -- permit alice to read data1
 else
-   --error occurs
+   -- deny the request, show an error
 end
 
 ```
@@ -407,7 +405,7 @@ let roles = e.get_roles_for_user("alice");
 <!--Lua-->
 
 ```lua
-local roles =e:GetRolesForUser("alice")
+local roles = e:GetRolesForUser("alice")
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
