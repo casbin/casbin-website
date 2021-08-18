@@ -19,7 +19,7 @@ The above role definition shows that ``g`` is a RBAC system, and ``g2`` is anoth
 
 Casbin stores the actual user-role mapping (or resource-role mapping if you are using roles on resources) in the policy, for example:
 
-```
+```bash
 p, data2_admin, data2, read
 g, alice, data2_admin
 ```
@@ -79,7 +79,7 @@ The pattern matching function supports each parameter of g.
 
 We know that normally RBAC is expressed as ``g(r.sub, p.sub)`` in matcher. Then we will use policy like:
 
-```
+```bash
 p, alice, book_group, read
 g, /book/1, book_group
 g, /book/2, book_group
@@ -89,7 +89,7 @@ So ``alice`` can read all books including ``book 1`` and ``book 2``. But there c
 
 But with pattern matching functions, you can write the policy with only one line:
 
-```
+```bash
 g, /book/:id, book_group
 ```
 
@@ -111,7 +111,7 @@ r.(*defaultrolemanager.RoleManager).AddDomainMatchingFunc("KeyMatch2",util.KeyMa
 
 register `keyMatch2` to model:
 
-```
+```bash
 m = g(r.sub, p.sub, r.dom) && keyMatch2(r.dom, p.dom) && r.obj == p.obj && r.act == p.act
 ```
 
@@ -121,7 +121,7 @@ Apart from the pattern matching syntax above, we can also use pure domain patter
 
 For example,  if we want ```sub``` to have access in different domains, ```domain1``` and ```domain2```, we can use the pure domain pattern:
 
-```
+```bash
 p, admin, domain1, data1, read
 p, admin, domain1, data1, write
 p, admin, domain2, data2, read

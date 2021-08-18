@@ -1,0 +1,128 @@
+[
+    {
+        "caption": "Intel RMD",
+        "image": "users/intel.png",
+        "infolink": "https://github.com/intel/rmd",
+        "pinned" : true
+    },
+    {
+        "caption": "Vmware Harbor",
+        "image": "users/vmware.png",
+        "infolink": "https://github.com/goharbor/harbor",
+        "pinned" : true
+    },
+    {
+        "caption": "Docker",
+        "image": "users/docker.png",
+        "infolink": "https://docs.docker.com/engine/extend/legacy_plugins/#authorization-plugins",
+        "pinned" : true
+    },
+    {
+        "caption": "Orange Gobis",
+        "image": "users/orange.png",
+        "infolink": "https://github.com/orange-cloudfoundry/gobis",
+        "pinned" : true
+    },
+    {
+        "caption": "Cisco",
+        "image": "users/cisco.svg",
+        "infolink": "https://www.linkedin.com/in/openmohan/",
+        "pinned" : true
+    },
+    {
+        "caption": "Microsoft",
+        "image": "users/microsoft.png",
+        "infolink": "https://github.com/microsoft/mouselog",
+        "pinned" : true
+    },
+    {
+        "caption": "Verizon",
+        "image": "users/verizon.png",
+        "infolink": "https://github.com/casbin/casbin/pull/56",
+        "pinned" : true
+    },
+    {
+        "caption": "Redhat",
+        "image": "users/redhat.png",
+        "infolink": "https://github.com/skydive-project/skydive",
+        "pinned" : true
+    },
+    {
+        "caption": "Tencent",
+        "image": "users/tencent.png",
+        "infolink": "https://github.com/tkestack/tke",
+        "pinned" : true
+    },
+    {
+        "caption": "ETH Zurich",
+        "image": "users/eth.jpg",
+        "infolink": "https://github.com/netsec-ethz/",
+        "pinned" : true
+    },
+    {
+        "caption": "T-Mobile",
+        "image": "users/t-mobile.png",
+        "infolink": "https://github.com/tmobile/jazz",
+        "pinned" : true
+    },
+    {
+        "caption": "IBM",
+        "image": "users/ibm.png",
+        "infolink": "https://loopback.io/doc/en/lb4/migration-auth-access-control-example.html#using-casbin",
+        "pinned" : true
+    },
+    {
+        "caption": "F5",
+        "image": "users/f5.png",
+        "infolink": "https://github.com/casbin/casbin/issues/299",
+        "pinned" : true
+    },
+    {
+        "caption": "Bose",
+        "image": "users/bose.png",
+        "infolink": "https://github.com/casbin/casbin/issues/302",
+        "pinned" : true
+    },
+    {
+        "caption": "r/SpaceX",
+        "image": "users/rspacex.png",
+        "infolink": "https://github.com/r-spacex/SpaceX-API/commit/f8daa8f9878dcd7a281fc8081e3aeb8e5d216089",
+        "pinned" : true
+    },
+    {
+        "caption": "Elastic",
+        "image": "users/elastic.svg",
+        "infolink": "https://www.elastic.co/guide/en/cloud-on-k8s/master/k8s-dependencies.html",
+        "pinned" : true
+    },
+    {
+        "caption": "OVO",
+        "image": "users/ovo.png",
+        "infolink": "https://ovo.id/",
+        "pinned" : true
+    },
+    {
+        "caption": "Musma",
+        "image": "users/musma.svg",
+        "infolink": "https://www.musma.net/",
+        "pinned" : true
+    },
+    {
+        "caption": "kubemq",
+        "image": "users/kubemq.png",
+        "infolink": "https://docs.kubemq.io/license/open-source-software-notices",
+        "pinned" : true
+    },
+    {
+        "caption": "Jdlt",
+        "image": "users/jdlt.svg",
+        "infolink": "https://jdlt.co.uk/",
+        "pinned" : true
+    },
+    {
+        "caption": "Jfif",
+        "image": "users/360.jfif",
+        "infolink": "https://www.linkedin.com/in/andrew-weng/",
+        "pinned" : true
+    }
+]

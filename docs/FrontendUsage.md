@@ -8,12 +8,12 @@ title: Frontend Usage
 
 ## Installation
 
-```
+```bash
 npm install casbin.js
 npm install casbin
 ```
 or
-```
+```bash
 yarn add casbin.js
 ```
 
@@ -25,7 +25,7 @@ Middleware | Type | Author | Description
 
 ## Quick Start
 You can use `manual` mode in your frontend application, and set the permission whenever you wish.
-```Javascript
+```javascript
 const casbinjs = require("casbin.js");
 // Set the user's permission:
 // He/She can read `data1` and `data2` objects and can write `data1` object
@@ -88,7 +88,7 @@ Casbin.js provides a perfect solution to integrating your frontend access-contro
 
 Use `auto` mode and specify your endpoint when initializing the Casbin.js `Authorizer`, it will automatically sync the permission and manipulate the frontend status.
 
-```Javascript
+```javascript
 const casbinjs = require('casbin.js');
 
 // Set your backend casbin service url
@@ -112,6 +112,9 @@ result.then((success, failed) => {
 
 Correspondingly, you need to expose an interface (e.g. a RestAPI) to generate the permission object and pass it to the frontend. In your API controller, call `CasbinJsGetUserPermission` to construct the permission object. Here is an example in Beego:
 
+<<<<<<< HEAD:docs/WebpageController.md
+```go
+=======
 :::note
 Your endpoint server should return something like
 ```json
@@ -123,6 +126,7 @@ Your endpoint server should return something like
 :::
 
 ```Go
+>>>>>>> df44e94fd0644572d3f2d203bf2db7cfe2bbbaef:docs/FrontendUsage.md
 // Router
 beego.Router("api/casbin", &controllers.APIController{}, "GET:GetFrontendPermission")
 

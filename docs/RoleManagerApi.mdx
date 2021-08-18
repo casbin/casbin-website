@@ -1,0 +1,306 @@
+---
+id: rolemanager-api
+title: RoleManager API
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+## RoleManager
+
+RoleManager provides interface to define the operations for managing roles.
+Adding matching function to rolemanager allows using wildcards in role name and domain.
+
+### `AddNamedMatchingFunc()`
+
+AddNamedMatchingFunc add MatchingFunc by ptype RoleManager.
+MatchingFunc will work when operating role matching.
+
+```go
+    e.AddNamedMatchingFunc("g", "", util.KeyMatch)
+	_, _ = e.AddGroupingPolicies([][]string{{"*", "admin", "domain1"}})
+	_, _ = e.GetRoleManager().HasLink("bob", "admin", "domain1") // -> true, nil
+```
+
+For example:
+
+<Tabs
+  defaultValue="go"
+  values={[
+    { label: 'Go', value: 'go'},
+  ]
+}>
+
+<TabItem value="go">
+
+```go
+    e, _ := casbin.NewEnforcer("path/to/model", "path/to/policy")
+    e.AddNamedMatchingFunc("g", "", util.MatchKey)
+```
+
+</TabItem>
+
+</Tabs>
+
+### `AddNamedDomainMatchingFunc()`
+
+AddNamedDomainMatchingFunc add MatchingFunc by ptype to RoleManager.
+`DomainMatchingFunc` is similar to `MatchingFunc` listed above.
+
+For example:
+
+<Tabs
+  defaultValue="go"
+  values={[
+    { label: 'Go', value: 'go'},
+  ]
+}>
+
+<TabItem value="go">
+
+```go
+    e, _ := casbin.NewEnforcer("path/to/model", "path/to/policy")
+    e.AddNamedDomainMatchingFunc("g", "", util.MatchKey)
+```
+
+</TabItem>
+
+</Tabs>
+
+### `GetRoleManager()`
+
+GetRoleManager gets the current role manager for `g`.
+
+For example:
+
+<Tabs
+  defaultValue="go"
+  values={[
+    { label: 'Go', value: 'go'},
+  ]
+}>
+
+<TabItem value="go">
+
+```go
+    rm := e.GetRoleManager()
+```
+
+</TabItem>
+
+</Tabs>
+
+### `Clear()`
+
+Clear clears all stored data and resets the role manager to the initial state.
+
+
+For example:
+
+<Tabs
+  defaultValue="go"
+  values={[
+    { label: 'Go', value: 'go'},
+  ]
+}>
+
+<TabItem value="go">
+
+```go
+    rm.Clear()
+```
+
+</TabItem>
+
+</Tabs>
+
+### `AddLink()`
+
+AddLink adds the inheritance link between two roles. role: name1 and role: name2.
+Domain is a prefix to the roles (can be used for other purposes).
+
+For example:
+
+<Tabs
+  defaultValue="go"
+  values={[
+    { label: 'Go', value: 'go'},
+  ]
+}>
+
+<TabItem value="go">
+
+```go
+    rm.AddLink("u1", "g1", "domain1")
+```
+
+</TabItem>
+
+</Tabs>
+
+### `DeleteLink()`
+
+DeleteLink deletes the inheritance link between two roles. role: name1 and role: name2.
+Domain is a prefix to the roles (can be used for other purposes).
+
+For example:
+
+<Tabs
+  defaultValue="go"
+  values={[
+    { label: 'Go', value: 'go'},
+  ]
+}>
+
+<TabItem value="go">
+
+```go
+    rm := DeleteLink("u1", "g1", "domain1")
+```
+
+</TabItem>
+
+</Tabs>
+
+###	`HasLink()`
+
+HasLink determines whether a link exists between two roles. role: name1 inherits role: name2.
+Domain is a prefix to the roles (can be used for other purposes).
+
+For example:
+
+<Tabs
+  defaultValue="go"
+  values={[
+    { label: 'Go', value: 'go'},
+  ]
+}>
+
+<TabItem value="go">
+
+```go
+    rm.HasLink("u1", "g1", "domain1")
+```
+
+</TabItem>
+
+</Tabs>
+
+### `GetRoles()`
+
+GetRoles gets the roles that a user inherits.
+Domain is a prefix to the roles (can be used for other purposes).
+
+For example:
+
+<Tabs
+  defaultValue="go"
+  values={[
+    { label: 'Go', value: 'go'},
+  ]
+}>
+
+<TabItem value="go">
+
+```go
+    rm.GetRoles("u1", "domain1")
+```
+
+</TabItem>
+
+</Tabs>
+
+### `GetUsers()`
+
+GetUsers gets the users that inherits a role.
+Domain is a prefix to the users (can be used for other purposes).
+
+For example:
+
+<Tabs
+  defaultValue="go"
+  values={[
+    { label: 'Go', value: 'go'},
+  ]
+}>
+
+<TabItem value="go">
+
+```go
+    rm.GetUsers("g1")
+```
+
+</TabItem>
+
+</Tabs>
+
+### `PrintRoles()`
+
+PrintRoles prints all the roles to log.
+
+For example:
+
+<Tabs
+  defaultValue="go"
+  values={[
+    { label: 'Go', value: 'go'},
+  ]
+}>
+
+<TabItem value="go">
+
+```go
+    rm.PrintRoles()
+```
+
+</TabItem>
+
+</Tabs>
+
+### `SetLogger()`
+
+SetLogger sets role manager's logger.
+
+For example:
+
+<Tabs
+  defaultValue="go"
+  values={[
+    { label: 'Go', value: 'go'},
+  ]
+}>
+
+<TabItem value="go">
+
+```go
+	logger := log.DefaultLogger{}
+	logger.EnableLog(true)
+	rm.SetLogger(&logger)
+	_ = rm.PrintRoles()
+```
+
+</TabItem>
+
+</Tabs>
+
+### `GetDomains()`
+GetDomains gets domains that a user has
+
+For example:
+
+<Tabs
+  defaultValue="go"
+  values={[
+    { label: 'Go', value: 'go'},
+  ]
+}>
+
+<TabItem value="go">
+
+```go
+    result, err := rm.GetDomains(name)
+```
+
+</TabItem>
+
+</Tabs>

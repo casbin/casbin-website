@@ -32,14 +32,14 @@ p2 = sub, act
 
 And we have the following policy (if in a policy file)
 
-```
+```bash
 p, alice, data1, read
 p2, bob, write-all-objects
 ```
 
 Each line in a policy is called a policy rule. Each policy rule starts with a ``policy type``, e.g., `p`, `p2`. It is used to match the policy definition if there are multiple definitions. The above policy shows the following binding. The binding can be used in the matcher.
 
-```
+```bash
 (alice, data1, read) -> (p.sub, p.obj, p.act)
 (bob, write-all-objects) -> (p2.sub, p2.act)
 ```
@@ -170,4 +170,8 @@ casbin-rs | Rust | https://github.com/jonathandturner/rhai
 
 :::note
 If you encounter performance issue about Casbin, it's probably caused by the low efficiency of the expression evaluator. You can both send issue to Casbin or the expression evaluator directly for advice to speed up. See [Benchmarks](/docs/en/benchmark) section for details.
+<<<<<<< HEAD
+:::
+=======
 :::	
+>>>>>>> df44e94fd0644572d3f2d203bf2db7cfe2bbbaef

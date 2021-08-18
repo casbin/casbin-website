@@ -11,7 +11,7 @@ Let's start at the Enforce APIs of Casbin. We will load a RBAC model from `model
 
 `model.conf`
 
-```
+```ini
 [request_definition]
 r = sub, obj, act
 

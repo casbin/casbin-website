@@ -11,7 +11,7 @@ Before reading, please note that some tutorials are for the Casbin's model and w
 
 This paper digs deeply into the design details about Casbin. Please cite the following BibTex if you use Casbin/PML as a reference in your paper:
 
-```bibtex
+```latex
 @article{luo2019pml,
   title={PML: An Interpreter-Based Access Control Policy Language for Web Services},
   author={Luo, Yang and Shen, Qingni and Wu, Zhonghai},
