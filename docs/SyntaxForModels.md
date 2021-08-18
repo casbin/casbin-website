@@ -83,11 +83,11 @@ The supported built-in policy effects are:
 
 Policy effect | Meaning | Example
 ----|------|----
-some(where (p.eft == allow)) | allow-override | [ACL, RBAC, etc.](/docs/en/supported-models#examples)
-!some(where (p.eft == deny)) | deny-override | [Deny-override](/docs/en/supported-models#examples)
-some(where (p.eft == allow)) && !some(where (p.eft == deny)) | allow-and-deny | [Allow-and-deny](/docs/en/supported-models#examples)
-priority(p.eft) &#124;&#124; deny | priority | [Priority](/docs/en/supported-models#examples)
-subjectPriority(p.eft) | priority base on role | [Subject-Priority](/docs/en/supported-models#examples) 
+some(where (p.eft == allow)) | allow-override | [ACL, RBAC, etc.](/docs/supported-models#examples)
+!some(where (p.eft == deny)) | deny-override | [Deny-override](/docs/supported-models#examples)
+some(where (p.eft == allow)) && !some(where (p.eft == deny)) | allow-and-deny | [Allow-and-deny](/docs/supported-models#examples)
+priority(p.eft) &#124;&#124; deny | priority | [Priority](/docs/supported-models#examples)
+subjectPriority(p.eft) | priority base on role | [Subject-Priority](/docs/supported-models#examples) 
 
 ## Matchers
 
@@ -169,9 +169,5 @@ Casbin4D | Delphi | https://github.com/casbin4d/Casbin4D/tree/master/SourceCode/
 casbin-rs | Rust | https://github.com/jonathandturner/rhai
 
 :::note
-If you encounter performance issue about Casbin, it's probably caused by the low efficiency of the expression evaluator. You can both send issue to Casbin or the expression evaluator directly for advice to speed up. See [Benchmarks](/docs/en/benchmark) section for details.
-<<<<<<< HEAD
-:::
-=======
+If you encounter performance issue about Casbin, it's probably caused by the low efficiency of the expression evaluator. You can both send issue to Casbin or the expression evaluator directly for advice to speed up. See [Benchmarks](/docs/benchmark) section for details.
 :::	
->>>>>>> df44e94fd0644572d3f2d203bf2db7cfe2bbbaef

@@ -73,7 +73,7 @@ When a user inherits a role or permission via RBAC hierarchy instead of directly
 
 ## Use pattern matching in RBAC
 
-Sometimes, you want some subjects, object or domains/tenants with the specific pattern to be automatically granted to a role. Pattern matching functions in RBAC can help you do that. A pattern matching function shares the same parameters and return value as the previous [matcher function](https://casbin.org/docs/en/syntax-for-models#functions-in-matchers).
+Sometimes, you want some subjects, object or domains/tenants with the specific pattern to be automatically granted to a role. Pattern matching functions in RBAC can help you do that. A pattern matching function shares the same parameters and return value as the previous [matcher function](https://casbin.org/docs/syntax-for-models#functions-in-matchers).
 
 The pattern matching function supports each parameter of g.
 
@@ -115,7 +115,7 @@ register `keyMatch2` to model:
 m = g(r.sub, p.sub, r.dom) && keyMatch2(r.dom, p.dom) && r.obj == p.obj && r.act == p.act
 ```
 
-If you don't understand what `g(r.sub, p.sub, r.dom)` means, please read [this](https://casbin.org/docs/en/rbac-with-domains). In short, `g(r.sub, p.sub, r.dom)` will check whether the user `r.sub` has a role `p.sub` in the domain `r.dom`. So this is how the matcher work. You can see the full example [here](https://github.com/casbin/casbin/blob/dbdb6cbe2e7a80863e4951f9ff36da07fef01b75/model_test.go#L278-L307).
+If you don't understand what `g(r.sub, p.sub, r.dom)` means, please read [this](https://casbin.org/docs/rbac-with-domains). In short, `g(r.sub, p.sub, r.dom)` will check whether the user `r.sub` has a role `p.sub` in the domain `r.dom`. So this is how the matcher work. You can see the full example [here](https://github.com/casbin/casbin/blob/dbdb6cbe2e7a80863e4951f9ff36da07fef01b75/model_test.go#L278-L307).
 
 Apart from the pattern matching syntax above, we can also use pure domain pattern.
 
@@ -137,4 +137,4 @@ By using pattern matching, especially in the scenarios which is more complicated
 
 ## Role manager
 
-See [Role Managers](/docs/en/role-managers) section for details.
+See [Role Managers](/docs/role-managers) section for details.
