@@ -33,29 +33,30 @@ function HomepageHeader() {
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div>
-          <Button
-            href="/docs/get-started"
+          <Link className="button button--secondary button--lg"
+          style={{marginTop: "1rem", marginRight: "3rem", marginLeft: "3rem"}}
+            to="/docs/get-started"
             >
             Get Start
-          </Button>
+          </Link>
           <div className={styles.buttons}>
-          <Button href="https://github.com/casbin/casbin" icon="https://cdn.casbin.org/language/go-logo-1.svg">Golang</Button>
-            <Button href="https://github.com/casbin/jcasbin"icon="https://cdn.casbin.org/language/jee-3.svg">Java</Button>
-            <Button href="https://github.com/casbin/casbin-cpp"icon="https://cdn.casbin.org/language/c.svg">C/C++</Button>
-            <Button href="https://github.com/casbin/node-casbin"icon="https://cdn.casbin.org/language/nodejs-1.svg">Node.js</Button>
-            <Button href="https://github.com/casbin/casbin.js"icon="https://cdn.casbin.org/language/logo-javascript.svg">Front-end js</Button>
-            <Button href="https://github.com/php-casbin/php-casbin"icon="https://cdn.casbin.org/language/PHP-logo.svg">PHP</Button>
-            <Button href="https://github.com/php-casbin/laravel-authz"icon="https://cdn.casbin.org/language/laravel-2.svg">Laravel</Button>
-            <Button href="https://github.com/casbin/pycasbin" icon="https://cdn.casbin.org/language/python-5.svg">Python</Button>
-            <Button href="https://github.com/casbin/Casbin.NET"icon="https://cdn.casbin.org/language/dotnet-logo.svg">.NET (C#)</Button>
-            <Button href="https://github.com/casbin4d/Casbin4D"icon="https://cdn.casbin.org/language/delphi-2.svg">Delphi</Button>
-            <Button href="https://github.com/casbin/casbin-rs"icon="https://cdn.casbin.org/language/rust.svg">Rust</Button>
-            <Button href="https://github.com/CasbinRuby/casbin-ruby"icon="https://cdn.casbin.org/language/ruby.svg">Ruby</Button>
-            <Button href="https://github.com/casbin/SwiftCasbin"icon="https://cdn.casbin.org/language/swift-15.svg">Swift (Objective-C)</Button>
-            <Button href="https://github.com/casbin/lua-casbin"icon="https://cdn.casbin.org/language/lua-5.svg">Lua (OpenResty, Kong, APISIX)</Button>
-            <Button href="https://github.com/casbin/dart-casbin"icon="https://cdn.casbin.org/language/dart.svg">Dart (Flutter)</Button>
-            <Button href="https://github.com/casbin/casbin-ex"icon="https://cdn.casbin.org/language/elixir-lang-icon.svg">Elixir</Button>
-            <Button href="/docs/en/cloud-native"icon="https://cdn.casbin.org/language/kubernets.svg">Cloud Native (Kubernetes, Istio, Envoy, KubeSphere)</Button>
+            <Link className="button button--secondary button--lg" style={{marginTop: "1rem", marginRight: ".5rem", marginLeft: ".5rem"}} to="https://github.com/casbin"><embed className={styles.embedbutton} src="https://cdn.casbin.org/language/go-logo-1.svg" />Get Start</Link>
+            <Link className="button button--secondary button--lg" style={{marginTop: "1rem", marginRight: ".5rem", marginLeft: ".5rem"}} to="https://github.com/casbin/jcasbin"><embed className={styles.embedbutton} src="https://cdn.casbin.org/language/jee-3.svg" />Java</Link>
+            <Link className="button button--secondary button--lg" style={{marginTop: "1rem", marginRight: ".5rem", marginLeft: ".5rem"}} to="https://github.com/casbin/casbin-cpp"><embed className={styles.embedbutton} src="https://cdn.casbin.org/language/c.svg" />C/C++</Link>
+            <Link className="button button--secondary button--lg" style={{marginTop: "1rem", marginRight: ".5rem", marginLeft: ".5rem"}}  to="https://github.com/casbin/node-casbin"><embed className={styles.embedbutton} src="https://cdn.casbin.org/language/nodejs-1.svg" />Node.js</Link>
+            <Link className="button button--secondary button--lg" style={{marginTop: "1rem", marginRight: ".5rem", marginLeft: ".5rem"}}  to="https://github.com/casbin/casbin.js"><embed className={styles.embedbutton} src="https://cdn.casbin.org/language/logo-javascript.svg" />Front-end js</Link>
+            <Link className="button button--secondary button--lg" style={{marginTop: "1rem", marginRight: ".5rem", marginLeft: ".5rem"}}  to="https://github.com/php-casbin/php-casbin"><embed className={styles.embedbutton} src="https://cdn.casbin.org/language/PHP-logo.svg" />PHP</Link>
+            <Link className="button button--secondary button--lg" style={{marginTop: "1rem", marginRight: ".5rem", marginLeft: ".5rem"}}  to="https://github.com/php-casbin/laravel-authz"><embed className={styles.embedbutton} src="https://cdn.casbin.org/language/laravel-2.svg" />Laravel</Link>
+            <Link className="button button--secondary button--lg" style={{marginTop: "1rem", marginRight: ".5rem", marginLeft: ".5rem"}}  to="https://github.com/casbin/pycasbin"><embed className={styles.embedbutton} src="https://cdn.casbin.org/language/python-5.svg" />Python</Link>
+            <Link className="button button--secondary button--lg" style={{marginTop: "1rem", marginRight: ".5rem", marginLeft: ".5rem"}}  to="https://github.com/casbin/Casbin.NET"><embed className={styles.embedbutton} src="https://cdn.casbin.org/language/dotnet-logo.svg" />.Net (C#)</Link>
+            <Link className="button button--secondary button--lg" style={{marginTop: "1rem", marginRight: ".5rem", marginLeft: ".5rem"}}  to="https://github.com/casbin4f/Casbin4D"><embed className={styles.embedbutton} src="https://cdn.casbin.org/language/delphi-2.svg" />Delphi</Link>
+            <Link className="button button--secondary button--lg" style={{marginTop: "1rem", marginRight: ".5rem", marginLeft: ".5rem"}}  to="https://github.com/casbin/casbin-rs"><embed className={styles.embedbutton} src="https://cdn.casbin.org/language/rust.svg" />Rust</Link>
+            <Link className="button button--secondary button--lg" style={{marginTop: "1rem", marginRight: ".5rem", marginLeft: ".5rem"}}  to="https://github.com/CasbinRuby/casbin-ruby"><embed className={styles.embedbutton} src="https://cdn.casbin.org/language/ruby.svg" />Ruby</Link>
+            <Link className="button button--secondary button--lg" style={{marginTop: "1rem", marginRight: ".5rem", marginLeft: ".5rem"}}  to="https://github.com/casbin/SwiftCasbin"><embed className={styles.embedbutton} src="https://cdn.casbin.org/language/swift-15.svg" />Swift (Objective-C)</Link>
+            <Link className="button button--secondary button--lg" style={{marginTop: "1rem", marginRight: ".5rem", marginLeft: ".5rem"}}  to="https://github.com/casbin/lua-casbin"><embed className={styles.embedbutton} src="https://cdn.casbin.org/language/lua-5.svg" />Lua (OpenResty, Kong, APISIX)</Link>
+            <Link className="button button--secondary button--lg" style={{marginTop: "1rem", marginRight: ".5rem", marginLeft: ".5rem"}}  to="https://github.com/casbin/dart-casbin"><embed className={styles.embedbutton} src="https://cdn.casbin.org/language/dart.svg" />Dart (Flutter)</Link>
+            <Link className="button button--secondary button--lg" style={{marginTop: "1rem", marginRight: ".5rem", marginLeft: ".5rem"}}  to="https://github.com/casbin/casbin/casbin-ex"><embed className={styles.embedbutton} src="https://cdn.casbin.org/language/elixir-lang-icon.svg" />Elixir</Link>
+            <Link className="button button--secondary button--lg" style={{marginTop: "1rem", marginRight: ".5rem", marginLeft: ".5rem"}}  to="/docs/en/cloud-native"><embed className={styles.embedbutton} src="https://cdn.casbin.org/language/kubernets.svg" />Cloud Native (Kubernetes, Istio, Envoy, KubeSphere)</Link>
         </div>
         </div>
       </div>

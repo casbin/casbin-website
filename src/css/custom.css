@@ -31,6 +31,7 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 .product-showcase-section {
   color: var(--color-primary);
 }
+
 .showcase {
   padding-left: 0;
   padding-right: 0;
@@ -38,6 +39,7 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   margin-right: 0;
   margin-bottom: 70px;
 }
+
 .showcase .container {
   padding-left: 0;
   padding-right: 0;

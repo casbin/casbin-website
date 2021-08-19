@@ -54,3 +54,12 @@
   margin-top: 5px;
   align-items: center;
 }
+
+.embedbutton {
+  display: inline-block;
+  margin-right: .2em;
+  margin-top: .2rem;
+  stroke-width: 0;
+  width: 22px;
+  height: 22px;
+}
