@@ -50,6 +50,7 @@ Adapter | Type | Author | AutoSave | Description
 [JSON Adapter](https://github.com/casbin/json-adapter) | String | Casbin | ❌ | For [JSON](https://www.json.org/)
 [String Adapter](https://github.com/qiangmzsx/string-adapter) | String | [@qiangmzsx](https://github.com/qiangmzsx) | ❌ | For String
 [HTTP File Adapter](https://github.com/h4ckedneko/casbin-httpfs) | HTTP | [@h4ckedneko](https://github.com/h4ckedneko) | ❌ | For [http.FileSystem](https://golang.org/src/net/http/fs.go)
+[FileSystem Adapter](https://github.com/naucon/casbin-fs-adapter) | File | [@naucon](https://github.com/naucon) | ❌ | For [fs.FS](https://pkg.go.dev/io/fs) and [embed.FS](https://pkg.go.dev/embed)
 
 <!--Java-->
 Adapter | Type | Author | AutoSave | Description
