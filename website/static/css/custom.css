@@ -60,6 +60,111 @@ a:hover {
 }
 
 .announcement-inner {
-    margin: 0 auto;
-    max-width: 768px;
+  margin: 0 auto;
+  max-width: 768px;
+}
+
+.homeWrapper {
+  margin-right: 50%;
+}
+
+.HomeSplash {
+  margin-right: 70%;
+  line-height: 40px;
+}
+
+.features {
+  margin-top: 280px;
+}
+
+.BrowserWindowDiv {
+  border-radius: 10px;
+  box-shadow: 0 0 40px grey;
+}
+
+.projectTitle {
+  line-height: 120px;
+}
+
+.inner {
+  line-height: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.iframediv {
+  height: 108vh;
+  width: 800px;
+}
+
+.browserWindow {
+  border: 0px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-top: 12px;
+  margin-left: 13px;
+  margin-right: 13px;
+  height: 115vh;
+  width: 800px;
+  border: 1;
+  float: right;
+  border-radius: 10px;
+  box-shadow: 0 0 40px grey;
+}
+  
+.browserWindowHeader {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  align-items: center;
+  background: #000;
+  display: flex;
+  padding: 0.5rem 1rem;
+}
+  
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+ 
+.buttons {
+  white-space: nowrap;
+}
+  
+.right {
+  align-self: center;
+  width: 10%;
+}
+ 
+.browserWindowAddressBar {
+  flex: 1 0;
+  margin: 0 1rem 0 0.5rem;
+  border-radius: 12.5px;
+  background-color: #fff;
+  color: #666;
+  padding: 5px 15px;
+  font: 400 13px Arial;
+  user-select: none;
+}
+  
+.dot {
+  margin-right: 6px;
+  margin-top: 4px;
+  height: 12px;
+  width: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+  
+.browserWindowMenuIcon {
+  margin-left: auto;
+}
+  
+.bar {
+  width: 17px;
+  height: 3px;
+  background-color: #aaa;
+  margin: 3px 0;
+  display: block;
 }

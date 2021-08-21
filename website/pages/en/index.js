@@ -109,6 +109,45 @@ class HomeSplash extends React.Component {
   }
 }
 
+function BrowserWindow () {
+  return (
+    <div className='browserWindow'>
+      <div className='browserWindowHeader'>
+        <div className='buttons'>
+          <span className='dot' style={{background: '#f25f58'}} />
+          <span className='dot' style={{background: '#fbbe3c'}} />
+          <span className='dot' style={{background: '#58cb42'}} />
+        </div>
+        <div className='browserWindowAddressBar'>{'https://casbin.org/casbin-editor/'}</div>
+        <div className='browserWindowMenuIcon'>
+          <div>
+            <span className='bar' />
+            <span className='bar' />
+            <span className='bar' />
+          </div>
+        </div>
+      </div>
+      <div className='browserWindowBody'><Editor /></div>
+    </div>
+  );
+}
+
+class Editor extends React.Component {
+  render() {
+    return (
+      <div className="iframediv">
+        <iframe
+          src="https://casbin.org/casbin-editor/"
+          style={{width: '100%', height: '108vh', display: 'block'}}
+          scrolling="no"
+          title="Casbin-editor"
+          allowFullScreen={true}
+        />
+      </div>
+    );
+  }
+}
+
 const Block = props => (
   <Container
     padding={['bottom', 'top']}
@@ -241,6 +280,9 @@ class Index extends React.Component {
               💖 Also need authentication/SSO? Learn more about: Casdoor
             </a>
           </div>
+        </div>
+        <div className='BrowserWindowDiv'>
+        <BrowserWindow />
         </div>
         <HomeSplash language={language} />
         <div className="mainContainer">
