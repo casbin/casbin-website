@@ -95,7 +95,7 @@ m, _ := model.NewModelFromString(text)
 
 // Load the policy rules from the .CSV file adapter.
 // Replace it with your adapter to avoid files.
-a := model.NewModelFromString("examples/rbac_policy.csv")
+a := fileadapter.NewAdapter("examples/rbac_policy.csv")
 
 // Create the enforcer.
 e := casbin.NewEnforcer(m, a)
