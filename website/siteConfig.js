@@ -38,6 +38,7 @@ const siteConfig = {
     {href: 'https://oa.casbin.com', label: "OA"},
     {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
+    {doc: 'contributing', label: "Contributing"},
     {languages: true},
     {search: true},
     {href: 'https://github.com/casbin', label: "GitHub"},
