@@ -62,5 +62,10 @@
       "privacy-policy",
       "terms-of-service"
     ]
+  },
+  "contributing": {
+    "Contributing": [
+      "contributing"
+    ]
   }
 }
