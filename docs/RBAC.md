@@ -100,13 +100,14 @@ r := e.GetRoleManager()
 r.(*defaultrolemanager.RoleManager).AddMatchingFunc("KeyMatch2",util.KeyMatch2)
 ```
 
-When Using a pattern matching function in domains/tenants, You need to register the function to enforcer and model.
+When Using a pattern matching function in domains/tenants, You need to register the function to enforcer and model. **You also need to rebuild by calling ``e.BuildRoleLinks()``**
 
-register `keyMatch2` to enforcer: 
+register `keyMatch2` to enforcer and build role links again: 
 
 ```go
 r := e.GetRoleManager()
 r.(*defaultrolemanager.RoleManager).AddDomainMatchingFunc("KeyMatch2",util.KeyMatch2)
+e.BuildRoleLinks()
 ```
 
 register `keyMatch2` to model:
