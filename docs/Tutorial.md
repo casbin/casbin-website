@@ -39,7 +39,8 @@ This is another longer-version paper published in Journal of Software. The citat
 - [ThinkPHP 5.1 + Casbin: RBAC authorization (in Chinese)](https://www.bilibili.com/video/BV1A541187M4)
 - [ThinkPHP 5.1 + Casbin: RESTful & Middleware (in Chinese)](https://www.bilibili.com/video/BV1uk4y117up)
 - [Quick Start for PHP-Casbin (in Chinese)](https://www.bilibili.com/video/BV1dK4y1L7xy)
-
+- [ThinkPHP 5.1 + Casbin:How to use custom matching functions (in Chinese)](https://www.bilibili.com/video/BV1dq4y1Z78g)
+- 
 ### PERM Meta-Model (Policy, Effect, Request, Matchers)
 
 - [Understanding Casbin with different Access Control Model Configurations](https://medium.com/wesionary-team/understanding-casbin-with-different-access-control-model-configurations-faebc60f6da5)
