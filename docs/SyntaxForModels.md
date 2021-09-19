@@ -119,7 +119,7 @@ type EnforceContext struct {
 	eType string
 	mType string
 }
-``````
+```
 
 <!--Node.js-->
 ```javascript
@@ -140,6 +140,7 @@ Example usage, see [model](https://github.com/casbin/casbin/blob/master/examples
 
 <!--DOCUSAURUS_CODE_TABS-->
 
+<!--go-->
 ```go
 // Pass in a suffix as parameter to NewEnforceContext,such as 2 or 3 and it will create r2,p2,etc..
 enforceContext := NewEnforceContext("2")
@@ -150,9 +151,11 @@ e.Enforce("alice", "data2", "read")		// true
 // pass in EnforceContext
 e.Enforce(enforceContext, struct{ Age int }{Age: 70}, "/data1", "read")		//false
 e.Enforce(enforceContext, struct{ Age int }{Age: 30}, "/data1", "read")		//true
-``````
+```
 
-```Node.js
+
+<!--Node.js-->
+```javascript
 // Pass in a suffix as parameter to NewEnforceContext,such as 2 or 3 and it will create r2,p2,etc..
 const enforceContext = new NewEnforceContext('2');
 // You can also specify a certain type individually
