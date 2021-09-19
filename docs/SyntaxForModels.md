@@ -108,7 +108,10 @@ If you need multiple policy definitions or multiple matcher, you can use like ``
 
 You can pass in ``EnforceContext`` as the first parameter of ``enforce`` method to specify the types, the ``EnforceContext`` is like this
 
-``````go
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--go-->
+```go
 EnforceContext{"r2","p2","e2","m2"}
 type EnforceContext struct {
 	rType string
@@ -118,9 +121,26 @@ type EnforceContext struct {
 }
 ``````
 
+<!--Node.js-->
+```javascript
+const enforceContext = new EnforceContext('r2', 'p2', 'e2', 'm2');
+class EnforceContext {
+  constructor(rType, pType, eType, mType) {
+    this.pType = pType;
+    this.eType = eType;
+    this.mType = mType;
+    this.rType = rType;
+  }
+}
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
 Example usage, see [model](https://github.com/casbin/casbin/blob/master/examples/multiple_policy_definitions_model.conf) and [policy](https://github.com/casbin/casbin/blob/master/examples/multiple_policy_definitions_policy.csv), the request is as follows
 
-``````go
+<!--DOCUSAURUS_CODE_TABS-->
+
+```go
 // Pass in a suffix as parameter to NewEnforceContext,such as 2 or 3 and it will create r2,p2,etc..
 enforceContext := NewEnforceContext("2")
 // You can also specify a certain type individually
@@ -131,6 +151,20 @@ e.Enforce("alice", "data2", "read")		// true
 e.Enforce(enforceContext, struct{ Age int }{Age: 70}, "/data1", "read")		//false
 e.Enforce(enforceContext, struct{ Age int }{Age: 30}, "/data1", "read")		//true
 ``````
+
+```Node.js
+// Pass in a suffix as parameter to NewEnforceContext,such as 2 or 3 and it will create r2,p2,etc..
+const enforceContext = new NewEnforceContext('2');
+// You can also specify a certain type individually
+enforceContext.eType = "e"
+// Don't pass in EnforceContext,the default is r,p,e,m
+e.Enforce("alice", "data2", "read")		// true
+// pass in EnforceContext
+e.Enforce(enforceContext, {Age: 70}, "/data1", "read")		//false
+e.Enforce(enforceContext, {Age: 30}, "/data1", "read")		//true
+``````
+
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 ### Special Grammer
 
