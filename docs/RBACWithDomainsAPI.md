@@ -49,12 +49,12 @@ For example:
 
 <!--Go-->
 ```go
-res := e.GetUsersForRoleInDomain("alice", "domain1")
+res := e.getUsersForRoleInDomain("alice", "domain1")
 ```
 
 <!--Node.js-->
 ```typescript
-const res = e.GetUsersForRoleInDomain("alice", "domain1")
+const res = e.getUsersForRoleInDomain("alice", "domain1")
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
