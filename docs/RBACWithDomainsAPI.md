@@ -49,7 +49,7 @@ For example:
 
 <!--Go-->
 ```go
-res := e.getUsersForRoleInDomain("alice", "domain1")
+res := e.GetUsersForRoleInDomain("alice", "domain1")
 ```
 
 <!--Node.js-->
@@ -74,7 +74,7 @@ res := e.GetRolesForUserInDomain("admin", "domain1")
 
 <!--Node.js-->
 ```typescript
-const res = e.GetRolesForUserInDomain("alice", "domain1")
+const res = e.getRolesForUserInDomain("alice", "domain1")
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
