@@ -141,4 +141,10 @@ module.exports = [
     infoLink: "https://jdlt.co.uk",
     pinned: true,
   },
+  {
+    caption: "Apache Pulsar",
+    image: "/img/users/pulsar.svg",
+    infoLink: "https://apachecon.com/acasia2021/sessions/1049.html",
+    pinned: true,
+  },
 ];
