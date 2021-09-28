@@ -159,7 +159,7 @@ For example:
 
 <!--Go-->
 ```go
-ok, err := e.GetUsersForRoleInDomain("alice","domain1")
+ok, err := e.DeleteAllUserByDomain("domain1")
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
