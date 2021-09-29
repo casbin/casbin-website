@@ -302,6 +302,33 @@ a := yourpackage.NewAdapter(params)
 e := casbin.NewEnforcer("examples/basic_model.conf", a)
 ```
 
+## Migrate/Convert between different adapter
+
+If you want to convert adapter from ``A`` to ``B``, you can do like this: 
+
+1. Load policy from A to memory
+
+   ```go
+   e, _ := NewEnforcer(m, A)
+   ```
+   or
+   ```go
+   e.SetAdapter(A)
+   e.LoadPolicy()
+   ```
+
+2. convert your adapter from A to B
+
+   ```
+   e.SetAdapter(B)
+   ```
+
+3. Save policy from memory to B
+
+   ```
+   e.LoadPolicy()
+   ```
+
 ## Load/Save at run-time
 
 You may also want to reload the model, reload the policy or save the policy after initialization:
