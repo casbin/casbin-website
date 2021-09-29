@@ -114,10 +114,10 @@ You can pass in ``EnforceContext`` as the first parameter of ``enforce`` method 
 ```go
 EnforceContext{"r2","p2","e2","m2"}
 type EnforceContext struct {
-	rType string
-	pType string
-	eType string
-	mType string
+	RType string
+	PType string
+	EType string
+	MType string
 }
 ```
 
@@ -145,7 +145,7 @@ Example usage, see [model](https://github.com/casbin/casbin/blob/master/examples
 // Pass in a suffix as parameter to NewEnforceContext,such as 2 or 3 and it will create r2,p2,etc..
 enforceContext := NewEnforceContext("2")
 // You can also specify a certain type individually
-enforceContext.eType = "e"
+enforceContext.EType = "e"
 // Don't pass in EnforceContext,the default is r,p,e,m
 e.Enforce("alice", "data2", "read")		// true
 // pass in EnforceContext
