@@ -148,7 +148,7 @@ res := e.GetAllUsersByDomain("domain1")
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
-### `DeleteAllUserByDomain()`
+### `DeleteAllUsersByDomain()`
 
 DeleteAllUsersByDomain would delete all users associated with the domain.
 Returns false if has no domain defined in model.
@@ -159,7 +159,7 @@ For example:
 
 <!--Go-->
 ```go
-ok, err := e.GetUsersForRoleInDomain("alice","domain1")
+ok, err := e.DeleteAllUsersByDomain("domain1")
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
