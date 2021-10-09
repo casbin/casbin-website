@@ -31,12 +31,6 @@ module.exports = [
     pinned: true,
   },
   {
-    caption: "Microsoft",
-    image: "/img/users/microsoft.png",
-    infoLink: "https://github.com/microsoft/mouselog",
-    pinned: true,
-  },
-  {
     caption: "Verizon",
     image: "/img/users/verizon.png",
     infoLink: "https://github.com/casbin/casbin/pull/56",
@@ -52,12 +46,6 @@ module.exports = [
     caption: "Tencent",
     image: "/img/users/tencent.png",
     infoLink: "https://github.com/tkestack/tke",
-    pinned: true,
-  },
-  {
-    caption: "ETH Zürich",
-    image: "/img/users/eth.jpg",
-    infoLink: "https://github.com/netsec-ethz/2SMS",
     pinned: true,
   },
   {
@@ -108,7 +96,19 @@ module.exports = [
   {
     caption: "Honeywell",
     image: "/img/users/honeywell.png",
-    infoLink: "https://www.linkedin.com/search/results/people/headless?origin=CLUSTER_EXPANSION&keywords=casbin&lipi=urn%3Ali%3Apage%3Asearch_results_generic_index%3BFOVsvEXCTtiykug2mPyiSQ%3D%3D",
+    infoLink: "https://www.linkedin.com/search/results/people/?keywords=casbin%20honeywell",
+    pinned: true,
+  },
+  {
+    caption: "HPE",
+    image: "/img/users/hpe.jpg",
+    infoLink: "https://www.linkedin.com/in/raghavbabu",
+    pinned: true,
+  },
+  {
+    caption: "Schneider Electric",
+    image: "/img/users/se.png",
+    infoLink: "https://www.linkedin.com/in/peterjotoole",
     pinned: true,
   },
   {
@@ -133,6 +133,12 @@ module.exports = [
     caption: "Musma",
     image: "/img/users/musma.svg",
     infoLink: "https://www.musma.net/",
+    pinned: true,
+  },
+  {
+    caption: "Ontario Government",
+    image: "/img/users/ontario.jpg",
+    infoLink: "https://www.linkedin.com/in/nihalpandit",
     pinned: true,
   },
   {
