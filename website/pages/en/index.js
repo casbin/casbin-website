@@ -173,7 +173,10 @@ const TryOut = props => (
           '\n' +
           'To use filtered policies with a supported adapter, simply call the `LoadFilteredPolicy` method. The valid format for the filter parameter depends on the adapter used. To prevent accidental data loss, the `SavePolicy` method is disabled when a filtered policy is loaded.\n' +
           '\n' +
-          'For example, the following code snippet uses the built-in filtered file adapter and the RBAC model with domains. In this case, the filter limits the policy to a single domain. Any policy lines for domains other than `"domain1"` are omitted from the loaded policy:\n',
+          'For example, the following code snippet uses the built-in filtered file adapter and the RBAC model with domains. In this case, the filter limits the policy to a single domain. Any policy lines for domains other than `"domain1"` are omitted from the loaded policy:\n'+
+          '\n' +
+          '```go\n e.LoadFilteredPolicy(&fileadapter.Filter{\n P: []string{"", "domain1"},\n  G: []string{"", "", "domain1"},})',
+
         image: imgUrl('scale.png'),
         imageAlign: 'left',
         title: 'Policy enforcement at scale',
