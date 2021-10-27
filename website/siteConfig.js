@@ -103,6 +103,8 @@ const siteConfig = {
     '/js/baidu-analytics.js',
     '/js/hotjar.js',
     '/js/gitter.js',
+    '/js/wwads.js',
+    'https://cdn.wwads.cn/js/makemoney.js',
   ],
   stylesheets: ['/css/code-blocks-buttons.css', '/css/custom.css'],
 
