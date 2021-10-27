@@ -13,9 +13,10 @@ The site configuration and documentation powering Casbin's website: https://casb
 ### Installation
 
 1.  `git clone https://github.com/casbin/casbin-website` to download source code.
-1.  `cd casbin-website` to go into the project root.
-1.  `cd website` to go into the website portion of the project.
-1.  `yarn` to install the website's npm dependencies (or `npm install`, if not using Yarn).
+2.  `git remote add upstream https://github.com/casbin/casbin-website.git` to keep your local repository updated.
+3.  `cd casbin-website` to go into the project root.
+4.  `cd website` to go into the website portion of the project.
+5.  `yarn` to install the website's npm dependencies (or `npm install`, if not using Yarn).
 
 ### Running locally
 
