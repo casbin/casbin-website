@@ -65,6 +65,7 @@ Name | Description
 [EasySwoole](https://www.easyswoole.com/) | A distributed, persistent memory PHP framework based on the Swoole extension, via plugin: [easyswoole-permission](https://github.com/php-casbin/easyswoole-permission) or [easyswoole-hyperfOrm-permission](https://github.com/ice-leng/easyswoole-hyperfOrm-permission)
 [Slim](https://www.slimframework.com/) | A PHP micro framework that helps you quickly write simple yet powerful web applications and APIs, via plugin: [casbin-with-slim](https://github.com/php-casbin/casbin-with-slim)
 [Phalcon](https://phalcon.io/) | A full-stack PHP framework delivered as a C-extension, via plugin: [phalcon-permission](https://github.com/php-casbin/phalcon-permission)
+[webman](https://github.com/walkor/webman) | High performance HTTP Service Framework for PHP based on Workerman, via plugin: [webman-permission](https://github.com/Tinywan/webman-permission)
 
 <!--Python-->
 Name | Description
