@@ -110,6 +110,7 @@ Adapter | Type | Author | AutoSave | Description
 [Couchbase Adapter](https://github.com/ScienceLogic/casbin-couchbase-adapter) | NoSQL | [ScienceLogic](https://github.com/ScienceLogic) | ✅ (without `remove_filtered_policy()`) | For [Couchbase](https://www.couchbase.com/)
 [DynamoDB Adapter](https://github.com/abqadeer/python-dycasbin) | NoSQL | [@abqadeer](https://github.com/abqadeer/) | ✅ | For [DynamoDB](https://aws.amazon.com/dynamodb/)
 [Pymongo Adapter](https://github.com/pycasbin/pymongo-adapter) | NoSQL |  Casbin | ❌ | MongoDB is supported by [Pymongo](https://pypi.org/project/pymongo/)
+[GCP Firebase Adapter](https://github.com/devrushi41/pycasbin-firebase-adapter) | Cloud | [@devrushi41](https://github.com/devrushi41) | ✅ | For [Google Cloud Platform Firebase](https://firebase.google.com/)
 
 <!--.NET-->
 Adapter | Type | Author | AutoSave | Description
