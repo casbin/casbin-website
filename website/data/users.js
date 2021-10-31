@@ -37,6 +37,12 @@ module.exports = [
     pinned: true,
   },
   {
+    caption: "Alibaba",
+    image: "/img/users/alibaba.png",
+    infoLink: "https://github.com/dragonflyoss/Dragonfly2/search?q=casbin&type=code",
+    pinned: true,
+  },
+  {
     caption: "Red Hat",
     image: "/img/users/redhat.png",
     infoLink: "https://github.com/skydive-project/skydive",
