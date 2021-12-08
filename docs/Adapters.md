@@ -26,6 +26,7 @@ Adapter | Type | Author | AutoSave | Description
 [GF ORM Adapter](https://github.com/vance-liu/gdb-adapter) | ORM | [@vance-liu](https://github.com/vance-liu) | ✅ | MySQL, SQLite, PostgreSQL, Oracle, SQL Server are supported by [GoFrame ORM](https://goframe.org/pages/viewpage.action?pageId=1114686)
 [GoFrame ORM Adapter](https://github.com/kotlin2018/adapter) | ORM | [@kotlin2018](https://github.com/kotlin2018) | ✅ | MySQL, SQLite, PostgreSQL, Oracle, SQL Server are supported by [GoFrame ORM](https://goframe.org/pages/viewpage.action?pageId=1114686)
 [Filtered PostgreSQL Adapter](https://github.com/casbin/casbin-pg-adapter) | SQL | Casbin | ✅ | For [PostgreSQL](https://www.postgresql.org/)
+[Filtered pgx Adapter](https://github.com/pckhoi/casbin-pgx-adapter) | SQL | [@pckhoi](https://github.com/pckhoi) | ✅ | PostgreSQL is supported by [pgx](https://github.com/jackc/pgx)
 [PostgreSQL Adapter](https://github.com/cychiuae/casbin-pg-adapter) | SQL | [@cychiuae](https://github.com/cychiuae) | ✅ | For [PostgreSQL](https://www.postgresql.org/)
 [RQLite Adapter](https://github.com/edomosystems/rqlite-adapter) | SQL | [EDOMO Systems](https://github.com/edomosystems) | ✅ | For [RQLite](https://github.com/rqlite/rqlite/)
 [MongoDB Adapter](https://github.com/casbin/mongodb-adapter) | NoSQL | Casbin | ✅ | For [MongoDB](https://www.mongodb.com) based on [MongoDB Go Driver](https://github.com/mongodb/mongo-go-driver)
