@@ -17,11 +17,14 @@ or
 yarn add casbin.js
 ```
 
-## 3rd-Party Middlewares
+## Frontend Middlewares
 
 Middleware | Type | Author | Description
-----|------|----|----
+----|-----|----|----
+[react-authz](https://github.com/casbin-js/react-authz) | React | Casbin | React wrapper for Casbin.js
 [rbac-react](https://github.com/daobeng/rbac-react) | React | [@daobeng](https://github.com/daobeng) | Role Based Access Control in React using HOCs, CASL and Casbin.js
+[vue-authz](https://github.com/casbin-js/vue-authz) | Vue | Casbin | Vue wrapper for Casbin.js
+[angular-authz](https://github.com/casbin-js/angular-authz) | Angular | Casbin | Angular wrapper for Casbin.js
 
 ## Quick Start
 You can use `manual` mode in your frontend application, and set the permission whenever you wish.
