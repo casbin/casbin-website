@@ -41,6 +41,7 @@ e, err := NewEnforcer("examples/rbac_model.conf", "examples/rbac_policy.csv")
 ```
 
 <!--Node.js-->
+
 ```typescript
 const e = await newEnforcer('examples/rbac_model.conf', 'examples/rbac_policy.csv')
 ```
@@ -85,7 +86,14 @@ ok, err := e.Enforce(request)
 $ok = $e->enforcer($request);
 ```
 
+<!--Node.js-->
+
+```typescript
+const ok = await e.enforce(request)
+```
+
 <!--Python-->
+
 ```python
 ok = e.enforcer($request);
 ```
@@ -111,6 +119,7 @@ $ok = $e->enforceWithMatcher($matcher, $request);
 ```
 
 <!--Python-->
+
 ```python
 ok = e.enforce_with_matcher(matcher, request);
 ```
@@ -138,6 +147,12 @@ list($ok, $reason) = $e->enforceEx($request);
 <!--Python-->
 ```python
 ok, reason = e.enforce_ex(request);
+```
+
+<!--Node.js-->
+
+```typescript
+const ok = await e.enforceEx(request)
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -1732,6 +1747,12 @@ For example:
 updated, err := e.UpdatePolicy([]string{"eve", "data3", "read"}, []string{"eve", "data3", "write"})
 ```
 
+<!--Node.js-->
+
+```typescript
+const ok = await e.updatePolicy(["eve", "data3", "write"],["eve", "data3", "read"])
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `UpdatePolicies()`
@@ -1832,6 +1853,12 @@ For example:
 err := e.LoadFilteredPolicy()
 ```
 
+<!--Node.js-->
+
+```typescript
+const ok = await e.loadFilteredPolicy()
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `LoadIncrementalFilteredPolicy()`
@@ -1843,8 +1870,15 @@ For example:
 <!--DOCUSAURUS_CODE_TABS-->
 
 <!--Go-->
+
 ```go
 err := e.LoadIncrementalFilteredPolicy()
+```
+
+<!--Node.js-->
+
+```typescript
+const ok = await e.loadIncrementalFilteredPolicy()
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
