@@ -19,7 +19,7 @@ e = priority(p.eft) || deny
 
 > Also see: [casbin#550](https://github.com/casbin/casbin/issues/550)
 
-The first element in policy must be priority, and the smaller priority value will has higher priority. If there's non-numerical character in priority, it will be in the last, rather than throw an error.
+The priority token name in policy definition must be "priority", and the smaller priority value will has higher priority. If there's non-numerical character in priority, it will be in the last, rather than throw an error.
 Now, explicit priority only support `AddPolicy` & `AddPolicies`, if `UpdatePolicy` been called, you shouldn't change the priority attribute.
 
 model.conf:
