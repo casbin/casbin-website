@@ -36,6 +36,10 @@ var e = new Enforcer("path/to/model.conf", "path/to/policy.csv");
 let mut e = Enforcer::new("examples/rbac_model.conf", "examples/rbac_policy.csv").await?;
 ```
 
+<!--Java-->
+```java
+Enforcer e = new Enforcer("examples/rbac_model.conf", "examples/rbac_policy.csv");
+```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
@@ -77,6 +81,11 @@ res := e.GetRolesForUserInDomain("admin", "domain1")
 const res = e.getRolesForUserInDomain("alice", "domain1")
 ```
 
+<!--Java-->
+```java
+List<String> res = e.getRolesForUserInDomain("admin", "domain1");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetPermissionsForUserInDomain()`
@@ -90,6 +99,11 @@ For example:
 <!--Go-->
 ```go
 res := e.GetPermissionsForUserInDomain("alice", "domain1")
+```
+
+<!--Java-->
+```java
+List<List<String>> res = e.getPermissionsForUserInDomain("alice", "domain1");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -108,6 +122,11 @@ For example:
 ok, err := e.AddRoleForUserInDomain("alice", "admin", "domain1")
 ```
 
+<!--Java-->
+```java
+boolean ok = e.addRoleForUserInDomain("alice", "admin", "domain1");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `DeleteRoleForUserInDomain()`
@@ -122,6 +141,11 @@ For example:
 <!--Go-->
 ```go
 ok, err := e.DeleteRoleForUserInDomain("alice", "admin", "domain1")
+```
+
+<!--Java-->
+```java
+boolean ok = e.deleteRoleForUserInDomain("alice", "admin", "domain1");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
