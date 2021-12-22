@@ -22,4 +22,10 @@ For example:
 ```go
 boolArray, err := e.BatchEnforce(requests)
 ```
+
+<!--Java-->
+```java
+List<Boolean> boolArray = e.batchEnforce(requests);
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->

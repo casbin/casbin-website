@@ -36,6 +36,10 @@ var e = new Enforcer("path/to/model.conf", "path/to/policy.csv");
 let mut e = Enforcer::new("examples/rbac_model.conf", "examples/rbac_policy.csv").await?;
 ```
 
+<!--Java-->
+```java
+Enforcer e = new Enforcer("examples/rbac_model.conf", "examples/rbac_policy.csv");
+```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
@@ -70,6 +74,11 @@ var res = e.GetRolesForUser("alice");
 <!--Rust-->
 ```rust
 let roles = e.get_roles_for_user("alice", None); // No domain
+```
+
+<!--Java-->
+```java
+List<String> res = e.getRolesForUser("alice");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -107,6 +116,11 @@ var res = e.GetUsersForRole("data1_admin");
 let users = e.get_users_for_role("data1_admin", None); // No domain
 ```
 
+<!--Java-->
+```java
+List<String> res = e.getUsersForRole("data1_admin");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `HasRoleForUser()`
@@ -140,6 +154,11 @@ var res = e.HasRoleForUser("alice", "data1_admin");
 <!--Rust-->
 ```rust
 let has = e.has_role_for_user("alice", "data1_admin", None); // No domain
+```
+
+<!--Java-->
+```java
+boolean res = e.hasRoleForUser("alice", "data1_admin");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -178,6 +197,11 @@ var added = await e.AddRoleForUserAsync("alice", "data2_admin");
 <!--Rust-->
 ```rust
 let added = e.add_role_for_user("alice", "data2_admin", None).await?; // No domain
+```
+
+<!--Java-->
+```java
+boolean added = e.addRoleForUser("alice", "data2_admin");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -237,6 +261,10 @@ var deleted = await e.DeleteRoleForUser("alice", "data1_admin");
 let deleted = e.delete_role_for_user("alice", "data1_admin", None).await?; // No domain
 ```
 
+<!--Java-->
+```java
+boolean deleted = e.deleteRoleForUser("alice", "data1_admin");
+```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
@@ -274,6 +302,11 @@ var deletedAtLeastOne = await e.DeleteRolesForUserAsync("alice");
 <!--Rust-->
 ```rust
 let deleted_at_least_one = e.delete_roles_for_user("alice", None).await?; // No domain
+```
+
+<!--Java-->
+```java
+boolean deletedAtLeastOne = e.deleteRolesForUser("alice");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -314,6 +347,11 @@ var deleted = await e.DeleteUserAsync("alice");
 let deleted = e.delete_user("alice").await?;
 ```
 
+<!--Java-->
+```java
+boolean deleted = e.deleteUser("alice");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `DeleteRole()`
@@ -349,6 +387,11 @@ var deleted = await e.DeleteRoleAsync("data2_admin");
 <!--Rust-->
 ```rust
 let deleted = e.delete_role("data2_admin").await?;
+```
+
+<!--Java-->
+```java
+e.deleteRole("data2_admin");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -389,6 +432,11 @@ var deleted = await e.DeletePermissionAsync("read");
 let deleted = e.delete_permission(vec!["read".to_owned()]).await?;
 ```
 
+<!--Java-->
+```java
+boolean deleted = e.deletePermission("read");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 
@@ -426,6 +474,11 @@ var added = await e.AddPermissionForUserAsync("bob", "read");
 <!--Rust-->
 ```rust
 let added = e.add_permission_for_user("bob", vec!["read".to_owned()]).await?;
+```
+
+<!--Java-->
+```java
+boolean added = e.addPermissionForUser("bob", "read");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -488,6 +541,11 @@ var deleted = await e.DeletePermissionForUserAsync("bob", "read");
 let deleted = e.delete_permission_for_user("bob", vec!["read".to_owned()]).await?;
 ```
 
+<!--Java-->
+```java
+boolean deleted = e.deletePermissionForUser("bob", "read");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 
@@ -527,6 +585,11 @@ var deletedAtLeastOne = await e.DeletePermissionsForUserAsync("bob");
 let deleted_at_least_one = e.delete_permissions_for_user("bob").await?;
 ```
 
+<!--Java-->
+```java
+boolean deletedAtLeastOne = e.deletePermissionForUser("bob");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetPermissionsForUser()`
@@ -555,6 +618,11 @@ $e->getPermissionsForUser("bob");
 <!--.NET-->
 ```csharp
 var permissions = e.GetPermissionsForUser("bob");
+```
+
+<!--Java-->
+```java
+List<List<String>> permissions = e.getPermissionsForUser("bob");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -590,6 +658,11 @@ var has = e.HasPermissionForUser("bob", "read");
 <!--Rust-->
 ```rust
 let has = e.has_permission_for_user("alice", vec!["data1".to_owned(), "read".to_owned()]);
+```
+
+<!--Java-->
+```java
+boolean has = e.hasPermissionForUser("alice", "read");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -636,6 +709,11 @@ var implicitRoles = e.GetImplicitRolesForUser("alice");
 e.get_implicit_roles_for_user("alice", None); // No domain
 ```
 
+<!--Java-->
+```java
+List<String> implicitRoles = e.getImplicitRolesForUser("alice");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetImplicitUsersForRole()`
@@ -658,6 +736,11 @@ For example:
 <!--Go-->
 ```go
 users := e.GetImplicitUsersForRole("role:user")
+```
+
+<!--Java-->
+```java
+List<String> users = e.getImplicitUsersForRole("role:user");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -702,6 +785,11 @@ var implicitPermissions = e.GetImplicitPermissionsForUser("alice");
 <!--Rust-->
 ```rust
 e.get_implicit_permissions_for_user("alice", None); // No domain
+```
+
+<!--Java-->
+```java
+List<List<String>> implicitPermissions = e.getImplicitPermissionsForUser("alice");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
