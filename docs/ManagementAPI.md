@@ -85,6 +85,11 @@ For example:
 ok, err := e.Enforce(request)
 ```
 
+<!--Node.js-->
+```typescript
+const ok = await e.enforce(request);
+```
+
 <!--PHP-->
 ```php
 $ok = $e->enforcer($request);
@@ -143,6 +148,11 @@ For example:
 <!--Go-->
 ```go
 ok, reason, err := e.EnforceEx(request)
+```
+
+<!--Node.js-->
+```typescript
+const ok = await e.enforceEx(request);
 ```
 
 <!--PHP-->
@@ -1986,6 +1996,11 @@ For example:
 <!--Go-->
 ```go
 updated, err := e.UpdatePolicy([]string{"eve", "data3", "read"}, []string{"eve", "data3", "write"})
+```
+
+<!-- Node.js -->
+```typescript
+const update = await e.updatePolicy(["eve", "data3", "read"], ["eve", "data3", "write"]);
 ```
 
 <!--Java-->
