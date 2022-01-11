@@ -2134,6 +2134,11 @@ For example:
 err := e.LoadFilteredPolicy()
 ```
 
+<!--Node.js-->
+```typescript
+const ok = await e.loadFilteredPolicy();
+```
+
 <!--Java-->
 ```java
 e.loadFilteredPolicy(new String[] { "", "domain1" });
@@ -2152,6 +2157,11 @@ For example:
 <!--Go-->
 ```go
 err := e.LoadIncrementalFilteredPolicy()
+```
+
+<!--Node.js-->
+```typescript
+const ok = await e.loadIncrementalFilteredPolicy();
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
