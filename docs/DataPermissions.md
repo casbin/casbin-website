@@ -23,6 +23,11 @@ For example:
 boolArray, err := e.BatchEnforce(requests)
 ```
 
+<!--Node.js-->
+```typescript
+const boolArray = await e.batchEnforce(requests);
+```
+
 <!--Java-->
 ```java
 List<Boolean> boolArray = e.batchEnforce(requests);

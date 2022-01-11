@@ -85,6 +85,11 @@ For example:
 ok, err := e.Enforce(request)
 ```
 
+<!--Node.js-->
+```typescript
+const ok = await e.enforce(request);
+```
+
 <!--PHP-->
 ```php
 $ok = $e->enforcer($request);
@@ -145,6 +150,11 @@ For example:
 ok, reason, err := e.EnforceEx(request)
 ```
 
+<!--Node.js-->
+```typescript
+const ok = await e.enforceEx(request);
+```
+
 <!--PHP-->
 ```php
 list($ok, $reason) = $e->enforceEx($request);
@@ -182,6 +192,11 @@ For example:
 <!--Go-->
 ```go
 boolArray, err := e.BatchEnforce(requests)
+```
+
+<!--Node.js-->
+```typescript
+const boolArray = await e.batchEnforce(requests);
 ```
 
 <!--Java-->
@@ -1988,6 +2003,11 @@ For example:
 updated, err := e.UpdatePolicy([]string{"eve", "data3", "read"}, []string{"eve", "data3", "write"})
 ```
 
+<!-- Node.js -->
+```typescript
+const update = await e.updatePolicy(["eve", "data3", "read"], ["eve", "data3", "write"]);
+```
+
 <!--Java-->
 ```java
 boolean updated = e.updatePolicy(Arrays.asList("eve", "data3", "read"), Arrays.asList("eve", "data3", "write"));
@@ -2119,6 +2139,11 @@ For example:
 err := e.LoadFilteredPolicy()
 ```
 
+<!--Node.js-->
+```typescript
+const ok = await e.loadFilteredPolicy();
+```
+
 <!--Java-->
 ```java
 e.loadFilteredPolicy(new String[] { "", "domain1" });
@@ -2137,6 +2162,11 @@ For example:
 <!--Go-->
 ```go
 err := e.LoadIncrementalFilteredPolicy()
+```
+
+<!--Node.js-->
+```typescript
+const ok = await e.loadIncrementalFilteredPolicy();
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
