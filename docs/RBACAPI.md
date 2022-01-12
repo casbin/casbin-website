@@ -216,6 +216,12 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
+<!--Node.js-->
+```typescript
+const roles = ["data1_admin", "data2_admin"];
+roles.map((role) => e.addRoleForUser("alice", role));
+```
+
 <!--Rust-->
 ```rust
 let roles = vec!["data1_admin".to_owned(), "data2_admin".to_owned()];
@@ -491,6 +497,16 @@ Returns false if the user or role already has one of the permissions (aka not af
 For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
+
+<!--Node.js-->
+```typescript
+const permissions = [
+    ["data1", "read"],
+    ["data2", "write"],
+];
+
+permissions.map((permission) => e.addPermissionForUser("bob", ...permission));
+```
 
 <!--Rust-->
 ```rust
