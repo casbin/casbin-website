@@ -66,6 +66,7 @@ Name | Description
 [Slim](https://www.slimframework.com/) | A PHP micro framework that helps you quickly write simple yet powerful web applications and APIs, via plugin: [casbin-with-slim](https://github.com/php-casbin/casbin-with-slim)
 [Phalcon](https://phalcon.io/) | A full-stack PHP framework delivered as a C-extension, via plugin: [phalcon-permission](https://github.com/php-casbin/phalcon-permission)
 [webman](https://github.com/walkor/webman) | High performance HTTP Service Framework for PHP based on Workerman, via plugin: [webman-permission](https://github.com/Tinywan/webman-permission)
+[webman plugin](https://github.com/walkor/webman) | Webman for casbin plugin, Publish and subscribe Watcher based on Redis，via plugin: [casbin](https://github.com/Tinywan/casbin)
 
 <!--Python-->
 Name | Description
