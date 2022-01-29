@@ -754,6 +754,11 @@ For example:
 users := e.GetImplicitUsersForRole("role:user")
 ```
 
+<!--Node.js-->
+```typescript
+const users = e.getImplicitUsersForRole("role:user");
+```
+
 <!--Java-->
 ```java
 List<String> users = e.getImplicitUsersForRole("role:user");
