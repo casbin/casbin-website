@@ -216,6 +216,12 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
+<!--Go-->
+```go
+roles := []string{"data1_admin", "data2_admin"}
+e.AddRolesForUser("alice", roles)
+```
+
 <!--Node.js-->
 ```typescript
 const roles = ["data1_admin", "data2_admin"];
