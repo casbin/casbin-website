@@ -35,7 +35,6 @@ const siteConfig = {
     {doc: 'ide-plugins', label: "IDE Plugins"},
     {href: 'https://door.casbin.com', label: "Casdoor"},
     {href: 'https://forum.casbin.com', label: "Forum"},
-    {href: 'https://oa.casbin.com', label: "OA"},
     {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
     {doc: 'contributing', label: "Contributing"},
