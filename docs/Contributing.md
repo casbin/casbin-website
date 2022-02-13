@@ -23,7 +23,7 @@ production-ready | production-ready | production-ready | production-ready
 
 | Project | Demo | Details | Skill stacks |
 | -- | -- | -- | -- |
-| [Casdoor](https://github.com/casdoor/casdoor) | [Casdoor](https://door.casbin.com/) | Casdoor is UI-first centralized authentication / Single-Sign-On (SSO) platform based on OAuth 2.0 / OIDC | JavaScript + React and Golang + Beego + SQL |
+| [Casdoor](https://github.com/casdoor/casdoor) | [Casdoor](https://door.casdoor.com/) | Casdoor is UI-first centralized authentication / Single-Sign-On (SSO) platform based on OAuth 2.0 / OIDC | JavaScript + React and Golang + Beego + SQL |
 | [Casnode](https://github.com/casbin/casnode) | [Casbin Forum](https://forum.casbin.com) | Casnode is next generation forum software | JavaScript + React and Golang + Beego + SQL |
 | [Casbin OA](https://github.com/casbin/casbin-oa) | [OA system](https://oa.casbin.com) | Casbin-OA is An official manuscript processing, evaluation and display system for Casbin technical writers | JavaScript + React and Golang + Beego + MySQL |
 | [Casbin Editor](https://github.com/casbin/casbin-editor) | [Casbin Editor](https://casbin.org/casbin-editor) | Casbin-editor is a web-based Casbin model and policy editor | TypeScript + React |
