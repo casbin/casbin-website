@@ -112,6 +112,7 @@ Adapter | Type | Author | AutoSave | Description
 [DynamoDB Adapter](https://github.com/abqadeer/python-dycasbin) | NoSQL | [@abqadeer](https://github.com/abqadeer/) | ✅ | For [DynamoDB](https://aws.amazon.com/dynamodb/)
 [Pymongo Adapter](https://github.com/pycasbin/pymongo-adapter) | NoSQL |  Casbin | ❌ | MongoDB is supported by [Pymongo](https://pypi.org/project/pymongo/)
 [GCP Firebase Adapter](https://github.com/devrushi41/pycasbin-firebase-adapter) | Cloud | [@devrushi41](https://github.com/devrushi41) | ✅ | For [Google Cloud Platform Firebase](https://firebase.google.com/)
+[Async ormar Adapter](https://github.com/shepilov-vladislav/ormar-casbin-adapte) | ORM | [sampingantech](https://github.com/shepilov-vladislav) | ✅ | PostgreSQL, MySQL, SQLite, Oracle, Microsoft SQL Server, Firebird, Sybase are supported by [ormar](https://github.com/collerek/ormar/)
 
 <!--.NET-->
 Adapter | Type | Author | AutoSave | Description
@@ -277,7 +278,7 @@ $config = [
     // Either 'driver' with one of the following values:
     // pdo_mysql,pdo_sqlite,pdo_pgsql,pdo_oci (unstable),pdo_sqlsrv,pdo_sqlsrv,
     // mysqli,sqlanywhere,sqlsrv,ibm_db2 (unstable),drizzle_pdo_mysql
-    'driver'     => 'pdo_mysql', 
+    'driver'     => 'pdo_mysql',
     'host' => '127.0.0.1',
     'dbname' => 'test',
     'user' => 'root',
@@ -307,7 +308,7 @@ e := casbin.NewEnforcer("examples/basic_model.conf", a)
 
 ## Migrate/Convert between different adapter
 
-If you want to convert adapter from ``A`` to ``B``, you can do like this: 
+If you want to convert adapter from ``A`` to ``B``, you can do like this:
 
 1. Load policy from A to memory
 
