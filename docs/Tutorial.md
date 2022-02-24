@@ -40,6 +40,7 @@ This is another longer-version paper published in Journal of Software. The citat
 - [ThinkPHP 5.1 + Casbin: RESTful & Middleware (in Chinese)](https://www.bilibili.com/video/BV1uk4y117up)
 - [Quick Start for PHP-Casbin (in Chinese)](https://www.bilibili.com/video/BV1dK4y1L7xy)
 - [ThinkPHP 5.1 + Casbin:How to use custom matching functions (in Chinese)](https://www.bilibili.com/video/BV1dq4y1Z78g)
+- [Webman + Casbin: How to use Webman Casbin Plugin  (in Chinese)](https://www.bilibili.com/video/BV1X34y1Q7ZH)
 - 
 ### PERM Meta-Model (Policy, Effect, Request, Matchers)
 
