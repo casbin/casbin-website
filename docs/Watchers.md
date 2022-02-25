@@ -27,6 +27,7 @@ Watcher | Type | Author | Description
 ----|------|----|----
 [Etcd Adapter](https://github.com/mapleafgo/jcasbin-extra) | KV store | [@mapleafgo](https://github.com/mapleafgo) | Watcher for [etcd](https://github.com/coreos/etcd)
 [Redis Watcher](https://github.com/jcasbin/redis-watcher) | KV store | Casbin | Watcher for [Redis](http://redis.io/)
+[Kafka Watcher](https://github.com/jcasbin/kafka-watcher) | Messaging system | Casbin | Watcher for [Apache Kafka](https://kafka.apache.org/)
 
 <!--Node.js-->
 Watcher | Type | Author | Description
@@ -52,6 +53,11 @@ Watcher | Type | Author | Description
 ----|------|----|----
 [Redis Watcher](https://github.com/CasbinRuby/casbin-ruby-redis-watcher) | KV store | [CasbinRuby](https://github.com/CasbinRuby) | Watcher for [Redis](http://redis.io/)
 [RabbitMQ Watcher](https://github.com/CasbinRuby/casbin-ruby-rabbitmq-watcher) | Messaging system | [CasbinRuby](https://github.com/CasbinRuby) | Watcher for [RabbitMQ](https://www.rabbitmq.com/)
+
+<!--PHP-->
+Watcher | Type | Author | Description
+----|------|----|----
+[Redis Watcher](https://github.com/Tinywan/casbin) | KV store | [Tinywan](https://github.com/Tinywan) | Watcher for [Redis](http://redis.io/)
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 

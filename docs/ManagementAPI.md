@@ -66,6 +66,11 @@ var e = new Enforcer("path/to/model.conf", "path/to/policy.csv");
 let mut e = Enforce::new("examples/rbac_model.conf", "examples/rbac_policy.csv").await?;
 ```
 
+<!--Java-->
+```java
+Enforcer e = new Enforcer("examples/rbac_model.conf", "examples/rbac_policy.csv");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `Enforce()`
@@ -79,6 +84,11 @@ For example:
 <!--Go-->
 ```go
 ok, err := e.Enforce(request)
+```
+
+<!--Node.js-->
+```typescript
+const ok = await e.enforce(request);
 ```
 
 <!--PHP-->
@@ -96,6 +106,11 @@ const ok = await e.enforce(request)
 
 ```python
 ok = e.enforcer($request);
+```
+
+<!--Java-->
+```java
+boolean ok = e.enforce(request);
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -124,6 +139,11 @@ $ok = $e->enforceWithMatcher($matcher, $request);
 ok = e.enforce_with_matcher(matcher, request);
 ```
 
+<!--Java-->
+```java
+boolean ok = e.enforceWithMatcher(matcher, request);
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `EnforceEx()`
@@ -137,6 +157,11 @@ For example:
 <!--Go-->
 ```go
 ok, reason, err := e.EnforceEx(request)
+```
+
+<!--Node.js-->
+```typescript
+const ok = await e.enforceEx(request);
 ```
 
 <!--PHP-->
@@ -183,6 +208,16 @@ For example:
 ```go
 boolArray, err := e.BatchEnforce(requests)
 ```
+
+<!--Node.js-->
+```typescript
+const boolArray = await e.batchEnforce(requests);
+```
+
+<!--Java-->
+```java
+List<Boolean> boolArray = e.batchEnforce(requests);
+```
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetAllSubjects()`
@@ -216,6 +251,11 @@ var allSubjects = e.GetAllSubjects();
 <!--Rust-->
 ```rust
 let all_subjects = e.get_all_subjects();
+```
+
+<!--Java-->
+```java
+List<String> allSubjects = e.getAllSubjects();
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -253,6 +293,10 @@ var allNamedSubjects = e.GetAllNamedSubjects("p");
 let all_named_subjects = e.get_all_named_subjects("p");
 ```
 
+<!--Java-->
+```java
+List<String> allNamedSubjects = e.getAllNamedSubjects("p");
+```
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetAllObjects()`
@@ -286,6 +330,11 @@ var allObjects = e.GetAllObjects();
 <!--Rust-->
 ```rust
 let all_objects = e.get_all_objects();
+```
+
+<!--Java-->
+```java
+List<String> allObjects = e.getAllObjects();
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -323,6 +372,11 @@ var allNamedObjects = e.GetAllNamedObjects("p");
 let all_named_objects = e.get_all_named_objects("p");
 ```
 
+<!--Java-->
+```java
+List<String> allNamedObjects = e.getAllNamedObjects("p");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetAllActions()`
@@ -356,6 +410,11 @@ var allActions = e.GetAllActions();
 <!--Rust-->
 ```rust
 let all_actions = e.get_all_actions();
+```
+
+<!--Java-->
+```java
+List<String> allActions = e.getAllActions();
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -393,6 +452,11 @@ var allNamedActions = e.GetAllNamedActions("p");
 let all_named_actions = e.get_all_named_actions("p");
 ```
 
+<!--Java-->
+```java
+List<String> allNamedActions = e.getAllNamedActions("p");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetAllRoles()`
@@ -426,6 +490,11 @@ var allRoles = e.GetAllRoles();
 <!--Rust-->
 ```rust
 let all_roles = e.get_all_roles();
+```
+
+<!--Java-->
+```java
+List<String> allRoles = e.getAllRoles();
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -463,6 +532,11 @@ var allNamedRoles = e.GetAllNamedRoles("g");
 let all_named_roles = e.get_all_named_roles("g");
 ```
 
+<!--Java-->
+```java
+List<String> allNamedRoles = e.getAllNamedRoles("g");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetPolicy()`
@@ -496,6 +570,11 @@ var policy = e.GetPolicy();
 <!--Rust-->
 ```rust
 let policy = e.get_policy();
+```
+
+<!--Java-->
+```java
+List<List<String>> policy = e.getPolicy();
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -534,6 +613,11 @@ var filteredPolicy = e.GetFilteredPolicy(0, "alice");
 let filtered_policy = e.get_filtered_policy(0, vec!["alice".to_owned()]);
 ```
 
+<!--Java-->
+```java
+List<List<String>> filteredPolicy = e.getFilteredPolicy(0, "alice");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetNamedPolicy()`
@@ -567,6 +651,11 @@ var namedPolicy = e.GetNamedPolicy("p");
 <!--Rust-->
 ```rust
 let named_policy = e.get_named_policy("p");
+```
+
+<!--Java-->
+```java
+List<List<String>> namedPolicy = e.getNamedPolicy("p");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -605,6 +694,11 @@ var filteredNamedPolicy = e.GetFilteredNamedPolicy("p", 0, "alice");
 let filtered_named_policy = e.get_filtered_named_policy("p", 0, vec!["bob".to_owned()]);
 ```
 
+<!--Java-->
+```java
+List<List<String>> filteredNamedPolicy = e.getFilteredNamedPolicy("p", 0, "bob");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetGroupingPolicy()`
@@ -638,6 +732,11 @@ var groupingPolicy = e.GetGroupingPolicy();
 <!--Rust-->
 ```rust
 let grouping_policy = e.get_grouping_policy();
+```
+
+<!--Java-->
+```java
+List<List<String>> groupingPolicy = e.getGroupingPolicy();
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -675,6 +774,11 @@ var filteredGroupingPolicy = e.GetFilteredGroupingPolicy(0, "alice");
 let filtered_grouping_policy = e.get_filtered_grouping_policy(0, vec!["alice".to_owned()]);
 ```
 
+<!--Java-->
+```java
+List<List<String>> filteredGroupingPolicy = e.getFilteredGroupingPolicy(0, "alice");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetNamedGroupingPolicy()`
@@ -710,6 +814,10 @@ var namedGroupingPolicy = e.GetNamedGroupingPolicy("g");
 let named_grouping_policy = e.get_named_grouping_policy("g");
 ```
 
+<!--Java-->
+```java
+List<List<String>> namedGroupingPolicy = e.getNamedGroupingPolicy("g");
+```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
@@ -744,6 +852,11 @@ var namedGroupingPolicy = e.GetFilteredNamedGroupingPolicy("g", 0, "alice");
 <!--Rust-->
 ```rust
 let named_grouping_policy = e.get_filtered_named_groupingPolicy("g", 0, vec!["alice".to_owned()]);
+```
+
+<!--Java-->
+```java
+List<List<String>> filteredNamedGroupingPolicy = e.getFilteredNamedGroupingPolicy("g", 0, "alice");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -781,6 +894,11 @@ var hasPolicy = e.HasPolicy("data2_admin", "data2", "read");
 let has_policy = e.has_policy(vec!["data2_admin".to_owned(), "data2".to_owned(), "read".to_owned()]);
 ```
 
+<!--Java-->
+```java
+boolean hasPolicy = e.hasPolicy("data2_admin", "data2", "read");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `HasNamedPolicy()`
@@ -816,6 +934,11 @@ var hasNamedPolicy = e.HasNamedPolicy("p", "data2_admin", "data2", "read");
 let has_named_policy = e.has_named_policy("p", vec!["data2_admin".to_owned(), "data2".to_owned(), "read".to_owned()]);
 ```
 
+<!--Java-->
+```java
+boolean hasNamedPolicy = e.hasNamedPolicy("p", "data2_admin", "data2", "read");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `AddPolicy()`
@@ -830,7 +953,7 @@ For example:
 
 <!--Go-->
 ```go
-added := e.AddPolicy("eve", "data3", "read")
+added := e.AddPolicy('eve', 'data3', 'read')
 ```
 
 <!--Node.js-->
@@ -854,6 +977,11 @@ var added = await e.AddPolicyAsync("eve", "data3", "read");
 <!--Rust-->
 ```rust
 let added = e.add_policy(vec!["eve".to_owned(), "data3".to_owned(), "read".to_owned()]);
+```
+
+<!--Java-->
+```java
+boolean added = e.addPolicy("eve", "data3", "read");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -905,6 +1033,18 @@ const rules = [
 const areRulesAdded = await e.addPolicies(rules);
 ```
 
+<!--Java-->
+```java
+String[][] rules = {
+	{"jack", "data4", "read"},
+	{"katy", "data4", "write"},
+	{"leyo", "data4", "read"},
+	{"ham", "data4", "write"},
+};
+
+boolean areRulesAdded = e.addPolicies(rules);
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `AddNamedPolicy()`
@@ -943,6 +1083,11 @@ var added = await e.AddNamedPolicyAsync("p", "eve", "data3", "read");
 <!--Rust-->
 ```rust
 let added = e.add_named_policy("p", vec!["eve".to_owned(), "data3".to_owned(), "read".to_owned()]).await?;
+```
+
+<!--Java-->
+```java
+boolean added = e.addNamedPolicy("p", "eve", "data3", "read");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -994,6 +1139,17 @@ const rules = [
 const areRulesAdded = await e.addNamedPolicies('p', rules);
 ```
 
+<!--Java-->
+```java
+List<List<String>> rules = Arrays.asList(
+	Arrays.asList("jack", "data4", "read"),
+	Arrays.asList("katy", "data4", "write"),
+	Arrays.asList("leyo", "data4", "read"),
+	Arrays.asList("ham", "data4", "write")
+);
+boolean areRulesAdded = e.addNamedPolicies("p", rules);
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `RemovePolicy()`
@@ -1030,6 +1186,11 @@ var removed = await e.RemovePolicyAsync("alice", "data1", "read");
 <!--Rust-->
 ```rust
 let removed = e.remove_policy(vec!["alice".to_owned(), "data1".to_owned(), "read".to_owned()]).await?;
+```
+
+<!--Java-->
+```java
+boolean removed = e.removePolicy("alice", "data1", "read");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -1081,6 +1242,16 @@ const rules = [
 const areRulesRemoved = await e.removePolicies(rules);
 ```
 
+<!--Java-->
+```java
+String[][] rules = {
+	{"jack", "data4", "read"},
+	{"katy", "data4", "write"},
+	{"leyo", "data4", "read"},
+	{"ham", "data4", "write"},
+};
+boolean areRulesRemoved = e.removePolicies(rules);
+```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
@@ -1121,6 +1292,11 @@ var removed = await e.RemoveFilteredPolicyAsync("alice", "data1", "read");
 let removed = e.remove_filtered_policy(0, vec!["alice".to_owned(), "data1".to_owned(), "read".to_owned()]).await?;
 ```
 
+<!--Java-->
+```java
+boolean removed = e.removeFilteredPolicy(0, "alice", "data1", "read");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `RemoveNamedPolicy()`
@@ -1157,6 +1333,11 @@ var removed = await e.RemoveNamedPolicyAsync("p", "alice", "data1", "read");
 <!--Rust-->
 ```rust
 let removed = e.remove_named_policy("p", vec!["alice".to_owned(), "data1".to_owned(), "read".to_owned()]).await?;
+```
+
+<!--Java-->
+```java
+boolean removed = e.removeNamedPolicy("p", "alice", "data1", "read");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -1208,6 +1389,17 @@ const rules = [
 const areRulesRemoved = await e.removeNamedPolicies('p', rules);
 ```
 
+<!--Java-->
+```java
+List<List<String>> rules = Arrays.asList(
+	Arrays.asList("jack", "data4", "read"),
+	Arrays.asList("katy", "data4", "write"),
+	Arrays.asList("leyo", "data4", "read"),
+	Arrays.asList("ham", "data4", "write")
+);
+boolean areRulesRemoved = e.removeNamedPolicies("p", rules);
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `RemoveFilteredNamedPolicy()`
@@ -1246,6 +1438,11 @@ var removed = e.RemoveFilteredNamedPolicyAync("p", 0, "alice", "data1", "read");
 let removed = e.remove_filtered_named_policy("p", 0, vec!["alice".to_owned(), "data1".to_owned(), "read".to_owned()]).await?;
 ```
 
+<!--Java-->
+```java
+boolean removed = e.removeFilteredNamedPolicy("p", 0, "alice", "data1", "read");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `HasGroupingPolicy()`
@@ -1279,6 +1476,11 @@ var has = e.HasGroupingPolicy("alice", "data2_admin");
 <!--Rust-->
 ```rust
 let has = e.has_grouping_policy(vec!["alice".to_owned(), "data2_admin".to_owned()]);
+```
+
+<!--Java-->
+```java
+boolean has = e.hasGroupingPolicy("alice", "data2_admin");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -1316,6 +1518,10 @@ var has = e.HasNamedGroupingPolicy("g", "alice", "data2_admin");
 let has = e.has_named_grouping_policy("g", vec!["alice".to_owned(), "data2_admin".to_owned()]);
 ```
 
+<!--Java-->
+```java
+boolean has = e.hasNamedGroupingPolicy("g", "alice", "data2_admin");
+```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
@@ -1354,6 +1560,11 @@ var added = await e.AddGroupingPolicyAsync("group1", "data2_admin");
 <!--Rust-->
 ```rust
 let added = e.add_grouping_policy(vec!["group1".to_owned(), "data2_admin".to_owned()]).await?;
+```
+
+<!--Java-->
+```java
+boolean added = e.addGroupingPolicy("group1", "data2_admin");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -1402,6 +1613,15 @@ const groupingRules = [
 const areRulesAdded = await e.addGroupingPolicies(groupingRules);
 ```
 
+<!--Java-->
+```java
+String[][] groupingRules = {
+	{"ham", "data4_admin"},
+	{"jack", "data5_admin"}
+};
+boolean areRulesAdded = e.addGroupingPolicies(groupingRules);
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `AddNamedGroupingPolicy()`
@@ -1441,6 +1661,10 @@ var added = await e.AddNamedGroupingPolicyAsync("g", "group1", "data2_admin");
 let added = e.add_named_grouping_policy("g", vec!["group1".to_owned(), "data2_admin".to_owned()]).await?;
 ```
 
+<!--Java-->
+```java
+boolean added = e.addNamedGroupingPolicy("g", "group1", "data2_admin");
+```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
@@ -1489,6 +1713,15 @@ const groupingRules = [
 const areRulesAdded = await e.addNamedGroupingPolicies('g', groupingRules);
 ```
 
+<!--Java-->
+```java
+String[][] groupingRules = {
+	{"ham", "data4_admin"},
+	{"jack", "data5_admin"}
+};
+boolean areRulesAdded = e.addNamedGroupingPolicies("g", groupingRules);
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `RemoveGroupingPolicy()`
@@ -1524,6 +1757,11 @@ var removed = await e.RemoveGroupingPolicyAsync("alice", "data2_admin");
 <!--Rust-->
 ```rust
 let removed = e.remove_grouping_policy(vec!["alice".to_owned(), "data2_admin".to_owned()]).await?;
+```
+
+<!--Java-->
+```java
+boolean removed = e.removeGroupingPolicy("alice", "data2_admin");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -1573,6 +1811,15 @@ const groupingRules = [
 const areRulesRemoved = await e.removeGroupingPolicies(groupingRules);
 ```
 
+<!--Java-->
+```java
+String[][] groupingRules = {
+	{"ham", "data4_admin"},
+	{"jack", "data5_admin"}
+};
+boolean areRulesRemoved = e.removeGroupingPolicies(groupingRules);
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `RemoveFilteredGroupingPolicy()`
@@ -1610,6 +1857,11 @@ var removed = await e.RemoveFilteredGroupingPolicyAsync(0, "alice");
 let removed = e.remove_filtered_grouping_policy(0, vec!["alice".to_owned()]).await?;
 ```
 
+<!--Java-->
+```java
+boolean removed = e.removeFilteredGroupingPolicy(0, "alice");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `RemoveNamedGroupingPolicy()`
@@ -1645,6 +1897,11 @@ var removed = await e.RemoveNamedGroupingPolicyAsync("g", "alice");
 <!--Rust-->
 ```rust
 let removed = e.remove_named_grouping_policy("g", vec!["alice".to_owned()]).await?;
+```
+
+<!--Java-->
+```java
+boolean removed = e.removeNamedGroupingPolicy("g", "alice");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -1695,6 +1952,15 @@ const groupingRules = [
 const areRulesRemoved = await e.removeNamedGroupingPolicies('g', groupingRules);
 ```
 
+<!--Java-->
+```java
+String[][] groupingRules = {
+	{"ham", "data4_admin"},
+	{"jack", "data5_admin"}
+};
+boolean areRulesRemoved = e.removeNamedGroupingPolicies("g", groupingRules);
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `RemoveFilteredNamedGroupingPolicy()`
@@ -1732,6 +1998,11 @@ var removed = await e.RemoveFilteredNamedGroupingPolicyAsync("g", 0, "alice");
 let removed = e.remove_filtered_named_groupingPolicy("g", 0, vec!["alice".to_owned()]).await?;
 ```
 
+<!--Java-->
+```java
+boolean removed = e.removeFilteredNamedGroupingPolicy("g", 0, "alice");
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `UpdatePolicy()`
@@ -1747,10 +2018,14 @@ For example:
 updated, err := e.UpdatePolicy([]string{"eve", "data3", "read"}, []string{"eve", "data3", "write"})
 ```
 
-<!--Node.js-->
-
+<!-- Node.js -->
 ```typescript
-const ok = await e.updatePolicy(["eve", "data3", "write"],["eve", "data3", "read"])
+const update = await e.updatePolicy(["eve", "data3", "read"], ["eve", "data3", "write"]);
+```
+
+<!--Java-->
+```java
+boolean updated = e.updatePolicy(Arrays.asList("eve", "data3", "read"), Arrays.asList("eve", "data3", "write"));
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -1838,6 +2113,32 @@ fn custom_function(key1: STring, key2: String) {
 e.add_function("keyMatchCustom", custom_function);
 ```
 
+<!--Java-->
+```java
+public static class CustomFunc extends CustomFunction {
+	@Override
+	public AviatorObject call(Map<String, Object> env, AviatorObject arg1, AviatorObject arg2) {
+		String key1 = FunctionUtils.getStringValue(arg1, env);
+		String key2 = FunctionUtils.getStringValue(arg2, env);
+		if (key1.equals("/alice_data2/myid/using/res_id") && key2.equals("/alice_data/:resource")) {
+			return AviatorBoolean.valueOf(true);
+		} else if (key1.equals("/alice_data2/myid/using/res_id") && key2.equals("/alice_data2/:id/using/:resId")) {
+			return AviatorBoolean.valueOf(true);
+		} else {
+			return AviatorBoolean.valueOf(false);
+		}
+	}
+
+	@Override
+	public String getName() {
+		return "keyMatchCustom";
+	}
+}
+
+FunctionTest.CustomFunc customFunc = new FunctionTest.CustomFunc();
+e.addFunction(customFunc.getName(), customFunc);
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `LoadFilteredPolicy()`
@@ -1854,9 +2155,13 @@ err := e.LoadFilteredPolicy()
 ```
 
 <!--Node.js-->
-
 ```typescript
-const ok = await e.loadFilteredPolicy()
+const ok = await e.loadFilteredPolicy();
+```
+
+<!--Java-->
+```java
+e.loadFilteredPolicy(new String[] { "", "domain1" });
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -1876,9 +2181,8 @@ err := e.LoadIncrementalFilteredPolicy()
 ```
 
 <!--Node.js-->
-
 ```typescript
-const ok = await e.loadIncrementalFilteredPolicy()
+const ok = await e.loadIncrementalFilteredPolicy();
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -1895,6 +2199,12 @@ For example:
 ```go
 succeed, err : = e.UpdateGroupingPolicy([]string{"data3_admin", "data4_admin"}, []string{"admin", "data4_admin"})
 ```
+
+<!--Java-->
+```Java
+boolean succeed = e.updateGroupingPolicy(Arrays.asList("data3_admin", "data4_admin"), Arrays.asList("admin", "data4_admin"));
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `UpdateNamedGroupingPolicy()`
@@ -1909,4 +2219,10 @@ For example:
 ```go
 succeed, err : = e.UpdateGroupingPolicy("g1",[]string{"data3_admin", "data4_admin"}, []string{"admin", "data4_admin"})
 ```
+
+<!--Java-->
+```Java
+boolean succeed = e.updateNamedGroupingPolicy("g1", Arrays.asList("data3_admin", "data4_admin"), Arrays.asList("admin", "data4_admin"));
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->

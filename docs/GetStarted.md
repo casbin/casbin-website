@@ -16,10 +16,11 @@ go get github.com/casbin/casbin/v2
 For Maven:
 
 ```
+<!-- https://mvnrepository.com/artifact/org.casbin/jcasbin -->
 <dependency>
-  <groupId>org.casbin</groupId>
-  <artifactId>jcasbin</artifactId>
-  <version>1.6.0</version>
+    <groupId>org.casbin</groupId>
+    <artifactId>jcasbin</artifactId>
+    <version>1.x.y</version>
 </dependency>
 ```
 

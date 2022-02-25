@@ -33,12 +33,12 @@ const siteConfig = {
     {doc: 'management-api', label: 'API'},
     {page: 'editor', label: 'Editor'},
     {doc: 'ide-plugins', label: "IDE Plugins"},
-    {href: 'https://door.casbin.com', label: "Casdoor"},
+    {href: 'https://casdoor.org', label: "Single Sign-On (SSO)"},
     {href: 'https://forum.casbin.com', label: "Forum"},
-    {href: 'https://oa.casbin.com', label: "OA"},
     {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
-    {doc: 'contributing', label: "Contributing"},
+    {href: 'mailto:sales@casbin.com', label: "Pricing & Sales"},
+    {href: 'mailto:contact@casbin.com', label: "Contact"},
     {languages: true},
     {search: true},
     {href: 'https://github.com/casbin', label: "GitHub"},
@@ -82,7 +82,7 @@ const siteConfig = {
   copyright:
     'Copyright © ' +
     new Date().getFullYear() +
-    ' Casbin contributors.',
+    ' Casbin Inc.',
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks

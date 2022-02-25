@@ -23,7 +23,7 @@ production-ready | production-ready | production-ready | production-ready
 
 | Project | Demo | Details | Skill stacks |
 | -- | -- | -- | -- |
-| [Casdoor](https://github.com/casbin/casdoor) | [Casdoor](https://door.casbin.com/) | Casdoor is UI-first centralized authentication / Single-Sign-On (SSO) platform based on OAuth 2.0 / OIDC | JavaScript + React and Golang + Beego + SQL |
+| [Casdoor](https://github.com/casdoor/casdoor) | [Casdoor](https://door.casdoor.com/) | Casdoor is UI-first centralized authentication / Single-Sign-On (SSO) platform based on OAuth 2.0 / OIDC | JavaScript + React and Golang + Beego + SQL |
 | [Casnode](https://github.com/casbin/casnode) | [Casbin Forum](https://forum.casbin.com) | Casnode is next generation forum software | JavaScript + React and Golang + Beego + SQL |
 | [Casbin OA](https://github.com/casbin/casbin-oa) | [OA system](https://oa.casbin.com) | Casbin-OA is An official manuscript processing, evaluation and display system for Casbin technical writers | JavaScript + React and Golang + Beego + MySQL |
 | [Casbin Editor](https://github.com/casbin/casbin-editor) | [Casbin Editor](https://casbin.org/casbin-editor) | Casbin-editor is a web-based Casbin model and policy editor | TypeScript + React |
@@ -68,7 +68,7 @@ There are something you need to know before you open a pull request:
   // limitations under the License.
   ```
 
-* In [Casdoor](https://github.com/casbin/casdoor), [Casnode](https://github.com/casbin/casnode) and [Casbin OA](https://github.com/casbin/casbin-oa), your might need to setup demo to show the maintainer your pull request help the development of project.
+* In [Casdoor](https://github.com/casdoor/casdoor), [Casnode](https://github.com/casbin/casnode) and [Casbin OA](https://github.com/casbin/casbin-oa), your might need to setup demo to show the maintainer your pull request help the development of project.
 
 * When you open PR and commit your contribution, it would be better to use the semantic commits, format: ```<type>(<scope>): <subject>```, ```<scope>``` is optional. For more detailed usage, please see [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/)
 
