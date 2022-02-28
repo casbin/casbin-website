@@ -6,7 +6,7 @@
       "how-it-works",
       "tutorials"
     ],
-    "Model":[
+    "Model": [
       "supported-models",
       "syntax-for-models",
       "effector",
@@ -18,12 +18,13 @@
       "priority-model",
       "superadmin"
     ],
-    "Storage":[
+    "Storage": [
       "model-storage",
       "policy-storage",
       "policy-subset-loading"
     ],
-    "Extensions":[
+    "Extensions": [
+      "enforcers",
       "adapters",
       "watchers",
       "dispatchers",
@@ -47,7 +48,7 @@
       "k8s",
       "envoy"
     ],
-    "Management":[
+    "Management": [
       "admin-portal",
       "service",
       "log-error",
@@ -57,7 +58,7 @@
       "online-editor",
       "ide-plugins"
     ],
-    "More":[
+    "More": [
       "adopters",
       "contributing",
       "privacy-policy",
