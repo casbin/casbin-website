@@ -95,18 +95,39 @@ g, /book/:id, book_group
 
 Casbin will automatically match ``/book/1`` and ``/book/2`` into pattern ``/book/:id`` for you. You only need to register the function with the enforcer like:
 
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
 ```go
 e.AddNamedDomainMatchingFunc("g","KeyMatch2",util.KeyMatch2)
 ```
+
+<!--Node.js-->
+```typescript
+await e.addNamedDomainMatchingFunc('g', Util.keyMatch2Func);
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 When Using a pattern matching function in domains/tenants, You need to register the function to enforcer and model. **You also need to rebuild by calling ``e.BuildRoleLinks()``**
 
 register `keyMatch2` to enforcer and build role links again: 
 
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
 ```go
 e.AddNamedDomainMatchingFunc("g","KeyMatch2",util.KeyMatch2)
 e.BuildRoleLinks()
 ```
+
+<!--Node.js-->
+```typescript
+await e.addNamedDomainMatchingFunc('g', Util.keyMatch2Func);
+await e.buildRoleLinks()
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 register `keyMatch2` to model:
 
