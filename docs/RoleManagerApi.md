@@ -13,11 +13,23 @@ Adding matching function to rolemanager allows using wildcards in role name and 
 AddNamedMatchingFunc add MatchingFunc by ptype RoleManager.
 MatchingFunc will work when operating role matching.
 
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
 ```go
     e.AddNamedMatchingFunc("g", "", util.KeyMatch)
 	_, _ = e.AddGroupingPolicies([][]string{{"*", "admin", "domain1"}})
 	_, _ = e.GetRoleManager().HasLink("bob", "admin", "domain1") // -> true, nil
 ```
+
+<!--Node.js-->
+```typescript
+    await e.addNamedMatchingFunc('g', Util.keyMatchFunc);
+    await e.addGroupingPolicies([['*', 'admin', 'domain1']]);
+    await e.getRoleManager().hasLink('bob', 'admin', 'domain1');
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
 
 For example:
 
@@ -27,6 +39,12 @@ For example:
 ```go
     e, _ := casbin.NewEnforcer("path/to/model", "path/to/policy")
     e.AddNamedMatchingFunc("g", "", util.MatchKey)
+```
+
+<!--Node.js-->
+```typescript
+    const e = await newEnforcer('path/to/model', 'path/to/policy');
+    await e.addNamedMatchingFunc('g', Util.keyMatchFunc);
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -46,6 +64,12 @@ For example:
     e.AddNamedDomainMatchingFunc("g", "", util.MatchKey)
 ```
 
+<!--Node.js-->
+```typescript
+    const e = await newEnforcer('path/to/model', 'path/to/policy');
+    await e.addNamedDomainMatchingFunc('g', Util.keyMatchFunc);
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetRoleManager()`
@@ -59,6 +83,11 @@ For example:
 <!--Go-->
 ```go
     rm := e.GetRoleManager()
+```
+
+<!--Node.js-->
+```typescript
+    const rm = await e.getRoleManager();
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -77,6 +106,11 @@ For example:
     rm.Clear()
 ```
 
+<!--Node.js-->
+```typescript
+    await rm.clear();
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `AddLink()`
@@ -93,6 +127,11 @@ For example:
     rm.AddLink("u1", "g1", "domain1")
 ```
 
+<!--Node.js-->
+```typescript
+    await rm.addLink('u1', 'g1', 'domain1');
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `DeleteLink()`
@@ -106,7 +145,12 @@ For example:
 
 <!--Go-->
 ```go
-    rm := DeleteLink("u1", "g1", "domain1")
+    rm.DeleteLink("u1", "g1", "domain1")
+```
+
+<!--Node.js-->
+```typescript
+    await rm.deleteLink('u1', 'g1', 'domain1');
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -125,6 +169,11 @@ For example:
     rm.HasLink("u1", "g1", "domain1")
 ```
 
+<!--Node.js-->
+```typescript
+    await rm.hasLink('u1', 'g1', 'domain1');
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetRoles()`
@@ -139,6 +188,11 @@ For example:
 <!--Go-->
 ```go
     rm.GetRoles("u1", "domain1")
+```
+
+<!--Node.js-->
+```typescript
+    await rm.getRoles('u1', 'domain1');
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -157,6 +211,11 @@ For example:
     rm.GetUsers("g1")
 ```
 
+<!--Node.js-->
+```typescript
+    await rm.getUsers('g1');
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `PrintRoles()`
@@ -170,6 +229,11 @@ For example:
 <!--Go-->
 ```go
     rm.PrintRoles()
+```
+
+<!--Node.js-->
+```typescript
+    await rm.printRoles();
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
