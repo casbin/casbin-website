@@ -104,6 +104,7 @@ const siteConfig = {
     '/js/hotjar.js',
     '/js/gitter.js',
     '/js/wwads.js',
+    '/js/probe.js',
     'https://cdn.wwads.cn/js/makemoney.js',
   ],
   stylesheets: ['/css/code-blocks-buttons.css', '/css/custom.css'],
