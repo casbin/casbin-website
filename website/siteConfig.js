@@ -37,8 +37,8 @@ const siteConfig = {
     {href: 'https://forum.casbin.com', label: "Forum"},
     {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
-    {href: 'mailto:sales@casbin.com', label: "Pricing & Sales"},
-    {href: 'mailto:contact@casbin.com', label: "Contact"},
+    {href: 'https://tawk.to/chat/62333c3ca34c2456412b88a7/1fuc26j6b', label: "Pricing & Sales"},
+    {href: 'https://tawk.to/chat/62333c3ca34c2456412b88a7/1fuc26j6b', label: "Contact"},
     {languages: true},
     {search: true},
     {href: 'https://github.com/casbin', label: "GitHub"},
@@ -102,9 +102,9 @@ const siteConfig = {
     '/js/disqus.js',
     '/js/baidu-analytics.js',
     '/js/hotjar.js',
-    '/js/gitter.js',
     '/js/wwads.js',
     '/js/probe.js',
+    '/js/tawk.js',
     'https://cdn.wwads.cn/js/makemoney.js',
   ],
   stylesheets: ['/css/code-blocks-buttons.css', '/css/custom.css'],
@@ -140,7 +140,7 @@ const siteConfig = {
   enableUpdateTime: true,
 
   // Enable the scroll to top button at the bottom of your site
-  scrollToTop: true,
+  scrollToTop: false,
 
   translationRecruitingLink: 'https://crowdin.com/project/casbin',
 
