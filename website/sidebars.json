@@ -12,6 +12,7 @@
       "effector",
       "function",
       "rbac",
+      "rbac-with-pattern",
       "rbac-with-domains",
       "rbac-96",
       "abac",
