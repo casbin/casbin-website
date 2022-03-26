@@ -234,7 +234,7 @@ PyCasbin | Python | https://github.com/danthedeckie/simpleeval
 Casbin.NET | C# | https://github.com/davideicardi/DynamicExpresso
 Casbin4D | Delphi | https://github.com/casbin4d/Casbin4D/tree/master/SourceCode/Common/Third%20Party/TExpressionParser
 casbin-rs | Rust | https://github.com/jonathandturner/rhai
-casbin-cpp | C++ | https://github.com/svaarala/duktape, https://github.com/ArashPartow/exprtk(Developing)
+casbin-cpp | C++ | https://github.com/ArashPartow/exprtk
 
 :::note
 If you encounter performance issue about Casbin, it's probably caused by the low efficiency of the expression evaluator. You can both send issue to Casbin or the expression evaluator directly for advice to speed up. See [Benchmarks](/docs/en/benchmark) section for details.

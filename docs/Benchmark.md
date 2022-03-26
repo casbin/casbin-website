@@ -38,24 +38,24 @@ The overhead of policy enforcement of [Casbin CPP](https://github.com/casbin/cas
 [`tests/benchmarks`](https://github.com/casbin/casbin-cpp/tree/master/tests/benchmarks) directory with the help of 
 [Google's benchmarking tool](https://github.com/google/benchmark). The testbed for these benchmarks is:
 ```
-Apple M1 (2020) SOC @ 3.2 GHz, 8 cores, 16 threads
+Intel(R) Core(TM) i5-6300HQ CPU @ 2.30GHz, 4 cores, 4 threads
 ```
 
-Here is the benchmarking result of executing `casbin_benchmark` target built in `Release` configuration (op = an `enforce()` call, ns = nanoseconds):
+Here is the benchmarking result of executing `casbin_benchmark` target built in `Release` configuration (op = an `enforce()` call, ms = millisecond):
 
-Test case | Rule size | Time overhead (ns/op)
+Test case | Rule size | Time overhead (ms/op)
 ----|------|------
-ACL | 2 rules (2 users) | 95.6
-RBAC | 5 rules (2 users, 1 role) | 95.6
-RBAC (small) | 1100 rules (1000 users, 100 roles) | 110
-RBAC (medium) | 11000 rules (10000 users, 1000 roles) | 119
-RBAC (large) | 110000 rules (100000 users, 10000 roles) | 90.3217
-RBAC with resource roles | 6 rules (2 users, 2 roles) | 96.0
-RBAC with domains/tenants | 6 rules (2 users, 1 role, 2 domains) | 134
+ACL | 2 rules (2 users) | 0.0195
+RBAC | 5 rules (2 users, 1 role) | 0.0288
+RBAC (small) | 1100 rules (1000 users, 100 roles) | 0.300
+RBAC (medium) | 11000 rules (10000 users, 1000 roles) | 2.113
+RBAC (large) | 110000 rules (100000 users, 10000 roles) | 21.450
+RBAC with resource roles | 6 rules (2 users, 2 roles) | 0.03
+RBAC with domains/tenants | 6 rules (2 users, 1 role, 2 domains) | 0.041
 ABAC | 0 rule (0 user) | NA
 RESTful | 5 rules (3 users) | NA
-Deny-override | 6 rules (2 users, 1 role) | 96.2
-Priority | 9 rules (2 users, 2 roles) | 96.1
+Deny-override | 6 rules (2 users, 1 role) | 0.0246
+Priority | 9 rules (2 users, 2 roles) | 0.035
 
 <!--Lua (JIT)-->
 
