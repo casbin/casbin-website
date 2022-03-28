@@ -364,7 +364,7 @@ Casbin also provides API for permission management at run-time. For example, You
 
 <!--Go-->
 ```go
-roles := e.GetRolesForUser("alice")
+roles, err := e.GetRolesForUser("alice")
 ```
 
 <!--Java-->
