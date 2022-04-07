@@ -1,4 +1,4 @@
-# [casbin.org](https://casbin.org/) [![Build Status](https://img.shields.io/github/workflow/status/casbin/casbin-website/Node.js%20CI)](https://github.com/casbin/casbin-website/actions)
+# [casbin.org](https://casbin.org/) [![Build Status](https://img.shields.io/github/workflow/status/casbin/casbin-website/Node.js%20CI)](https://github.com/casbin/casbin-website/actions) 
 The site configuration and documentation powering Casbin's website: https://casbin.org
 
 ## Getting started
