@@ -46,6 +46,7 @@ class Help extends React.Component {
     return (
       <div className="docMainWrapper wrapper">
         <Container className="mainContainer documentContainer postContainer">
+          <div className="placeholderads" />
           <div className="post">
             <header className="postHeader">
               <h1>

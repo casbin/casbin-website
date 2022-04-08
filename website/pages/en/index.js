@@ -83,7 +83,9 @@ class HomeSplash extends React.Component {
         <div className="inner">
           {/*<Button href="https://github.com/casbin/casbin-forum">Need to build your own forum? See: Casbin-Forum</Button>*/}
           <ProjectTitle />
-          <iframe src="https://github.com/sponsors/casbin/card" title="Sponsor casbin" height="130" width="600" style={{backgroundColor: 'rgba(68,61,128,0.27)', border: '1px solid #443d80', borderRadius: '3px'}} />
+          {/*<iframe src="https://github.com/sponsors/casbin/card" title="Sponsor casbin" height="130" width="600" style={{backgroundColor: 'rgba(68,61,128,0.27)', border: '1px solid #443d80', borderRadius: '3px'}} />*/}
+          <div className="placeholderads" />
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3509678918753247" crossOrigin="anonymous" />
           <PromoSection>
             <Button href={docUrl('overview', language)}><translate>Get Started</translate></Button>
             <Button href="https://github.com/casbin/casbin" icon="https://cdn.casbin.org/language/go-logo-1.svg">Golang</Button>
