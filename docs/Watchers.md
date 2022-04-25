@@ -65,7 +65,7 @@ Watcher | Type | Author | Description
 
 In order to support incremental synchronization between multiple instances, we provide the `WatcherEx` interface. We hope it can notify other instances when the policy changes, but there is currently no implementation of `WatcherEx`. We recommend that you use dispatcher to achieve this. 
 
-Compared with `Watcher` interface, with implementing `WatcherEx` what kind of update action can be distinguished, etc `AddPolicy`, `RemovePolicy`, etc. 
+Compared with `Watcher` interface, `WatcherEx` can distinguish what type of update action is received, e.g., `AddPolicy` and `RemovePolicy`. 
 
 WatcherEx Apis:
 | api | description |
