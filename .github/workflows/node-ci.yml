@@ -41,7 +41,7 @@ jobs:
           cd website && yarn install && yarn run write-translations && cd ..
 
       - name: Crowdin Action
-        uses: crowdin/github-action@1.1.2
+        uses: crowdin/github-action@1.4.8
         with:
           download_translations: true
           config: crowdin_gh.yaml
