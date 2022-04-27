@@ -504,6 +504,14 @@ For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
 
+<!--Go-->
+```go
+var permissions = [][]string{{"data1", "read"},{"data2","write"}}
+for i := 0; i < len(permissions); i++ {
+    e.AddPermissionsForUser("alice", permissions[i])
+}
+```
+
 <!--Node.js-->
 ```typescript
 const permissions = [
