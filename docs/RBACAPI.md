@@ -3,7 +3,7 @@ id: rbac-api
 title: RBAC API
 ---
 
-A more friendly API for RBAC. This API is a subset of Management API. The RBAC users could use this API to simplify the code. 
+A more friendly API for RBAC. This API is a subset of Management API. The RBAC users could use this API to simplify the code.
 
 ## Reference
 
@@ -212,9 +212,15 @@ boolean added = e.addRoleForUser("alice", "data2_admin");
 AddRolesForUser adds multiple roles for a user.
 Returns false if the user already has one of these roles (aka not affected).
 
-For example: 
+For example:
 
 <!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
+```go
+var roles = []string{"data2_admin", "data1_admin"}
+e.AddRolesForUser("alice", roles)
+```
 
 <!--Node.js-->
 ```typescript
@@ -853,7 +859,7 @@ p, data2_admin, data2, write
 g, alice, data2_admin
 ```
 
-GetImplicitResourcesForUser("alice") will return 
+GetImplicitResourcesForUser("alice") will return
 `[[alice data1 read] [alice data2 read] [alice data2 write]]`
 
 
