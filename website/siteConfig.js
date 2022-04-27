@@ -106,7 +106,7 @@ const siteConfig = {
     'https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js',
     '/js/wwads.js',
     '/js/wwads2.js',
-    // '/js/probe.js',
+    '/js/probe.js',
     '/js/tawk.js',
   ],
   stylesheets: ['/css/code-blocks-buttons.css', '/css/custom.css'],
