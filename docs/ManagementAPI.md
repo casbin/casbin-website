@@ -228,6 +228,11 @@ const allSubjects = await e.getAllSubjects()
 $allSubjects = $e->getAllSubjects();
 ```
 
+<!--Python-->
+```python
+all_subjects = e.get_all_subjects()
+```
+
 <!--.NET-->
 ```csharp
 var allSubjects = e.GetAllSubjects();
@@ -268,6 +273,11 @@ const allNamedSubjects = await e.getAllNamedSubjects('p')
 $allNamedSubjects = $e->getAllNamedSubjects("p");
 ```
 
+<!--Python-->
+```python
+all_named_subjects = e.get_all_named_subjects("p")
+```
+
 <!--.NET-->
 ```csharp
 var allNamedSubjects = e.GetAllNamedSubjects("p");
@@ -305,6 +315,11 @@ const allObjects = await e.getAllObjects()
 <!--PHP-->
 ```php
 $allObjects = $e->getAllObjects();
+```
+
+<!--Python-->
+```python
+all_objects = e.get_all_objects()
 ```
 
 <!--.NET-->
@@ -347,6 +362,11 @@ const allNamedObjects = await e.getAllNamedObjects('p')
 $allNamedObjects = $e->getAllNamedObjects("p");
 ```
 
+<!--Python-->
+```python
+all_named_objects = e.get_all_named_objects("p")
+```
+
 <!--.NET-->
 ```csharp
 var allNamedObjects = e.GetAllNamedObjects("p");
@@ -385,6 +405,11 @@ const allActions = await e.getAllActions()
 <!--PHP-->
 ```php
 $allActions = $e->getAllActions();
+```
+
+<!--Python-->
+```python
+all_actions = e.get_all_actions()
 ```
 
 <!--.NET-->
@@ -427,6 +452,11 @@ const allNamedActions = await e.getAllNamedActions('p')
 $allNamedActions = $e->getAllNamedActions("p");
 ```
 
+<!--Python-->
+```python
+all_named_actions = e.get_all_named_actions("p")
+```
+
 <!--.NET-->
 ```csharp
 var allNamedActions = e.GetAllNamedActions("p");
@@ -465,6 +495,11 @@ const allRoles = await e.getAllRoles()
 <!--PHP-->
 ```php
 $allRoles = $e->getAllRoles();
+```
+
+<!--Python-->
+```python
+all_roles = e.get_all_roles()
 ```
 
 <!--.NET-->
@@ -507,6 +542,11 @@ const allNamedRoles = await e.getAllNamedRoles('g')
 $allNamedRoles = $e->getAllNamedRoles('g');
 ```
 
+<!--Python-->
+```python
+all_named_roles = e.get_all_named_roles("g")
+```
+
 <!--.NET-->
 ```csharp
 var allNamedRoles = e.GetAllNamedRoles("g");
@@ -545,6 +585,11 @@ const policy = await e.getPolicy()
 <!--PHP-->
 ```php
 $policy = $e->getPolicy();
+```
+
+<!--Python-->
+```python
+policy = e.get_policy()
 ```
 
 <!--.NET-->
