@@ -633,6 +633,11 @@ const filteredPolicy = await e.getFilteredPolicy(0, 'alice')
 $filteredPolicy = $e->getFilteredPolicy(0, "alice");
 ```
 
+<!--Python-->
+```python
+filtered_policy = e.get_filtered_policy(0, "alice")
+```
+
 <!--.NET-->
 ```csharp
 var filteredPolicy = e.GetFilteredPolicy(0, "alice");
@@ -671,6 +676,11 @@ const namedPolicy = await e.getNamedPolicy('p')
 <!--PHP-->
 ```php
 $namedPolicy = $e->getNamedPolicy("p");
+```
+
+<!--Python-->
+```python
+named_policy = e.get_named_policy("p")
 ```
 
 <!--.NET-->
@@ -714,6 +724,11 @@ const filteredNamedPolicy = await e.getFilteredNamedPolicy('p', 0, 'bob')
 $filteredNamedPolicy = $e->getFilteredNamedPolicy("p", 0, "bob");
 ```
 
+<!--Python-->
+```python
+filtered_named_policy = e.get_filtered_named_policy("p", 0, "alice")
+```
+
 <!--.NET-->
 ```csharp
 var filteredNamedPolicy = e.GetFilteredNamedPolicy("p", 0, "alice");
@@ -752,6 +767,11 @@ const groupingPolicy = await e.getGroupingPolicy()
 <!--PHP-->
 ```php
 $groupingPolicy = $e->getGroupingPolicy();
+```
+
+<!--Python-->
+```python
+grouping_policy = e.get_grouping_policy()
 ```
 
 <!--.NET-->
@@ -794,6 +814,11 @@ const filteredGroupingPolicy = await e.getFilteredGroupingPolicy(0, 'alice')
 $filteredGroupingPolicy = $e->getFilteredGroupingPolicy(0, "alice");
 ```
 
+<!--Python-->
+```python
+filtered_grouping_policy = e.get_filtered_grouping_policy(0, "alice")
+```
+
 <!--.NET-->
 ```csharp
 var filteredGroupingPolicy = e.GetFilteredGroupingPolicy(0, "alice");
@@ -834,6 +859,11 @@ const namedGroupingPolicy = await e.getNamedGroupingPolicy('g')
 $namedGroupingPolicy = $e->getNamedGroupingPolicy("g");
 ```
 
+<!--Python-->
+```python
+named_grouping_policy = e.get_named_grouping_policy("g")
+```
+
 <!--.NET-->
 ```csharp
 var namedGroupingPolicy = e.GetNamedGroupingPolicy("g");
@@ -872,6 +902,11 @@ const namedGroupingPolicy = await e.getFilteredNamedGroupingPolicy('g', 0, 'alic
 <!--PHP-->
 ```php
 $namedGroupingPolicy = $e->getFilteredNamedGroupingPolicy("g", 0, "alice");
+```
+
+<!--Python-->
+```python
+named_grouping_policy = e.get_filtered_named_grouping_policy("g", 0, "alice")
 ```
 
 <!--.NET-->
