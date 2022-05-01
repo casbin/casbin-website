@@ -1750,6 +1750,26 @@ rules := [][] string {
 areRulesAdded := e.AddGroupingPolicies(rules)
 ```
 
+<!--Node.js-->
+```typescript
+const groupingRules = [
+    ['ham', 'data4_admin'],
+    ['jack', 'data5_admin']
+  ];
+
+const areRulesAdded = await e.addGroupingPolicies(groupingRules);
+```
+
+<!--Python-->
+```python
+rules = [
+    ["ham", "data4_admin"],
+    ["jack", "data5_admin"]
+]
+
+are_rules_added = e.add_grouping_policies(rules)
+```
+
 <!--Rust-->
 ```rust
 let rules = vec![
@@ -1760,15 +1780,6 @@ let rules = vec![
 ];
 
 let areRulesAdded = e.add_grouping_policies(rules).await?;
-```
-<!--Node.js-->
-```typescript
-const groupingRules = [
-    ['ham', 'data4_admin'],
-    ['jack', 'data5_admin']
-  ];
-
-const areRulesAdded = await e.addGroupingPolicies(groupingRules);
 ```
 
 <!--Java-->
@@ -1805,6 +1816,11 @@ const added = await e.addNamedGroupingPolicy('g', 'group1', 'data2_admin')
 <!--PHP-->
 ```php
 $added = $e->addNamedGroupingPolicy("g", "group1", "data2_admin");
+```
+
+<!--Python-->
+```python
+added = e.add_named_grouping_policy("g", "group1", "data2_admin")
 ```
 
 <!--.NET-->
@@ -1849,6 +1865,26 @@ rules := [][] string {
 areRulesAdded := e.AddNamedGroupingPolicies("g", rules)
 ```
 
+<!--Node.js-->
+```typescript
+const groupingRules = [
+    ['ham', 'data4_admin'],
+    ['jack', 'data5_admin']
+  ];
+
+const areRulesAdded = await e.addNamedGroupingPolicies('g', groupingRules);
+```
+
+<!--Python-->
+```python
+rules = [
+    ["ham", "data4_admin"],
+    ["jack", "data5_admin"]
+]
+
+are_rules_added = e.add_named_grouping_policies("g", rules)
+```
+
 <!--Rust-->
 ```rust
 let rules = vec![
@@ -1859,16 +1895,6 @@ let rules = vec![
 ];
 
 let are_rules_added = e.add_named_grouping_policies("g", rules).await?;
-```
-
-<!--Node.js-->
-```typescript
-const groupingRules = [
-    ['ham', 'data4_admin'],
-    ['jack', 'data5_admin']
-  ];
-
-const areRulesAdded = await e.addNamedGroupingPolicies('g', groupingRules);
 ```
 
 <!--Java-->
@@ -1903,6 +1929,11 @@ const removed = await e.removeGroupingPolicy('alice', 'data2_admin')
 <!--PHP-->
 ```php
 $removed = $e->removeGroupingPolicy("alice", "data2_admin");
+```
+
+<!--Python-->
+```python
+removed = e.remove_grouping_policy("alice", "data2_admin")
 ```
 
 <!--.NET-->
@@ -1947,6 +1978,16 @@ rules := [][] string {
 areRulesRemoved := e.RemoveGroupingPolicies(rules)
 ```
 
+<!--Node.js-->
+```typescript
+const groupingRules = [
+    ['ham', 'data4_admin'],
+    ['jack', 'data5_admin']
+  ];
+
+const areRulesRemoved = await e.removeGroupingPolicies(groupingRules);
+```
+
 <!--Rust-->
 ```rust
 let rules = vec![
@@ -1959,14 +2000,14 @@ let rules = vec![
 let are_rules_removed = e.remove_grouping_policies(rules).await?;
 ```
 
-<!--Node.js-->
-```typescript
-const groupingRules = [
-    ['ham', 'data4_admin'],
-    ['jack', 'data5_admin']
-  ];
+<!--Python-->
+```python
+rules = [
+    ["ham", "data4_admin"],
+    ["jack", "data5_admin"]
+]
 
-const areRulesRemoved = await e.removeGroupingPolicies(groupingRules);
+are_rules_removed = e.remove_grouping_policies(rules)
 ```
 
 <!--Java-->
@@ -2001,6 +2042,11 @@ const removed = await e.removeFilteredGroupingPolicy(0, 'alice')
 <!--PHP-->
 ```php
 $removed = $e->removeFilteredGroupingPolicy(0, "alice");
+```
+
+<!--Python-->
+```python
+removed = e.remove_filtered_grouping_policy(0, "alice")
 ```
 
 <!--.NET-->
@@ -2045,6 +2091,11 @@ const removed = await e.removeNamedGroupingPolicy('g', 'alice')
 $removed = $e->removeNamedGroupingPolicy("g", "alice");
 ```
 
+<!--Python-->
+```python
+removed = e.remove_named_grouping_policy("g", "alice", "data2_admin")
+```
+
 <!--.NET-->
 ```csharp
 var removed = e.RemoveNamedGroupingPolicy("g", "alice");
@@ -2087,6 +2138,24 @@ rules := [][] string {
 areRulesRemoved := e.RemoveNamedGroupingPolicies("g", rules)
 ```
 
+<!--Node.js-->
+```typescript
+const groupingRules = [
+    ['ham', 'data4_admin'],
+    ['jack', 'data5_admin']
+  ];
+
+const areRulesRemoved = await e.removeNamedGroupingPolicies('g', groupingRules);
+```
+
+<!--Python-->
+```python
+rules = [
+    ["ham", "data4_admin"],
+    ["jack", "data5_admin"]
+]
+are_rules_removed = e.remove_named_grouping_policies("g", rules)
+```
 
 <!--Rust-->
 ```rust
@@ -2098,16 +2167,6 @@ let rules = vec![
 ];
 
 let are_rules_removed = e.remove_named_grouping_policies("g", rules).await?;
-```
-
-<!--Node.js-->
-```typescript
-const groupingRules = [
-    ['ham', 'data4_admin'],
-    ['jack', 'data5_admin']
-  ];
-
-const areRulesRemoved = await e.removeNamedGroupingPolicies('g', groupingRules);
 ```
 
 <!--Java-->
@@ -2142,6 +2201,11 @@ const removed = await e.removeFilteredNamedGroupingPolicy('g', 0, 'alice')
 <!--PHP-->
 ```php
 $removed = $e->removeFilteredNamedGroupingPolicy("g", 0, "alice");
+```
+
+<!--Python-->
+```python
+removed = e.remove_filtered_named_grouping_policy("g", 0, "alice")
 ```
 
 <!--.NET-->
