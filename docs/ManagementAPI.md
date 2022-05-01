@@ -228,6 +228,11 @@ const allSubjects = await e.getAllSubjects()
 $allSubjects = $e->getAllSubjects();
 ```
 
+<!--Python-->
+```python
+all_subjects = e.get_all_subjects()
+```
+
 <!--.NET-->
 ```csharp
 var allSubjects = e.GetAllSubjects();
@@ -268,6 +273,11 @@ const allNamedSubjects = await e.getAllNamedSubjects('p')
 $allNamedSubjects = $e->getAllNamedSubjects("p");
 ```
 
+<!--Python-->
+```python
+all_named_subjects = e.get_all_named_subjects("p")
+```
+
 <!--.NET-->
 ```csharp
 var allNamedSubjects = e.GetAllNamedSubjects("p");
@@ -305,6 +315,11 @@ const allObjects = await e.getAllObjects()
 <!--PHP-->
 ```php
 $allObjects = $e->getAllObjects();
+```
+
+<!--Python-->
+```python
+all_objects = e.get_all_objects()
 ```
 
 <!--.NET-->
@@ -347,6 +362,11 @@ const allNamedObjects = await e.getAllNamedObjects('p')
 $allNamedObjects = $e->getAllNamedObjects("p");
 ```
 
+<!--Python-->
+```python
+all_named_objects = e.get_all_named_objects("p")
+```
+
 <!--.NET-->
 ```csharp
 var allNamedObjects = e.GetAllNamedObjects("p");
@@ -385,6 +405,11 @@ const allActions = await e.getAllActions()
 <!--PHP-->
 ```php
 $allActions = $e->getAllActions();
+```
+
+<!--Python-->
+```python
+all_actions = e.get_all_actions()
 ```
 
 <!--.NET-->
@@ -427,6 +452,11 @@ const allNamedActions = await e.getAllNamedActions('p')
 $allNamedActions = $e->getAllNamedActions("p");
 ```
 
+<!--Python-->
+```python
+all_named_actions = e.get_all_named_actions("p")
+```
+
 <!--.NET-->
 ```csharp
 var allNamedActions = e.GetAllNamedActions("p");
@@ -465,6 +495,11 @@ const allRoles = await e.getAllRoles()
 <!--PHP-->
 ```php
 $allRoles = $e->getAllRoles();
+```
+
+<!--Python-->
+```python
+all_roles = e.get_all_roles()
 ```
 
 <!--.NET-->
@@ -507,6 +542,11 @@ const allNamedRoles = await e.getAllNamedRoles('g')
 $allNamedRoles = $e->getAllNamedRoles('g');
 ```
 
+<!--Python-->
+```python
+all_named_roles = e.get_all_named_roles("g")
+```
+
 <!--.NET-->
 ```csharp
 var allNamedRoles = e.GetAllNamedRoles("g");
@@ -545,6 +585,11 @@ const policy = await e.getPolicy()
 <!--PHP-->
 ```php
 $policy = $e->getPolicy();
+```
+
+<!--Python-->
+```python
+policy = e.get_policy()
 ```
 
 <!--.NET-->
@@ -588,6 +633,11 @@ const filteredPolicy = await e.getFilteredPolicy(0, 'alice')
 $filteredPolicy = $e->getFilteredPolicy(0, "alice");
 ```
 
+<!--Python-->
+```python
+filtered_policy = e.get_filtered_policy(0, "alice")
+```
+
 <!--.NET-->
 ```csharp
 var filteredPolicy = e.GetFilteredPolicy(0, "alice");
@@ -626,6 +676,11 @@ const namedPolicy = await e.getNamedPolicy('p')
 <!--PHP-->
 ```php
 $namedPolicy = $e->getNamedPolicy("p");
+```
+
+<!--Python-->
+```python
+named_policy = e.get_named_policy("p")
 ```
 
 <!--.NET-->
@@ -669,6 +724,11 @@ const filteredNamedPolicy = await e.getFilteredNamedPolicy('p', 0, 'bob')
 $filteredNamedPolicy = $e->getFilteredNamedPolicy("p", 0, "bob");
 ```
 
+<!--Python-->
+```python
+filtered_named_policy = e.get_filtered_named_policy("p", 0, "alice")
+```
+
 <!--.NET-->
 ```csharp
 var filteredNamedPolicy = e.GetFilteredNamedPolicy("p", 0, "alice");
@@ -707,6 +767,11 @@ const groupingPolicy = await e.getGroupingPolicy()
 <!--PHP-->
 ```php
 $groupingPolicy = $e->getGroupingPolicy();
+```
+
+<!--Python-->
+```python
+grouping_policy = e.get_grouping_policy()
 ```
 
 <!--.NET-->
@@ -749,6 +814,11 @@ const filteredGroupingPolicy = await e.getFilteredGroupingPolicy(0, 'alice')
 $filteredGroupingPolicy = $e->getFilteredGroupingPolicy(0, "alice");
 ```
 
+<!--Python-->
+```python
+filtered_grouping_policy = e.get_filtered_grouping_policy(0, "alice")
+```
+
 <!--.NET-->
 ```csharp
 var filteredGroupingPolicy = e.GetFilteredGroupingPolicy(0, "alice");
@@ -789,6 +859,11 @@ const namedGroupingPolicy = await e.getNamedGroupingPolicy('g')
 $namedGroupingPolicy = $e->getNamedGroupingPolicy("g");
 ```
 
+<!--Python-->
+```python
+named_grouping_policy = e.get_named_grouping_policy("g")
+```
+
 <!--.NET-->
 ```csharp
 var namedGroupingPolicy = e.GetNamedGroupingPolicy("g");
@@ -827,6 +902,11 @@ const namedGroupingPolicy = await e.getFilteredNamedGroupingPolicy('g', 0, 'alic
 <!--PHP-->
 ```php
 $namedGroupingPolicy = $e->getFilteredNamedGroupingPolicy("g", 0, "alice");
+```
+
+<!--Python-->
+```python
+named_grouping_policy = e.get_filtered_named_grouping_policy("g", 0, "alice")
 ```
 
 <!--.NET-->
