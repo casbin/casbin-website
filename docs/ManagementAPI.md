@@ -1104,8 +1104,10 @@ const areRulesAdded = await e.addPolicies(rules);
 <!--Python-->
 ```python
 rules = [
-    ["jack", "data4", "read"], ["katy", "data4", "write"],
-    ["leyo", "data4", "read"], ["ham", "data4", "write"]
+    ["jack", "data4", "read"],
+    ["katy", "data4", "write"],
+    ["leyo", "data4", "read"],
+    ["ham", "data4", "write"]
 ]
 are_rules_added = e.add_policies(rules)
 ```
@@ -1224,8 +1226,10 @@ const areRulesAdded = await e.addNamedPolicies('p', rules);
 <!--Python-->
 ```python
 rules = [
-    ["jack", "data4", "read"], ["katy", "data4", "write"],
-    ["leyo", "data4", "read"], ["ham", "data4", "write"]
+    ["jack", "data4", "read"],
+    ["katy", "data4", "write"],
+    ["leyo", "data4", "read"],
+    ["ham", "data4", "write"]
 ]
 are_rules_added = e.add_named_policies("p", rules)
 ```
@@ -1341,8 +1345,10 @@ const areRulesRemoved = await e.removePolicies(rules);
 <!--Python-->
 ```python
 rules = [
-    ["jack", "data4", "read"], ["katy", "data4", "write"],
-    ["leyo", "data4", "read"], ["ham", "data4", "write"]
+    ["jack", "data4", "read"],
+    ["katy", "data4", "write"],
+    ["leyo", "data4", "read"],
+    ["ham", "data4", "write"]
 ]
 are_rules_removed = e.remove_policies(rules)
 ```
