@@ -949,6 +949,11 @@ const hasPolicy = await e.hasPolicy('data2_admin', 'data2', 'read')
 $hasPolicy = $e->hasPolicy('data2_admin', 'data2', 'read');
 ```
 
+<!--Python-->
+```python
+has_policy = e.has_policy("data2_admin", "data2", "read")
+```
+
 <!--.NET-->
 ```csharp
 var hasPolicy = e.HasPolicy("data2_admin", "data2", "read");
@@ -987,6 +992,11 @@ const hasNamedPolicy = await e.hasNamedPolicy('p', 'data2_admin', 'data2', 'read
 <!--PHP-->
 ```php
 $hasNamedPolicy = $e->hasNamedPolicy("p", "data2_admin", "data2", "read");
+```
+
+<!--Python-->
+```python
+has_named_policy = e.has_named_policy("p", "data2_admin", "data2", "read")
 ```
 
 <!--.NET-->
@@ -1032,6 +1042,11 @@ const added = await e.addPolicy(...p)
 $added = $e->addPolicy('eve', 'data3', 'read');
 ```
 
+<!--Python-->
+```python
+added = e.add_policy("eve", "data3", "read")
+```
+
 <!--.NET-->
 ```csharp
 var added = e.AddPolicy("eve", "data3", "read");
@@ -1074,18 +1089,6 @@ rules := [][] string {
 areRulesAdded := e.AddPolicies(rules)
 ```
 
-<!--Rust-->
-```rust
-let rules = vec![
-	vec!["jack".to_owned(), "data4".to_owned(), "read".to_owned()],
-	vec!["katy".to_owned(), "data4".to_owned(), "write".to_owned()],
-	vec!["leyo".to_owned(), "data4".to_owned(), "read".to_owned()],
-	vec!["ham".to_owned(), "data4".to_owned(), "write".to_owned()],
-];
-
-let are_rules_added = e.add_policies(rules).await?
-```
-
 <!--Node.js-->
 ```typescript
 const rules = [
@@ -1096,6 +1099,27 @@ const rules = [
 ];
 
 const areRulesAdded = await e.addPolicies(rules);
+```
+
+<!--Python-->
+```python
+rules = [
+    ["jack", "data4", "read"], ["katy", "data4", "write"],
+    ["leyo", "data4", "read"], ["ham", "data4", "write"]
+]
+are_rules_added = e.add_policies(rules)
+```
+
+<!--Rust-->
+```rust
+let rules = vec![
+	vec!["jack".to_owned(), "data4".to_owned(), "read".to_owned()],
+	vec!["katy".to_owned(), "data4".to_owned(), "write".to_owned()],
+	vec!["leyo".to_owned(), "data4".to_owned(), "read".to_owned()],
+	vec!["ham".to_owned(), "data4".to_owned(), "write".to_owned()],
+];
+
+let are_rules_added = e.add_policies(rules).await?
 ```
 
 <!--Java-->
@@ -1136,6 +1160,11 @@ const added = await e.addNamedPolicy('p', ...p)
 <!--PHP-->
 ```php
 $added = $e->addNamedPolicy("p", "eve", "data3", "read");
+```
+
+<!--Python-->
+```python
+added = e.add_named_policy("p", "eve", "data3", "read")
 ```
 
 <!--.NET-->
@@ -1180,18 +1209,6 @@ rules := [][] string {
 areRulesAdded := e.AddNamedPolicies("p", rules)
 ```
 
-<!--Rust-->
-```rust
-let rules = vec![
-	vec!["jack".to_owned(), "data4".to_owned(), "read".to_owned()],
-	vec!["katy".to_owned(), "data4".to_owned(), "write".to_owned()],
-	vec!["leyo".to_owned(), "data4".to_owned(), "read".to_owned()],
-	vec!["ham".to_owned(), "data4".to_owned(), "write".to_owned()],
-];
-
-let are_rules_added := e.add_named_policies("p", rules).await?;
-```
-
 <!--Node.js-->
 ```typescript
 const rules = [
@@ -1202,6 +1219,27 @@ const rules = [
 ];
 
 const areRulesAdded = await e.addNamedPolicies('p', rules);
+```
+
+<!--Python-->
+```python
+rules = [
+    ["jack", "data4", "read"], ["katy", "data4", "write"],
+    ["leyo", "data4", "read"], ["ham", "data4", "write"]
+]
+are_rules_added = e.add_named_policies("p", rules)
+```
+
+<!--Rust-->
+```rust
+let rules = vec![
+	vec!["jack".to_owned(), "data4".to_owned(), "read".to_owned()],
+	vec!["katy".to_owned(), "data4".to_owned(), "write".to_owned()],
+	vec!["leyo".to_owned(), "data4".to_owned(), "read".to_owned()],
+	vec!["ham".to_owned(), "data4".to_owned(), "write".to_owned()],
+];
+
+let are_rules_added := e.add_named_policies("p", rules).await?;
 ```
 
 <!--Java-->
@@ -1239,6 +1277,11 @@ const removed = await e.removePolicy(...p)
 <!--PHP-->
 ```php
 $removed = $e->removePolicy("alice", "data1", "read");
+```
+
+<!--Python-->
+```python
+removed = e.remove_policy("alice", "data1", "read")
 ```
 
 <!--.NET-->
@@ -1283,18 +1326,6 @@ rules := [][] string {
 areRulesRemoved := e.RemovePolicies(rules)
 ```
 
-<!--Rust-->
-```rust
-let rules = vec![
-	vec!["jack".to_owned(), "data4".to_owned(), "read".to_owned()],
-	vec!["katy".to_owned(), "data4".to_owned(), "write".to_owned()],
-	vec!["leyo".to_owned(), "data4".to_owned(), "read".to_owned()],
-	vec!["ham".to_owned(), "data4".to_owned(), "write".to_owned()],
-];
-
-let are_rules_removed = e.remove_policies(rules).await?;
-```
-
 <!--Node.js-->
 ```typescript
 const rules = [
@@ -1305,6 +1336,27 @@ const rules = [
 ];
 
 const areRulesRemoved = await e.removePolicies(rules);
+```
+
+<!--Python-->
+```python
+rules = [
+    ["jack", "data4", "read"], ["katy", "data4", "write"],
+    ["leyo", "data4", "read"], ["ham", "data4", "write"]
+]
+are_rules_removed = e.remove_policies(rules)
+```
+
+<!--Rust-->
+```rust
+let rules = vec![
+	vec!["jack".to_owned(), "data4".to_owned(), "read".to_owned()],
+	vec!["katy".to_owned(), "data4".to_owned(), "write".to_owned()],
+	vec!["leyo".to_owned(), "data4".to_owned(), "read".to_owned()],
+	vec!["ham".to_owned(), "data4".to_owned(), "write".to_owned()],
+];
+
+let are_rules_removed = e.remove_policies(rules).await?;
 ```
 
 <!--Java-->
@@ -1343,6 +1395,11 @@ const removed = await e.removeFilteredPolicy(0, ...p)
 <!--PHP-->
 ```php
 $removed = $e->removeFilteredPolicy(0, "alice", "data1", "read");
+```
+
+<!--Python-->
+```python
+removed = e.remove_filtered_policy(0, "alice", "data1", "read")
 ```
 
 <!--.NET-->
@@ -1388,6 +1445,11 @@ const removed = await e.removeNamedPolicy('p', ...p)
 $removed = $e->removeNamedPolicy("p", "alice", "data1", "read");
 ```
 
+<!--Python-->
+```python
+removed = e.remove_named_policy("p", "alice", "data1", "read")
+```
+
 <!--.NET-->
 ```csharp
 var removed = e.RemoveNamedPolicy("p", "alice", "data1", "read");
@@ -1430,18 +1492,6 @@ rules := [][] string {
 areRulesRemoved := e.RemoveNamedPolicies("p", rules)
 ```
 
-<!--Rust-->
-```rust
-let rules = vec![
-	vec!["jack".to_owned(), "data4".to_owned(), "read".to_owned()],
-	vec!["katy".to_owned(), "data4".to_owned(), "write".to_owned()],
-	vec!["leyo".to_owned(), "data4".to_owned(), "read".to_owned()],
-	vec!["ham".to_owned(), "data4".to_owned(), "write".to_owned()],
-];
-
-let areRulesRemoved = e.remove_named_policies("p", rules).await?;
-```
-
 <!--Node.js-->
 ```typescript
 const rules = [
@@ -1452,6 +1502,29 @@ const rules = [
 ];
 
 const areRulesRemoved = await e.removeNamedPolicies('p', rules);
+```
+
+<!--Python-->
+```python
+rules = [
+    ["jack", "data4", "read"],
+    ["katy", "data4", "write"],
+    ["leyo", "data4", "read"],
+    ["ham", "data4", "write"]
+]
+are_rules_removed = e.remove_named_policies("p", rules)
+```
+
+<!--Rust-->
+```rust
+let rules = vec![
+	vec!["jack".to_owned(), "data4".to_owned(), "read".to_owned()],
+	vec!["katy".to_owned(), "data4".to_owned(), "write".to_owned()],
+	vec!["leyo".to_owned(), "data4".to_owned(), "read".to_owned()],
+	vec!["ham".to_owned(), "data4".to_owned(), "write".to_owned()],
+];
+
+let areRulesRemoved = e.remove_named_policies("p", rules).await?;
 ```
 
 <!--Java-->
@@ -1489,6 +1562,11 @@ const removed = await e.removeFilteredNamedPolicy('p', 0, ...p)
 <!--PHP-->
 ```php
 $removed = $e->removeFilteredNamedPolicy("p", 0, "alice", "data1", "read");
+```
+
+<!--Python-->
+```python
+removed = e.remove_filtered_named_policy("p", 0, "alice", "data1", "read")
 ```
 
 <!--.NET-->
@@ -1533,6 +1611,11 @@ const has = await e.hasGroupingPolicy('alice', 'data2_admin')
 $has = $e->hasGroupingPolicy("alice", "data2_admin");
 ```
 
+<!--Python-->
+```python
+has = e.has_grouping_policy("alice", "data2_admin")
+```
+
 <!--.NET-->
 ```csharp
 var has = e.HasGroupingPolicy("alice", "data2_admin");
@@ -1571,6 +1654,11 @@ const has = await e.hasNamedGroupingPolicy('g', 'alice', 'data2_admin')
 <!--PHP-->
 ```php
 $has = $e->hasNamedGroupingPolicy("g", "alice", "data2_admin");
+```
+
+<!--Python-->
+```python
+has = e.has_named_grouping_policy("g", "alice", "data2_admin")
 ```
 
 <!--.NET-->
@@ -1613,6 +1701,11 @@ const added = await e.addGroupingPolicy('group1', 'data2_admin')
 <!--PHP-->
 ```php
 $added = $e->addGroupingPolicy("group1", "data2_admin");
+```
+
+<!--Python-->
+```python
+added = e.add_grouping_policy("group1", "data2_admin")
 ```
 
 <!--.NET-->
