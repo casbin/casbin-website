@@ -1080,11 +1080,11 @@ For example:
 <!--Go-->
 ```go
 rules := [][] string {
-				[]string {"jack", "data4", "read"},
-				[]string {"katy", "data4", "write"},
-				[]string {"leyo", "data4", "read"},
-				[]string {"ham", "data4", "write"},
-		}
+	[]string {"jack", "data4", "read"},
+	[]string {"katy", "data4", "write"},
+	[]string {"leyo", "data4", "read"},
+	[]string {"ham", "data4", "write"},
+}
 
 areRulesAdded := e.AddPolicies(rules)
 ```
@@ -1202,11 +1202,11 @@ For example:
 <!--Go-->
 ```go
 rules := [][] string {
-				[]string {"jack", "data4", "read"},
-				[]string {"katy", "data4", "write"},
-				[]string {"leyo", "data4", "read"},
-				[]string {"ham", "data4", "write"},
-		}
+	[]string {"jack", "data4", "read"},
+	[]string {"katy", "data4", "write"},
+	[]string {"leyo", "data4", "read"},
+	[]string {"ham", "data4", "write"},
+}
 
 areRulesAdded := e.AddNamedPolicies("p", rules)
 ```
@@ -1321,11 +1321,11 @@ For example:
 <!--Go-->
 ```go
 rules := [][] string {
-				[]string {"jack", "data4", "read"},
-				[]string {"katy", "data4", "write"},
-				[]string {"leyo", "data4", "read"},
-				[]string {"ham", "data4", "write"},
-		}
+	[]string {"jack", "data4", "read"},
+	[]string {"katy", "data4", "write"},
+	[]string {"leyo", "data4", "read"},
+	[]string {"ham", "data4", "write"},
+}
 
 areRulesRemoved := e.RemovePolicies(rules)
 ```
@@ -1489,11 +1489,11 @@ For example:
 <!--Go-->
 ```go
 rules := [][] string {
-				[]string {"jack", "data4", "read"},
-				[]string {"katy", "data4", "write"},
-				[]string {"leyo", "data4", "read"},
-				[]string {"ham", "data4", "write"},
-		}
+	[]string {"jack", "data4", "read"},
+	[]string {"katy", "data4", "write"},
+	[]string {"leyo", "data4", "read"},
+	[]string {"ham", "data4", "write"},
+}
 
 areRulesRemoved := e.RemoveNamedPolicies("p", rules)
 ```
@@ -1747,11 +1747,9 @@ For example:
 <!--Go-->
 ```go
 rules := [][] string {
-				[]string {"jack", "data4", "read"},
-				[]string {"katy", "data4", "write"},
-				[]string {"leyo", "data4", "read"},
-				[]string {"ham", "data4", "write"},
-		}
+	[]string {"ham", "data4_admin"},
+	[]string {"jack", "data5_admin"},
+}
 
 areRulesAdded := e.AddGroupingPolicies(rules)
 ```
@@ -1779,10 +1777,8 @@ are_rules_added = e.add_grouping_policies(rules)
 <!--Rust-->
 ```rust
 let rules = vec![
-	vec!["jack".to_owned(), "group1".to_owned(), "domain1".to_owned()],
-	vec!["katy".to_owned(), "group1".to_owned(), "domain1".to_owned()],
-	vec!["leyo".to_owned(), "group1".to_owned(), "domain1".to_owned()],
-	vec!["ham".to_owned(), "group1".to_owned(), "domain1".to_owned()],
+	vec!["ham".to_owned(), "data4_admin".to_owned()],
+	vec!["jack".to_owned(), "data5_admin".to_owned()],
 ];
 
 let areRulesAdded = e.add_grouping_policies(rules).await?;
@@ -1862,11 +1858,9 @@ For example:
 <!--Go-->
 ```go
 rules := [][] string {
-				[]string {"jack", "data4", "read"},
-				[]string {"katy", "data4", "write"},
-				[]string {"leyo", "data4", "read"},
-				[]string {"ham", "data4", "write"},
-		}
+	[]string {"ham", "data4_admin"},
+	[]string {"jack", "data5_admin"},
+}
 
 areRulesAdded := e.AddNamedGroupingPolicies("g", rules)
 ```
@@ -1894,10 +1888,8 @@ are_rules_added = e.add_named_grouping_policies("g", rules)
 <!--Rust-->
 ```rust
 let rules = vec![
-	vec!["jack".to_owned(), "group1".to_owned(), "domain1".to_owned()],
-	vec!["katy".to_owned(), "group1".to_owned(), "domain1".to_owned()],
-	vec!["leyo".to_owned(), "group1".to_owned(), "domain1".to_owned()],
-	vec!["ham".to_owned(), "group1".to_owned(), "domain1".to_owned()],
+	vec!["ham".to_owned(), "data4_admin".to_owned()],
+	vec!["jack".to_owned(), "data5_admin".to_owned()],
 ];
 
 let are_rules_added = e.add_named_grouping_policies("g", rules).await?;
@@ -1975,10 +1967,8 @@ For example:
 <!--Go-->
 ```go
 rules := [][] string {
-				[]string {"jack", "data4", "read"},
-				[]string {"katy", "data4", "write"},
-				[]string {"leyo", "data4", "read"},
-				[]string {"ham", "data4", "write"},
+				[]string {"ham", "data4_admin"},
+				[]string {"jack", "data5_admin"},
 		}
 
 areRulesRemoved := e.RemoveGroupingPolicies(rules)
@@ -1997,10 +1987,8 @@ const areRulesRemoved = await e.removeGroupingPolicies(groupingRules);
 <!--Rust-->
 ```rust
 let rules = vec![
-	vec!["jack".to_owned(), "group1".to_owned(), "domain1".to_owned()],
-	vec!["katy".to_owned(), "group1".to_owned(), "domain1".to_owned()],
-	vec!["leyo".to_owned(), "group1".to_owned(), "domain1".to_owned()],
-	vec!["ham".to_owned(), "group1".to_owned(), "domain1".to_owned()],
+	vec!["ham".to_owned(), "data4_admin".to_owned()],
+	vec!["jack".to_owned(), "data5_admin".to_owned()],
 ];
 
 let are_rules_removed = e.remove_grouping_policies(rules).await?;
@@ -2135,11 +2123,9 @@ For example:
 <!--Go-->
 ```go
 rules := [][] string {
-				[]string {"jack", "data4", "read"},
-				[]string {"katy", "data4", "write"},
-				[]string {"leyo", "data4", "read"},
-				[]string {"ham", "data4", "write"},
-		}
+	[]string {"ham", "data4_admin"},
+	[]string {"jack", "data5_admin"},
+}
 
 areRulesRemoved := e.RemoveNamedGroupingPolicies("g", rules)
 ```
@@ -2166,10 +2152,8 @@ are_rules_removed = e.remove_named_grouping_policies("g", rules)
 <!--Rust-->
 ```rust
 let rules = vec![
-	vec!["jack".to_owned(), "group1".to_owned(), "domain1".to_owned()],
-	vec!["katy".to_owned(), "group1".to_owned(), "domain1".to_owned()],
-	vec!["leyo".to_owned(), "group1".to_owned(), "domain1".to_owned()],
-	vec!["ham".to_owned(), "group1".to_owned(), "domain1".to_owned()],
+	vec!["ham".to_owned(), "data4_admin".to_owned()],
+	vec!["jack".to_owned(), "data5_admin".to_owned()],
 ];
 
 let are_rules_removed = e.remove_named_grouping_policies("g", rules).await?;
