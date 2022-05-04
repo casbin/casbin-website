@@ -829,6 +829,36 @@ List<List<String>> implicitPermissions = e.getImplicitPermissionsForUser("alice"
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
+### `GetNamedImplicitPermissionsForUser()`
+
+GetNamedImplicitPermissionsForUser gets implicit permissions for a user or role by named policy
+Compared to GetImplicitPermissionsForUser(), this function allow you to specify the policy name.
+
+For example:
+p, admin, data1, read
+p2, admin, create
+g, alice, admin
+
+GetImplicitPermissionsForUser("alice") only get: [["admin", "data1", "read"]], whose policy is default "p"
+
+But you can specify the policy as "p2" to get: [["admin", "create"]] by GetNamedImplicitPermissionsForUser("p2","alice")
+
+For example:
+
+<!--DOCUSAURUS_CODE_TABS-->
+
+<!--Go-->
+```go
+e.GetNamedImplicitPermissionsForUser("p2","alice")
+```
+
+<!--Python-->
+```python
+e.get_named_implicit_permissions_for_user("p2", "alice")
+```
+
+<!--END_DOCUSAURUS_CODE_TABS-->
+
 ### `GetDomainsForUser()`
 GetDomainsForUser gets all domains which a user has.
 
