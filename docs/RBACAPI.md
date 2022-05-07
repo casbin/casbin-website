@@ -26,6 +26,11 @@ const e = await newEnforcer('examples/rbac_model.conf', 'examples/rbac_policy.cs
 $e = new Enforcer('examples/rbac_model.conf', 'examples/rbac_policy.csv');
 ```
 
+<!--Python-->
+```python
+e = casbin.Enforcer("examples/rbac_model.conf", "examples/rbac_policy.csv")
+```
+
 <!--.NET-->
 ```csharp
 var e = new Enforcer("path/to/model.conf", "path/to/policy.csv");
@@ -66,6 +71,11 @@ const res = await e.getRolesForUser('alice')
 $res = $e->getRolesForUser("alice");
 ```
 
+<!--Python-->
+```python
+roles = e.get_roles_for_user("alice")
+```
+
 <!--.NET-->
 ```csharp
 var res = e.GetRolesForUser("alice");
@@ -104,6 +114,11 @@ const res = await e.getUsersForRole('data1_admin')
 <!--PHP-->
 ```php
 $res = $e->getUsersForRole("data1_admin");
+```
+
+<!--Python-->
+```python
+users = e.get_users_for_role("data1_admin")
 ```
 
 <!--.NET-->
@@ -645,6 +660,11 @@ await e.getPermissionsForUser('bob')
 $e->getPermissionsForUser("bob");
 ```
 
+<!--Python-->
+```python
+e.get_permissions_for_user("bob")
+```
+
 <!--.NET-->
 ```csharp
 var permissions = e.GetPermissionsForUser("bob");
@@ -729,6 +749,11 @@ await e.getImplicitRolesForUser("alice")
 $e->getImplicitRolesForUser("alice");
 ```
 
+<!--Python-->
+```python
+e.get_implicit_roles_for_user("alice")
+```
+
 <!--.NET-->
 ```csharp
 var implicitRoles = e.GetImplicitRolesForUser("alice");
@@ -810,6 +835,11 @@ await e.getImplicitPermissionsForUser("alice")
 <!--PHP-->
 ```php
 $e->getImplicitPermissionsForUser("alice");
+```
+
+<!--Python-->
+```python
+e.get_implicit_permissions_for_user("alice")
 ```
 
 <!--.NET-->
