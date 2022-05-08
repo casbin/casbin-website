@@ -80,7 +80,7 @@ const siteConfig = {
   copyright:
     'Copyright © ' +
     new Date().getFullYear() +
-    ' Casbin Inc.',
+    ' Casbin Organization',
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
