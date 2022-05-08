@@ -37,8 +37,6 @@ const siteConfig = {
     {href: 'https://forum.casbin.com', label: "Forum"},
     {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
-    {href: 'https://tawk.to/chat/62333c3ca34c2456412b88a7/1fuc26j6b', label: "Pricing & Sales"},
-    {href: 'https://tawk.to/chat/62333c3ca34c2456412b88a7/1fuc26j6b', label: "Contact"},
     {languages: true},
     {search: true},
     {href: 'https://github.com/casbin', label: "GitHub"},
@@ -107,7 +105,7 @@ const siteConfig = {
     '/js/wwads.js',
     '/js/wwads2.js',
     '/js/probe.js',
-    '/js/tawk.js',
+    // '/js/tawk.js',
   ],
   stylesheets: ['/css/code-blocks-buttons.css', '/css/custom.css'],
 
