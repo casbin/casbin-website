@@ -161,6 +161,11 @@ const res = await e.hasRoleForUser('alice', 'data1_admin')
 $res = $e->hasRoleForUser("alice", "data1_admin");
 ```
 
+<!--Python-->
+```python
+has = e.has_role_for_user("alice", "data1_admin")
+```
+
 <!--.NET-->
 ```csharp
 var res = e.HasRoleForUser("alice", "data1_admin");
@@ -200,6 +205,11 @@ await e.addRoleForUser('alice', 'data2_admin')
 <!--PHP-->
 ```PHP
 $e->addRoleForUser("alice", "data2_admin");
+```
+
+<!--Python-->
+```python
+e.add_role_for_user("alice", "data2_admin")
 ```
 
 <!--.NET-->
@@ -276,6 +286,11 @@ await e.deleteRoleForUser('alice', 'data1_admin')
 $e->deleteRoleForUser("alice", "data1_admin");
 ```
 
+<!--Python-->
+```python
+e.delete_role_for_user("alice", "data1_admin")
+```
+
 <!--.NET-->
 ```csharp
 var deleted = e.DeleteRoleForUser("alice", "data1_admin");
@@ -317,6 +332,11 @@ await e.deleteRolesForUser('alice')
 <!--PHP-->
 ```php
 $e->deleteRolesForUser("alice");
+```
+
+<!--Python-->
+```python
+e.delete_roles_for_user("alice")
 ```
 
 <!--.NET-->
@@ -362,6 +382,11 @@ await e.deleteUser('alice')
 $e->deleteUser("alice");
 ```
 
+<!--Python-->
+```python
+e.delete_user("alice")
+```
+
 <!--.NET-->
 ```csharp
 var deleted = e.DeleteUser("alice");
@@ -402,6 +427,11 @@ await e.deleteRole("data2_admin")
 <!--PHP-->
 ```php
 $e->deleteRole("data2_admin");
+```
+
+<!--Python-->
+```python
+e.delete_role("data2_admin")
 ```
 
 <!--.NET-->
@@ -447,6 +477,11 @@ await e.deletePermission('read')
 $e->deletePermission("read");
 ```
 
+<!--Python-->
+```python
+e.delete_permission("read")
+```
+
 <!--.NET-->
 ```csharp
 var deleted = e.DeletePermission("read");
@@ -489,6 +524,11 @@ await e.addPermissionForUser('bob', 'read')
 <!--PHP-->
 ```php
 $e->addPermissionForUser("bob", "read");
+```
+
+<!--Python-->
+```python
+e.add_permission_for_user("bob", "read")
 ```
 
 <!--.NET-->
@@ -574,6 +614,11 @@ await e.deletePermissionForUser("bob", "read")
 $e->deletePermissionForUser("bob", "read");
 ```
 
+<!--Python-->
+```python
+e.delete_permission_for_user("bob", "read")
+```
+
 <!--.NET-->
 ```csharp
 var deleted = e.DeletePermissionForUser("bob", "read");
@@ -616,6 +661,11 @@ await e.deletePermissionsForUser('bob')
 <!--PHP-->
 ```php
 $e->deletePermissionsForUser("bob");
+```
+
+<!--Python-->
+```python
+e.delete_permissions_for_user("bob")
 ```
 
 <!--.NET-->
@@ -698,6 +748,11 @@ await e.hasPermissionForUser('alice', 'read')
 <!--PHP-->
 ```php
 $e->hasPermissionForUser("alice", []string{"read"});
+```
+
+<!--Python-->
+```python
+has = e.has_permission_for_user("alice", "read")
 ```
 
 <!--.NET-->
