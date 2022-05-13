@@ -13,32 +13,37 @@ global variable `e` is Enforcer instance.
 
 <!--Go-->
 ```go
-e, err := NewEnforcer("examples/rbac_model.conf", "examples/rbac_policy.csv")
+e, err := NewEnforcer("examples/rbac_with_domains_model.conf", "examples/rbac_with_domains_policy.csv")
 ```
 
 <!--Node.js-->
 ```typescript
-const e = await newEnforcer('examples/rbac_model.conf', 'examples/rbac_policy.csv')
+const e = await newEnforcer('examples/rbac_with_domains_model.conf', 'examples/rbac_with_domains_policy.csv')
 ```
 
 <!--PHP-->
 ```php
-$e = new Enforcer('examples/rbac_model.conf', 'examples/rbac_policy.csv');
+$e = new Enforcer('examples/rbac_with_domains_model.conf', 'examples/rbac_with_domains_policy.csv');
+```
+
+<!--Python-->
+```python
+e = casbin.Enforcer("examples/rbac_with_domains_model.conf", "examples/rbac_with_domains_policy.csv")
 ```
 
 <!--.NET-->
 ```csharp
-var e = new Enforcer("path/to/model.conf", "path/to/policy.csv");
+var e = new Enforcer("examples/rbac_with_domains_model.conf", "examples/rbac_with_domains_policy.csv");
 ```
 
 <!--Rust-->
 ```rust
-let mut e = Enforcer::new("examples/rbac_model.conf", "examples/rbac_policy.csv").await?;
+let mut e = Enforcer::new("examples/rbac_with_domains_model.conf", "examples/rbac_with_domains_policy.csv").await?;
 ```
 
 <!--Java-->
 ```java
-Enforcer e = new Enforcer("examples/rbac_model.conf", "examples/rbac_policy.csv");
+Enforcer e = new Enforcer("examples/rbac_with_domains_model.conf", "examples/rbac_with_domains_policy.csv");
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -53,12 +58,17 @@ For example:
 
 <!--Go-->
 ```go
-res := e.GetUsersForRoleInDomain("alice", "domain1")
+res := e.GetUsersForRoleInDomain("admin", "domain1")
 ```
 
 <!--Node.js-->
 ```typescript
-const res = e.getUsersForRoleInDomain("alice", "domain1")
+const res = e.getUsersForRoleInDomain("admin", "domain1")
+```
+
+<!--Python-->
+```python
+res = e.get_users_for_role_in_domain("admin", "domain1")
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -79,6 +89,11 @@ res := e.GetRolesForUserInDomain("admin", "domain1")
 <!--Node.js-->
 ```typescript
 const res = e.getRolesForUserInDomain("alice", "domain1")
+```
+
+<!--Python-->
+```python
+res = e.get_roles_for_user_in_domain("alice", "domain1")
 ```
 
 <!--Java-->
@@ -120,6 +135,11 @@ For example:
 <!--Go-->
 ```go
 ok, err := e.AddRoleForUserInDomain("alice", "admin", "domain1")
+```
+
+<!--Python-->
+```python
+ok = e.add_role_for_user_in_domain("alice", "admin", "domain1")
 ```
 
 <!--Java-->
