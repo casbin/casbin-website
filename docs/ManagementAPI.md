@@ -2235,6 +2235,11 @@ updated, err := e.UpdatePolicy([]string{"eve", "data3", "read"}, []string{"eve",
 const update = await e.updatePolicy(["eve", "data3", "read"], ["eve", "data3", "write"]);
 ```
 
+<!--Python-->
+```python
+updated = e.update_policy(["eve", "data3", "read"], ["eve", "data3", "write"])
+```
+
 <!--Java-->
 ```java
 boolean updated = e.updatePolicy(Arrays.asList("eve", "data3", "read"), Arrays.asList("eve", "data3", "write"));
@@ -2253,6 +2258,14 @@ For example:
 <!--Go-->
 ```go
 updated, err := e.UpdatePolicies([][]string{{"eve", "data3", "read"}, {"jack", "data3", "read"}}, [][]string{{"eve", "data3", "write"}, {"jack", "data3", "write"}})
+```
+
+<!--Python-->
+```python
+old_rules = [["eve", "data3", "read"], ["jack", "data3", "read"]]
+new_rules = [["eve", "data3", "write"], ["jack", "data3", "write"]]
+
+updated = e.update_policies(old_rules, new_rules)
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
