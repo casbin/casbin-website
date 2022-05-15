@@ -224,6 +224,36 @@ if err != nil {
 	log.Fatalf("error: enforcer: %s", err)
 }
 ```
+
+<!--Python-->
+```python
+import casbin
+import casbin_sqlalchemy_adapter
+
+
+# Use SQLAlchemy Casbin adapter with SQLLite DB
+adapter = casbin_sqlalchemy_adapter.Adapter('sqlite:///test.db')
+
+# Create a config model policy
+with open("rbac_example_model.conf", "w") as f:
+    f.write("""
+    [request_definition]
+    r = sub, obj, act
+
+    [policy_definition]
+    p = sub, obj, act
+
+    [policy_effect]
+    e = some(where (p.eft == allow))
+
+    [matchers]
+    m = r.sub == p.sub && r.obj == p.obj && r.act == p.act
+    """)
+
+# Create enforcer from adapter and config policy
+e = casbin.Enforcer('rbac_example_model.conf', adapter)
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### Check permissions
