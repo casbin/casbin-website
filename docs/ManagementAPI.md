@@ -97,7 +97,7 @@ $ok = $e->enforcer($request);
 
 <!--Python-->
 ```python
-ok = e.enforcer($request);
+ok = e.enforcer(request)
 ```
 
 <!--Java-->
@@ -127,7 +127,7 @@ $ok = $e->enforceWithMatcher($matcher, $request);
 
 <!--Python-->
 ```python
-ok = e.enforce_with_matcher(matcher, request);
+ok = e.enforce_with_matcher(matcher, request)
 ```
 
 <!--Java-->
@@ -162,7 +162,7 @@ list($ok, $reason) = $e->enforceEx($request);
 
 <!--Python-->
 ```python
-ok, reason = e.enforce_ex(request);
+ok, reason = e.enforce_ex(request)
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -2327,6 +2327,14 @@ func customFunctionWrapper(...$args){
 $e->addFunction("keyMatchCustom", customFunctionWrapper);
 ```
 
+<!--Python-->
+```python
+def custom_function(key1, key2):
+    return ((key1 == "/alice_data2/myid/using/res_id" and key2 == "/alice_data/:resource") or (key1 == "/alice_data2/myid/using/res_id" and key2 == "/alice_data2/:id/using/:resId"))
+
+
+e.add_function("keyMatchCustom", custom_function)
+```
 
 <!--Rust-->
 ```rust
