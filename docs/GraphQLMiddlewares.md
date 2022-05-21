@@ -43,6 +43,6 @@ Middleware | GraphQL Implementation | Author | Description
 <!--Python-->
 Middleware | GraphQL Implementation | Author | Description
 ----|----|----|----
-[graphql-authz](https://github.com/node-casbin/graphql-authz) | [GraphQL-core 3](https://github.com/graphql-python/graphql-core) | [@Checho3388](https://github.com/Checho3388) | A Casbin authorization middleware for [GraphQL-core 3](https://github.com/graphql-python/graphql-core)
+[graphql-authz](https://github.com/Checho3388/graphql-authz) | [GraphQL-core 3](https://github.com/graphql-python/graphql-core) | [@Checho3388](https://github.com/Checho3388) | A Casbin authorization middleware for [GraphQL-core 3](https://github.com/graphql-python/graphql-core)
 
 <!--END_DOCUSAURUS_CODE_TABS-->
