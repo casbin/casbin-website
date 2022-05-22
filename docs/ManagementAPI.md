@@ -2301,8 +2301,18 @@ e.AddFunction("keyMatchCustom", CustomFunctionWrapper)
 ```
 
 <!--Node.js-->
-```text
-Method is not implemented
+```typescript
+function customFunction(key1, key2){
+    if(key1 == "/alice_data2/myid/using/res_id" && key2 == "/alice_data/:resource") {
+        return true
+    } else if(key1 == "/alice_data2/myid/using/res_id" && key2 == "/alice_data2/:id/using/:resId") {
+        return true
+    } else {
+        return false
+    }
+}
+
+e.addFunction("keyMatchCustom", customFunction);
 ```
 
 <!--PHP-->
