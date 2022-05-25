@@ -2407,6 +2407,20 @@ const ok = await e.loadFilteredPolicy();
 e.loadFilteredPolicy(new String[] { "", "domain1" });
 ```
 
+<!--Python-->
+```python
+class Filter:
+    P = []
+    G = []
+
+adapter = casbin.persist.adapters.FilteredAdapter("rbac_with_domains_policy.csv")
+e = casbin.Enforcer("rbac_with_domains_model.conf", adapter)
+filter = Filter()
+filter.P = ["", "domain1"]
+filter.G = ["", "", "domain1"]
+e.load_filtered_policy(filter)
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `LoadIncrementalFilteredPolicy()`
