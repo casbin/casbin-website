@@ -90,6 +90,11 @@ For example:
     const rm = await e.getRoleManager();
 ```
 
+<!--Python-->
+```python
+    rm = e.get_role_manager()
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `Clear()`
@@ -195,6 +200,11 @@ For example:
     await rm.getRoles('u1', 'domain1');
 ```
 
+<!--Python-->
+```python
+    rm.get_roles("u1", "domain")
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `GetUsers()`
@@ -214,6 +224,11 @@ For example:
 <!--Node.js-->
 ```typescript
     await rm.getUsers('g1');
+```
+
+<!--Python-->
+```python
+    rm.get_users("g1")
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
