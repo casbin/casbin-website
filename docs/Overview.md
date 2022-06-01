@@ -19,7 +19,7 @@ production-ready | production-ready | production-ready | production-ready
 
 ## Feature set for different languages
 
-Feature | Go | Java | Node.js | PHP | Python | C# | Delphi | Rust | C++ | Lua |Dart | Exilir
+Feature | Go | Java | Node.js | PHP | Python | C# | Delphi | Rust | C++ | Lua |Dart | Elixir
 ----|----|----|----|----|----|----|----|----|---- | ---- | ---- | ---- 
 Enforcement | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅|✅|✅|✅
 RBAC | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅|✅|✅|✅
