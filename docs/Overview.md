@@ -3,9 +3,18 @@ id: overview
 title: Overview
 ---
 
-Casbin is a powerful and efficient open-source access control library. It provides support for enforcing authorization based on various access control models.
+Casbin is a powerful and efficient open-source access control library that supports various 
+[access control models](https://en.wikipedia.org/wiki/Access_control#Access_control_models)
+for enforcing authorization across the board.
 
-## All the languages supported by Casbin:
+Enforcing a set of rules is as simple as listing down subjects, objects and the
+desired allowed action (or any other format as per your needs) in a *_policy_* file.
+This is synonymous across all flows Casbin is used in. The developer/administrator has the 
+complete control over the layout, execution and conditions for authorization 
+which is set via the *_model_* file. Casbin provides an *_Enforcer_* for 
+validating an incoming request based on the policy and model files given to the Enforcer.
+
+## Languages supported by Casbin:
 
 [![golang](https://casbin.org/img/langs/golang.png)](https://github.com/casbin/casbin) | [![java](https://casbin.org/img/langs/java.png)](https://github.com/casbin/jcasbin) | [![nodejs](https://casbin.org/img/langs/nodejs.png)](https://github.com/casbin/node-casbin) | [![php](https://casbin.org/img/langs/php.png)](https://github.com/php-casbin/php-casbin)
 ----|----|----|----
@@ -17,25 +26,30 @@ production-ready | production-ready | production-ready | production-ready
 [PyCasbin](https://github.com/casbin/pycasbin) | [Casbin.NET](https://github.com/casbin/Casbin.NET) | [Casbin-CPP](https://github.com/casbin/casbin-cpp) | [Casbin-RS](https://github.com/casbin/casbin-rs)
 production-ready | production-ready | production-ready | production-ready
 
-## Feature set for different languages
+### Feature set for different languages
 
-Feature | Go | Java | Node.js | PHP | Python | C# | Delphi | Rust | C++ | Lua |Dart | Elixir
-----|----|----|----|----|----|----|----|----|---- | ---- | ---- | ---- 
-Enforcement | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅|✅|✅|✅
-RBAC | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅|✅|✅|✅
-ABAC | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅|✅|✅|✅
-Scaling ABAC (`eval()`) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅|✅|✅|✅
-Adapter | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅|✅|✅|❌
-Management API | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅|✅|✅|✅
-RBAC API | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅|✅|✅|✅
-Batch API | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅|✅|❌|❌
-Filtered Adapter | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅|✅|❌|❌
-Watcher | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅|✅|❌|❌
-Role Manager | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | ✅|✅|✅|❌
-Multi-Threading | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ❌ | ✅ | ❌|❌|❌|❌
-'in' of matcher | ✅ | ✅ | ✅  | ✅ | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ | ✅ | ✅
+We are always working our best to make Casbin have the same set of features for all 
+languages. But the reality is not that beautiful.
 
-We are always working our best to make Casbin have the same set of features for all languages. But the reality is not that beautiful. The current progress is as the above table. ✅ for Watcher or Role Manager only means having the interface in the core library. Whether there is an available watcher or role manager implementation is another question.
+Feature                 | Go   | Java | Node.js | PHP  | Python | C#   | Delphi | Rust | C++ | Lua  |Dart  | Elixir
+:---                    | :--: | :--: | :--:    | :--: | :--:   | :--: | :--:   | :--: | :--:| :--: | :--: | :--: 
+Enforcement             | ✅   | ✅    | ✅      | ✅   | ✅      | ✅   | ✅     | ✅    | ✅  | ✅   | ✅    | ✅
+RBAC                    | ✅   | ✅    | ✅      | ✅   | ✅      | ✅   | ✅     | ✅    | ✅  | ✅   | ✅    | ✅
+ABAC                    | ✅   | ✅    | ✅      | ✅   | ✅      | ✅   | ✅     | ✅    | ✅  | ✅   | ✅    | ✅
+Scaling ABAC (`eval()`) | ✅   | ✅    | ✅      | ✅   | ✅      | ✅   | ❌     | ✅    | ✅  | ✅   | ✅    | ✅
+Adapter                 | ✅   | ✅    | ✅      | ✅   | ✅      | ✅   | ✅     | ✅    | ✅  | ✅   | ✅    | ❌
+Management API          | ✅   | ✅    | ✅      | ✅   | ✅      | ✅   | ✅     | ✅    | ✅  | ✅   | ✅    | ✅
+RBAC API                | ✅   | ✅    | ✅      | ✅   | ✅      | ✅   | ✅     | ✅    | ✅  | ✅   | ✅    | ✅
+Batch API               | ✅   | ✅    | ✅      | ✅   | ✅      | ✅   | ❌     | ✅    | ✅  | ✅   | ❌    | ❌
+Filtered Adapter        | ✅   | ✅    | ✅      | ✅   | ✅      | ✅   | ❌     | ✅    | ✅  | ✅   | ❌    | ❌
+Watcher                 | ✅   | ✅    | ✅      | ✅   | ✅      | ✅   | ✅     | ✅    | ✅  | ✅   | ❌    | ❌
+Role Manager            | ✅   | ✅    | ✅      | ✅   | ✅      | ✅   | ❌     | ✅    | ✅  | ✅   | ✅    | ❌
+Multi-Threading         | ✅   | ✅    | ✅      | ❌   | ✅      | ✅   | ❌     | ✅    | ❌  | ❌   | ❌    | ❌
+'in' of matcher         | ✅   | ✅    | ❌      | ✅   | ✅      | ❌   | ✅     | ❌    | ❌  | ❌   | ✅    | ✅
+
+**Note**- ✅ for Watcher or Role Manager 
+only means having the interface in the core library. It is not indicative of whether 
+there is a watcher or role manager implementation available.
 
 ## What is Casbin?
 
