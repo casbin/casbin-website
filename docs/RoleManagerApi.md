@@ -116,6 +116,11 @@ For example:
     await rm.clear();
 ```
 
+<!--Python-->
+```python
+    rm.clear()
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ### `AddLink()`
@@ -135,6 +140,11 @@ For example:
 <!--Node.js-->
 ```typescript
     await rm.addLink('u1', 'g1', 'domain1');
+```
+
+<!--Python-->
+```python
+    rm.add_link("u1", "g1", "domain1")
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -158,6 +168,11 @@ For example:
     await rm.deleteLink('u1', 'g1', 'domain1');
 ```
 
+<!--Python-->
+```python
+    rm.delete_link("u1", "g1", "domain1")
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 ###	`HasLink()`
@@ -177,6 +192,11 @@ For example:
 <!--Node.js-->
 ```typescript
     await rm.hasLink('u1', 'g1', 'domain1');
+```
+
+<!--Python-->
+```python
+    rm.has_link("u1", "g1", "domain1")
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
@@ -249,6 +269,11 @@ For example:
 <!--Node.js-->
 ```typescript
     await rm.printRoles();
+```
+
+<!--Python-->
+```python
+    rm.print_roles()
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
