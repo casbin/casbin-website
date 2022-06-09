@@ -125,22 +125,22 @@ const Features = props => (
   <Block layout="fourColumn">
     {[
       {
-        content: 'In Casbin, an access control model is abstracted into a CONF file based on the PERM metamodel (Policy, Effect, Request, Matchers). So switching or upgrading the authorization mechanism for a project is just as simple as modifying a configuration.',
+        content: <translate>In Casbin, an access control model is abstracted into a CONF file based on the PERM metamodel (Policy, Effect, Request, Matchers). So switching or upgrading the authorization mechanism for a project is just as simple as modifying a configuration.</translate>,
         image: imgUrl('model.png'),
         imageAlign: 'top',
-        title: 'Hybrid access control models',
+        title: <translate>Hybrid access control models</translate>,
       },
       {
-        content: 'Besides memory and file, Casbin policy can be stored into lots of places. Currently, dozens of databases are supported, from MySQL, Postgres, Oracle to MongoDB, Redis, Cassandra, AWS S3. Check the full supported list at: https://casbin.org/docs/en/adapters',
+        content: <translate>Besides memory and file, Casbin policy can be stored into lots of places. Currently, dozens of databases are supported, from MySQL, Postgres, Oracle to MongoDB, Redis, Cassandra, AWS S3. Check the full supported list at: https://casbin.org/docs/en/adapters</translate>,
         image: imgUrl('storage.png'),
         imageAlign: 'top',
-        title: 'Flexible policy storage',
+        title: <translate>Flexible policy storage</translate>,
       },
       {
-        content: 'Casbin is implemented in Golang, Java, PHP and Node.js. All implementations share the same API and behaviors. You can learn Casbin once and use it everywhere.',
+        content: <translate>Casbin is implemented in Golang, Java, PHP and Node.js. All implementations share the same API and behaviors. You can learn Casbin once and use it everywhere.</translate>,
         image: imgUrl('language.png'),
         imageAlign: 'top',
-        title: 'Cross-languages & cross-platforms',
+        title: <translate>Cross-languages & cross-platforms</translate>,
       },
     ]}
   </Block>
@@ -159,10 +159,10 @@ const LearnHow = props => (
   <Block background="light">
     {[
       {
-        content: 'In Casbin, the policy storage is implemented as an adapter(aka middleware for Casbin). To keep light-weight, we don\'t put adapter code in the main library (except the default file adapter). A complete list of Casbin adapters is provided as below. Any 3rd-party contribution on a new adapter is welcomed, please inform us and I will put it in this list:) For details of adapters, please refer to the documentation: https://casbin.org/docs/en/adapters',
+        content: <translate>In Casbin, the policy storage is implemented as an adapter(aka middleware for Casbin). To keep light-weight, we don\'t put adapter code in the main library (except the default file adapter). A complete list of Casbin adapters is provided as below. Any 3rd-party contribution on a new adapter is welcomed, please inform us and I will put it in this list:) For details of adapters, please refer to the documentation: https://casbin.org/docs/en/adapters</translate>,
         image: imgUrl('store.png'),
         imageAlign: 'right',
-        title: 'Policy persistence',
+        title: <translate>Policy persistence</translate>,
       },
     ]}
   </Block>
@@ -172,14 +172,15 @@ const TryOut = props => (
   <Block id="try">
     {[
       {
-        content: 'Some adapters support filtered policy management. This means that the policy loaded by Casbin is a subset of the policy in storage based on a given filter. This allows for efficient policy enforcement in large, multi-tenant environments when parsing the entire policy becomes a performance bottleneck.\n' +
-          '\n' +
-          'To use filtered policies with a supported adapter, simply call the `LoadFilteredPolicy` method. The valid format for the filter parameter depends on the adapter used. To prevent accidental data loss, the `SavePolicy` method is disabled when a filtered policy is loaded.\n' +
-          '\n' +
-          'For example, the following code snippet uses the built-in filtered file adapter and the RBAC model with domains. In this case, the filter limits the policy to a single domain. Any policy lines for domains other than `"domain1"` are omitted from the loaded policy:\n',
+        content: <translate>Some adapters support filtered policy management. This means that the policy loaded by Casbin is a subset of the policy in storage based on a given filter. This allows for efficient policy enforcement in large, multi-tenant environments when parsing the entire policy becomes a performance bottleneck.</translate> +
+          '\n\n' +
+          <translate>To use filtered policies with a supported adapter, simply call the `LoadFilteredPolicy` method. The valid format for the filter parameter depends on the adapter used. To prevent accidental data loss, the `SavePolicy` method is disabled when a filtered policy is loaded.</translate> +
+          '\n\n' +
+          <translate>For example, the following code snippet uses the built-in filtered file adapter and the RBAC model with domains. In this case, the filter limits the policy to a single domain. Any policy lines for domains other than `"domain1"` are omitted from the loaded policy:</translate> +
+          '\n',
         image: imgUrl('scale.png'),
         imageAlign: 'left',
-        title: 'Policy enforcement at scale',
+        title: <translate>Policy enforcement at scale</translate>,
       },
     ]}
   </Block>
@@ -189,10 +190,10 @@ const Description = props => (
   <Block background="light">
     {[
       {
-        content: 'The role manager is used to manage the RBAC role hierarchy (user-role mapping) in Casbin. A role manager can retrieve the role data from Casbin policy rules or external sources such as LDAP, Okta, Auth0, Azure AD, etc. We support different implementations of a role manager. To keep light-weight, we don\'t put role manager code in the main library (except the default role manager). A complete list of Casbin role managers is provided as: https://casbin.org/docs/en/role-managers\n',
+        content: <translate>The role manager is used to manage the RBAC role hierarchy (user-role mapping) in Casbin. A role manager can retrieve the role data from Casbin policy rules or external sources such as LDAP, Okta, Auth0, Azure AD, etc. We support different implementations of a role manager. To keep light-weight, we don\'t put role manager code in the main library (except the default role manager). A complete list of Casbin role managers is provided as: https://casbin.org/docs/en/role-managers</translate> + '\n',
         image: imgUrl('role.png'),
         imageAlign: 'right',
-        title: 'Role manager',
+        title: <translate>Role manager</translate>,
       },
     ]}
   </Block>
@@ -241,7 +242,7 @@ class Index extends React.Component {
         <div className="announcement">
           <div className="announcement-inner">
             <a style={{color: "white"}} href="https://casdoor.org" target="_blank">
-              💖 Looking for an open-source identity and access management solution like Okta, Auth0, Keycloak ? Learn more about: Casdoor
+              <translate>💖 Looking for an open-source identity and access management solution like Okta, Auth0, Keycloak ? Learn more about: Casdoor</translate>
             </a>
           </div>
         </div>

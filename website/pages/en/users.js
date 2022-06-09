@@ -36,7 +36,7 @@ class Users extends React.Component {
                 <translate>Who's using Casbin?</translate>
               </h1>
               <p>
-                <translate>Hundreds of projects are using Casbin, from established Fortune 500 companies to hot new startups. If you&#x27;re curious to see what can be accomplished Casbin, check out these apps!</translate>
+                <translate>Hundreds of projects are using Casbin, from established Fortune 500 companies to hot new startups. If you&#x27;re curious to see what can be accomplished with Casbin, check out these apps!</translate>
               </p>
             </div>
             <div className="logos">{showcase}</div>
