@@ -62,7 +62,8 @@ const ProjectTitle = props => (
   <h2 className="projectTitle">
     {siteConfig.title}
     <small>
-      {siteConfig.tagline}
+        {/* {siteConfig.tagline} */}
+        <translate desc="siteConfig.tagline">An authorization library that supports access control models like ACL, RBAC, ABAC for Golang, Java, C/C++, Node.js, Javascript, PHP, Laravel, Python, .NET (C#), Delphi, Rust, Ruby, Swift (Objective-C), Lua (OpenResty), Dart (Flutter) and Elixir</translate>
     </small>
   </h2>
 );
