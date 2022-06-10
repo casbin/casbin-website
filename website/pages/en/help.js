@@ -23,23 +23,32 @@ class Help extends React.Component {
     let language = this.props.language || '';
     const supportLinks = [
       {
-        title: 'Forum',
-        content: `Discuss with maintainers or share your experience about Casbin on [Casbin Forum](https://forum.casbin.com/).`,
+        title: <translate>Forum</translate>,
+        content: 
+          <translate>
+            Discuss with maintainers or share your experience about Casbin on [Casbin Forum](https://forum.casbin.com/).
+          </translate>,
       },
       {
-        title: 'Gitter',
+        title: <translate>Gitter</translate>,
         content:
-          'You can join the conversation on [Gitter](https://gitter.im/casbin/Lobby) for contributing help.',
+          <translate>
+            You can join the conversation on [Gitter](https://gitter.im/casbin/Lobby) for contributing help.
+          </translate>,
       },
       {
-        title: 'Tencent QQ',
+        title: <translate>Tencent QQ</translate>,
         content:
-          'You can contact us by joining the QQ group: [546057381](https://shang.qq.com/wpa/qunwpa?idkey=8ac8b91fc97ace3d383d0035f7aa06f7d670fd8e8d4837347354a31c18fac885).',
+          <translate>
+            You can contact us by joining the QQ group: [546057381](https://shang.qq.com/wpa/qunwpa?idkey=8ac8b91fc97ace3d383d0035f7aa06f7d670fd8e8d4837347354a31c18fac885).
+          </translate>,
       },
       {
-        title: 'GitHub',
-        content:
-          'At our [GitHub repo](https://github.com/casbin/casbin), browse and submit [issues](https://github.com/casbin/casbin/issues) or [pull requests](https://github.com/casbin/casbin/pulls) for bugs you find or any new features you may want implemented.',
+        title: <translate>GitHub</translate>,
+        content: 
+          <translate>
+            At our [GitHub repo](https://github.com/casbin/casbin), browse and submit [issues](https://github.com/casbin/casbin/issues) or [pull requests](https://github.com/casbin/casbin/pulls) for bugs you find or any new features you may want implemented.
+          </translate>,
       },
     ];
 
