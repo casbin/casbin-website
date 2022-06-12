@@ -29,6 +29,13 @@ MatchingFunc will work when operating role matching.
     await e.getRoleManager().hasLink('bob', 'admin', 'domain1');
 ```
 
+<!--Python-->
+```python
+    e.add_named_matching_func("g", casbin.util.glob_match)
+    are_rules_added = e.add_grouping_policies([['*', 'admin', 'domain1']])
+    e.get_role_manager().has_link('bob', 'admin', 'domain1')
+```
+
 <!--END_DOCUSAURUS_CODE_TABS-->
 
 For example:
@@ -45,6 +52,12 @@ For example:
 ```typescript
     const e = await newEnforcer('path/to/model', 'path/to/policy');
     await e.addNamedMatchingFunc('g', Util.keyMatchFunc);
+```
+
+<!--Python-->
+```python
+    e = casbin.Enforcer("path/to/model", "path/to/policy")
+    e.add_named_matching_func("g", casbin.util.glob_match)
 ```
 
 <!--END_DOCUSAURUS_CODE_TABS-->
