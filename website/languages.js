@@ -33,6 +33,11 @@ const languages = [
   },
   {
     enabled: true,
+    name: 'Deutsch',
+    tag: 'de',
+  },
+  {
+    enabled: true,
     name: '日本語',
     tag: 'ja',
   },
