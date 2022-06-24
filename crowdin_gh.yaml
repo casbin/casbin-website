@@ -14,6 +14,7 @@ files:
         'ko': 'ko'
         'ru': 'ru'
         'fr': 'fr'
+        'de': 'de'
         'ja': 'ja'
   -
     source: '/website/i18n/en.json'
