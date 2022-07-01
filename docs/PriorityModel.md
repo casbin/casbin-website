@@ -19,7 +19,38 @@ e = priority(p.eft) || deny
 
 > Also see: [casbin#550](https://github.com/casbin/casbin/issues/550)
 
-The priority token name in policy definition must be "priority", and the smaller priority value will has higher priority. If there's non-numerical character in priority, it will be in the last, rather than throw an error.
+
+
+The smaller priority value will have a higher priority. If there's a non-numerical character in priority, it will be in the last, rather than throw an error.
+
+The priority token name in policy definition is  "priority" conventionally. A customized one requires invoking `e.SetFieldIndex()` and reload policies (full example on [TestCustomizedFieldIndex](https://github.com/casbin/casbin/pull/1044) ).
+
+model.conf:
+
+```ini
+[policy_definition]
+p = customized_priority, sub, obj, act, eft
+
+```
+
+Golnag code example:
+
+```golang
+	e, _ := NewEnforcer("./example/priority_model_explicit_customized.conf",
+		"./example/priority_policy_explicit_customized.csv")
+
+	// Due to the customized priority token, the enforcer failed to handle the priority.
+	ok, err := e.Enforce("bob", "data2", "read") // the result will be `true, nil`
+
+	// set PriorityIndex and reload
+	e.SetFieldIndex("p", constant.PriorityIndex, 0)
+	err := e.LoadPolicy()
+	if err != nil {
+		log.Fatalf("LoadPolicy: %v", err)
+	}
+	ok, err := e.Enforce("bob", "data2", "read") // the result will be `false, nil`
+```
+
 Now, explicit priority only support `AddPolicy` & `AddPolicies`, if `UpdatePolicy` been called, you shouldn't change the priority attribute.
 
 model.conf:
