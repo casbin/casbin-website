@@ -102,8 +102,6 @@ const siteConfig = {
     '/js/hotjar.js',
     '/js/gitter.js',
     'https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js',
-    '/js/wwads.js',
-    '/js/wwads2.js',
     '/js/probe.js',
     // '/js/tawk.js',
   ],
