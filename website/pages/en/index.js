@@ -243,7 +243,7 @@ class Index extends React.Component {
         <div className="announcement">
           <div className="announcement-inner">
             <a style={{color: "yellow"}} href="https://casbin.io" target="_blank">
-              <translate>Please visit the new docs site: casbin.io</translate>
+              <translate>Casbin docs got a new home: visit casbin.io now!</translate>
             </a>
             <br/>
             <a style={{color: "white"}} href="https://casdoor.org" target="_blank">
