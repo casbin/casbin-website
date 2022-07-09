@@ -10,9 +10,12 @@ To use filtered policies with a supported adapter, simply call the `LoadFiltered
 For example, the following code snippet uses the built-in filtered file adapter and the RBAC model with domains. In this case, the filter limits the policy to a single domain. Any policy lines for domains other than `"domain1"` are omitted from the loaded policy:
 
 ```go
-import "github.com/casbin/casbin"
+import (
+    "github.com/casbin/casbin/v2"
+    fileadapter "github.com/casbin/casbin/v2/persist/file-adapter"
+)
 
-enforcer := casbin.NewEnforcer()
+enforcer, _ := casbin.NewEnforcer()
 
 adapter := fileadapter.NewFilteredAdapter("examples/rbac_with_domains_policy.csv")
 enforcer.InitWithAdapter("examples/rbac_with_domains_model.conf", adapter)
