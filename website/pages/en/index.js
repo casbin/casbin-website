@@ -242,6 +242,10 @@ class Index extends React.Component {
       <div>
         <div className="announcement">
           <div className="announcement-inner">
+            <a style={{color: "yellow"}} href="https://casbin.io" target="_blank">
+              <translate>Please visit the new docs site: casbin.io</translate>
+            </a>
+            <br/>
             <a style={{color: "white"}} href="https://casdoor.org" target="_blank">
               <translate>💖 Looking for an open-source identity and access management solution like Okta, Auth0, Keycloak ? Learn more about: Casdoor</translate>
             </a>
