@@ -103,7 +103,7 @@ const siteConfig = {
     '/js/gitter.js',
     'https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js',
     '/js/probe.js',
-    // '/js/tawk.js',
+    '/js/tawk.js',
   ],
   stylesheets: ['/css/code-blocks-buttons.css', '/css/custom.css'],
 
