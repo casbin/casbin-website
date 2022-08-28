@@ -75,7 +75,7 @@ a:hover {
 }
 
 .announcementBar {
-    background-color: #20232a;
+    background-color: #1b1b1d;
     font-weight: bold;
     font-size: 24px;
     text-align: center;
@@ -89,6 +89,20 @@ a:hover {
     margin: 0 auto;
     max-width: 768px;
     line-height: 30px;
+}
+
+.announcementBar-inner a{
+    display: inline;
+}
+
+.bannerText {
+    background: linear-gradient(45deg, #399cff, #00c775 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bannerText:hover {
+    border-bottom: solid 2px;
 }
 
 @media only screen and (min-width: 1024px) {

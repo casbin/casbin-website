@@ -9,9 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
         announcementBar.className = 'announcementBar';
         announcementBar.innerHTML =
             `<div class="announcementBar-inner">
-                <a style="color: #FFEB3B;" href="https://casbin.io" target="_blank">
+                🎉
+                <a class="bannerText" href="https://casbin.io" target="_blank">
                     Casbin docs got a new home: visit casbin.io now!
                 </a>
+                🥳
             </div>`;
         container.insertBefore(announcementBar, container.firstChild);
     }
