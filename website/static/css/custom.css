@@ -129,6 +129,6 @@ a:hover {
     }
 }
 
-iframe[sandbox]:not([sandbox=""]) {
+#disqus_thread>iframe[sandbox]:not([sandbox=""]) {
     display: none !important;
 }
