@@ -128,3 +128,7 @@ a:hover {
         height: 60px;
     }
 }
+
+iframe[sandbox]:not([sandbox=""]) {
+    display: none !important;
+}
