@@ -37,6 +37,8 @@ const siteConfig = {
     {href: 'https://forum.casbin.com', label: "Forum"},
     {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
+    {href: 'https://casdoor.com/#pricing', label: "Pricing"},
+    {href: 'https://tawk.to/chat/62333c3ca34c2456412b88a7/1fuc26j6b', label: "Contact Sales"},
     {languages: true},
     {search: true},
     {href: 'https://github.com/casbin', label: "GitHub"},

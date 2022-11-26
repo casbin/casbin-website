@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
         announcementBar.innerHTML =
             `<div class="announcementBar-inner">
                 🎉
-                <a class="bannerText" href="https://casbin.io" target="_blank">
-                    Casbin docs got a new home: visit casbin.io now!
+                <a class="bannerText" href="https://casbin.org">
+                    Visit the new Casbin docs at: casbin.org now!
                 </a>
                 🥳
             </div>`;
