@@ -33,9 +33,9 @@ service Authorization {
 From the above proto file, we have to use `Check()` service in the authorization server.
 
 ## Usage
-- Define the Casbin policies under config files by following this [guide](https://casbin.org/docs/en/how-it-works).
+- Define the Casbin policies under config files by following this [guide](/docs/en/how-it-works).
 
-You can verify/test your policies on online [casbin-editor](https://casbin.org/editor/).
+You can verify/test your policies on online [casbin-editor](/editor/).
 
 - Start the authorizing server by running:-
 ```

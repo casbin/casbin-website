@@ -25,12 +25,12 @@ As shown above, after you create the ``enforcer`` instance, you need to activate
 
 :::note
 If you use the online editor, it specifies the pattern matching function in the lower left corner.
-![editor-tips](https://casbin.org/img/editor-tips.png)
+![editor-tips](/img/editor-tips.png)
 :::
 
 ## Use pattern matching in RBAC
 
-Sometimes, you want some subjects, object or domains/tenants with the specific pattern to be automatically granted to a role. Pattern matching functions in RBAC can help you do that. A pattern matching function shares the same parameters and return value as the previous [matcher function](https://casbin.org/docs/en/syntax-for-models#functions-in-matchers).
+Sometimes, you want some subjects, object or domains/tenants with the specific pattern to be automatically granted to a role. Pattern matching functions in RBAC can help you do that. A pattern matching function shares the same parameters and return value as the previous [matcher function](/docs/en/syntax-for-models#functions-in-matchers).
 
 The pattern matching function supports each parameter of g.
 
@@ -86,7 +86,7 @@ await e.addNamedDomainMatchingFunc('g', Util.keyMatch2Func);
 
 <!--END_DOCUSAURUS_CODE_TABS-->
 
-If you don't understand what `g(r.sub, p.sub, r.dom)` means, please read [rbac-with-domains](https://casbin.org/docs/en/rbac-with-domains). In short, `g(r.sub, p.sub, r.dom)` will check whether the user `r.sub` has a role `p.sub` in the domain `r.dom`. So this is how the matcher work. You can see the full example [here](https://github.com/casbin/casbin/blob/dbdb6cbe2e7a80863e4951f9ff36da07fef01b75/model_test.go#L278-L307). 
+If you don't understand what `g(r.sub, p.sub, r.dom)` means, please read [rbac-with-domains](/docs/en/rbac-with-domains). In short, `g(r.sub, p.sub, r.dom)` will check whether the user `r.sub` has a role `p.sub` in the domain `r.dom`. So this is how the matcher work. You can see the full example [here](https://github.com/casbin/casbin/blob/dbdb6cbe2e7a80863e4951f9ff36da07fef01b75/model_test.go#L278-L307). 
 
 Apart from the pattern matching syntax above, we can also use pure domain pattern.
 
