@@ -3,11 +3,11 @@ id: api-overview
 title: API Overview
 ---
 
-This overview only shows you how to use Casbin APIs and doesn't explain how Casbin is installed and how it works. You can find those tutorials here: [installation of Casbin](https://casbin.org/docs/en/get-started) and [how Casbin works](https://casbin.org/docs/en/how-it-works). So, when you start reading this tutorial, we assume that you have fully installed and imported Casbin into your code.
+This overview only shows you how to use Casbin APIs and doesn't explain how Casbin is installed and how it works. You can find those tutorials here: [installation of Casbin](/docs/en/get-started) and [how Casbin works](/docs/en/how-it-works). So, when you start reading this tutorial, we assume that you have fully installed and imported Casbin into your code.
 
 ## Enforce API
 
-Let's start at the Enforce APIs of Casbin. We will load a RBAC model from `model.conf`, and load policies from `policy.csv`. You can learn the Model syntax [here](https://casbin.org/docs/en/syntax-for-models), and we won't talk about it in this tutorial. We assume that you can understand the config files given below:
+Let's start at the Enforce APIs of Casbin. We will load a RBAC model from `model.conf`, and load policies from `policy.csv`. You can learn the Model syntax [here](/docs/en/syntax-for-models), and we won't talk about it in this tutorial. We assume that you can understand the config files given below:
 
 `model.conf`
 
@@ -180,7 +180,7 @@ Same operations also useful to `GroupingPolicy, NamedGroupingPolicy`.
 
 Casbin provided come APIs for you to modify the RBAC model and policies. If you are familiar with RBAC, you can use these APIs easily.
 
-Here we only show you how to use RBAC APIs of Casbin and won't talk about RBAC itself. You can get more details [here](https://casbin.org/docs/en/rbac).
+Here we only show you how to use RBAC APIs of Casbin and won't talk about RBAC itself. You can get more details [here](/docs/en/rbac).
 
 We use this code to load model and policies just like before.
 
@@ -224,4 +224,4 @@ fmt.Println(enforcer.Enforce("alice", "data1", "read")) // false
 
 And use `DeletePermissionForUser()` to delete a permission for a user.
 
-Casbin have a lot of APIs like this. Their call methods and return values have the same style as the above APIs. You can find these APIs in [next documents](https://casbin.org/docs/en/rbac-api).
+Casbin have a lot of APIs like this. Their call methods and return values have the same style as the above APIs. You can find these APIs in [next documents](/docs/en/rbac-api).

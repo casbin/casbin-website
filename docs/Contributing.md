@@ -9,12 +9,12 @@ Currently, there are mainly two types of projects.
 
 * **Algorithms oriented**——First kind of projects are algorithms related projects for different language implementations, include most of the mainstream programming languages ranging from Golang, Java, C++ to Elixir, Dart and Rust, and their peripheral products.
 
-[![golang](https://casbin.org/img/langs/golang.png)](https://github.com/casbin/casbin) | [![java](https://casbin.org/img/langs/java.png)](https://github.com/casbin/jcasbin) | [![nodejs](https://casbin.org/img/langs/nodejs.png)](https://github.com/casbin/node-casbin) | [![php](https://casbin.org/img/langs/php.png)](https://github.com/php-casbin/php-casbin)
+[![golang](/img/langs/golang.png)](https://github.com/casbin/casbin) | [![java](/img/langs/java.png)](https://github.com/casbin/jcasbin) | [![nodejs](/img/langs/nodejs.png)](https://github.com/casbin/node-casbin) | [![php](/img/langs/php.png)](https://github.com/php-casbin/php-casbin)
 ----|----|----|----
 [Casbin](https://github.com/casbin/casbin) | [jCasbin](https://github.com/casbin/jcasbin) | [node-Casbin](https://github.com/casbin/node-casbin) | [PHP-Casbin](https://github.com/php-casbin/php-casbin)
 production-ready | production-ready | production-ready | production-ready
 
-[![python](https://casbin.org/img/langs/python.png)](https://github.com/casbin/pycasbin) | [![dotnet](https://casbin.org/img/langs/dotnet.png)](https://github.com/casbin/Casbin.NET) | [![c++](https://casbin.org/img/langs/cpp.png)](https://github.com/casbin/casbin-cpp) | [![rust](https://casbin.org/img/langs/rust.png)](https://github.com/casbin/casbin-rs)
+[![python](/img/langs/python.png)](https://github.com/casbin/pycasbin) | [![dotnet](/img/langs/dotnet.png)](https://github.com/casbin/Casbin.NET) | [![c++](/img/langs/cpp.png)](https://github.com/casbin/casbin-cpp) | [![rust](/img/langs/rust.png)](https://github.com/casbin/casbin-rs)
 ----|----|----|----
 [PyCasbin](https://github.com/casbin/pycasbin) | [Casbin.NET](https://github.com/casbin/Casbin.NET) | [Casbin-CPP](https://github.com/casbin/casbin-cpp) | [Casbin-RS](https://github.com/casbin/casbin-rs)
 production-ready | production-ready | production-ready | production-ready
@@ -26,7 +26,7 @@ production-ready | production-ready | production-ready | production-ready
 | [Casdoor](https://github.com/casdoor/casdoor) | [Casdoor](https://door.casdoor.com/) | Casdoor is UI-first centralized authentication / Single-Sign-On (SSO) platform based on OAuth 2.0 / OIDC | JavaScript + React and Golang + Beego + SQL |
 | [Casnode](https://github.com/casbin/casnode) | [Casbin Forum](https://forum.casbin.com) | Casnode is next generation forum software | JavaScript + React and Golang + Beego + SQL |
 | [Casbin OA](https://github.com/casbin/casbin-oa) | [OA system](https://oa.casbin.com) | Casbin-OA is An official manuscript processing, evaluation and display system for Casbin technical writers | JavaScript + React and Golang + Beego + MySQL |
-| [Casbin Editor](https://github.com/casbin/casbin-editor) | [Casbin Editor](https://casbin.org/casbin-editor) | Casbin-editor is a web-based Casbin model and policy editor | TypeScript + React |
+| [Casbin Editor](https://github.com/casbin/casbin-editor) | [Casbin Editor](/casbin-editor) | Casbin-editor is a web-based Casbin model and policy editor | TypeScript + React |
 
 ## Get involved
 

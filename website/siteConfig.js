@@ -14,7 +14,7 @@ const users = require('./data/users');
 const siteConfig = {
   title: 'Casbin' /* title for your website */,
   tagline: 'An authorization library that supports access control models like ACL, RBAC, ABAC for Golang, Java, C/C++, Node.js, Javascript, PHP, Laravel, Python, .NET (C#), Delphi, Rust, Ruby, Swift (Objective-C), Lua (OpenResty), Dart (Flutter) and Elixir',
-  url: 'https://casbin.org' /* your website url */,
+  url: 'https://v1.casbin.org' /* your website url */,
   baseUrl: '/' /* base url for your project */,
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
@@ -113,7 +113,7 @@ const siteConfig = {
   /* On page navigation for the current documentation page */
   onPageNav: 'separate',
 
-  cname: 'casbin.org',
+  cname: 'v1.casbin.org',
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...

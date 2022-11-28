@@ -1,5 +1,5 @@
-# [casbin.org](https://casbin.org/) [![Build Status](https://img.shields.io/github/workflow/status/casbin/casbin-website/Node.js%20CI)](https://github.com/casbin/casbin-website/actions) 
-The site configuration and documentation powering Casbin's website: https://casbin.org
+# [v1.casbin.org](https://v1.casbin.org/) [![Build Status](https://img.shields.io/github/workflow/status/casbin/casbin-website/Node.js%20CI)](https://github.com/casbin/casbin-website/actions) 
+The site configuration and documentation powering Casbin's website: https://v1.casbin.org
 
 ## Getting started
 
@@ -25,11 +25,11 @@ The site configuration and documentation powering Casbin's website: https://casb
 ### Publish manually (optional)
 
 Whenever a new commit lands in `master`, the change will be automatically
-published to: https://casbin.org. However, if you want to deploy the site manually,
+published to: https://v1.casbin.org. However, if you want to deploy the site manually,
 make sure you have `write` access to: https://github.com/casbin/casbin.github.io,
 and use the following instruction:
 
-1. `yarn run publish-gh-pages` to publish the site to GitHub pages: https://github.com/casbin/casbin.github.io (aka https://casbin.org).
+1. `yarn run publish-gh-pages` to publish the site to GitHub pages: https://github.com/casbin/casbin.github.io (aka https://v1.casbin.org).
 
 # Overview
 
@@ -156,7 +156,7 @@ open `http://localhost:3000/casbin/versions.html` to see other versions.
     your changes
 1.  `git push my-fork-name the-name-of-my-branch`
 1.  Go to the
-    [casbin-website repo](https://casbin.org)
+    [casbin-website repo](https://v1.casbin.org)
     and you should see recently pushed branches.
 1.  Follow GitHub's instructions.
 1.  If possible, include screenshots of visual changes.
